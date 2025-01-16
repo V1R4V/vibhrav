@@ -120,7 +120,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.8 }}
             >
               <Image
-                src="/public/IMG_0950.jpg"
+                src="/IMG_0950.jpg"
                 alt="vibhrav"
                 layout="fill"
                 objectFit="cover"
