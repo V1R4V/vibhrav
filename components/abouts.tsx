@@ -31,11 +31,11 @@ const AnimatedText = () => {
         fontSize: '1.5em', 
         display: 'inline-block', 
         whiteSpace: 'pre-line', 
-        fontFamily: '"Roboto", sans-serif', // Modern font
-        fontWeight: '500', // Slightly bolder text
+        fontFamily: '"Roboto", sans-serif', 
+        fontWeight: '500', 
         color: 'white',
         lineHeight: '1.5',
-        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)', // Adds a shadow for better readability
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)', 
       }}
     />
   );
@@ -51,7 +51,7 @@ export function About() {
       <div
         className="relative h-[40vh] md:h-[60vh] w-full bg-center"
         style={{
-          backgroundImage: 'url("/public/IMG_0950.jpg")',
+          backgroundImage: 'url("/IMG_0950.jpg")',
           backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
