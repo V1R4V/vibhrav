@@ -51,7 +51,7 @@ export function About() {
       <div
         className="relative h-[40vh] md:h-[60vh] w-full bg-center"
         style={{
-          backgroundImage: 'url("/IMG_0950.jpg")',
+          backgroundImage: 'url("/public/IMG_0950.jpg")',
           backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
