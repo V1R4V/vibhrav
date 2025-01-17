@@ -12,11 +12,11 @@ const AnimatedText = () => {
         "I'm Vibhrav Jha, from New Delhi, India🇮🇳.", 
         2000,
         "Currently based in Madison, WI🇺🇸.", 
-        4000, 
+        2000, 
         " I'm looking forward to making a career in the field of Software Development and engineering🛠️.", 
-        4000, 
+        2000, 
         "Hopefully we can connect after you know a bit more about me🤝!",
-        4000,  
+        2000,  
         "Keep Scrolling!🚀",
         8000,
         () => {
@@ -27,6 +27,7 @@ const AnimatedText = () => {
       cursor={true}
       repeat={Infinity}
       speed={65}
+      omitDeletionAnimation={true}
       style={{
         fontSize: '1.5em', 
         display: 'inline-block', 

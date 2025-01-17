@@ -29,6 +29,7 @@ const AnimatedText = () => {
       cursor={true}
       repeat={Infinity}
       speed={65}
+      omitDeletionAnimation={true}
       style={{
         fontSize: '1.5em', 
         display: 'inline-block', 
