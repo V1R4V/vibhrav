@@ -71,7 +71,52 @@ const stackItems: StackItem[] = [
     icon: "/icons8-excel.svg",
     name: "Excel",
     description: "Spreadsheet Tool for Data Analysis"
-  }
+  },
+  {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg",
+    name: "PyTorch",
+    description: "Deep Learning Framework"
+  },
+  {
+    icon: "https://raw.githubusercontent.com/lobehub/lobe-icons/main/svg/livekit.svg",
+    name: "LiveKit",
+    description: "Real-time Audio/Video Infrastructure"
+  },
+  {
+    icon: "https://img.icons8.com/ios-filled/50/000000/llama.png",
+    name: "Llama",
+    description: "Large Language Model"
+  },
+  {
+    icon: "https://raw.githubusercontent.com/lobehub/lobe-icons/main/svg/langchain.svg",
+    name: "LangChain",
+    description: "Framework for LLM Applications"
+  },
+  {
+    icon: "https://www.svgrepo.com/show/521382/hugging-face.svg",
+    name: "HuggingFace",
+    description: "AI Model Hub & Tools"
+  },
+  {
+    icon: "https://img.icons8.com/fluency/48/000000/database.png",
+    name: "ChromaDB",
+    description: "AI-native Vector Database"
+  },
+  {
+    icon: "https://img.icons8.com/fluency/48/000000/search-client.png",
+    name: "FAISS",
+    description: "Similarity Search Library"
+  },
+  {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
+    name: "Pandas",
+    description: "Data Analysis Library"
+  },
+  {
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg",
+    name: "NumPy",
+    description: "Numerical Computing Library"
+  },
 ]
 
 export default function TechStack() {
