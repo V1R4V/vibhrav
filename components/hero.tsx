@@ -147,7 +147,7 @@ export function Hero() {
           >
             {/* Use RainbowButton instead of Button */}
             <RainbowButton className="mt-16">
-              <Link href="/Vibhrav’s_Resume.pdf" target="_blank">Check Out My Resume!</Link>
+              <Link href="Vibhrav_Resume_2025.pdf" target="_blank">Check Out My Resume!</Link>
             </RainbowButton>
           </motion.div>
         </div>
