@@ -6,44 +6,52 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { ArrowUpRight } from 'lucide-react'
 
 const projects = [
-  {
-    title: 'RAG Automation Platform',
-    description:
-      'Production-grade Retrieval-Augmented Generation system for automating RFI/RFP generation with Llama3 and ChromaDB.',
-    tags: ['Python', 'Llama3', 'RAG', 'ChromaDB', 'OCR', 'Prompt Engineering'],
-    image: '/f3.png', // Add this image to your /public folder
-    link: 'https://github.com/V1R4V', // Replace with actual repo link
-  },
-  {
-    title: 'Startup Scout',
-    description:
-      'Investor-startup matching platform with dynamic filtering, data scraping, and Recharts-powered visualizations.',
-    tags: ['TypeScript', 'React', 'SQLite', 'Firecrawl', 'Express.js', 'Shadcn'],
-    image: '/sscout.jpg', // Add this image to your /public folder
-    link: 'https://github.com/V1R4V', // Replace with actual repo link
-  },
-  {
-    title: 'Facial Analysis System',
-    description:
-      'PCA-based facial recognition system with dimensionality reduction and eigenface visualization.',
-    tags: ['Python', 'NumPy', 'SciPy', 'Computer Vision', 'PCA'],
-    image: '/f1.png', // Add this image to your /public folder
-    link: 'https://github.com/V1R4V', // Replace with actual repo link
-  },
-  {
-    title: 'Recipe Pal',
-    description: 'An inventory-based intelligent recipe planner with meal tracking.',
-    tags: ['React', 'Next.js', 'TypeScript'],
-    image: '/recipepal.png',
-    link: 'https://github.com/V1R4V/RecipePlanner',
-  },
-  {
-    title: 'Campus Navigator',
-    description: 'A custom Java-based map and navigation system for UW-Madison.',
-    tags: ['Java', 'Graph Theory', 'HTML/CSS'],
-    image: '/Campus.png',
-    link: 'https://github.com/V1R4V/CampusNavigator',
-  }
+	
+	{
+		title: 'Autflow.ai',
+		description: 'Custom website for an automation AI based Startup',
+		tags: ['React', 'Next.js', 'TypeScript','GsheetsAPI'],
+		image: '/autoflow.png',
+		link: 'https://aiautoflow.vercel.app/', 
+	},
+	{
+		title: 'RAG Automation Platform',
+		description:
+			'Production-grade Retrieval-Augmented Generation system for automating RFI/RFP generation with Llama3 and ChromaDB.',
+		tags: ['Python', 'Llama3', 'RAG', 'ChromaDB', 'OCR', 'Prompt Engineering'],
+		image: '/f3.png', 
+		link: 'https://github.com/V1R4V/rag-for-private_data',
+	},
+	{
+		title: 'Startup Scout',
+		description:
+			'Investor-startup matching platform with dynamic filtering, data scraping, and Recharts-powered visualizations.',
+		tags: ['TypeScript', 'React', 'SQLite', 'Firecrawl', 'Express.js', 'Shadcn'],
+		image: '/sscout.jpg', 
+		link: 'https://github.com/V1R4V/Startupscout', 
+	},
+	{
+		title: 'Facial Analysis System',
+		description:
+			'PCA-based facial recognition system with dimensionality reduction and eigenface visualization.',
+		tags: ['Python', 'NumPy', 'SciPy', 'Computer Vision', 'PCA'],
+		image: '/f1.png', // Add this image to your /public folder
+		link: 'https://github.com/V1R4V/image_compression_pca', // Replace with actual repo link
+	},
+	{
+		title: 'Recipe Pal',
+		description: 'An inventory-based intelligent recipe planner with meal tracking.',
+		tags: ['React', 'Next.js', 'TypeScript'],
+		image: '/recipepal.png',
+		link: 'https://github.com/V1R4V/RecipePlanner',
+	},
+	{
+		title: 'Campus Navigator',
+		description: 'A custom Java-based map and navigation system for UW-Madison.',
+		tags: ['Java', 'Graph Theory', 'HTML/CSS'],
+		image: '/Campus.png',
+		link: 'https://github.com/V1R4V/CampusNavigator',
+	}
 ]
 
 
