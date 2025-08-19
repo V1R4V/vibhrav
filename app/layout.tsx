@@ -16,10 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link rel="icon" href="public/favicon.ico" />
+      </head>
       <body className={`${inter.className} bg-black text-white min-h-screen`}>
         {children}
       </body>
     </html>
   )
 }
-
