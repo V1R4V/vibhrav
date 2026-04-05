@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="faviconTitle faviconDesc">
+  <title id="faviconTitle">Vibhrav Jha favicon</title>
+  <desc id="faviconDesc">Rounded blue gradient square icon with stylized AI lettering in white.</desc>
+  <defs>
+    <linearGradient id="faviconGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#faviconGradient)" />
+  <path d="M23 20l9 24h-5l-2-6h-7l-2 6h-5l9-24h3zm-1.5 14h4l-2-6-2 6z" fill="#ffffff"/>
+  <path d="M38 20v24h-4V20h4z" fill="#ffffff"/>
+</svg>
