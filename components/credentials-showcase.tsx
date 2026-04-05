@@ -22,11 +22,11 @@ const coursework: CourseworkItem[] = [
   { label: 'Big Data Systems', focus: 'Distributed Data Processing', toneClass: 'border-indigo-200/25 bg-indigo-500/10' },
   { label: 'Artificial Intelligence', focus: 'Search + Reasoning + ML Foundations', toneClass: 'border-fuchsia-200/25 bg-fuchsia-500/10' },
   { label: 'Data Science Modeling', focus: 'Predictive Modeling', toneClass: 'border-emerald-200/25 bg-emerald-500/10' },
-  { label: 'Programming III', focus: 'Object-Oriented Systems', toneClass: 'border-sky-200/25 bg-sky-500/10' },
+  { label: 'Object-Oriented Software Development', focus: 'OOP Principles + Design Patterns + Modular Architecture', toneClass: 'border-sky-200/25 bg-sky-500/10' },
   { label: 'Discrete Mathematics', focus: 'Proofs + Logic + Graphs', toneClass: 'border-violet-200/25 bg-violet-500/10' },
   { label: 'Statistics in Economics', focus: 'Applied Quantitative Analysis', toneClass: 'border-amber-200/25 bg-amber-500/10' },
   { label: 'Linear Algebra', focus: 'Matrices + Vector Spaces', toneClass: 'border-teal-200/25 bg-teal-500/10' },
-  { label: 'Calculus I', focus: 'Optimization + Rates of Change', toneClass: 'border-blue-200/25 bg-blue-500/10' },
+  { label: 'Advanced Mathematical Methods', focus: 'Multivariable Analysis + Optimization Techniques', toneClass: 'border-blue-200/25 bg-blue-500/10' },
   { label: 'Web + Mobile Development', focus: 'React + React Native Delivery', toneClass: 'border-rose-200/25 bg-rose-500/10' },
 ]
 

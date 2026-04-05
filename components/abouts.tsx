@@ -123,10 +123,6 @@ export function About() {
                 priority={false}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/20 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/20 bg-black/35 p-3">
-                <p className="text-xs tracking-[0.16em] text-cyan-100/90 uppercase">Current Goal</p>
-                <p className="text-slate-100 mt-1 font-medium">Ship product features that create visible user value.</p>
-              </div>
             </div>
           </motion.aside>
         </div>
