@@ -4,20 +4,20 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { GenericTool, StreamingMarkdown } from '@21st-sdk/react'
-import { Brain, Code2, Rocket, ShieldCheck, Sparkles } from 'lucide-react'
+import { BrainCircuit, CodeXml, ShieldCheck, WandSparkles } from 'lucide-react'
 import { Nav } from '@/components/nav'
 import { InteractiveBackground } from './interactive-background'
 
 const valueCards = [
   {
-    icon: Code2,
+    icon: CodeXml,
     title: 'Product Engineering',
     subtitle: 'From UX to API architecture',
     text: 'I ship complete features across frontend and backend with an emphasis on user clarity, clean abstractions, and maintainable delivery.',
     accent: 'from-cyan-400/35 to-sky-500/20',
   },
   {
-    icon: Brain,
+    icon: BrainCircuit,
     title: 'Applied AI',
     subtitle: 'Practical systems over demos',
     text: 'I build AI workflows that are measurable and production-ready, using retrieval, automation, and robust backend orchestration.',
@@ -198,7 +198,7 @@ export function About() {
                 className="rounded-xl border border-white/12 bg-white/8 p-4 md:p-5"
               >
                 <div className="flex items-start gap-2">
-                  <Sparkles className="w-4 h-4 mt-1 text-cyan-200" />
+                  <WandSparkles className="w-4 h-4 mt-1 text-cyan-200" />
                   <p className="text-slate-100 leading-relaxed text-sm md:text-base">{currentFocus.content}</p>
                 </div>
               </motion.div>

@@ -18,6 +18,9 @@ const sora = Sora({
 export const metadata: Metadata = {
   title: 'Vibhrav Jha',
   description: 'Portfolio of Vibhrav Jha',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({
@@ -27,9 +30,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body className={`${manrope.variable} ${sora.variable} bg-black text-white min-h-screen antialiased`}>
         {children}
       </body>
