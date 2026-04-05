@@ -1,0 +1,42 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Country data clustering and dendrogram project cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#121826"/>
+      <stop offset="100%" stop-color="#1f1140"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect x="95" y="95" width="1010" height="560" rx="30" fill="#171f33" stroke="#a78bfa" stroke-opacity="0.35"/>
+
+  <text x="145" y="190" fill="#efe8ff" font-size="48" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Country Data Clustering
+  </text>
+  <text x="145" y="245" fill="#c6b9f2" font-size="30" font-family="Arial, Helvetica, sans-serif">
+    Segment countries with hierarchical clustering + dendrograms
+  </text>
+
+  <line x1="170" y1="520" x2="170" y2="350" stroke="#c4b5fd" stroke-width="4"/>
+  <line x1="280" y1="520" x2="280" y2="395" stroke="#c4b5fd" stroke-width="4"/>
+  <line x1="390" y1="520" x2="390" y2="430" stroke="#c4b5fd" stroke-width="4"/>
+  <line x1="500" y1="520" x2="500" y2="365" stroke="#c4b5fd" stroke-width="4"/>
+  <line x1="610" y1="520" x2="610" y2="420" stroke="#c4b5fd" stroke-width="4"/>
+  <line x1="720" y1="520" x2="720" y2="385" stroke="#c4b5fd" stroke-width="4"/>
+
+  <line x1="170" y1="430" x2="280" y2="430" stroke="#ddd6fe" stroke-width="4"/>
+  <line x1="390" y1="470" x2="500" y2="470" stroke="#ddd6fe" stroke-width="4"/>
+  <line x1="610" y1="455" x2="720" y2="455" stroke="#ddd6fe" stroke-width="4"/>
+
+  <line x1="225" y1="430" x2="225" y2="360" stroke="#ddd6fe" stroke-width="4"/>
+  <line x1="445" y1="470" x2="445" y2="360" stroke="#ddd6fe" stroke-width="4"/>
+  <line x1="665" y1="455" x2="665" y2="360" stroke="#ddd6fe" stroke-width="4"/>
+
+  <line x1="225" y1="360" x2="445" y2="360" stroke="#f5f3ff" stroke-width="4"/>
+  <line x1="335" y1="360" x2="335" y2="300" stroke="#f5f3ff" stroke-width="4"/>
+  <line x1="335" y1="300" x2="665" y2="300" stroke="#f5f3ff" stroke-width="4"/>
+
+  <rect x="810" y="360" width="230" height="170" rx="18" fill="#221a3f" stroke="#c4b5fd" stroke-opacity="0.35"/>
+  <text x="840" y="410" fill="#efe8ff" font-size="24" font-family="Arial, Helvetica, sans-serif">Clusters:</text>
+  <text x="840" y="450" fill="#d8cef8" font-size="20" font-family="Arial, Helvetica, sans-serif">1. Developed economies</text>
+  <text x="840" y="482" fill="#d8cef8" font-size="20" font-family="Arial, Helvetica, sans-serif">2. Emerging markets</text>
+  <text x="840" y="514" fill="#d8cef8" font-size="20" font-family="Arial, Helvetica, sans-serif">3. Resource-led growth</text>
+</svg>

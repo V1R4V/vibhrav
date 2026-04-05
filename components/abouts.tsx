@@ -1,256 +1,237 @@
 'use client'
 
-import { motion, useMotionValue, useTransform } from 'framer-motion'
-import { useRef, useState, useEffect } from 'react'
-import { InteractiveBackground } from './interactive-background'
+import Image from 'next/image'
+import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { GenericTool, StreamingMarkdown } from '@21st-sdk/react'
+import { Brain, Code2, Rocket, ShieldCheck, Sparkles } from 'lucide-react'
 import { Nav } from '@/components/nav'
-import { TypeAnimation } from 'react-type-animation'
-import HyperText from '@/components/ui/hyper-text'
+import { InteractiveBackground } from './interactive-background'
 
-const AnimatedText = () => (
-  <TypeAnimation
-    sequence={[
-      "I'm Vibhrav Jha, from New Delhi, India🇮🇳.",
-      2000,
-      "Currently based in Madison, WI🇺🇸.",
-      2000,
-      "I'm looking forward to making a career in Software Development and Engineering🛠️.",
-      2000,
-      "Hopefully we can connect after you know a bit more about me🤝!",
-      2000,
-      "Keep Scrolling!🚀",
-      8000,
-    ]}
-    wrapper="span"
-    cursor={true}
-    repeat={Infinity}
-    speed={65}
-    omitDeletionAnimation={true}
-    style={{
-      fontSize: '1.5em',
-      display: 'inline-block',
-      whiteSpace: 'pre-line',
-      fontFamily: '"Roboto", sans-serif',
-      fontWeight: '500',
-      color: 'white',
-      lineHeight: '1.5',
-      textShadow: '2px 2px 8px rgba(0, 180, 255, 0.5)',
-      letterSpacing: '0.01em',
-    }}
-  />
-)
+const valueCards = [
+  {
+    icon: Code2,
+    title: 'Product Engineering',
+    subtitle: 'From UX to API architecture',
+    text: 'I ship complete features across frontend and backend with an emphasis on user clarity, clean abstractions, and maintainable delivery.',
+    accent: 'from-cyan-400/35 to-sky-500/20',
+  },
+  {
+    icon: Brain,
+    title: 'Applied AI',
+    subtitle: 'Practical systems over demos',
+    text: 'I build AI workflows that are measurable and production-ready, using retrieval, automation, and robust backend orchestration.',
+    accent: 'from-violet-400/35 to-fuchsia-500/20',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Execution Discipline',
+    subtitle: 'Reliability + communication',
+    text: 'I move fast with high ownership, document decisions clearly, and optimize for long-term engineering velocity and quality.',
+    accent: 'from-emerald-400/35 to-cyan-500/20',
+  },
+]
 
-interface PillarCardProps {
-  title: string
-  description: string
-  icon: string
-  gradient: string
-}
+const focusModes = [
+  {
+    id: 'roles',
+    label: 'ROLES',
+    content:
+      'I am targeting Software Engineer and Product Engineer opportunities where I can own meaningful features and collaborate closely with product + design.',
+  },
+  {
+    id: 'impact',
+    label: 'IMPACT',
+    content:
+      'I deliver outcomes with clear metrics, fast iteration loops, and implementation quality that scales with team and product complexity.',
+  },
+  {
+    id: 'culture',
+    label: 'CULTURE',
+    content:
+      'I thrive in ambitious teams that value craftsmanship, feedback, and execution standards as much as speed.',
+  },
+]
 
-function PillarCard({ title, description, icon, gradient }: PillarCardProps) {
-  const ref = useRef<HTMLDivElement>(null)
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-
-  const rotateX = useTransform(y, [0, 300], [8, -8])
-  const rotateY = useTransform(x, [0, 300], [-8, 8])
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    const bounds = ref.current?.getBoundingClientRect()
-    if (!bounds) return
-    const xPos = e.clientX - bounds.left
-    const yPos = e.clientY - bounds.top
-    x.set(xPos)
-    y.set(yPos)
-  }
-
-  return (
-    <motion.div
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      className={`relative p-8 rounded-3xl shadow-lg text-white bg-gradient-to-br ${gradient} overflow-hidden transition-all duration-300`}
-      style={{ rotateX, rotateY }}
-      whileHover={{
-        scale: 1.05,
-        transition: { type: 'spring', stiffness: 300, damping: 24 }
-      }}
-    >
-      <motion.div
-        className="absolute -inset-1 rounded-3xl blur-xl opacity-50 pointer-events-none z-0"
-        animate={{ scale: [1, 1.05, 1] }}
-        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-      />
-      <div className="relative z-10">
-        <div className="text-4xl mb-4">{icon}</div>
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-blue-100 leading-relaxed text-sm">{description}</p>
-      </div>
-    </motion.div>
-  )
-}
+const personal = [
+  { label: 'LOCATION', value: 'Madison, WI (originally New Delhi, India)' },
+  { label: 'CURRENT FOCUS', value: 'High-quality product engineering with real user impact.' },
+  { label: 'OUTSIDE WORK', value: 'Football, gym, cooking, gaming, and reading.' },
+]
 
 export function About() {
-  const pillars = [
-    {
-      icon: '💡',
-      title: 'Creative Engineering',
-      description: 'Combining design thinking and code to deliver visually intuitive, user-first digital experiences.',
-      gradient: 'from-blue-700 via-cyan-600 to-blue-400'
-    },
-    {
-      icon: '🌐',
-      title: 'Full-Stack Builder',
-      description: 'Crafting robust web apps with scalable backends and performant frontends. React, Next.js, Spring Boot.',
-      gradient: 'from-cyan-700 via-blue-600 to-cyan-400'
-    },
-    {
-      icon: '🧠',
-      title: 'AI + Data',
-      description: 'Deep interest in LLMs, embeddings, vector databases, and frameworks like LangChain & HuggingFace.',
-      gradient: 'from-blue-500 via-cyan-400 to-blue-300'
-    }
-  ]
-
-  const hobbies = [
-    {
-      title: '⚽️ Football',
-      description: 'Once a pro footballer and forever a die-hard Real Madrid fan!',
-      gradient: 'from-blue-700 via-cyan-600 to-blue-400'
-    },
-    {
-      title: '🏋️ Gym',
-      description: 'Passionate about fitness and hitting the gym to build strength and discipline.',
-      gradient: 'from-cyan-700 via-blue-600 to-cyan-400'
-    },
-    {
-      title: '👨‍🍳 Cooking',
-      description: 'Mastering the art of Indian cuisine, from buttery curries to sizzling tandoori.',
-      gradient: 'from-blue-500 via-cyan-400 to-blue-300'
-    },
-    {
-      title: '🛫 Travelling',
-      description: 'Exploring unique and untouched destinations like the serene A&N Islands in India.',
-      gradient: 'from-cyan-800 via-blue-700 to-cyan-500'
-    },
-    {
-      title: '🎮 Gaming',
-      description: 'From clutch plays in Valorant to scoring screamers in FIFA, gaming fuels adrenaline.',
-      gradient: 'from-blue-800 via-cyan-700 to-blue-500'
-    },
-    {
-      title: '📚 Reading',
-      description: 'Currently diving into *Leaders Eat Last* by Simon Sinek.',
-      gradient: 'from-cyan-700 via-blue-500 to-cyan-300'
-    }
-  ]
+  const [activeFocus, setActiveFocus] = useState(focusModes[0].id)
+  const currentFocus = focusModes.find((item) => item.id === activeFocus) ?? focusModes[0]
 
   return (
     <div>
       <Nav />
       <InteractiveBackground />
-      <div className="relative">
 
-        {/* Hero Section */}
-        <div
-          className="relative h-[40vh] md:h-[60vh] w-full bg-center flex items-center justify-center overflow-hidden"
-          style={{
-            backgroundImage: 'url("A (8).jpg")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
-        >
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-cyan-700/50 to-blue-400/40"
-            initial={{ opacity: 0.7 }}
-            animate={{ opacity: [0.7, 0.9, 0.7] }}
-            transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
-          />
-          <motion.img
-            src="/IMG_0950.jpg"
-            alt="Vibhrav Jha"
-            className="relative z-10 w-32 h-32 md:w-48 md:h-48 rounded-full object-cover border-4 border-cyan-300 shadow-2xl"
-            initial={{ y: 60, opacity: 0, scale: 0.8 }}
-            animate={{ y: 0, opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, type: "spring", bounce: 0.4 }}
-            whileHover={{ scale: 1.05, rotate: 2 }}
-            style={{ boxShadow: "0 8px 32px 0 rgba(0,180,255,0.37)" }}
-          />
-        </div>
+      <section className="relative px-4 pt-28 md:pt-32 pb-14 overflow-hidden">
+        <div className="pointer-events-none absolute -top-24 right-10 h-72 w-72 rounded-full bg-cyan-400/15 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-12 left-6 h-64 w-64 rounded-full bg-blue-500/15 blur-3xl" />
 
-        {/* Main Content */}
-        <div className="max-w-5xl mx-auto px-4 py-16">
-          <motion.h2
-            className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-700 bg-clip-text text-transparent drop-shadow-lg"
-            initial={{ opacity: 0, y: 30 }}
+        <div className="max-w-7xl mx-auto relative z-10 grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
+          <motion.article
+            initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, type: "spring" }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
+            className="apple-surface rounded-[2rem] p-7 md:p-10"
           >
-            <HyperText>About Me ✨</HyperText>
-          </motion.h2>
+            <p className="text-xs md:text-sm tracking-[0.22em] uppercase text-cyan-200/85 mb-3">ABOUT</p>
+            <h1 className="section-title text-5xl md:text-6xl">Engineer, Builder, Collaborator</h1>
 
-          <motion.div
-            className="my-8 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, type: "spring" }}
-            viewport={{ once: true }}
-          >
-          </motion.div>
-
-          {/* Pillars */}
-          <motion.div
-            className="grid gap-8 md:grid-cols-3"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{ visible: { transition: { staggerChildren: 0.18 } } }}
-          >
-            {pillars.map((pillar, idx) => (
-              <PillarCard key={idx} {...pillar} />
-            ))}
-          </motion.div>
-
-          {/* Hobbies Section */}
-          <motion.div
-            className="mt-20"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, type: "spring" }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-700 bg-clip-text text-transparent">
-              My Hobbies
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {hobbies.map((hobby, index) => (
-                <motion.div
-                  key={index}
-                  className={`relative p-8 rounded-2xl shadow-xl text-white bg-gradient-to-br ${hobby.gradient} overflow-hidden group`}
-                  whileHover={{
-                    scale: 1.07,
-                    rotate: [0, 2, -2, 0],
-                    boxShadow: "0 8px 32px 0 rgba(58,133,255,0.37)"
-                  }}
-                  whileTap={{ scale: 0.97 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  <motion.div
-                    className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-blue-400 via-cyan-400 to-blue-700 blur-lg opacity-60 group-hover:opacity-90 transition-all duration-500 pointer-events-none z-0"
-                    animate={{ scale: [1, 1.04, 1] }}
-                    transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-                  />
-                  <div className="relative z-10">
-                    <h3 className="text-xl font-semibold drop-shadow-lg">{hobby.title}</h3>
-                    <p className="text-base mt-3 text-blue-100">{hobby.description}</p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="mt-7 rounded-2xl border border-white/15 bg-black/25 p-5 md:p-6">
+              <StreamingMarkdown
+                className="text-slate-200 text-base md:text-xl leading-relaxed"
+                content="I am Vibhrav Jha, a full-stack engineer focused on building software that is useful, fast, and production-ready. I enjoy owning features end-to-end, from interface polish to backend logic. I am currently looking for opportunities where I can contribute to product growth and solve meaningful engineering problems."
+              />
             </div>
-          </motion.div>
+
+            <div className="mt-6 grid sm:grid-cols-3 gap-3">
+              <div className="rounded-xl border border-cyan-200/25 bg-cyan-500/10 px-4 py-3">
+                <p className="text-xs tracking-[0.16em] text-cyan-100/90 uppercase">Core</p>
+                <p className="mt-1 text-slate-100 font-semibold">Fullstack + AI</p>
+              </div>
+              <div className="rounded-xl border border-violet-200/25 bg-violet-500/10 px-4 py-3">
+                <p className="text-xs tracking-[0.16em] text-violet-100/90 uppercase">Focus</p>
+                <p className="mt-1 text-slate-100 font-semibold">Product Impact</p>
+              </div>
+              <div className="rounded-xl border border-emerald-200/25 bg-emerald-500/10 px-4 py-3">
+                <p className="text-xs tracking-[0.16em] text-emerald-100/90 uppercase">Style</p>
+                <p className="mt-1 text-slate-100 font-semibold">High Ownership</p>
+              </div>
+            </div>
+          </motion.article>
+
+          <motion.aside
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+            viewport={{ once: true }}
+            className="apple-surface rounded-[2rem] p-5 md:p-6"
+          >
+            <div className="relative overflow-hidden rounded-2xl border border-white/15 h-[340px] md:h-[420px]">
+              <Image
+                src="/IMG_0950.jpg"
+                alt="Vibhrav Jha"
+                fill
+                sizes="(max-width: 1280px) 100vw, 30vw"
+                className="object-cover"
+                priority={false}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/20 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/20 bg-black/35 p-3">
+                <p className="text-xs tracking-[0.16em] text-cyan-100/90 uppercase">Current Goal</p>
+                <p className="text-slate-100 mt-1 font-medium">Ship product features that create visible user value.</p>
+              </div>
+            </div>
+          </motion.aside>
         </div>
-      </div>
+      </section>
+
+      <section className="relative px-4 pb-14 md:pb-16">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold text-slate-100 mb-7 tracking-tight">WORK STYLE</h2>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {valueCards.map((item, index) => (
+              <motion.article
+                key={item.title}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.42, delay: 0.05 * index }}
+                viewport={{ once: true, margin: '-90px' }}
+                whileHover={{ y: -5, scale: 1.012 }}
+                className="apple-surface rounded-[1.65rem] p-5"
+              >
+                <div className={`inline-flex rounded-full bg-gradient-to-r ${item.accent} px-3 py-1.5 border border-white/20 mb-3`}>
+                  <item.icon className="w-4 h-4 text-slate-100" />
+                </div>
+
+                <GenericTool
+                  icon={item.icon}
+                  title={item.title}
+                  subtitle={item.subtitle}
+                  isPending={false}
+                  isError={false}
+                  size="compact"
+                />
+
+                <p className="mt-4 text-sm md:text-base text-slate-200 leading-relaxed">{item.text}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative px-4 pb-14 md:pb-16">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold text-slate-100 mb-6 tracking-tight">FOCUS</h2>
+
+          <div className="apple-surface rounded-[1.8rem] p-5 md:p-6">
+            <div className="flex flex-wrap gap-2 mb-4">
+              {focusModes.map((mode) => {
+                const active = mode.id === activeFocus
+                return (
+                  <button
+                    key={mode.id}
+                    type="button"
+                    onClick={() => setActiveFocus(mode.id)}
+                    className={`rounded-full border px-3.5 py-1.5 text-xs md:text-sm tracking-[0.12em] transition-all ${
+                      active
+                        ? 'border-cyan-200/45 bg-cyan-400/12 text-cyan-100 shadow-[0_8px_18px_rgba(35,160,255,0.2)]'
+                        : 'border-white/15 text-slate-300 hover:bg-white/8'
+                    }`}
+                  >
+                    {mode.label}
+                  </button>
+                )
+              })}
+            </div>
+
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentFocus.id}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.25 }}
+                className="rounded-xl border border-white/12 bg-white/8 p-4 md:p-5"
+              >
+                <div className="flex items-start gap-2">
+                  <Sparkles className="w-4 h-4 mt-1 text-cyan-200" />
+                  <p className="text-slate-100 leading-relaxed text-sm md:text-base">{currentFocus.content}</p>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative px-4 pb-20 md:pb-24">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold text-slate-100 mb-6 tracking-tight">PERSONAL</h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            {personal.map((item, index) => (
+              <motion.article
+                key={item.label}
+                initial={{ opacity: 0, y: 14 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.38, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -4, scale: 1.01 }}
+                className="rounded-2xl border border-white/15 bg-slate-950/75 p-5"
+              >
+                <p className="text-xs tracking-[0.2em] text-cyan-200/90 uppercase">{item.label}</p>
+                <p className="mt-3 text-slate-100 leading-relaxed">{item.value}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

@@ -1,0 +1,48 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Spark analytics system cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#151311"/>
+      <stop offset="100%" stop-color="#402114"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fb923c" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.07"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#fdba74"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <circle cx="1050" cy="100" r="180" fill="#fb923c" opacity="0.24"/>
+  <circle cx="130" cy="650" r="220" fill="#22d3ee" opacity="0.1"/>
+
+  <rect x="90" y="120" width="1020" height="510" rx="34" fill="url(#card)" stroke="#fdba74" stroke-opacity="0.3"/>
+
+  <text x="140" y="210" fill="#fff7ed" font-size="44" font-family="Arial, Helvetica, sans-serif" font-weight="700">Competitive Programming Analytics with Spark</text>
+  <text x="140" y="258" fill="#fed7aa" font-size="28" font-family="Arial, Helvetica, sans-serif">RDD/DataFrame/SQL processing with ML pipelines and NL-to-SQL interface</text>
+
+  <rect x="140" y="345" width="175" height="95" rx="18" fill="#352016" stroke="#fdba74" stroke-opacity="0.35"/>
+  <text x="228" y="400" text-anchor="middle" fill="#fff1e6" font-size="21" font-family="Arial, Helvetica, sans-serif">Contest Data</text>
+
+  <rect x="380" y="305" width="370" height="175" rx="24" fill="#352016" stroke="#fdba74" stroke-opacity="0.35"/>
+  <text x="565" y="348" text-anchor="middle" fill="#fff1e6" font-size="24" font-family="Arial, Helvetica, sans-serif">Spark Engine</text>
+  <rect x="445" y="368" width="240" height="36" rx="10" fill="#4a2d20"/>
+  <text x="565" y="392" text-anchor="middle" fill="#ffedd5" font-size="16" font-family="Arial, Helvetica, sans-serif">Bucketing + Caching</text>
+  <rect x="445" y="414" width="240" height="36" rx="10" fill="#4a2d20"/>
+  <text x="565" y="438" text-anchor="middle" fill="#ffedd5" font-size="16" font-family="Arial, Helvetica, sans-serif">Spark SQL + ML</text>
+
+  <rect x="820" y="345" width="110" height="95" rx="18" fill="#352016" stroke="#fdba74" stroke-opacity="0.35"/>
+  <text x="875" y="400" text-anchor="middle" fill="#fff1e6" font-size="21" font-family="Arial, Helvetica, sans-serif">HDFS</text>
+
+  <rect x="970" y="345" width="90" height="95" rx="18" fill="#352016" stroke="#fdba74" stroke-opacity="0.35"/>
+  <text x="1015" y="393" text-anchor="middle" fill="#fff1e6" font-size="19" font-family="Arial, Helvetica, sans-serif">LLM</text>
+  <text x="1015" y="414" text-anchor="middle" fill="#ffd7b5" font-size="12" font-family="Arial, Helvetica, sans-serif">NL to SQL</text>
+
+  <line x1="315" y1="392" x2="380" y2="392" stroke="#fdba74" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="750" y1="392" x2="820" y2="392" stroke="#fdba74" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="930" y1="392" x2="970" y2="392" stroke="#fdba74" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="140" y="505" width="920" height="70" rx="14" fill="#2d1c14" stroke="#fdba74" stroke-opacity="0.24"/>
+  <text x="175" y="549" fill="#ffedd5" font-size="20" font-family="Arial, Helvetica, sans-serif">Large-scale analysis with optimized Spark execution and natural-language exploration</text>
+</svg>

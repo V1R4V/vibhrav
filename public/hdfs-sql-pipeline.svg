@@ -1,0 +1,47 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HDFS and SQL integration pipeline cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081f1f"/>
+      <stop offset="100%" stop-color="#154635"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0.08"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#6ee7b7"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <circle cx="1040" cy="90" r="190" fill="#34d399" opacity="0.2"/>
+  <circle cx="130" cy="650" r="220" fill="#2dd4bf" opacity="0.11"/>
+
+  <rect x="90" y="120" width="1020" height="510" rx="34" fill="url(#card)" stroke="#86efac" stroke-opacity="0.3"/>
+
+  <text x="140" y="210" fill="#ecfdf5" font-size="44" font-family="Arial, Helvetica, sans-serif" font-weight="700">Distributed Data Pipeline with HDFS + SQL</text>
+  <text x="140" y="258" fill="#bbf7d0" font-size="28" font-family="Arial, Helvetica, sans-serif">MySQL ingestion, gRPC APIs, Parquet storage, and replication-aware recovery</text>
+
+  <rect x="140" y="345" width="150" height="95" rx="18" fill="#1a4035" stroke="#6ee7b7" stroke-opacity="0.35"/>
+  <text x="215" y="400" text-anchor="middle" fill="#e8fff2" font-size="22" font-family="Arial, Helvetica, sans-serif">MySQL</text>
+
+  <rect x="350" y="345" width="170" height="95" rx="18" fill="#1a4035" stroke="#6ee7b7" stroke-opacity="0.35"/>
+  <text x="435" y="400" text-anchor="middle" fill="#e8fff2" font-size="22" font-family="Arial, Helvetica, sans-serif">gRPC API</text>
+
+  <rect x="580" y="300" width="300" height="185" rx="24" fill="#1a4035" stroke="#6ee7b7" stroke-opacity="0.35"/>
+  <text x="730" y="345" text-anchor="middle" fill="#e8fff2" font-size="24" font-family="Arial, Helvetica, sans-serif">HDFS Cluster</text>
+  <rect x="640" y="370" width="180" height="36" rx="10" fill="#205045"/>
+  <text x="730" y="394" text-anchor="middle" fill="#d1fae5" font-size="16" font-family="Arial, Helvetica, sans-serif">NameNode + DataNodes</text>
+  <rect x="640" y="416" width="180" height="36" rx="10" fill="#205045"/>
+  <text x="730" y="440" text-anchor="middle" fill="#d1fae5" font-size="16" font-family="Arial, Helvetica, sans-serif">Parquet + replication</text>
+
+  <rect x="940" y="345" width="120" height="95" rx="18" fill="#1a4035" stroke="#6ee7b7" stroke-opacity="0.35"/>
+  <text x="1000" y="400" text-anchor="middle" fill="#e8fff2" font-size="21" font-family="Arial, Helvetica, sans-serif">Clients</text>
+
+  <line x1="290" y1="392" x2="350" y2="392" stroke="#6ee7b7" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="520" y1="392" x2="580" y2="392" stroke="#6ee7b7" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="880" y1="392" x2="940" y2="392" stroke="#6ee7b7" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="140" y="505" width="920" height="70" rx="14" fill="#17382f" stroke="#86efac" stroke-opacity="0.24"/>
+  <text x="175" y="549" fill="#d1fae5" font-size="20" font-family="Arial, Helvetica, sans-serif">Partition-aware analytics with failover-safe reads and reduced I/O via columnar storage</text>
+</svg>

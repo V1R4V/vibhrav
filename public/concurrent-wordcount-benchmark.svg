@@ -1,0 +1,50 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Concurrent word count benchmark cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1222"/>
+      <stop offset="100%" stop-color="#23345e"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.08"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#93c5fd"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <circle cx="1050" cy="90" r="190" fill="#60a5fa" opacity="0.2"/>
+  <circle cx="130" cy="650" r="220" fill="#818cf8" opacity="0.12"/>
+
+  <rect x="90" y="120" width="1020" height="510" rx="34" fill="url(#card)" stroke="#93c5fd" stroke-opacity="0.3"/>
+
+  <text x="140" y="210" fill="#eff6ff" font-size="44" font-family="Arial, Helvetica, sans-serif" font-weight="700">Concurrent Word Count + Performance Benchmarking</text>
+  <text x="140" y="258" fill="#c7dbff" font-size="28" font-family="Arial, Helvetica, sans-serif">Thread-pool scaling, GIL/no-GIL tests, and CSV/Parquet/Arrow throughput analysis</text>
+
+  <rect x="140" y="345" width="180" height="95" rx="18" fill="#1d2f57" stroke="#93c5fd" stroke-opacity="0.35"/>
+  <text x="230" y="400" text-anchor="middle" fill="#e7f1ff" font-size="21" font-family="Arial, Helvetica, sans-serif">Text Corpus</text>
+
+  <rect x="380" y="300" width="340" height="185" rx="24" fill="#1d2f57" stroke="#93c5fd" stroke-opacity="0.35"/>
+  <text x="550" y="345" text-anchor="middle" fill="#e7f1ff" font-size="24" font-family="Arial, Helvetica, sans-serif">Thread Pool</text>
+  <rect x="445" y="370" width="210" height="36" rx="10" fill="#28406f"/>
+  <text x="550" y="394" text-anchor="middle" fill="#dbeafe" font-size="16" font-family="Arial, Helvetica, sans-serif">Shared counters + mutex</text>
+  <rect x="445" y="416" width="210" height="36" rx="10" fill="#28406f"/>
+  <text x="550" y="440" text-anchor="middle" fill="#dbeafe" font-size="16" font-family="Arial, Helvetica, sans-serif">Configurable workers</text>
+
+  <rect x="780" y="345" width="130" height="95" rx="18" fill="#1d2f57" stroke="#93c5fd" stroke-opacity="0.35"/>
+  <text x="845" y="400" text-anchor="middle" fill="#e7f1ff" font-size="21" font-family="Arial, Helvetica, sans-serif">Outputs</text>
+
+  <rect x="960" y="332" width="100" height="122" rx="18" fill="#1d2f57" stroke="#93c5fd" stroke-opacity="0.35"/>
+  <rect x="982" y="390" width="16" height="42" rx="3" fill="#bfdbfe"/>
+  <rect x="1004" y="370" width="16" height="62" rx="3" fill="#93c5fd"/>
+  <rect x="1026" y="350" width="16" height="82" rx="3" fill="#60a5fa"/>
+  <text x="1010" y="456" text-anchor="middle" fill="#c7dbff" font-size="12" font-family="Arial, Helvetica, sans-serif">bench</text>
+
+  <line x1="320" y1="392" x2="380" y2="392" stroke="#93c5fd" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="720" y1="392" x2="780" y2="392" stroke="#93c5fd" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="910" y1="392" x2="960" y2="392" stroke="#93c5fd" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="140" y="505" width="920" height="70" rx="14" fill="#1a2a4d" stroke="#93c5fd" stroke-opacity="0.24"/>
+  <text x="175" y="549" fill="#dbeafe" font-size="20" font-family="Arial, Helvetica, sans-serif">Performance reports highlight scaling efficiency and format-level write throughput tradeoffs</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bayesian Language Detection project cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#081022"/>
+      <stop offset="100%" stop-color="#10324a"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <circle cx="1020" cy="110" r="210" fill="#22d3ee" opacity="0.16"/>
+  <circle cx="150" cy="640" r="240" fill="#38bdf8" opacity="0.12"/>
+
+  <rect x="120" y="145" width="960" height="460" rx="28" fill="url(#card)" stroke="#67e8f9" stroke-opacity="0.28"/>
+
+  <text x="170" y="255" fill="#dff7ff" font-size="46" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    Bayesian Language Detection
+  </text>
+  <text x="170" y="318" fill="#a7d9ec" font-size="30" font-family="Arial, Helvetica, sans-serif">
+    English vs Spanish classification with posterior probability
+  </text>
+
+  <text x="170" y="405" fill="#c7efff" font-size="24" font-family="Arial, Helvetica, sans-serif">P(English|text) = P(text|English) * P(English) / P(text)</text>
+  <text x="170" y="452" fill="#c7efff" font-size="24" font-family="Arial, Helvetica, sans-serif">P(Spanish|text) = P(text|Spanish) * P(Spanish) / P(text)</text>
+
+  <rect x="170" y="505" width="170" height="52" rx="26" fill="#155e75"/>
+  <text x="220" y="538" fill="#d9fbff" font-size="22" font-family="Arial, Helvetica, sans-serif">Python</text>
+  <rect x="360" y="505" width="220" height="52" rx="26" fill="#0e7490"/>
+  <text x="398" y="538" fill="#d9fbff" font-size="22" font-family="Arial, Helvetica, sans-serif">Bayes Rule</text>
+  <rect x="600" y="505" width="260" height="52" rx="26" fill="#0f766e"/>
+  <text x="642" y="538" fill="#d9fbff" font-size="22" font-family="Arial, Helvetica, sans-serif">Letter Frequency</text>
+</svg>

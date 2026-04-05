@@ -12,12 +12,15 @@ export function InteractiveBackground() {
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
+    let animationFrame = 0
+
     let particles: Array<{
       x: number
       y: number
       dx: number
       dy: number
       size: number
+      alpha: number
     }> = []
 
     const resize = () => {
@@ -28,19 +31,28 @@ export function InteractiveBackground() {
 
     const initParticles = () => {
       particles = []
-      for (let i = 0; i < 100; i++) {
+      const count = Math.min(55, Math.max(26, Math.floor((canvas.width * canvas.height) / 60000)))
+      for (let i = 0; i < count; i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          dx: (Math.random() - 0.5) * 1,
-          dy: (Math.random() - 0.5) * 1,
-          size: Math.random() * 2,
+          dx: (Math.random() - 0.5) * 0.45,
+          dy: (Math.random() - 0.5) * 0.45,
+          size: Math.random() * 2.6 + 1.2,
+          alpha: Math.random() * 0.25 + 0.2,
         })
       }
     }
 
     const animate = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+      const bgGradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height)
+      bgGradient.addColorStop(0, 'rgba(4, 11, 22, 0.52)')
+      bgGradient.addColorStop(0.55, 'rgba(8, 18, 36, 0.36)')
+      bgGradient.addColorStop(1, 'rgba(5, 10, 18, 0.56)')
+
+      ctx.fillStyle = bgGradient
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
       particles.forEach((particle) => {
@@ -50,20 +62,35 @@ export function InteractiveBackground() {
         if (particle.x < 0 || particle.x > canvas.width) particle.dx *= -1
         if (particle.y < 0 || particle.y > canvas.height) particle.dy *= -1
 
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.5)'
+        const glow = ctx.createRadialGradient(
+          particle.x,
+          particle.y,
+          0,
+          particle.x,
+          particle.y,
+          particle.size * 12,
+        )
+        glow.addColorStop(0, `rgba(121, 226, 255, ${particle.alpha})`)
+        glow.addColorStop(1, 'rgba(0, 0, 0, 0)')
+
+        ctx.fillStyle = glow
         ctx.beginPath()
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
+        ctx.arc(particle.x, particle.y, particle.size * 10, 0, Math.PI * 2)
         ctx.fill()
       })
 
-      requestAnimationFrame(animate)
+      animationFrame = requestAnimationFrame(animate)
     }
 
     resize()
     animate()
 
     window.addEventListener('resize', resize)
-    return () => window.removeEventListener('resize', resize)
+
+    return () => {
+      window.removeEventListener('resize', resize)
+      cancelAnimationFrame(animationFrame)
+    }
   }, [])
 
   return (
