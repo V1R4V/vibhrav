@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: 'Vibhrav Jha',
   description: 'Portfolio of Vibhrav Jha',
   icons: {
-    icon: '/favicon.svg',
+    icon: '/favicon.ico',
   },
 }
 
