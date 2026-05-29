@@ -8,9 +8,10 @@ export const profile = {
   tagline: "building across web, AI & systems",
   location: "Madison, WI",
   origin: "New Delhi, India",
+  availability: "Open to 2026 · SWE & Applied AI roles",
   status: {
-    label: "browser-safety copilot",
-    org: "People & Robots Lab",
+    label: "Open to 2026",
+    org: "SWE & Applied AI roles",
   },
   socials: {
     github: "https://github.com/V1R4V",
@@ -25,6 +26,7 @@ export type TimelineEntry = {
   period: string
   title: string
   org: string
+  location?: string
   logo?: string
   summary: string
   bullets: string[]
@@ -38,46 +40,50 @@ export const timeline: TimelineEntry[] = [
     period: "Jan 2026 — Present",
     title: "Undergraduate Research Assistant",
     org: "UW–Madison People & Robots Lab",
+    location: "Madison, WI",
     logo: "/company-logos/wisc.png",
     summary:
-      "Building a browser safety assistant for adults with IDD using multimodal OCR + DOM context parsing, with guidance generated in plain language for risky web interactions.",
+      "Building an Android overlay app that delivers real-time, context-aware security and privacy guidance to adults with intellectual and developmental disabilities (IDD), as part of an IRB-approved HCI study on interdependent security support.",
     bullets: [
-      "Browser-safety copilot prototype",
-      "OCR + DOM risk signal pipeline",
-      "Accessibility-first evaluation loop",
+      "Multimodal screen-analysis pipeline",
+      "Deterministic risk safety floor",
+      "Gemini API + JSON risk schema",
     ],
-    tools: ["Chrome", "TypeScript", "Python"],
+    tools: ["Kotlin", "Android", "Gemini API"],
   },
   {
     kind: "experience",
     period: "May 2025 — Aug 2025",
     title: "Software Engineering Intern",
     org: "VDart Inc.",
+    location: "Atlanta, GA",
     logo: "/company-logos/vdart.png",
     summary:
-      "Led an automated RFI/RFP generation pipeline with IBM Docling and Gemini, reducing proposal turnaround from two weeks to under 24 hours and increasing capacity 3x.",
-    bullets: ["3x proposal capacity", "<24h turnaround", "50+ active users"],
-    tools: ["React", "FastAPI", "Python"],
+      "Engineered an automated RFI/RFP generation pipeline with IBM Docling, Llama 3, and Gemini, cutting proposal turnaround from two weeks to under 24 hours and shipping a full-stack React + FastAPI chat interface to 50+ users.",
+    bullets: ["3x proposal capacity", "96% retrieval accuracy", "50+ active users"],
+    tools: ["React", "FastAPI", "IBM Docling"],
   },
   {
     kind: "experience",
     period: "Jan 2022 — Mar 2023",
     title: "Software Development Intern",
     org: "Pink City Expressways",
+    location: "Jaipur, India",
     logo: "/company-logos/pinkcity.gif",
     summary:
-      "Developed analytics and CRM improvements that increased machinery utilization, drove +$18K monthly revenue impact, and improved lead-to-partnership conversion.",
-    bullets: ["+$18K monthly impact", "+27% conversion lift", "40% faster response"],
-    tools: ["MySQL", "JavaScript", "HTML/CSS"],
+      "Built a Python and SQL CRM to track 30+ business leads plus an automated contractor-management tool, lifting successful partnerships from 15 to 19 and adding $18K in revenue through better resource allocation.",
+    bullets: ["15 → 19 partnerships", "+$18K added revenue", "30+ leads tracked"],
+    tools: ["Python", "SQL", "JavaScript"],
   },
   {
     kind: "education",
     period: "Sep 2023 — May 2027",
     title: "B.S. Computer Science, Data Science & Economics",
     org: "University of Wisconsin–Madison",
+    location: "Madison, WI",
     logo: "/company-logos/wisc.png",
     summary:
-      "Dean's List · GPA 3.719 / 4.0. Coursework spanning algorithms, big data systems, AI, and applied quantitative analysis.",
+      "Dean's List (3x) · GPA 3.755 / 4.0. Coursework spanning algorithms, big data systems, AI, and applied quantitative analysis.",
     bullets: [
       "Algorithms · Data Structures + Complexity",
       "Big Data Systems · Distributed Processing",
@@ -91,7 +97,7 @@ export const timeline: TimelineEntry[] = [
 export const metrics = [
   { value: "3x", label: "proposal capacity shipped" },
   { value: "16", label: "projects across 4 domains" },
-  { value: "$18K", label: "monthly revenue impact" },
+  { value: "$18K", label: "revenue impact delivered" },
 ] as const
 
 export type Project = {
@@ -321,9 +327,9 @@ export const techStack: TechCategory[] = [
       { name: "JavaScript", desc: "Interactive Web Logic", icon: "javascript/javascript-original" },
       { name: "TypeScript", desc: "Type-Safe Development", icon: "typescript/typescript-original" },
       { name: "React", desc: "Component Architecture", icon: "react/react-original" },
-      { name: "React Native", desc: "Cross-platform Mobile", icon: "react/react-original" },
       { name: "Next.js", desc: "App Router + SSR", icon: "nextjs/nextjs-original" },
       { name: "Tailwind CSS", desc: "Modern Styling System", icon: "tailwindcss/tailwindcss-original" },
+      { name: "Streamlit", desc: "Data App Interfaces", slug: "streamlit" },
     ],
   },
   {
@@ -333,10 +339,11 @@ export const techStack: TechCategory[] = [
       { name: "Java", desc: "Service Development", icon: "java/java-original" },
       { name: "FastAPI", desc: "Python API Services", icon: "fastapi/fastapi-original" },
       { name: "Node.js + Express", desc: "Backend Runtime", icon: "nodejs/nodejs-original" },
+      { name: "REST APIs + gRPC", desc: "HTTP + Protobuf Services" },
       { name: "MySQL + SQLite", desc: "Relational Data", icon: "mysql/mysql-original" },
-      { name: "Snowflake", desc: "Cloud Data Warehouse", slug: "snowflake" },
       { name: "MongoDB", desc: "NoSQL Data Models", icon: "mongodb/mongodb-original" },
       { name: "Apache Cassandra", desc: "Distributed NoSQL", icon: "cassandra/cassandra-original" },
+      { name: "Snowflake", desc: "Cloud Data Warehouse", slug: "snowflake" },
     ],
   },
   {
@@ -347,24 +354,24 @@ export const techStack: TechCategory[] = [
       { name: "PyTorch", desc: "Model Training", icon: "pytorch/pytorch-original" },
       { name: "Scikit-learn", desc: "Classical ML", icon: "scikitlearn/scikitlearn-original" },
       { name: "Pandas + NumPy", desc: "Data + Numerical Compute", icon: "pandas/pandas-original" },
+      { name: "Hugging Face", desc: "Models + Datasets", slug: "huggingface" },
       { name: "LangChain", desc: "Agent Orchestration", slug: "langchain" },
-      { name: "Claude Code", desc: "Developer Agent Workflow", slug: "claude" },
-      { name: "Ollama + Hugging Face", desc: "Local + Hosted Models", slug: "ollama" },
-      { name: "IBM Docling", desc: "Document Intelligence" },
+      { name: "Ollama + LoRA", desc: "Local Models + Fine-Tuning", slug: "ollama" },
+      { name: "ONNX", desc: "Portable Inference", slug: "onnx" },
     ],
   },
   {
-    name: "Deploy + Infra",
-    summary: "CI/CD, infra, and distributed processing stack.",
+    name: "Data & Infra",
+    summary: "Data pipelines, distributed processing, and deployment.",
     items: [
-      { name: "Docker", desc: "Containerized Apps", icon: "docker/docker-original" },
-      { name: "GitHub Actions", desc: "CI/CD Automation", slug: "githubactions" },
-      { name: "Vercel", desc: "Web Deployments", icon: "vercel/vercel-original" },
+      { name: "Elasticsearch", desc: "Search + Retrieval", icon: "elasticsearch/elasticsearch-original" },
+      { name: "dbt + Airbyte", desc: "ELT Transformations", slug: "dbt" },
       { name: "Apache Kafka", desc: "Streaming Pipelines", icon: "apachekafka/apachekafka-original" },
       { name: "Apache Spark", desc: "Distributed Compute", icon: "apachespark/apachespark-original" },
-      { name: "gRPC", desc: "Service Communication" },
       { name: "HDFS / Hadoop", desc: "Data Infrastructure", slug: "apachehadoop" },
-      { name: "Git", desc: "Version Control", icon: "git/git-original" },
+      { name: "Docker", desc: "Containerized Apps", icon: "docker/docker-original" },
+      { name: "Google Cloud", desc: "Cloud + BigQuery", slug: "googlecloud" },
+      { name: "Git", desc: "Version Control + CI/CD", icon: "git/git-original" },
     ],
   },
 ]
@@ -396,7 +403,7 @@ export const skillGroups: SkillGroup[] = [
       "TypeScript",
       "React",
       "Next.js",
-      "React Native",
+      "Streamlit",
       "Tailwind CSS",
       "JavaScript",
       "HTML5 / CSS3",
@@ -409,10 +416,11 @@ export const skillGroups: SkillGroup[] = [
       "FastAPI",
       "Node.js / Express",
       "Java",
+      "REST APIs / gRPC",
       "MySQL / SQLite",
-      "Snowflake",
       "MongoDB",
       "Cassandra",
+      "Snowflake",
     ],
   },
   {
@@ -423,10 +431,10 @@ export const skillGroups: SkillGroup[] = [
       "PyTorch",
       "Scikit-learn",
       "Pandas / NumPy",
+      "Hugging Face",
       "LangChain",
-      "IBM Docling",
-      "Ollama",
-      "OpenAI API",
+      "Ollama / LoRA",
+      "ONNX",
     ],
   },
   {
@@ -434,12 +442,13 @@ export const skillGroups: SkillGroup[] = [
     summary: "CI/CD, containers, and distributed processing.",
     items: [
       "Docker",
-      "GitHub Actions",
-      "Vercel",
       "Apache Kafka",
       "Apache Spark",
-      "gRPC",
       "HDFS / Hadoop",
+      "Elasticsearch",
+      "dbt / Airbyte",
+      "Google Cloud",
+      "Git / CI-CD",
     ],
   },
 ]
