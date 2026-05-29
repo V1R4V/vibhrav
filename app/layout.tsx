@@ -1,25 +1,54 @@
-import type { Metadata } from 'next'
-import { Manrope, Sora } from 'next/font/google'
-import './globals.css'
-import '@21st-sdk/react/styles.css'
+import type { Metadata } from "next"
+import {
+  Bricolage_Grotesque,
+  Space_Grotesk,
+  Newsreader,
+  JetBrains_Mono,
+} from "next/font/google"
+import "./globals.css"
+import { SmoothScroll } from "@/components/site/smooth-scroll"
+import { ThemeProvider } from "@/components/site/theme-provider"
+import { Ambient } from "@/components/site/ambient"
+import { profile } from "@/lib/site-data"
 
-const manrope = Manrope({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
+// Body / UI — clean technical grotesque.
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
 })
 
-const sora = Sora({
-  subsets: ['latin'],
-  variable: '--font-display',
-  display: 'swap',
+// Section headlines — contemporary grotesque with character + impact.
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+})
+
+// Hero title + the one italic emphasis word per section — editorial serif.
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-hero",
+  display: "swap",
+  style: ["normal", "italic"],
+  weight: ["400", "500", "600"],
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
 })
 
 export const metadata: Metadata = {
-  title: 'Vibhrav Jha',
-  description: 'Portfolio of Vibhrav Jha',
-  icons: {
-    icon: '/favicon.ico',
+  title: `${profile.name} — ${profile.role}`,
+  description: `${profile.name} — software engineer ${profile.tagline}. Web development, applied AI, and distributed systems.`,
+  icons: { icon: "/favicon.svg" },
+  openGraph: {
+    title: `${profile.name} — ${profile.role}`,
+    description: `Software engineer ${profile.tagline}.`,
+    type: "website",
   },
 }
 
@@ -29,9 +58,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${manrope.variable} ${sora.variable} bg-black text-white min-h-screen antialiased`}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${spaceGrotesk.variable} ${bricolage.variable} ${newsreader.variable} ${jetbrainsMono.variable} grain bg-paper text-ink antialiased`}
+      >
+        <ThemeProvider>
+          <Ambient />
+          <SmoothScroll>{children}</SmoothScroll>
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -2,91 +2,132 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+/*
+  BADGER EDITORIAL — a UW–Madison red & white identity on warm paper.
+  · Editorial type discipline (Bricolage headings / Newsreader hero serif / JetBrains labels)
+  · Bright, airy light mode with real card elevation; warm-graphite dark mode
+  · Badger Red (#C5050C) as the single accent; a crimson → red → coral ramp powers
+    the hero word, brand mark, and ambient aurora light.
+  Cobalt blue is kept as a backup accent (see --accent-cobalt) if we ever switch.
+
+  All components speak in semantic tokens (ink / paper / line / burgundy / ember / teal),
+  so the entire identity is retuned here per theme. Note: the `burgundy` token NAME is
+  reused as the primary accent (now Badger Red) so component classes never had to change.
+*/
 
 @layer base {
+  /* ── LIGHT — bright warm paper, white cards float on shadow ────────────── */
   :root {
-    --background: 220 44% 7%;
-    --foreground: 210 35% 96%;
-    --card: 222 35% 11%;
-    --card-foreground: 210 35% 96%;
-    --popover: 222 35% 11%;
-    --popover-foreground: 210 35% 96%;
-    --primary: 186 88% 54%;
-    --primary-foreground: 222 45% 9%;
-    --secondary: 220 22% 16%;
-    --secondary-foreground: 210 35% 94%;
-    --muted: 220 20% 17%;
-    --muted-foreground: 215 14% 72%;
-    --accent: 193 90% 62%;
-    --accent-foreground: 222 45% 10%;
-    --destructive: 0 84.2% 60.2%;
+    --paper: 45 33% 98%; /* #FCFBF8 near-white warm page */
+    --paper-2: 42 30% 94%; /* #F4F1EA gently recessed section */
+    --paper-3: 0 0% 100%; /* #FFFFFF card surface (lifts on shadow) */
+    --ink: 45 30% 7%; /* #16140C strong near-black */
+    --ink-soft: 40 14% 26%; /* #4C463A readable secondary */
+    --ink-faint: 37 9% 50%; /* #8A8275 muted / mono labels */
+
+    /* Badger Red accent system */
+    --burgundy: 358 95% 40%; /* #C5050C Badger Red — the one accent */
+    --accent-cobalt: 226 100% 55%; /* backup accent (kept per request) */
+    --ember: 4 48% 44%; /* brick-red label / date (subtle red flavour) */
+    --teal: 188 58% 30%; /* cool counterpoint (globe / travels) */
+    --teal-soft: 186 44% 42%;
+    --gold: 38 80% 48%;
+
+    /* Gradient stops — crimson → badger red → warm coral */
+    --grad-1: 348 72% 38%; /* deep crimson */
+    --grad-2: 358 90% 45%; /* badger red */
+    --grad-3: 14 88% 50%; /* warm coral */
+
+    --line: 40 16% 86%; /* hairline borders */
+    --line-strong: 38 14% 76%;
+
+    /* Card elevation — the fix for "cards blending into the background" */
+    --shadow-sm: 0 1px 2px hsl(40 30% 8% / 0.05), 0 6px 16px -10px hsl(40 30% 8% / 0.16);
+    --shadow-card: 0 1px 2px hsl(40 30% 8% / 0.05), 0 16px 38px -20px hsl(40 30% 8% / 0.22);
+    --shadow-lift: 0 2px 6px hsl(40 30% 8% / 0.07), 0 28px 60px -24px hsl(40 30% 8% / 0.3);
+
+    /* Glass + grain behaviour for this theme */
+    --glass-bg: 45 33% 98% / 0.78;
+    --glass-border: 38 14% 76% / 0.6;
+    --grain-blend: multiply;
+    --grain-opacity: 0.04;
+    --aurora-strength: 0.32; /* subtle so light mode stays clean white */
+
+    /* shadcn-compat */
+    --background: var(--paper);
+    --foreground: var(--ink);
+    --card: var(--paper-3);
+    --card-foreground: var(--ink);
+    --popover: var(--paper-3);
+    --popover-foreground: var(--ink);
+    --primary: var(--burgundy);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--paper-2);
+    --secondary-foreground: var(--ink);
+    --muted: var(--paper-2);
+    --muted-foreground: var(--ink-faint);
+    --accent: var(--burgundy);
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 42%;
     --destructive-foreground: 0 0% 98%;
-    --border: 216 22% 24%;
-    --input: 216 22% 24%;
-    --ring: 186 88% 54%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --border: var(--line);
+    --input: var(--line);
+    --ring: var(--burgundy);
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-    --color-1: 182 95% 54%;
-    --color-2: 198 92% 62%;
-    --color-3: 209 85% 59%;
-    --color-4: 169 88% 46%;
-    --color-5: 23 95% 63%;
   }
+
+  /* ── DARK (warm graphite) — the default identity ──────────────────────── */
   .dark {
-    --background: 220 44% 7%;
-    --foreground: 210 35% 96%;
-    --card: 222 35% 11%;
-    --card-foreground: 210 35% 96%;
-    --popover: 222 35% 11%;
-    --popover-foreground: 210 35% 96%;
-    --primary: 186 88% 54%;
-    --primary-foreground: 222 45% 9%;
-    --secondary: 220 22% 16%;
-    --secondary-foreground: 210 35% 94%;
-    --muted: 220 20% 17%;
-    --muted-foreground: 215 14% 72%;
-    --accent: 193 90% 62%;
-    --accent-foreground: 222 45% 10%;
-    --destructive: 0 62.8% 30.6%;
+    --paper: 45 14% 6%; /* #100F0C warm near-black */
+    --paper-2: 42 17% 9%; /* #1A1813 recessed surface */
+    --paper-3: 40 12% 11%; /* slightly lifted card surface */
+    --ink: 40 26% 92%; /* #F1EEE7 warm off-white (never pure) */
+    --ink-soft: 40 12% 61%; /* #A7A092 body */
+    --ink-faint: 40 10% 42%; /* meta */
+
+    --burgundy: 358 84% 62%; /* lifted Badger Red — legible on near-black */
+    --accent-cobalt: 222 100% 66%;
+    --ember: 6 62% 64%; /* brighter brick-red label */
+    --teal: 187 66% 54%; /* #2FC6D4 cyan-teal */
+    --teal-soft: 187 60% 60%;
+    --gold: 40 92% 60%;
+
+    --grad-1: 348 80% 60%; /* crimson brighter on dark */
+    --grad-2: 358 90% 64%; /* red */
+    --grad-3: 16 92% 60%; /* coral */
+
+    --line: 40 10% 18%; /* subtle light hairline */
+    --line-strong: 40 8% 28%;
+
+    --shadow-sm: 0 1px 2px hsl(0 0% 0% / 0.4), 0 6px 16px -10px hsl(0 0% 0% / 0.55);
+    --shadow-card: 0 1px 2px hsl(0 0% 0% / 0.4), 0 18px 40px -22px hsl(0 0% 0% / 0.6);
+    --shadow-lift: 0 2px 6px hsl(0 0% 0% / 0.5), 0 28px 60px -24px hsl(0 0% 0% / 0.7);
+
+    --glass-bg: 45 14% 6% / 0.6;
+    --glass-border: 40 10% 80% / 0.1;
+    --grain-blend: soft-light;
+    --grain-opacity: 0.07;
+    --aurora-strength: 1;
+
+    --background: var(--paper);
+    --foreground: var(--ink);
+    --card: var(--paper-3);
+    --card-foreground: var(--ink);
+    --popover: var(--paper-3);
+    --popover-foreground: var(--ink);
+    --primary: var(--burgundy);
+    --primary-foreground: 45 14% 6%;
+    --secondary: var(--paper-2);
+    --secondary-foreground: var(--ink);
+    --muted: var(--paper-2);
+    --muted-foreground: var(--ink-faint);
+    --accent: var(--burgundy);
+    --accent-foreground: 45 14% 6%;
+    --destructive: 0 72% 58%;
     --destructive-foreground: 0 0% 98%;
-    --border: 216 22% 24%;
-    --input: 216 22% 24%;
-    --ring: 186 88% 54%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-    --color-1: 182 95% 54%;
-    --color-2: 198 92% 62%;
-    --color-3: 209 85% 59%;
-    --color-4: 169 88% 46%;
-    --color-5: 23 95% 63%;
+    --border: var(--line);
+    --input: var(--line);
+    --ring: var(--burgundy);
   }
 }
 
@@ -94,85 +135,275 @@
   * {
     @apply border-border;
   }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Smooth theme transition on the big surfaces (not on everything — keeps motion crisp) */
+  body,
+  .theme-x {
+    transition:
+      background-color 0.5s ease,
+      border-color 0.5s ease,
+      color 0.5s ease;
+  }
+
+  /* Lenis smooth scroll */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-sans), sans-serif;
-    background-image:
-      radial-gradient(circle at 10% 0%, rgba(27, 193, 226, 0.22), transparent 40%),
-      radial-gradient(circle at 100% 20%, rgba(0, 130, 255, 0.18), transparent 45%),
-      radial-gradient(circle at 50% 100%, rgba(25, 95, 190, 0.22), transparent 50%);
-    background-attachment: fixed;
-    min-height: 100vh;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv01";
+    min-height: 100dvh;
   }
 
   h1,
   h2,
   h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-display), sans-serif;
+  h4 {
+    font-family: var(--font-display), "Space Grotesk", sans-serif;
+    font-weight: 600;
     letter-spacing: -0.02em;
+  }
+
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+
+  ::selection {
+    background: hsl(var(--burgundy) / 0.22);
+    color: hsl(var(--ink));
   }
 }
 
 @layer components {
-  .glass-surface {
-    background: linear-gradient(145deg, rgba(24, 35, 60, 0.93), rgba(10, 16, 30, 0.96));
-    border: 1px solid rgba(128, 183, 242, 0.3);
-    box-shadow:
-      inset 0 1px 0 rgba(197, 231, 255, 0.1),
-      0 18px 48px rgba(5, 11, 23, 0.45);
-    backdrop-filter: blur(8px);
+  /* Mono eyebrow label, e.g. "02 — WORK" */
+  .eyebrow {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    @apply text-[0.7rem] font-medium uppercase tracking-[0.22em];
+    color: hsl(var(--ember));
   }
 
-  .apple-surface {
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
-      linear-gradient(145deg, rgba(17, 24, 39, 0.92), rgba(8, 12, 23, 0.94));
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.16),
-      0 26px 60px rgba(2, 8, 20, 0.5);
-    backdrop-filter: blur(16px);
+  .hairline {
+    height: 1px;
+    background: hsl(var(--line-strong));
   }
 
-  .apple-chip {
-    @apply rounded-full px-3 py-1 text-xs tracking-wide font-medium;
-    background: rgba(148, 204, 255, 0.12);
-    color: #d7efff;
-    border: 1px solid rgba(159, 214, 255, 0.24);
-  }
-
-  .section-shell {
-    @apply rounded-3xl border px-6 py-8 md:px-8 md:py-10;
-    border-color: rgba(135, 194, 255, 0.22);
-    background: linear-gradient(150deg, rgba(14, 23, 42, 0.84), rgba(8, 13, 25, 0.9));
-    box-shadow: 0 24px 54px rgba(3, 9, 20, 0.45);
-  }
-
-  .section-title {
-    @apply text-4xl md:text-5xl font-bold;
-    background: linear-gradient(90deg, #9ce6ff 0%, #56d1ff 35%, #2f95ff 70%, #79ffd4 100%);
+  /* Chromatic dusk text — for the one emphasis word per section */
+  .text-grad {
+    background-image: linear-gradient(
+      100deg,
+      hsl(var(--grad-1)),
+      hsl(var(--grad-2)) 52%,
+      hsl(var(--grad-3))
+    );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    background-size: 200% 100%;
   }
 
-  .subtle-grid {
-    position: relative;
+  /* Glass surface (nav, chips, cards in dark) */
+  .glass {
+    background: hsl(var(--glass-bg));
+    -webkit-backdrop-filter: saturate(1.4) blur(14px);
+    backdrop-filter: saturate(1.4) blur(14px);
+    border-color: hsl(var(--glass-border));
   }
 
-  .subtle-grid::before {
-    content: '';
+  /* Card elevation — white cards lift off the warm paper in light mode */
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-lift {
+    box-shadow: var(--shadow-lift);
+  }
+
+  /* Always-dark editorial hero stage (same dramatic surface in both themes).
+     Re-points --paper to the stage colour so token-based children read light. */
+  .hero-stage {
+    --paper: 45 14% 4%;
+    color: #f4f1ea;
+    background:
+      radial-gradient(
+        62% 60% at 16% 8%,
+        hsl(var(--grad-2) / 0.3),
+        transparent 60%
+      ),
+      radial-gradient(
+        72% 66% at 98% 92%,
+        hsl(var(--grad-1) / 0.26),
+        transparent 58%
+      ),
+      #0b0a08;
+  }
+  /* Cursor-reactive spotlight that follows the pointer across the hero */
+  .hero-stage::before {
+    content: "";
     position: absolute;
     inset: 0;
+    z-index: 0;
     pointer-events: none;
-    opacity: 0.2;
-    background-image:
-      linear-gradient(rgba(114, 178, 255, 0.12) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(114, 178, 255, 0.12) 1px, transparent 1px);
-    background-size: 48px 48px;
-    mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
+    background: radial-gradient(
+      260px circle at var(--mx, 50%) var(--my, 30%),
+      hsl(var(--grad-3) / 0.18),
+      transparent 70%
+    );
+    transition: background 0.18s ease-out;
+  }
+  /* Vignette so the headline always reads over the glow */
+  .hero-stage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(120% 120% at 50% 42%, transparent 56%, rgba(0, 0, 0, 0.5));
+  }
+
+  /* ── Aurora ambient field — Soft Gradients 2.0 ───────────────────────── */
+  .aurora {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .aurora-orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    opacity: calc(0.55 * var(--aurora-strength));
+    will-change: transform;
+  }
+  .aurora-orb.o1 {
+    width: 46vw;
+    height: 46vw;
+    top: -12vw;
+    left: -8vw;
+    background: radial-gradient(circle, hsl(var(--grad-1) / 0.6), transparent 68%);
+    animation: drift-a 22s ease-in-out infinite alternate;
+  }
+  .aurora-orb.o2 {
+    width: 40vw;
+    height: 40vw;
+    top: 8vw;
+    right: -10vw;
+    background: radial-gradient(circle, hsl(var(--grad-2) / 0.55), transparent 68%);
+    animation: drift-b 27s ease-in-out infinite alternate;
+  }
+  .aurora-orb.o3 {
+    width: 38vw;
+    height: 38vw;
+    top: 42vw;
+    left: 28vw;
+    background: radial-gradient(circle, hsl(var(--grad-3) / 0.4), transparent 70%);
+    animation: drift-c 31s ease-in-out infinite alternate;
+  }
+  @keyframes drift-a {
+    to {
+      transform: translate3d(8vw, 10vw, 0) scale(1.15);
+    }
+  }
+  @keyframes drift-b {
+    to {
+      transform: translate3d(-10vw, 6vw, 0) scale(1.1);
+    }
+  }
+  @keyframes drift-c {
+    to {
+      transform: translate3d(6vw, -8vw, 0) scale(1.2);
+    }
+  }
+
+  /* Logo marquee — seamless loop of a duplicated track */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 38s linear infinite;
+  }
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+  }
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Line-mask reveal primitive — text slides up from behind an edge */
+  .reveal-line {
+    overflow: hidden;
+    display: block;
+  }
+  .reveal-line > span {
+    display: inline-block;
+    transform: translateY(110%);
+    will-change: transform;
+  }
+
+  /* Faint film grain — tactile minimalism, theme-aware blend */
+  .grain::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: var(--grain-opacity);
+    mix-blend-mode: var(--grain-blend);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/* Respect reduced-motion globally — kill transforms/animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-line > span {
+    transform: none !important;
+  }
+  .aurora-orb {
+    animation: none !important;
   }
 }
