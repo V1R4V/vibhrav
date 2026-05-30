@@ -129,30 +129,44 @@ function TimelineRow({
             </span>
           </div>
 
+          {/* Location */}
+          {entry.location && (
+            <p
+              className={[
+                "mt-2 font-mono text-[0.7rem] uppercase tracking-[0.16em] text-ember",
+                isLeft ? "md:text-right" : "",
+              ].join(" ")}
+            >
+              {entry.location}
+            </p>
+          )}
+
           {/* Summary */}
           <p
             className={[
-              "mt-4 max-w-md text-pretty text-sm leading-relaxed text-ink-soft",
+              "mt-4 max-w-md text-pretty text-[0.9rem] leading-relaxed text-ink-soft",
               isLeft ? "md:ml-auto" : "",
             ].join(" ")}
           >
             {entry.summary}
           </p>
 
-          {/* Impact bullets */}
-          <ul className="mt-5 space-y-2">
+          {/* Impact bullets — metric chips, high-contrast in both modes */}
+          <ul
+            className={[
+              "mt-5 flex flex-wrap gap-2",
+              isLeft ? "md:justify-end" : "",
+            ].join(" ")}
+          >
             {entry.bullets.map((b, bi) => (
               <motion.li
                 key={b}
-                initial={{ opacity: 0 }}
-                animate={inView ? { opacity: 1 } : { opacity: 0 }}
+                initial={{ opacity: 0, y: 6 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 6 }}
                 transition={{ duration: 0.4, delay: 0.35 + bi * 0.08 }}
-                className={[
-                  "flex items-center gap-2 text-sm text-ink-faint",
-                  isLeft ? "md:flex-row-reverse" : "",
-                ].join(" ")}
+                className="inline-flex items-center gap-1.5 rounded-full border border-line-strong bg-card px-3 py-1 text-[0.8rem] font-medium text-ink shadow-sm"
               >
-                <span className="h-1 w-1 shrink-0 rounded-full bg-ember" />
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-burgundy" />
                 <span className="tnum">{b}</span>
               </motion.li>
             ))}
@@ -162,14 +176,14 @@ function TimelineRow({
           {entry.tools && (
             <div
               className={[
-                "mt-5 flex flex-wrap gap-2",
+                "mt-4 flex flex-wrap gap-1.5",
                 isLeft ? "md:justify-end" : "",
               ].join(" ")}
             >
               {entry.tools.map((t) => (
                 <span
                   key={t}
-                  className="rounded-full border border-line px-2.5 py-0.5 font-mono text-[0.65rem] uppercase tracking-wide text-ink-faint"
+                  className="rounded-md border border-line bg-paper-2 px-2 py-0.5 font-mono text-[0.65rem] uppercase tracking-wide text-ink-soft"
                 >
                   {t}
                 </span>

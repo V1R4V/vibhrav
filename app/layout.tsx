@@ -9,6 +9,7 @@ import "./globals.css"
 import { SmoothScroll } from "@/components/site/smooth-scroll"
 import { ThemeProvider } from "@/components/site/theme-provider"
 import { Ambient } from "@/components/site/ambient"
+import { Toaster } from "@/components/ui/sonner"
 import { profile } from "@/lib/site-data"
 
 // Body / UI — clean technical grotesque.
@@ -65,6 +66,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Ambient />
           <SmoothScroll>{children}</SmoothScroll>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

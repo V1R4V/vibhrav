@@ -2,7 +2,9 @@
 
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
+import { Github, Linkedin, Instagram } from "lucide-react"
 import { profile } from "@/lib/site-data"
+import { ContactButton } from "@/components/site/contact-form"
 
 const EASE = [0.16, 1, 0.3, 1] as const
 
@@ -108,25 +110,34 @@ export function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-burgundy opacity-70" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-burgundy" />
               </span>
-              Open to 2026 · SWE &amp; Applied AI
+              {profile.availability}
             </span>
 
             <div className="flex items-center gap-2">
               {[
-                ["GitHub", profile.socials.github],
-                ["LinkedIn", profile.socials.linkedin],
-                ["Instagram", profile.socials.instagram],
-              ].map(([label, href]) => (
+                { href: profile.socials.github, Icon: Github, label: "GitHub" },
+                { href: profile.socials.linkedin, Icon: Linkedin, label: "LinkedIn" },
+                { href: profile.socials.instagram, Icon: Instagram, label: "Instagram" },
+              ].map(({ href, Icon, label }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border border-white/15 px-3 py-1.5 font-mono text-[0.65rem] uppercase tracking-[0.1em] text-white/60 transition-colors hover:border-white/60 hover:text-white"
+                  aria-label={label}
+                  title={label}
+                  className="rounded-full border border-white/15 p-2 text-white/60 transition-colors hover:border-white/60 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy"
                 >
-                  {label}
+                  <Icon className="h-4 w-4" />
                 </a>
               ))}
+
+              <ContactButton
+                label="Contact me"
+                showIcon={true}
+                className="rounded-full border border-white/15 bg-transparent px-3.5 py-2 font-mono text-[0.65rem] uppercase tracking-[0.1em] text-white/60 hover:border-white/60 hover:bg-transparent hover:text-white h-auto"
+                variant="ghost"
+              />
             </div>
           </div>
         </motion.div>

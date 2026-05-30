@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { Github, Linkedin, Instagram } from "lucide-react"
 import { profile } from "@/lib/site-data"
 import { ThemeToggle } from "@/components/site/theme-toggle"
 
@@ -83,7 +84,7 @@ export function Nav() {
 
         {/* Links */}
         <ul className="hidden items-center gap-7 md:flex">
-          {NAV_ITEMS.map((item, i) => {
+          {NAV_ITEMS.map((item) => {
             const isActive = active === item.id
             return (
               <li key={item.id}>
@@ -96,13 +97,6 @@ export function Nav() {
                       : "text-ink-soft hover:text-ink"
                   }`}
                 >
-                  <span
-                    className={`font-mono text-[0.6rem] ${
-                      onDark ? "text-white/40" : "text-ink-faint"
-                    }`}
-                  >
-                    0{i + 1}
-                  </span>
                   <span className="relative">
                     {item.label}
                     <span
@@ -117,9 +111,35 @@ export function Nav() {
           })}
         </ul>
 
-        {/* Theme toggle + Résumé */}
+        {/* Theme toggle + social icons + Résumé */}
         <div className="flex items-center gap-2.5">
           <ThemeToggle onDark={onDark} />
+
+          {/* Social icon links */}
+          <div className="hidden items-center gap-1.5 sm:flex">
+            {[
+              { href: profile.socials.github, Icon: Github, label: "GitHub" },
+              { href: profile.socials.linkedin, Icon: Linkedin, label: "LinkedIn" },
+              { href: profile.socials.instagram, Icon: Instagram, label: "Instagram" },
+            ].map(({ href, Icon, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                title={label}
+                className={`rounded-md p-1.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy ${
+                  onDark
+                    ? "text-white/50 hover:text-white"
+                    : "text-ink-soft hover:text-burgundy"
+                }`}
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            ))}
+          </div>
+
           <a
             href={profile.socials.resume}
             target="_blank"

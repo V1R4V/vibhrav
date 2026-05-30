@@ -21,21 +21,6 @@ const reveal = {
 export function About() {
   return (
     <section id="about" className="relative px-5 py-24 sm:px-8 sm:py-32">
-      {/* Warm duotone filter (burgundy shadows → cream highlights) */}
-      <svg className="absolute h-0 w-0" aria-hidden focusable="false">
-        <filter id="vj-duotone" colorInterpolationFilters="sRGB">
-          <feColorMatrix
-            type="matrix"
-            values="0.33 0.33 0.33 0 0 0.33 0.33 0.33 0 0 0.33 0.33 0.33 0 0 0 0 0 1 0"
-          />
-          <feComponentTransfer>
-            <feFuncR type="table" tableValues="0.16 0.97" />
-            <feFuncG type="table" tableValues="0.06 0.95" />
-            <feFuncB type="table" tableValues="0.08 0.9" />
-          </feComponentTransfer>
-        </filter>
-      </svg>
-
       <div className="mx-auto max-w-6xl">
         <header className="mb-16 flex items-baseline gap-4">
           <span className="eyebrow">04 — About</span>
@@ -126,7 +111,7 @@ export function About() {
               viewport={{ once: true, amount: 0.4 }}
             >
               <p className="font-display text-2xl leading-snug text-ink sm:text-[1.75rem]">
-                Based in {profile.location} — originally from{" "}
+                Based in {profile.location}, originally from{" "}
                 <span className="font-hero italic text-burgundy">
                   {profile.origin}
                 </span>
@@ -208,7 +193,7 @@ function DuotonePortrait() {
           alt={`${profile.name}, ${profile.location}`}
           fill
           sizes="(max-width: 768px) 70vw, 300px"
-          className="object-cover [filter:url(#vj-duotone)_contrast(1.05)]"
+          className="object-cover"
           style={{ transform: "translateZ(0)" }}
         />
         {/* warm sheen + label, lifted on Z for depth */}
