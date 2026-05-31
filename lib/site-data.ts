@@ -442,6 +442,7 @@ export const travelStats = {
 export type TechItem = {
   name: string
   desc: string
+  url?: string // local/static image path
   icon?: string // devicon "name/name-original" path
   slug?: string // simpleicons brand-color fallback
 }
@@ -468,11 +469,14 @@ export const techStack: TechCategory[] = [
     items: [
       { name: "Java", desc: "Service Development", icon: "java/java-original" },
       { name: "FastAPI", desc: "Python API Services", icon: "fastapi/fastapi-original" },
-      { name: "Node.js + Express", desc: "Backend Runtime", icon: "nodejs/nodejs-original" },
-      { name: "REST APIs + gRPC", desc: "HTTP + Protobuf Services" },
-      { name: "MySQL + SQLite", desc: "Relational Data", icon: "mysql/mysql-original" },
+      { name: "Node.js", desc: "Backend Runtime", icon: "nodejs/nodejs-original" },
+      { name: "Express", desc: "Web Framework", icon: "express/express-original" },
+      { name: "REST APIs", desc: "HTTP Services", slug: "openapiinitiative" },
+      { name: "gRPC", desc: "Protobuf Services", url: "/grpc.png" },
+      { name: "MySQL", desc: "Relational Data", icon: "mysql/mysql-original" },
+      { name: "SQLite", desc: "Embedded Database", icon: "sqlite/sqlite-original" },
       { name: "MongoDB", desc: "NoSQL Data Models", icon: "mongodb/mongodb-original" },
-      { name: "Apache Cassandra", desc: "Distributed NoSQL", icon: "cassandra/cassandra-original" },
+      { name: "Apache Cassandra", desc: "Wide-Column NoSQL", icon: "cassandra/cassandra-original" },
       { name: "Snowflake", desc: "Cloud Data Warehouse", slug: "snowflake" },
     ],
   },
@@ -486,6 +490,10 @@ export const techStack: TechCategory[] = [
       { name: "Pandas + NumPy", desc: "Data + Numerical Compute", icon: "pandas/pandas-original" },
       { name: "Hugging Face", desc: "Models + Datasets", slug: "huggingface" },
       { name: "LangChain", desc: "Agent Orchestration", slug: "langchain" },
+      { name: "Claude", desc: "Agent + Reasoning", slug: "anthropic" },
+      { name: "Codex", desc: "Code Generation", url: "/codex.png" },
+      { name: "Cursor", desc: "AI Editor", slug: "cursor" },
+      { name: "Copilot", desc: "Pair Programming", slug: "githubcopilot" },
       { name: "Ollama + LoRA", desc: "Local Models + Fine-Tuning", slug: "ollama" },
       { name: "ONNX", desc: "Portable Inference", slug: "onnx" },
     ],
@@ -500,8 +508,11 @@ export const techStack: TechCategory[] = [
       { name: "Apache Spark", desc: "Distributed Compute", icon: "apachespark/apachespark-original" },
       { name: "HDFS / Hadoop", desc: "Data Infrastructure", slug: "apachehadoop" },
       { name: "Docker", desc: "Containerized Apps", icon: "docker/docker-original" },
+      { name: "Linux", desc: "Server OS", slug: "linux" },
+      { name: "macOS", desc: "Developer OS", slug: "apple" },
+      { name: "Windows", desc: "Desktop OS", url: "/windows.png" },
       { name: "Google Cloud", desc: "Cloud + BigQuery", slug: "googlecloud" },
-      { name: "Git", desc: "Version Control + CI/CD", icon: "git/git-original" },
+      { name: "Git", desc: "Version Control", icon: "git/git-original" },
     ],
   },
 ]

@@ -14,6 +14,7 @@ const SIMPLE = (s: string) => `https://cdn.simpleicons.org/${s}`
 // (brand color) → a text glyph in the accent. Never grayscaled.
 function TechLogo({ item, size = 30 }: { item: TechItem; size?: number }) {
   const sources: string[] = []
+  if (item.url) sources.push(item.url)
   if (item.icon) sources.push(DEVICON(item.icon))
   if (item.slug) sources.push(SIMPLE(item.slug))
   const [stage, setStage] = useState(0)
