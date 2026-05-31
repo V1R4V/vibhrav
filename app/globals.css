@@ -18,9 +18,9 @@
 @layer base {
   /* ── LIGHT — bright warm paper, white cards float on shadow ────────────── */
   :root {
-    --paper: 45 33% 98%; /* #FCFBF8 near-white warm page */
-    --paper-2: 42 30% 94%; /* #F4F1EA gently recessed section */
-    --paper-3: 0 0% 100%; /* #FFFFFF card surface (lifts on shadow) */
+    --paper: 42 44% 96%; /* #F8F3E8 warm cream page (less stark than pure white) */
+    --paper-2: 40 38% 91%; /* #EEE7D9 recessed cream section */
+    --paper-3: 44 64% 99%; /* #FEFCF5 warm near-white card (lifts off the cream) */
     --ink: 45 30% 7%; /* #16140C strong near-black */
     --ink-soft: 40 14% 26%; /* #4C463A readable secondary */
     --ink-faint: 37 9% 50%; /* #8A8275 muted / mono labels */
@@ -41,13 +41,13 @@
     --line: 40 16% 86%; /* hairline borders */
     --line-strong: 38 14% 76%;
 
-    /* Card elevation — the fix for "cards blending into the background" */
-    --shadow-sm: 0 1px 2px hsl(40 30% 8% / 0.05), 0 6px 16px -10px hsl(40 30% 8% / 0.16);
-    --shadow-card: 0 1px 2px hsl(40 30% 8% / 0.05), 0 16px 38px -20px hsl(40 30% 8% / 0.22);
-    --shadow-lift: 0 2px 6px hsl(40 30% 8% / 0.07), 0 28px 60px -24px hsl(40 30% 8% / 0.3);
+    /* Card elevation — warmer, deeper shadows so cards lift off the cream */
+    --shadow-sm: 0 1px 2px hsl(32 38% 10% / 0.06), 0 8px 20px -12px hsl(32 38% 10% / 0.2);
+    --shadow-card: 0 2px 4px hsl(32 38% 10% / 0.07), 0 18px 42px -20px hsl(32 38% 10% / 0.26);
+    --shadow-lift: 0 3px 8px hsl(32 38% 10% / 0.09), 0 34px 66px -24px hsl(32 38% 10% / 0.34);
 
     /* Glass + grain behaviour for this theme */
-    --glass-bg: 45 33% 98% / 0.78;
+    --glass-bg: 42 44% 96% / 0.78;
     --glass-border: 38 14% 76% / 0.6;
     --grain-blend: multiply;
     --grain-opacity: 0.04;
@@ -234,7 +234,15 @@
 
   /* Always-dark editorial hero stage (same dramatic surface in both themes).
      Re-points --paper to the stage colour so token-based children read light. */
+  /* Light mode: the hero shares the page's exact paper surface so it flows
+     seamlessly into the sections below — no bounded wash, no seam. Color
+     comes from the type accents (crimson headline, burgundy labels). */
   .hero-stage {
+    color: hsl(var(--ink));
+    background: hsl(var(--paper));
+  }
+  /* Dark mode: the original dramatic dark stage. */
+  .dark .hero-stage {
     --paper: 45 14% 4%;
     color: #f4f1ea;
     background:
@@ -257,20 +265,28 @@
     inset: 0;
     z-index: 0;
     pointer-events: none;
+    background: none;
+    transition: background 0.18s ease-out;
+  }
+  /* Cursor spotlight only in dark mode (it would smudge the clean light hero). */
+  .dark .hero-stage::before {
     background: radial-gradient(
       260px circle at var(--mx, 50%) var(--my, 30%),
       hsl(var(--grad-3) / 0.18),
       transparent 70%
     );
-    transition: background 0.18s ease-out;
   }
-  /* Vignette so the headline always reads over the glow */
+  /* Vignette so the headline always reads over the glow — fades to the
+     theme's own paper color (no dark edges in light mode). */
   .hero-stage::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: 0;
     pointer-events: none;
+    background: radial-gradient(120% 120% at 50% 42%, transparent 60%, hsl(var(--paper) / 0.6));
+  }
+  .dark .hero-stage::after {
     background: radial-gradient(120% 120% at 50% 42%, transparent 56%, rgba(0, 0, 0, 0.5));
   }
 

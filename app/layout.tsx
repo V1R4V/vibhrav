@@ -34,6 +34,9 @@ const newsreader = Newsreader({
   display: "swap",
   style: ["normal", "italic"],
   weight: ["400", "500", "600"],
+  // Newsreader has no metrics in Next's fallback DB; skip the override so the
+  // dev server stops logging "Failed to find font override values".
+  adjustFontFallback: false,
 })
 
 const jetbrainsMono = JetBrains_Mono({
@@ -43,11 +46,11 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: `${profile.name} — ${profile.role}`,
-  description: `${profile.name} — software engineer ${profile.tagline}. Web development, applied AI, and distributed systems.`,
+  title: profile.name,
+  description: `${profile.name}, software engineer ${profile.tagline}. Web development, applied AI, and distributed systems.`,
   icons: { icon: "/favicon.svg" },
   openGraph: {
-    title: `${profile.name} — ${profile.role}`,
+    title: profile.name,
     description: `Software engineer ${profile.tagline}.`,
     type: "website",
   },

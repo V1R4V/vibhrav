@@ -16,7 +16,6 @@ export const profile = {
   socials: {
     github: "https://github.com/V1R4V",
     linkedin: "https://www.linkedin.com/in/vibhrav-jha-4846a3275/",
-    instagram: "https://www.instagram.com/iam_vibhrav/",
     resume: "/resume.pdf",
   },
 } as const
@@ -85,9 +84,18 @@ export const timeline: TimelineEntry[] = [
     summary:
       "Dean's List (3x) · GPA 3.755 / 4.0. Coursework spanning algorithms, big data systems, AI, and applied quantitative analysis.",
     bullets: [
-      "Algorithms · Data Structures + Complexity",
-      "Big Data Systems · Distributed Processing",
-      "Artificial Intelligence · Search + ML Foundations",
+      "Data Structures & Algorithms",
+      "Introduction to Algorithms",
+      "Machine Organization & Programming",
+      "Artificial Intelligence",
+      "Big Data Systems",
+      "Building User Interfaces",
+      "Data Management for Data Science",
+      "Discrete Mathematics",
+      "Data Science Modeling",
+      "Linear Algebra",
+      "Statistics for Economics",
+      "Data Analytics for Economics",
     ],
     tools: ["CS", "Data Science", "Economics"],
   },
@@ -96,7 +104,7 @@ export const timeline: TimelineEntry[] = [
 // Headline metrics surfaced near the hero / experience for instant credibility.
 export const metrics = [
   { value: "3x", label: "proposal capacity shipped" },
-  { value: "16", label: "projects across 4 domains" },
+  { value: "27", label: "projects across 4 domains" },
   { value: "$18K", label: "revenue impact delivered" },
 ] as const
 
@@ -125,13 +133,14 @@ export const projectCategories: ProjectCategory[] = [
 
 export const projects: Project[] = [
   {
-    title: "RAG Automation Platform",
-    subtitle: "Production retrieval + generation workflow",
+    title: "Aranyaka",
+    subtitle: "Wildlife camera-trap classification pipeline",
     description:
-      "End-to-end RAG system for RFI/RFP automation with quality-focused retrieval and practical delivery through a usable product interface.",
-    tags: ["Python", "RAG", "ChromaDB", "FastAPI", "React"],
-    link: "https://github.com/V1R4V/rag-for-private_data",
-    categories: ["ML & AI", "Fullstack"],
+      "Microservices system that turns camera-trap photos into structured biodiversity records: a React + Vite frontend plus independent FastAPI services for upload handling, Celery-based async inference (HuggingFace), and observation management over Supabase and Upstash Redis.",
+    tags: ["React", "FastAPI", "Celery", "Supabase", "HuggingFace"],
+    link: "https://github.com/V1R4V/Aranyaka",
+    image: "/aranyaka.png",
+    categories: ["Fullstack", "ML & AI", "Distributed Systems"],
   },
   {
     title: "DermaNet",
@@ -140,16 +149,8 @@ export const projects: Project[] = [
       "React + Vite diagnosis workflow (body-area selection, lesion upload, AI summary, follow-up chat) backed by three swappable FastAPI services for classification, orchestration, and a local Ollama LLM, wiring ONNX outputs into patient-friendly explanations.",
     tags: ["React", "FastAPI", "Ollama", "ONNX", "REST APIs"],
     link: "https://github.com/V1R4V",
+    image: "hackathon.jpeg",
     categories: ["ML & AI", "Fullstack"],
-  },
-  {
-    title: "Aranyaka",
-    subtitle: "Wildlife camera-trap classification pipeline",
-    description:
-      "Microservices system that turns camera-trap photos into structured biodiversity records: a React + Vite frontend plus independent FastAPI services for upload handling, Celery-based async inference (HuggingFace), and observation management over Supabase and Upstash Redis.",
-    tags: ["React", "FastAPI", "Celery", "Supabase", "HuggingFace"],
-    link: "https://github.com/V1R4V/Aranyaka",
-    categories: ["Fullstack", "ML & AI", "Distributed Systems"],
   },
   {
     title: "LLM Fine-Tuning & RAG Exam Prep",
@@ -158,103 +159,22 @@ export const projects: Project[] = [
       "Distilled 895 QA pairs from lecture transcripts with a Qwen2.5-7B teacher, fine-tuned Llama-3.2-1B with LoRA (perplexity 48.85 → 2.49), and shipped a Streamlit chatbot over an Elasticsearch BM25 RAG pipeline benchmarked at Precision@3 0.87.",
     tags: ["PyTorch", "LoRA", "HuggingFace", "Elasticsearch", "Streamlit"],
     link: "https://github.com/V1R4V",
+    image: "/course-chatbot.png",
     categories: ["ML & AI"],
   },
   {
-    title: "StudyFlow",
-    subtitle: "Study-habit tracker + analytics",
+    title: "RAG Automation Platform",
+    subtitle: "Production retrieval + generation workflow",
     description:
-      "Study tracker with a dual-mode timer, subject manager, editable session history, and a Recharts dashboard (daily totals, weekly trends, productivity scores, calendar heatmap), with hybrid Firestore + localStorage persistence and per-user security rules.",
-    tags: ["React", "Vite", "Firebase", "Recharts", "Vercel"],
-    link: "https://github.com/V1R4V/StudyFlow",
-    categories: ["Fullstack"],
-  },
-  {
-    title: "E-Commerce Semantic Search Engine",
-    subtitle: "BM25 + kNN vector search on Elasticsearch",
-    description:
-      "Explicit Elasticsearch mappings for 300+ products across 13 categories with a multi-modal query layer (BM25, fuzzy typo tolerance, phrase, boosted multi-field, boolean filters, 384-dim kNN) plus Kibana dashboards for price, ratings, and geospatial density.",
-    tags: ["Elasticsearch", "Kibana", "Python", "Docker", "kNN"],
-    link: "https://github.com/V1R4V",
-    categories: ["Data Engineering", "ML & AI"],
-  },
-  {
-    title: "Multi-Source ELT Data Pipeline",
-    subtitle: "Airbyte → Snowflake → dbt",
-    description:
-      "Multi-source ELT pipeline ingesting survey, trading-book, and stock/FX time-series data into Snowflake, with 6 dbt staging models and a fact table that validate ticker-date pairs, join point-in-time prices, and compute desk-level profit and loss.",
-    tags: ["Airbyte", "Snowflake", "dbt", "Python", "SQL"],
-    link: "https://github.com/V1R4V",
-    categories: ["Data Engineering"],
-  },
-  {
-    title: "Store Sales Time-Series Forecasting",
-    subtitle: "Gradient-boosted demand forecasting",
-    description:
-      "Merged 5 heterogeneous datasets into a unified time-series matrix, engineered calendar, holiday, oil, and transaction features, and compared LightGBM, CatBoost, and XGBoost on a time-based split with Optuna tuning, scored on the Kaggle RMSLE leaderboard.",
-    tags: ["LightGBM", "CatBoost", "XGBoost", "Optuna", "pandas"],
-    link: "https://github.com/V1R4V",
-    categories: ["ML & AI", "Data Engineering"],
-  },
-  {
-    title: "Yelp CA Geospatial Analytics",
-    subtitle: "MongoDB aggregation + geospatial queries",
-    description:
-      "30 MongoDB queries spanning multi-stage lookup/unwind aggregation pipelines and a 2dsphere geospatial layer (polygon containment, nearest-neighbor, radial filters), visualized over Santa Barbara city-limit GeoJSON with GeoPandas.",
-    tags: ["MongoDB", "PyMongo", "GeoPandas", "Python", "Docker"],
-    link: "https://github.com/V1R4V",
-    categories: ["Data Engineering"],
-  },
-  {
-    title: "Chinook Music Store SQL Analytics",
-    subtitle: "Window functions + moving averages",
-    description:
-      "30 SQL queries across correlated subqueries, multi-table joins, GROUP BY/HAVING, and window functions (RANK, ROW_NUMBER), including a 3-month moving-average revenue analysis over a Dockerized MySQL schema loaded via SQLAlchemy.",
-    tags: ["MySQL", "SQLAlchemy", "Docker", "pandas", "SQL"],
-    link: "https://github.com/V1R4V",
-    categories: ["Data Engineering"],
-  },
-  {
-    title: "Distributed Property Lookup Service",
-    subtitle: "Fault-tolerant gRPC address lookup",
-    description:
-      "High-performance address-lookup microservice in Python with gRPC and Protocol Buffers, featuring round-robin load balancing, automatic failover with exponential backoff, and an LRU cache, all orchestrated with Docker Compose.",
-    tags: ["Python", "gRPC", "Protobuf", "Docker", "Flask"],
-    link: "https://github.com/V1R4V/Distributed-Property-Lookup-Service",
-    categories: ["Distributed Systems"],
-  },
-  {
-    title: "Habit Command Center",
-    subtitle: "Weekly-goal planning & execution dashboard",
-    description:
-      "Next.js App Router productivity dashboard that turns weekly goals into daily action with habit scheduling, task tracking, weighted scoring, daily/weekly/monthly grades, and a Recharts calendar heatmap, backed by Supabase auth and Postgres.",
-    tags: ["Next.js", "TypeScript", "Supabase", "Recharts", "Vercel"],
-    link: "https://github.com/V1R4V/HabitTracker",
-    categories: ["Fullstack"],
-  },
-  {
-    title: "iSongLy",
-    subtitle: "BST / red-black tree song explorer",
-    description:
-      "Java command-line app that loads song catalogs from CSV and supports attribute filtering (danceability, energy) plus efficient range and recency queries using custom binary search tree and red-black tree implementations.",
-    tags: ["Java", "Red-Black Trees", "BST", "Algorithms"],
-    link: "https://github.com/V1R4V/iSongLy",
-    image: "/isongly.png",
-    categories: ["Fullstack"],
-  },
-  {
-    title: "Autoflow.ai",
-    subtitle: "Automation startup website + product surface",
-    description:
-      "Built a polished, conversion-friendly web experience with production-ready architecture and performance-focused frontend implementation.",
-    tags: ["Next.js", "TypeScript", "UI Engineering"],
-    link: "https://aiautoflow.vercel.app/",
-    image: "/autoflow.png",
-    categories: ["Fullstack"],
+      "End-to-end RAG pipeline for RFI/RFP automation: layout-aware document ingestion, semantic chunking, and vector retrieval feeding an LLM, wired to a React chat UI with token streaming over a FastAPI backend.",
+    tags: ["Python", "RAG", "ChromaDB", "FastAPI", "React"],
+    link: "https://github.com/V1R4V/rag-for-private_data",
+    image: "f3.png",
+    categories: ["ML & AI", "Fullstack"],
   },
   {
     title: "Real-Time Stock Data Streaming Pipeline",
-    subtitle: "High-throughput Kafka ingestion + exactly-once semantics",
+    subtitle: "High-throughput Kafka ingestion + crash-safe checkpointing",
     description:
       "Streams stock ticks from MySQL into Kafka partitions and persists atomic Parquet batches to HDFS with checkpoint-based crash recovery.",
     tags: ["Kafka", "MySQL", "HDFS", "Parquet", "Protocol Buffers"],
@@ -266,11 +186,21 @@ export const projects: Project[] = [
     title: "Distributed Weather Data System",
     subtitle: "Fault-tolerant ingestion with tunable consistency",
     description:
-      "Processes NOAA weather streams in a distributed Cassandra cluster with configurable read/write consistency and automatic failover behavior.",
+      "Ingests NOAA weather data into a 3-node Cassandra cluster (RF=3) over a gRPC API, with tunable read/write consistency and automatic R=2 to R=1 read failover verified through docker-kill fault injection.",
     tags: ["Cassandra", "Distributed DB", "NOAA", "Fault Tolerance"],
     link: "https://github.com/V1R4V/Distributed-Weather-Data-System-with-Cassandra",
     image: "/weather-cassandra-system.svg",
     categories: ["Distributed Systems"],
+  },
+  {
+    title: "Distributed Property Lookup Service",
+    subtitle: "Fault-tolerant gRPC address lookup",
+    description:
+      "High-performance address-lookup microservice in Python with gRPC and Protocol Buffers, featuring round-robin load balancing, automatic failover with exponential backoff, and an LRU cache, all orchestrated with Docker Compose.",
+    tags: ["Python", "gRPC", "Protobuf", "Docker", "Flask"],
+    link: "https://github.com/V1R4V/Distributed-Property-Lookup-Service",
+    image:"grpc.png",
+        categories: ["Distributed Systems"],
   },
   {
     title: "Competitive Programming Analytics",
@@ -280,6 +210,26 @@ export const projects: Project[] = [
     tags: ["Apache Spark", "Spark SQL", "ML", "HDFS", "Gemini"],
     link: "https://github.com/V1R4V/Competitive-Programming-Analytics-with-Apache-Spark",
     image: "/spark-analytics-system.svg",
+    categories: ["Data Engineering", "ML & AI"],
+  },
+  {
+    title: "Multi-Source ELT Data Pipeline",
+    subtitle: "Airbyte → Snowflake → dbt",
+    description:
+      "Multi-source ELT pipeline ingesting survey, trading-book, and stock/FX time-series data into Snowflake, with 6 dbt staging models and a fact table that validate ticker-date pairs, join point-in-time prices, and compute desk-level profit and loss.",
+    tags: ["Airbyte", "Snowflake", "dbt", "Python", "SQL"],
+    link: "https://github.com/V1R4V",
+    image: "/snowflake.png",
+    categories: ["Data Engineering"],
+  },
+  {
+    title: "E-Commerce Semantic Search Engine",
+    subtitle: "BM25 + kNN vector search on Elasticsearch",
+    description:
+      "Explicit Elasticsearch mappings for 300+ products across 13 categories with a multi-modal query layer (BM25, fuzzy typo tolerance, phrase, boosted multi-field, boolean filters, 384-dim kNN) plus Kibana dashboards for price, ratings, and geospatial density.",
+    tags: ["Elasticsearch", "Kibana", "Python", "Docker", "kNN"],
+    link: "https://github.com/V1R4V",
+    image: 'elasticsearch_install.jpg',
     categories: ["Data Engineering", "ML & AI"],
   },
   {
@@ -293,6 +243,46 @@ export const projects: Project[] = [
     categories: ["Data Engineering", "Distributed Systems"],
   },
   {
+    title: "Store Sales Time-Series Forecasting",
+    subtitle: "Gradient-boosted demand forecasting",
+    description:
+      "Merged 5 heterogeneous datasets into a unified time-series matrix, engineered calendar, holiday, oil, and transaction features, and compared LightGBM, CatBoost, and XGBoost on a time-based split with Optuna tuning, scored on the Kaggle RMSLE leaderboard.",
+    tags: ["LightGBM", "CatBoost", "XGBoost", "Optuna", "pandas"],
+    link: "https://github.com/V1R4V",
+    image: "ds.png",
+    categories: ["ML & AI", "Data Engineering"],
+  },
+  {
+    title: "Startup Scout",
+    subtitle: "Investor-startup matching + analytics platform",
+    description:
+      "Investor-startup matching platform over 1,000+ company profiles scraped with Firecrawl and a custom Python parser, with smart filtering on a React + Express + SQLite stack and Recharts dashboards for valuations and funding trends.",
+    tags: ["React", "TypeScript", "SQLite", "Recharts", "Express"],
+    link: "https://github.com/V1R4V/Startupscout",
+    image: "/sscout.jpg",
+    categories: ["Fullstack"],
+  },
+  {
+    title: "Habit Command Center",
+    subtitle: "Weekly-goal planning & execution dashboard",
+    description:
+      "Next.js App Router productivity dashboard that turns weekly goals into daily action with habit scheduling, task tracking, weighted scoring, daily/weekly/monthly grades, and a Recharts calendar heatmap, backed by Supabase auth and Postgres.",
+    tags: ["Next.js", "TypeScript", "Supabase", "Recharts", "Vercel"],
+    link: "https://github.com/V1R4V/HabitTracker",
+    image: "habit.png",
+    categories: ["Fullstack"],
+  },
+  {
+    title: "StudyFlow",
+    subtitle: "Study-habit tracker + analytics",
+    description:
+      "Study tracker with a dual-mode timer, subject manager, editable session history, and a Recharts dashboard (daily totals, weekly trends, productivity scores, calendar heatmap), with hybrid Firestore + localStorage persistence and per-user security rules.",
+    tags: ["React", "Vite", "Firebase", "Recharts", "Vercel"],
+    link: "https://github.com/V1R4V/StudyFlow",
+    image: "flow.png",
+    categories: ["Fullstack"],
+  },
+  {
     title: "Concurrent Word Count Benchmark",
     subtitle: "Multi-threaded processing + GIL benchmark analysis",
     description:
@@ -303,33 +293,53 @@ export const projects: Project[] = [
     categories: ["Data Engineering"],
   },
   {
-    title: "Startup Scout",
-    subtitle: "Investor-startup matching + analytics platform",
+    title: "Yelp CA Geospatial Analytics",
+    subtitle: "MongoDB aggregation + geospatial queries",
     description:
-      "Combines scraping, filtering, and visual analytics to help users discover startups through data-backed ranking and exploration.",
-    tags: ["React", "TypeScript", "SQLite", "Recharts", "Express"],
-    link: "https://github.com/V1R4V/Startupscout",
-    image: "/sscout.jpg",
+      "30 MongoDB queries spanning multi-stage lookup/unwind aggregation pipelines and a 2dsphere geospatial layer (polygon containment, nearest-neighbor, radial filters), visualized over Santa Barbara city-limit GeoJSON with GeoPandas.",
+    tags: ["MongoDB", "PyMongo", "GeoPandas", "Python", "Docker"],
+    link: "https://github.com/V1R4V",
+    image: 'yelp.png',
+    categories: ["Data Engineering"],
+  },
+  {
+    title: "Autoflow.ai",
+    subtitle: "Automation startup website + product surface",
+    description:
+      "Marketing and product site for an automation startup, built with Next.js and TypeScript: responsive landing pages, animated sections, and a reusable component system, deployed on Vercel.",
+    tags: ["Next.js", "TypeScript", "UI Engineering"],
+    link: "https://aiautoflow.vercel.app/",
+    image: "/autoflow.png",
     categories: ["Fullstack"],
+  },
+  {
+    title: "Chinook Music Store SQL Analytics",
+    subtitle: "Window functions + moving averages",
+    description:
+      "30 SQL queries across correlated subqueries, multi-table joins, GROUP BY/HAVING, and window functions (RANK, ROW_NUMBER), including a 3-month moving-average revenue analysis over a Dockerized MySQL schema loaded via SQLAlchemy.",
+    tags: ["MySQL", "SQLAlchemy", "Docker", "pandas", "SQL"],
+    link: "https://github.com/V1R4V",
+    image: 'chinook.png',
+    categories: ["Data Engineering"],
   },
   {
     title: "Recipe Pal",
     subtitle: "Inventory-aware consumer planning app",
     description:
-      "Transforms available ingredients into practical meal planning workflows with a clean user experience and rapid frontend interactions.",
+      "React + Next.js meal planner that suggests recipes from your on-hand inventory across a 10,000+ recipe API, with dietary filters, saved favorites, grocery lists, and barcode and receipt scanning.",
     tags: ["Next.js", "TypeScript", "Product UX"],
     link: "https://github.com/V1R4V/RecipePlanner",
     image: "/recipepal.png",
     categories: ["Fullstack"],
   },
   {
-    title: "Bayesian Language Detection",
-    subtitle: "Posterior classification for English vs Spanish",
+    title: "House Price Predictor",
+    subtitle: "Regression benchmarking + residual analysis",
     description:
-      "Implements Bayes theorem over letter-frequency distributions to classify shredded text, with a clear inference pipeline from character counts to language posterior scores.",
-    tags: ["Python", "Bayesian Inference", "NLP", "Probability"],
-    link: "https://github.com/V1R4V/language_detection",
-    image: "/bayesian-language-detection.svg",
+      "Compares Linear, Ridge, Lasso, Random Forest, and XGBoost regressors after correlation-guided feature selection, log transforms, scaling, and residual plotting.",
+    tags: ["XGBoost", "Random Forest", "Ridge", "Regression"],
+    link: "https://github.com/V1R4V/HousePricePredictor",
+    image: "/house-price-predictor.svg",
     categories: ["ML & AI"],
   },
   {
@@ -346,39 +356,50 @@ export const projects: Project[] = [
     title: "FashionMNIST PyTorch Classifier",
     subtitle: "Normalized pipeline + train/eval + top-3 output",
     description:
-      "Builds FashionMNIST loaders with normalization, trains feedforward PyTorch models with SGD + cross-entropy, and prints top-3 class probabilities for inference.",
+      "Feedforward PyTorch classifier for FashionMNIST that reaches 85%+ accuracy in 5 epochs, with a normalized data pipeline, SGD + cross-entropy training, and top-3 Softmax class probabilities at inference.",
     tags: ["PyTorch", "Deep Learning", "SGD", "Model Evaluation"],
     link: "https://github.com/V1R4V/FashionMNIST-PyTorch-CNN",
     image: "/fashionmnist-pytorch.svg",
     categories: ["ML & AI"],
   },
   {
-    title: "House Price Predictor",
-    subtitle: "Regression benchmarking + residual analysis",
+    title: "Bayesian Language Detection",
+    subtitle: "Posterior classification for English vs Spanish",
     description:
-      "Compares Linear, Ridge, Lasso, Random Forest, and XGBoost regressors after correlation-guided feature selection, log transforms, scaling, and residual plotting.",
-    tags: ["XGBoost", "Random Forest", "Ridge", "Regression"],
-    link: "https://github.com/V1R4V/HousePricePredictor",
-    image: "/house-price-predictor.svg",
+      "Implements Bayes theorem over letter-frequency distributions to classify shredded text, with a clear inference pipeline from character counts to language posterior scores.",
+    tags: ["Python", "Bayesian Inference", "NLP", "Probability"],
+    link: "https://github.com/V1R4V/language_detection",
+    image: "/bayesian-language-detection.svg",
     categories: ["ML & AI"],
   },
   {
     title: "Facial Analysis System",
     subtitle: "PCA-based computer vision pipeline",
     description:
-      "Implements dimensionality reduction and eigenface techniques for image compression and face-analysis experimentation.",
+      "PCA pipeline over 1,000 celebrity images that reduces 3,000-dimensional face vectors into compact eigenfaces, with image reconstruction, eigenface visualization, and noise-perturbation analysis in NumPy and SciPy.",
     tags: ["Python", "NumPy", "SciPy", "Computer Vision", "PCA"],
     link: "https://github.com/V1R4V/image_compression_pca",
+    image: "f1.png",
     categories: ["ML & AI"],
   },
   {
     title: "Campus Navigator",
     subtitle: "Graph-powered navigation engine",
     description:
-      "A Java-based map and routing system for UW–Madison applying graph-theory algorithms for pathfinding at campus scale.",
+      "Java routing app over 160+ UW–Madison locations using Dijkstra's algorithm on a hashtable-backed graph, with an HTML interface for shortest paths, travel times, and the 10 nearest destinations from any point.",
     tags: ["Java", "Graph Theory", "Algorithms"],
     link: "https://github.com/V1R4V/CampusNavigator",
     image: "/Campus.png",
+    categories: ["Fullstack"],
+  },
+  {
+    title: "iSongLy",
+    subtitle: "BST / red-black tree song explorer",
+    description:
+      "Java command-line app that loads song catalogs from CSV and supports attribute filtering (danceability, energy) plus efficient range and recency queries using custom binary search tree and red-black tree implementations.",
+    tags: ["Java", "Red-Black Trees", "BST", "Algorithms"],
+    link: "https://github.com/V1R4V/iSongLy",
+    image: "/isongly.png",
     categories: ["Fullstack"],
   },
 ]
@@ -581,7 +602,7 @@ export const marquee = [
 export const about = {
   heading: "Engineer, Builder, Collaborator",
   intro:
-    "I'm Vibhrav Jha, a full-stack and applied-AI engineer studying CS, Data Science, and Economics at UW–Madison. I own features end to end, from interface polish to backend APIs and ML pipelines. I've shipped production software at VDart, built a research prototype at the People & Robots Lab, and delivered 15+ projects across web, data, and AI. I'm looking for 2026 SWE and Applied AI roles where I can ship work that reaches real users.",
+    "I'm Vibhrav Jha, a full-stack and applied-AI engineer studying CS, Data Science, and Economics at UW–Madison. I own features end to end, from interface polish to backend APIs and ML pipelines. I've shipped production software at VDart, built a research prototype at the People & Robots Lab, and delivered 27 projects across web, data, and AI. I'm looking for 2026 SWE and Applied AI roles where I can ship work that reaches real users.",
   pillars: [
     {
       title: "Product Engineering",
@@ -591,12 +612,12 @@ export const about = {
     {
       title: "Applied AI",
       subtitle: "Production systems, not demos",
-      text: "I build measurable AI workflows using RAG, LLM fine-tuning, and robust backend orchestration that hold up against real data and real users.",
+      text: "I build AI workflows backed by numbers: 96% retrieval accuracy on a production RAG pipeline, and a 20x drop in model perplexity from LoRA fine-tuning.",
     },
     {
       title: "Execution Discipline",
       subtitle: "Reliability and communication",
-      text: "I move fast with high ownership, document decisions clearly, and optimize for long-term engineering velocity and quality.",
+      text: "I ship fast without cutting corners: deterministic safety floors, fault-injection testing, and CI/CD on every push, with decisions documented as I go.",
     },
   ],
   personal: {

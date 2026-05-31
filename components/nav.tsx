@@ -32,7 +32,7 @@ export function Nav() {
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold" style={{ opacity }}>
-          VIBHRAV JHA
+          Vibhrav Jha
         </Link>
         <div className="flex gap-4">
           <Link href="/" className="hover:text-gray-300 transition-colors">

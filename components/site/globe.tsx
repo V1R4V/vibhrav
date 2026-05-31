@@ -225,7 +225,7 @@ export function Globe() {
       {mode === "journey" ? (
         <p className="mt-5 max-w-xs text-center text-sm leading-relaxed text-ink-soft">
           <span className="text-burgundy">New Delhi</span> to{" "}
-          <span className="text-burgundy">Madison</span> — 12,000&nbsp;km from
+          <span className="text-burgundy">Madison</span>. 12,000&nbsp;km from
           where I grew up to where I build now.
         </p>
       ) : (

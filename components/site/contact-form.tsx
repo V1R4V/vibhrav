@@ -16,8 +16,12 @@ import { Textarea } from "@/components/ui/textarea"
 
 interface ContactButtonProps {
   label?: string
+  /** Optional aria-label for icon-only usage */
+  ariaLabel?: string
   /** Extra classes forwarded to the trigger Button */
   className?: string
+  /** Extra classes forwarded to the Mail icon */
+  iconClassName?: string
   /** Variant forwarded to the shadcn Button */
   variant?: "default" | "outline" | "ghost" | "secondary" | "destructive" | "link"
   /** Whether to show the Mail icon */
@@ -26,7 +30,9 @@ interface ContactButtonProps {
 
 export function ContactButton({
   label = "Contact me",
+  ariaLabel,
   className,
+  iconClassName,
   variant = "default",
   showIcon = true,
 }: ContactButtonProps) {
@@ -98,9 +104,14 @@ export function ContactButton({
 
   return (
     <>
-      <Button variant={variant} className={className} onClick={() => setOpen(true)}>
-        {showIcon && <Mail className="h-4 w-4" />}
-        {label}
+      <Button
+        variant={variant}
+        className={className}
+        onClick={() => setOpen(true)}
+        aria-label={ariaLabel || (label ? undefined : "Contact me")}
+      >
+        {showIcon && <Mail className={`h-4 w-4 ${iconClassName ?? ""}`} />}
+        {label ? label : <span className="sr-only">{ariaLabel || "Contact me"}</span>}
       </Button>
 
       <Dialog open={open} onOpenChange={setOpen}>

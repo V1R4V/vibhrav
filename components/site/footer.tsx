@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram, Mail, FileText } from "lucide-react"
+import { Github, Linkedin, Mail, FileText } from "lucide-react"
 import { profile } from "@/lib/site-data"
 import { ContactButton } from "@/components/site/contact-form"
 
@@ -45,6 +45,7 @@ export function Footer() {
           <ContactButton
             label="Get in touch"
             showIcon={true}
+            iconClassName="text-[#EA4335]"
             className="rounded-full border border-white/25 bg-transparent px-6 py-3 font-mono text-xs uppercase tracking-[0.12em] text-white hover:border-white hover:bg-white hover:text-[#0B0A08] h-auto transition-colors"
             variant="ghost"
           />
@@ -58,12 +59,31 @@ export function Footer() {
             </h4>
             <div className="flex flex-wrap gap-3 py-1">
               {[
-                { href: "mailto:vibhrav@gmail.com", Icon: Mail, label: "Email" },
-                { href: profile.socials.linkedin, Icon: Linkedin, label: "LinkedIn" },
-                { href: profile.socials.github, Icon: Github, label: "GitHub" },
-                { href: profile.socials.instagram, Icon: Instagram, label: "Instagram" },
-                { href: profile.socials.resume, Icon: FileText, label: "Résumé" },
-              ].map(({ href, Icon, label }) => (
+                {
+                  href: "mailto:vibhrav@gmail.com",
+                  Icon: Mail,
+                  label: "Email",
+                  colorClass: "text-[#EA4335]",
+                },
+                {
+                  href: profile.socials.linkedin,
+                  Icon: Linkedin,
+                  label: "LinkedIn",
+                  colorClass: "text-[#0A66C2]",
+                },
+                {
+                  href: profile.socials.github,
+                  Icon: Github,
+                  label: "GitHub",
+                  colorClass: "text-[#f5f5f5]",
+                },
+                {
+                  href: profile.socials.resume,
+                  Icon: FileText,
+                  label: "Résumé",
+                  colorClass: "text-white/70",
+                },
+              ].map(({ href, Icon, label, colorClass }) => (
                 <a
                   key={label}
                   href={href}
@@ -71,7 +91,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   aria-label={label}
                   title={label}
-                  className="rounded-md p-2 text-white/60 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+                  className={`rounded-md p-2 transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${colorClass}`}
                 >
                   <Icon className="h-5 w-5" />
                 </a>

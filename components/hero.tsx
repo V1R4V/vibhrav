@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Linkedin, Instagram, Github } from 'lucide-react'
+import { Linkedin, Github } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { RainbowButton } from '@/components/ui/rainbow-button'
@@ -18,13 +18,10 @@ export function Hero() {
         >
           <h3 className="text-slate-300/85 mb-4 text-xs md:text-sm tracking-[0.22em] uppercase">Say Hello</h3>
           <div className="flex gap-4 text-slate-300">
-            <Link href="https://www.linkedin.com/in/vibhrav-jha-4846a3275/" target="_blank" className="hover:text-cyan-200 transition-colors">
+            <Link href="https://www.linkedin.com/in/vibhrav-jha-4846a3275/" target="_blank" className="text-[#0A66C2] hover:opacity-80 transition-opacity">
               <Linkedin className="w-6 h-6" />
             </Link>
-            <Link href="https://www.instagram.com/iam_vibhrav/" target="_blank" className="hover:text-cyan-200 transition-colors">
-              <Instagram className="w-6 h-6" />
-            </Link>
-            <Link href="https://github.com/V1R4V" target="_blank" className="hover:text-cyan-200 transition-colors">
+            <Link href="https://github.com/V1R4V" target="_blank" className="text-[#f5f5f5] hover:opacity-80 transition-opacity">
               <Github className="w-6 h-6" />
             </Link>
           </div>

@@ -2,7 +2,7 @@
 
 import { motion, useInView, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { timeline, type TimelineEntry } from "@/lib/site-data"
 
 const EASE = [0.16, 1, 0.3, 1] as const
@@ -58,6 +58,13 @@ function TimelineRow({
   const ref = useRef<HTMLLIElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.45 })
   const isLeft = side === "left"
+
+  // Collapse long bullet lists (e.g. coursework) to the top 5 with a toggle.
+  const COLLAPSE_AT = 5
+  const [expanded, setExpanded] = useState(false)
+  const canCollapse = entry.bullets.length > COLLAPSE_AT
+  const visibleBullets =
+    canCollapse && !expanded ? entry.bullets.slice(0, COLLAPSE_AT) : entry.bullets
 
   return (
     <li ref={ref} className="relative">
@@ -158,18 +165,33 @@ function TimelineRow({
               isLeft ? "md:justify-end" : "",
             ].join(" ")}
           >
-            {entry.bullets.map((b, bi) => (
+            {visibleBullets.map((b, bi) => (
               <motion.li
                 key={b}
                 initial={{ opacity: 0, y: 6 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 6 }}
-                transition={{ duration: 0.4, delay: 0.35 + bi * 0.08 }}
+                transition={{ duration: 0.4, delay: 0.35 + Math.min(bi, COLLAPSE_AT) * 0.08 }}
                 className="inline-flex items-center gap-1.5 rounded-full border border-line-strong bg-card px-3 py-1 text-[0.8rem] font-medium text-ink shadow-sm"
               >
                 <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-burgundy" />
                 <span className="tnum">{b}</span>
               </motion.li>
             ))}
+
+            {canCollapse && (
+              <li>
+                <button
+                  type="button"
+                  onClick={() => setExpanded((v) => !v)}
+                  aria-expanded={expanded}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-dashed border-line-strong bg-transparent px-3 py-1 text-[0.8rem] font-medium text-ink-soft transition-colors hover:border-burgundy hover:text-ink"
+                >
+                  {expanded
+                    ? "Show less"
+                    : `See all ${entry.bullets.length}`}
+                </button>
+              </li>
+            )}
           </ul>
 
           {/* Tools */}

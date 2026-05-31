@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import { Github, Linkedin, Instagram } from "lucide-react"
+import { Github, Linkedin } from "lucide-react"
 import { profile } from "@/lib/site-data"
 import { ContactButton } from "@/components/site/contact-form"
 
@@ -12,7 +12,7 @@ const EASE = [0.16, 1, 0.3, 1] as const
 const LINES = [
   [{ t: "Software engineer" }],
   [{ t: "building across" }],
-  [{ t: "web, AI & " }, { t: "systems.", italic: true, accent: true }],
+  [{ t: "Fullstack, AI & " }, { t: "systems.", italic: true, accent: true }],
 ]
 
 export function Hero() {
@@ -42,7 +42,7 @@ export function Hero() {
       id="top"
       ref={ref}
       onMouseMove={onMove}
-      className="hero-stage relative flex min-h-dvh flex-col justify-end overflow-hidden px-5 pb-16 pt-28 sm:px-8 sm:pb-20"
+      className="hero-stage relative flex min-h-dvh flex-col justify-center overflow-hidden px-5 pb-24 pt-32 sm:px-8 sm:pb-28"
     >
       <motion.div
         style={{ y, opacity }}
@@ -56,12 +56,12 @@ export function Hero() {
           className="mb-8 flex items-center gap-3 font-mono text-[0.7rem] uppercase tracking-[0.24em]"
         >
           <span className="font-medium text-burgundy">Portfolio</span>
-          <span className="h-px w-12 bg-white/20" />
-          <span className="text-white/45">{profile.location}</span>
+          <span className="h-px w-12 bg-ink/20" />
+          <span className="text-ink-faint">{profile.location}</span>
         </motion.div>
 
         {/* Headline — Newsreader serif, line-mask reveal */}
-        <h1 className="font-hero text-[clamp(2.75rem,9vw,8rem)] font-medium leading-[1.0] tracking-[-0.018em] text-[#F4F1EA]">
+        <h1 className="font-hero text-[clamp(2.75rem,9vw,8rem)] font-medium leading-[1.0] tracking-[-0.018em] text-ink">
           {LINES.map((line, li) => (
             <span key={li} className="block overflow-hidden py-[0.03em]">
               <motion.span
@@ -97,15 +97,15 @@ export function Hero() {
           transition={{ duration: 0.8, ease: EASE, delay: 0.85 }}
           className="mt-9 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"
         >
-          <p className="max-w-md text-pretty text-[0.95rem] leading-relaxed text-white/65">
-            Hey — I&apos;m {profile.name.split(" ")[0]}, a CS, Data Science &amp;
+          <p className="max-w-md text-pretty text-[0.95rem] leading-relaxed text-ink-soft">
+            Hey, I&apos;m {profile.name.split(" ")[0]}, a CS, Data Science &amp;
             Economics student at UW–Madison shipping production software at the
             intersection of web development and applied AI.
           </p>
 
           <div className="flex flex-col items-start gap-4 sm:items-end">
             {/* Availability pill */}
-            <span className="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/[0.04] px-3.5 py-2 font-mono text-[0.7rem] uppercase tracking-[0.13em] text-white/70 backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2.5 rounded-full border border-line bg-ink/[0.04] px-3.5 py-2 font-mono text-[0.7rem] uppercase tracking-[0.13em] text-ink-soft backdrop-blur-sm">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-burgundy opacity-70" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-burgundy" />
@@ -115,10 +115,21 @@ export function Hero() {
 
             <div className="flex items-center gap-2">
               {[
-                { href: profile.socials.github, Icon: Github, label: "GitHub" },
-                { href: profile.socials.linkedin, Icon: Linkedin, label: "LinkedIn" },
-                { href: profile.socials.instagram, Icon: Instagram, label: "Instagram" },
-              ].map(({ href, Icon, label }) => (
+                {
+                  href: profile.socials.github,
+                  Icon: Github,
+                  label: "GitHub",
+                  colorClass: "text-ink dark:text-[#f5f5f5]",
+                  hoverClass: "hover:border-ink/60 dark:hover:border-white/60",
+                },
+                {
+                  href: profile.socials.linkedin,
+                  Icon: Linkedin,
+                  label: "LinkedIn",
+                  colorClass: "text-[#0A66C2]",
+                  hoverClass: "hover:border-[#0A66C2]",
+                },
+              ].map(({ href, Icon, label, colorClass, hoverClass }) => (
                 <a
                   key={label}
                   href={href}
@@ -126,7 +137,7 @@ export function Hero() {
                   rel="noopener noreferrer"
                   aria-label={label}
                   title={label}
-                  className="rounded-full border border-white/15 p-2 text-white/60 transition-colors hover:border-white/60 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy"
+                  className={`rounded-full border border-line p-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy ${colorClass} ${hoverClass}`}
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -135,7 +146,8 @@ export function Hero() {
               <ContactButton
                 label="Contact me"
                 showIcon={true}
-                className="rounded-full border border-white/15 bg-transparent px-3.5 py-2 font-mono text-[0.65rem] uppercase tracking-[0.1em] text-white/60 hover:border-white/60 hover:bg-transparent hover:text-white h-auto"
+                iconClassName="text-[#EA4335]"
+                className="rounded-full border border-line bg-transparent px-3.5 py-2 font-mono text-[0.65rem] uppercase tracking-[0.1em] text-ink-soft hover:border-ink/60 hover:bg-transparent hover:text-ink h-auto"
                 variant="ghost"
               />
             </div>
@@ -154,7 +166,7 @@ export function Hero() {
           aria-hidden
           animate={reduced ? {} : { y: [0, 7, 0] }}
           transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-          className="block font-mono text-[0.65rem] uppercase tracking-[0.3em] text-white/40"
+          className="block font-mono text-[0.65rem] uppercase tracking-[0.3em] text-ink-faint"
         >
           scroll
         </motion.span>

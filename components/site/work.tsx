@@ -2,7 +2,8 @@
 
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
-import { forwardRef, useState } from "react"
+import { forwardRef, useEffect, useMemo, useRef, useState } from "react"
+import { Check, ChevronDown, SlidersHorizontal } from "lucide-react"
 import {
   projectCategories,
   projects,
@@ -102,11 +103,24 @@ ProjectCard.displayName = "ProjectCard"
 
 export function Work() {
   const [filter, setFilter] = useState<Filter>("All")
+  const [skill, setSkill] = useState<string | null>(null)
   const filters: Filter[] = ["All", ...projectCategories]
-  const shown =
-    filter === "All"
-      ? projects
-      : projects.filter((p) => p.categories.includes(filter))
+
+  // Every unique tech tag across all projects, alphabetized.
+  const allSkills = useMemo(
+    () =>
+      Array.from(new Set(projects.flatMap((p) => p.tags))).sort((a, b) =>
+        a.localeCompare(b),
+      ),
+    [],
+  )
+
+  // Category and skill filters combine (AND). Projects keep their wow-order.
+  const shown = projects.filter(
+    (p) =>
+      (filter === "All" || p.categories.includes(filter)) &&
+      (!skill || p.tags.includes(skill)),
+  )
 
   return (
     <section id="work" className="relative px-5 py-24 sm:px-8 sm:py-32">
@@ -115,7 +129,9 @@ export function Work() {
           <span className="eyebrow">02 — Work</span>
           <span className="hidden h-px flex-1 bg-line-strong sm:block" />
           <span className="font-mono text-[0.7rem] uppercase tracking-[0.14em] text-ink-faint tnum">
-            {projects.length} projects
+            {shown.length === projects.length
+              ? `${projects.length} projects`
+              : `${shown.length} / ${projects.length}`}
           </span>
         </header>
 
@@ -127,43 +143,187 @@ export function Work() {
           className="max-w-2xl font-display text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.08] text-ink"
         >
           Things I&apos;ve{" "}
-          <span className="font-hero italic text-burgundy">built</span> — shipped
+          <span className="font-hero italic text-burgundy">built</span>: shipped
           products, systems &amp; experiments.
         </motion.h2>
 
-        {/* Category filter */}
-        <div className="mt-9 flex flex-wrap gap-2">
-          {filters.map((f) => {
-            const on = filter === f
-            return (
-              <button
-                key={f}
-                onClick={() => setFilter(f)}
-                aria-pressed={on}
-                className={`rounded-full border px-3.5 py-1.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] transition-colors ${
-                  on
-                    ? "border-burgundy bg-burgundy text-paper"
-                    : "border-line text-ink-soft hover:border-line-strong hover:text-ink"
-                }`}
-              >
-                {f}
-              </button>
-            )
-          })}
+        {/* Filters: category chips + searchable skill dropdown */}
+        <div className="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3">
+          <div className="flex flex-wrap gap-2">
+            {filters.map((f) => {
+              const on = filter === f
+              return (
+                <button
+                  key={f}
+                  onClick={() => setFilter(f)}
+                  aria-pressed={on}
+                  className={`rounded-full border px-3.5 py-1.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] transition-colors ${
+                    on
+                      ? "border-burgundy bg-burgundy text-paper"
+                      : "border-line text-ink-soft hover:border-line-strong hover:text-ink"
+                  }`}
+                >
+                  {f}
+                </button>
+              )
+            })}
+          </div>
+
+          <div className="sm:ml-auto">
+            <SkillFilter skills={allSkills} value={skill} onChange={setSkill} />
+          </div>
         </div>
 
         {/* Grid */}
-        <motion.div
-          layout
-          className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          <AnimatePresence mode="popLayout">
-            {shown.map((p) => (
-              <ProjectCard key={p.title} p={p} />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        {shown.length > 0 ? (
+          <motion.div
+            layout
+            className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            <AnimatePresence mode="popLayout">
+              {shown.map((p) => (
+                <ProjectCard key={p.title} p={p} />
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        ) : (
+          <div className="mt-10 rounded-xl border border-dashed border-line-strong px-6 py-16 text-center">
+            <p className="text-sm text-ink-soft">
+              No projects match{" "}
+              <span className="font-medium text-ink">{filter}</span>
+              {skill && (
+                <>
+                  {" "}
+                  +{" "}
+                  <span className="font-medium text-ink">{skill}</span>
+                </>
+              )}
+              .
+            </p>
+            <button
+              onClick={() => {
+                setFilter("All")
+                setSkill(null)
+              }}
+              className="mt-4 rounded-full border border-line px-3.5 py-1.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] text-ink-soft transition-colors hover:border-burgundy hover:text-burgundy"
+            >
+              Clear filters
+            </button>
+          </div>
+        )}
       </div>
     </section>
+  )
+}
+
+// Searchable dropdown to filter projects by a single tech tag.
+function SkillFilter({
+  skills,
+  value,
+  onChange,
+}: {
+  skills: string[]
+  value: string | null
+  onChange: (s: string | null) => void
+}) {
+  const [open, setOpen] = useState(false)
+  const [query, setQuery] = useState("")
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!open) return
+    const onDoc = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false)
+    }
+    document.addEventListener("mousedown", onDoc)
+    document.addEventListener("keydown", onKey)
+    return () => {
+      document.removeEventListener("mousedown", onDoc)
+      document.removeEventListener("keydown", onKey)
+    }
+  }, [open])
+
+  const filtered = skills.filter((s) =>
+    s.toLowerCase().includes(query.trim().toLowerCase()),
+  )
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        className={`flex items-center gap-2 rounded-full border px-3.5 py-1.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] transition-colors ${
+          value
+            ? "border-burgundy bg-burgundy text-paper"
+            : "border-line text-ink-soft hover:border-line-strong hover:text-ink"
+        }`}
+      >
+        <SlidersHorizontal className="h-3.5 w-3.5" />
+        <span className="normal-case tracking-normal">{value ?? "Filter by skill"}</span>
+        <ChevronDown
+          className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      {open && (
+        <div className="absolute right-0 z-30 mt-2 w-64 overflow-hidden rounded-xl border border-line bg-card shadow-lift">
+          <div className="border-b border-line p-2">
+            <input
+              autoFocus
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search skills…"
+              className="w-full rounded-md bg-paper-2 px-2.5 py-1.5 text-sm text-ink placeholder:text-ink-faint focus:outline-none focus-visible:ring-2 focus-visible:ring-burgundy"
+            />
+          </div>
+          <ul className="max-h-64 overflow-y-auto p-1" role="listbox">
+            <li>
+              <button
+                type="button"
+                onClick={() => {
+                  onChange(null)
+                  setOpen(false)
+                  setQuery("")
+                }}
+                className={`flex w-full items-center justify-between rounded-md px-2.5 py-1.5 text-left text-sm transition-colors hover:bg-paper-2 ${
+                  !value ? "font-medium text-burgundy" : "text-ink-soft"
+                }`}
+              >
+                All skills
+                {!value && <Check className="h-3.5 w-3.5" />}
+              </button>
+            </li>
+            {filtered.map((s) => (
+              <li key={s}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    onChange(s)
+                    setOpen(false)
+                    setQuery("")
+                  }}
+                  className={`flex w-full items-center justify-between rounded-md px-2.5 py-1.5 text-left text-sm transition-colors hover:bg-paper-2 ${
+                    value === s ? "font-medium text-burgundy" : "text-ink"
+                  }`}
+                >
+                  {s}
+                  {value === s && <Check className="h-3.5 w-3.5" />}
+                </button>
+              </li>
+            ))}
+            {filtered.length === 0 && (
+              <li className="px-2.5 py-3 text-center text-sm text-ink-faint">
+                No matching skill
+              </li>
+            )}
+          </ul>
+        </div>
+      )}
+    </div>
   )
 }
