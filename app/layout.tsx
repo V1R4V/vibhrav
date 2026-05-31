@@ -48,7 +48,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: profile.name,
   description: `${profile.name}, software engineer ${profile.tagline}. Web development, applied AI, and distributed systems.`,
-  icons: { icon: "/favicon.svg" },
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    shortcut: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+  },
   openGraph: {
     title: profile.name,
     description: `Software engineer ${profile.tagline}.`,

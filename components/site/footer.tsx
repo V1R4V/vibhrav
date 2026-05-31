@@ -87,7 +87,11 @@ export function Footer() {
                 <a
                   key={label}
                   href={href}
-                  target={href.startsWith("http") ? "_blank" : undefined}
+                  target={
+                    href.startsWith("http") || href === profile.socials.resume
+                      ? "_blank"
+                      : undefined
+                  }
                   rel="noopener noreferrer"
                   aria-label={label}
                   title={label}
@@ -134,8 +138,6 @@ export function Footer() {
           <span>
             © {new Date().getFullYear()} {profile.name}
           </span>
-          <span>Web Dev &amp; AI · UW–Madison</span>
-          <span>Built in {profile.location}</span>
         </div>
       </div>
     </footer>

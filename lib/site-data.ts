@@ -495,7 +495,7 @@ export const techStack: TechCategory[] = [
     summary: "Data pipelines, distributed processing, and deployment.",
     items: [
       { name: "Elasticsearch", desc: "Search + Retrieval", icon: "elasticsearch/elasticsearch-original" },
-      { name: "dbt + Airbyte", desc: "ELT Transformations", slug: "dbt" },
+      { name: "dbt + Airbyte", desc: "ELT Transformations", slug: "airbyte" },
       { name: "Apache Kafka", desc: "Streaming Pipelines", icon: "apachekafka/apachekafka-original" },
       { name: "Apache Spark", desc: "Distributed Compute", icon: "apachespark/apachespark-original" },
       { name: "HDFS / Hadoop", desc: "Data Infrastructure", slug: "apachehadoop" },
