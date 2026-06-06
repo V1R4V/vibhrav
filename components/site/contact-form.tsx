@@ -26,6 +26,8 @@ interface ContactButtonProps {
   variant?: "default" | "outline" | "ghost" | "secondary" | "destructive" | "link"
   /** Whether to show the Mail icon */
   showIcon?: boolean
+  /** Custom trigger content. When provided, replaces the label + icon. */
+  children?: React.ReactNode
 }
 
 export function ContactButton({
@@ -35,6 +37,7 @@ export function ContactButton({
   iconClassName,
   variant = "default",
   showIcon = true,
+  children,
 }: ContactButtonProps) {
   const [open, setOpen] = useState(false)
   const [name, setName] = useState("")
@@ -110,8 +113,14 @@ export function ContactButton({
         onClick={() => setOpen(true)}
         aria-label={ariaLabel || (label ? undefined : "Contact me")}
       >
-        {showIcon && <Mail className={`h-4 w-4 ${iconClassName ?? ""}`} />}
-        {label ? label : <span className="sr-only">{ariaLabel || "Contact me"}</span>}
+        {children ? (
+          children
+        ) : (
+          <>
+            {showIcon && <Mail className={`h-4 w-4 ${iconClassName ?? ""}`} />}
+            {label ? label : <span className="sr-only">{ariaLabel || "Contact me"}</span>}
+          </>
+        )}
       </Button>
 
       <Dialog open={open} onOpenChange={setOpen}>

@@ -67,7 +67,7 @@ export const timeline: TimelineEntry[] = [
     period: "Jan 2022 — Mar 2023",
     title: "Software Development Intern",
     org: "Pink City Expressways",
-    location: "Jaipur, India",
+    location: "New Delhi, India",
     logo: "/company-logos/pinkcity.gif",
     summary:
       "Built a Python and SQL CRM to track 30+ business leads plus an automated contractor-management tool, lifting successful partnerships from 15 to 19 and adding $18K in revenue through better resource allocation.",

@@ -39,7 +39,7 @@ export function About() {
               {about.heading.split(", ").map((w, i, arr) => (
                 <span key={w}>
                   {i === arr.length - 1 ? (
-                    <span className="font-hero italic text-burgundy">{w}</span>
+                    <span className="font-hero italic text-gold">{w}</span>
                   ) : (
                     `${w}, `
                   )}
@@ -53,8 +53,9 @@ export function About() {
               {["Fullstack + AI", "Product Impact", "High Ownership"].map((c) => (
                 <span
                   key={c}
-                  className="rounded-full border border-line px-3 py-1 font-mono text-[0.7rem] uppercase tracking-wide text-ink-faint"
+                  className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-card px-3.5 py-1.5 font-mono text-[0.7rem] uppercase tracking-wide text-ink shadow-sm transition-colors hover:border-burgundy"
                 >
+                  <span className="h-1.5 w-1.5 rounded-full bg-[hsl(var(--gold))]" />
                   {c}
                 </span>
               ))}
@@ -80,12 +81,19 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.6, ease: EASE, delay: i * 0.08 }}
-              className="bg-card p-7"
+              className="group relative bg-card p-7 transition-colors duration-300 hover:bg-paper-2"
             >
-              <span className="font-mono text-[0.7rem] text-ember">
-                0{i + 1}
-              </span>
-              <h3 className="mt-3 font-display text-xl text-ink">{p.title}</h3>
+              {/* Top accent line — draws in on hover */}
+              <span className="pointer-events-none absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-gradient-to-r from-burgundy via-[hsl(var(--gold))] to-transparent opacity-0 transition-all duration-500 group-hover:scale-x-100 group-hover:opacity-100" />
+
+              <div className="flex items-start justify-between">
+                <span className="text-gold font-mono text-4xl font-light leading-none opacity-40 transition-opacity duration-300 group-hover:opacity-100">
+                  0{i + 1}
+                </span>
+                <span className="mt-1 h-2 w-2 rounded-full bg-[hsl(var(--gold))] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              </div>
+
+              <h3 className="mt-5 font-display text-xl text-ink">{p.title}</h3>
               <p className="mt-1 font-mono text-[0.7rem] uppercase tracking-wide text-ink-faint">
                 {p.subtitle}
               </p>
@@ -112,7 +120,7 @@ export function About() {
             >
               <p className="font-display text-2xl leading-snug text-ink sm:text-[1.75rem]">
                 Based in {profile.location}, originally from{" "}
-                <span className="font-hero italic text-burgundy">
+                <span className="font-hero italic text-gold">
                   {profile.origin}
                 </span>
                 .

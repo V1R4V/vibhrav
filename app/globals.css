@@ -33,6 +33,11 @@
     --teal-soft: 186 44% 42%;
     --gold: 38 80% 48%;
 
+    /* Cursor spotlight — deep maroon / dark-red wash that follows the pointer.
+       soft-light keeps it as a gentle warming on the bright cream page. */
+    --cursor-blend: soft-light;
+    --cursor-strength: 0.5;
+
     /* Gradient stops — crimson → badger red → warm coral */
     --grad-1: 348 72% 38%; /* deep crimson */
     --grad-2: 358 90% 45%; /* badger red */
@@ -91,6 +96,10 @@
     --teal: 187 66% 54%; /* #2FC6D4 cyan-teal */
     --teal-soft: 187 60% 60%;
     --gold: 40 92% 60%;
+
+    /* On near-black, screen blend lets the maroon glow read as real light. */
+    --cursor-blend: screen;
+    --cursor-strength: 1;
 
     --grad-1: 348 80% 60%; /* crimson brighter on dark */
     --grad-2: 358 90% 64%; /* red */
@@ -216,6 +225,41 @@
     background-size: 200% 100%;
   }
 
+  /* Metallic gold emphasis — the "Engineer" hero word + each section's italic
+     accent word. LIGHT mode (this base rule) uses a deeper antique-gold ramp
+     so it doesn't glare on the cream page. */
+  .text-gold {
+    background-image: linear-gradient(
+      360deg,
+      #9c7518 0%,
+      #c2952f 25%,
+      #dcb24f 48%,
+      #e6c168 50%,
+      #dcb24f 52%,
+      #c2952f 75%,
+      #9c7518 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 200% 100%;
+  }
+  /* DARK mode — the original bright "gold foil" ramp (deep bronze anchors
+     alternating with champagne glints). Left untouched. */
+  .dark .text-gold {
+    background-image: linear-gradient(
+      360deg,
+      #8a5a1f 0%,
+      #cb9b51 22%,
+      #f6e27a 45%,
+      #fff6c4 50%,
+      #f6e27a 55%,
+      #cb9b51 78%,
+      #8a5a1f 100%
+    );
+  }
+
   /* Glass surface (nav, chips, cards in dark) */
   .glass {
     background: hsl(var(--glass-bg));
@@ -329,6 +373,17 @@
     background: radial-gradient(circle, hsl(var(--grad-3) / 0.4), transparent 70%);
     animation: drift-c 31s ease-in-out infinite alternate;
   }
+  /* Minimal gold tint — a single warm orb that drifts low-right as a quiet
+     counterpoint to the crimson ramp. Kept faint so it reads as light, not color. */
+  .aurora-orb.o4 {
+    width: 34vw;
+    height: 34vw;
+    bottom: -8vw;
+    right: 14vw;
+    opacity: calc(0.4 * var(--aurora-strength));
+    background: radial-gradient(circle, hsl(var(--gold) / 0.4), transparent 70%);
+    animation: drift-a 26s ease-in-out infinite alternate;
+  }
   @keyframes drift-a {
     to {
       transform: translate3d(8vw, 10vw, 0) scale(1.15);
@@ -343,6 +398,25 @@
     to {
       transform: translate3d(6vw, -8vw, 0) scale(1.2);
     }
+  }
+
+  /* ── Cursor spotlight — a warm gold glow that tracks the pointer across the
+     whole page (driven by --cx / --cy from <CursorGlow/>). Fixed overlay,
+     pointer-events none, theme-aware blend so it warms rather than washes. */
+  .cursor-glow {
+    position: fixed;
+    inset: 0;
+    z-index: 35;
+    pointer-events: none;
+    opacity: var(--cursor-strength);
+    mix-blend-mode: var(--cursor-blend);
+    background: radial-gradient(
+      220px circle at var(--cx, -200px) var(--cy, -200px),
+      hsl(0 68% 30% / 0.55),
+      hsl(0 60% 20% / 0.22) 40%,
+      transparent 64%
+    );
+    transition: opacity 0.4s ease;
   }
 
   /* Logo marquee — seamless loop of a duplicated track */
@@ -421,5 +495,8 @@
   }
   .aurora-orb {
     animation: none !important;
+  }
+  .cursor-glow {
+    display: none !important;
   }
 }

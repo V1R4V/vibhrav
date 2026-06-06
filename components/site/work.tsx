@@ -143,8 +143,9 @@ export function Work() {
           className="max-w-2xl font-display text-[clamp(1.75rem,4vw,2.75rem)] leading-[1.08] text-ink"
         >
           Things I&apos;ve{" "}
-          <span className="font-hero italic text-burgundy">built</span>: shipped
-          products, systems &amp; experiments.
+          <span className="font-hero italic text-gold">Built</span>:
+          <br />
+          shipped products, systems &amp; experiments.
         </motion.h2>
 
         {/* Filters: category chips + searchable skill dropdown */}

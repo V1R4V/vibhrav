@@ -9,8 +9,9 @@ import { ContactButton } from "@/components/site/contact-form"
 const EASE = [0.16, 1, 0.3, 1] as const
 
 // Headline rendered line-by-line so each can mask-reveal independently.
-const LINES = [
-  [{ t: "Software engineer" }],
+type Seg = { t: string; italic?: boolean; accent?: boolean; gold?: boolean }
+const LINES: Seg[][] = [
+  [{ t: "Software " }, { t: "Engineer", gold: true }],
   [{ t: "building across" }],
   [{ t: "Fullstack, AI & " }, { t: "systems.", italic: true, accent: true }],
 ]
@@ -80,6 +81,7 @@ export function Hero() {
                     className={[
                       seg.italic ? "italic" : "",
                       seg.accent ? "text-grad" : "",
+                      seg.gold ? "text-gold" : "",
                     ].join(" ")}
                   >
                     {seg.t}
@@ -97,10 +99,19 @@ export function Hero() {
           transition={{ duration: 0.8, ease: EASE, delay: 0.85 }}
           className="mt-9 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"
         >
-          <p className="max-w-md text-pretty text-[0.95rem] leading-relaxed text-ink-soft">
-            Hey, I&apos;m {profile.name.split(" ")[0]}, a CS, Data Science &amp;
-            Economics student at UW–Madison shipping production software at the
-            intersection of web development and applied AI.
+          <p className="max-w-md text-pretty text-[0.98rem] leading-relaxed text-ink/75">
+            Hey, I&apos;m{" "}
+            <span className="font-medium text-gold">
+              {profile.name.split(" ")[0]}
+            </span>
+            , a{" "}
+            <span className="font-medium text-ink">
+              CS, Data Science &amp; Economics
+            </span>{" "}
+            student at UW–Madison shipping production software at the
+            intersection of{" "}
+            <span className="font-medium text-ink">web development</span> and{" "}
+            <span className="font-medium text-ink">applied AI</span>.
           </p>
 
           <div className="flex flex-col items-start gap-4 sm:items-end">

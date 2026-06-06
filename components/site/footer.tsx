@@ -30,24 +30,21 @@ export function Footer() {
           Say hello
         </p>
 
-        {/* Big CTA */}
-        <p className="group mt-5 block font-display text-[clamp(2.5rem,9vw,7rem)] font-semibold leading-[0.92] tracking-[-0.03em]">
+        {/* Big CTA headline */}
+        <p className="mt-5 font-display text-[clamp(2.5rem,9vw,7rem)] font-semibold leading-[0.92] tracking-[-0.03em] text-[#F4F1EA]">
           Let&apos;s build
           <br />
-          something{" "}
-          <span className="inline-block font-hero font-normal italic">
-            ↗
-          </span>
+          something<span className="text-gold">.</span>
         </p>
 
-        {/* Contact CTA button */}
-        <div className="mt-8">
+        {/* Obvious contact CTA — a clearly labelled button, not a bare arrow. */}
+        <div className="mt-9">
           <ContactButton
             label="Get in touch"
-            showIcon={true}
+            showIcon
             iconClassName="text-[#EA4335]"
-            className="rounded-full border border-white/25 bg-transparent px-6 py-3 font-mono text-xs uppercase tracking-[0.12em] text-white hover:border-white hover:bg-white hover:text-[#0B0A08] h-auto transition-colors"
             variant="ghost"
+            className="group h-auto gap-3 rounded-full border border-white/30 bg-white/[0.05] px-7 py-4 font-mono text-sm uppercase tracking-[0.14em] text-white transition-colors hover:border-white hover:bg-white hover:text-[#0B0A08]"
           />
         </div>
 

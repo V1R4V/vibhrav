@@ -9,6 +9,7 @@ import "./globals.css"
 import { SmoothScroll } from "@/components/site/smooth-scroll"
 import { ThemeProvider } from "@/components/site/theme-provider"
 import { Ambient } from "@/components/site/ambient"
+import { CursorGlow } from "@/components/site/cursor-glow"
 import { Toaster } from "@/components/ui/sonner"
 import { profile } from "@/lib/site-data"
 
@@ -72,6 +73,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <Ambient />
+          <CursorGlow />
           <SmoothScroll>{children}</SmoothScroll>
           <Toaster />
         </ThemeProvider>

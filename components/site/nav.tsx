@@ -72,7 +72,7 @@ export function Nav() {
             aria-hidden
             className="block h-2.5 w-2.5 rotate-45 bg-[linear-gradient(135deg,hsl(var(--grad-1)),hsl(var(--grad-2)),hsl(var(--grad-3)))] transition-transform duration-300 group-hover:rotate-[135deg]"
           />
-          <span className="font-mono text-xs font-medium tracking-[0.18em] text-ink transition-colors">
+          <span className="text-gold font-mono text-sm font-semibold tracking-[0.18em] transition-colors">
             {profile.name}
           </span>
         </a>
