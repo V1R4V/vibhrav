@@ -12,6 +12,7 @@ import { Ambient } from "@/components/site/ambient"
 import { CursorGlow } from "@/components/site/cursor-glow"
 import { Toaster } from "@/components/ui/sonner"
 import { profile } from "@/lib/site-data"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // Body / UI — clean technical grotesque.
 const spaceGrotesk = Space_Grotesk({
@@ -77,6 +78,7 @@ export default function RootLayout({
           <SmoothScroll>{children}</SmoothScroll>
           <Toaster />
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   )
