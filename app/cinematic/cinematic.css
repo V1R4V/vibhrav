@@ -138,3 +138,29 @@ body { background: #0c0b0c; }
 
 @media (min-width: 768px) and (max-height: 740px) { .hero-statement { font-size: 18px; } }
 @media (max-width: 767px) { .footer-invitation { font-size: clamp(39px, 10.5vw, 76px); } }
+/* A short desktop window gets a taller natural-flow stage, preserving the
+   full-width wordmark without colliding with its supporting copy. */
+@media (min-width: 768px) and (min-height: 501px) and (max-height: 660px) {
+  .cinematic-stage { position: relative; height: max(800px, 56vw); min-height: 800px; }
+  .cinematic-hero { height: auto; }
+  .cinematic-hero + .experience-chapter { margin-top: 0; }
+}
+/* Touch screens keep the same pinned hero-to-experience handoff. */
+@media (max-width: 767px) and (min-height: 501px) and (prefers-reduced-motion: no-preference) {
+  .cinematic-hero { height: 180svh; }
+  .cinematic-hero + .experience-chapter { margin-top: -80svh; }
+}
+@media (scripting: none) {
+  .cinematic-hero { height: auto; }
+  .cinematic-hero + .experience-chapter { margin-top: 0; }
+}
+@media (min-width: 768px) and (max-height: 820px) {
+  .hero-topline { top: 106px; }
+  .hero-topline .hero-role { margin-bottom: 8px; }
+  .hero-statement { font-size: 18px; }
+}
+@media (min-width: 768px) and (min-height: 501px) and (min-aspect-ratio: 2/1) {
+  .cinematic-stage { position: relative; height: max(800px, 56vw); min-height: 800px; }
+  .cinematic-hero { height: auto; }
+  .cinematic-hero + .experience-chapter { margin-top: 0; }
+}

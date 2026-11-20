@@ -18,10 +18,10 @@
 .pg-exhibit-status { font-size: 12px; color: #665c50; line-height: 1.6; margin: 0 0 24px; }
 .pg-details { min-height: 44px; display: inline-flex; align-items: center; gap: 24px; border-bottom: 1px solid #786444; font-size: 13px; color: #3f3321; }
 .pg-exhibit-visual { position: relative; min-height: 650px; background: #191619; overflow: clip; isolation: isolate; display: flex; align-items: center; justify-content: center; perspective: 1300px; padding: 64px 32px 100px; }
-.pg-exhibit-light { position: absolute; inset: 0; z-index: -1; opacity: .9; background: radial-gradient(ellipse at 50% 30%, var(--exhibit-accent), transparent 68%); }
-.pg-orbit { width: 110%; aspect-ratio: 1; border: 1px solid rgb(198 165 108 / 22%); border-radius: 50%; position: absolute; transform: rotateX(68deg) rotateZ(-22deg); z-index: -1; }
+.pg-exhibit-light { transform: translate3d(0, var(--ambient-lift, 0px), 0); position: absolute; inset: 0; z-index: -1; opacity: .9; background: radial-gradient(ellipse at 50% 30%, var(--exhibit-accent), transparent 68%); }
+.pg-orbit { width: 110%; aspect-ratio: 1; border: 1px solid rgb(198 165 108 / 22%); border-radius: 50%; position: absolute; transform: rotateX(68deg) rotateZ(var(--orbit-turn, -22deg)); z-index: -1; }
 .pg-orbit::after { content: ""; position: absolute; inset: 12%; border-radius: 50%; border: 1px solid rgb(198 165 108 / 10%); }
-.pg-display { width: 100%; max-width: 740px; aspect-ratio: 1.45; position: relative; transform: translateY(var(--display-lift, 0px)) rotateX(var(--display-rotation, 0deg)) rotateY(-8deg); transform-style: preserve-3d; }
+.pg-display { width: 100%; max-width: 740px; aspect-ratio: 1.45; position: relative; transform: translate3d(0, var(--display-lift, 0px), var(--display-depth, 0px)) rotateX(var(--display-rotation, 0deg)) rotateY(var(--display-turn, -8deg)) scale(var(--display-scale, 1)); transform-style: preserve-3d; }
 .pg-display-surface { position: absolute; inset: 0; overflow: clip; background: #141316; border: 1px solid #8d7b60; border-radius: 8px; box-shadow: 10px 24px 45px rgb(0 0 0 / 45%); transform: translateZ(10px); }
 .pg-display-surface img { object-fit: contain; filter: grayscale(1); transition: filter 350ms ease; }
 .pg-display-edge { position: absolute; inset: -3px; border: 3px solid #473e32; border-radius: 10px; transform: translateZ(1px); }
@@ -90,7 +90,7 @@
   .pg-exhibit h3 { font-size: 46px; max-width: 22ch; }
   .pg-exhibit-summary { max-width: 65ch; font-size: 16px; }
   .pg-exhibit-visual { min-height: 540px; padding-inline: 48px; }
-  .pg-display { max-width: 680px; transform: none; }
+  .pg-display { max-width: 680px; }
   .pg-display-surface img { filter: none; }
   .pg-catalogue-head { gap: 48px; }
   .pg-catalogue-controls { gap: 24px; }
@@ -131,3 +131,22 @@
 @media (prefers-reduced-motion: reduce), (hover: none) { .pg-display-surface img { filter: none; } }
 @media (prefers-reduced-motion: reduce) { .pg-display { transform: none; } .pg-display-base { display: none; } }
 [data-motion="paused"] .pg-display { transform: none; }
+
+/* Keep the exhibit choreography on touch screens: the display holds while its
+   readable copy rises over it. Each article retains its natural content height. */
+@media (max-width: 900px) and (min-height: 540px) and (prefers-reduced-motion: no-preference) {
+  .pg-exhibit { align-items: start; background: #191619; }
+  .pg-exhibit-visual { grid-row: 1; position: sticky; top: 92px; min-height: clamp(340px, 52svh, 540px); z-index: 1; }
+  .pg-exhibit-copy { grid-row: 2; position: relative; z-index: 2; background: #e9e2d6; margin-top: -12px; box-shadow: 0 -18px 46px rgb(0 0 0 / 18%); }
+  .pg-exhibit-visual:focus-visible { z-index: 3; }
+}
+@media (max-width: 639px) and (min-height: 540px) and (prefers-reduced-motion: no-preference) {
+  .pg-exhibit-visual { top: 84px; min-height: clamp(320px, 46svh, 420px); perspective: 1000px; }
+}
+@media (max-height: 539px) and (max-width: 900px) {
+  .pg-exhibit-visual { min-height: 310px; padding-block: 36px 76px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pg-exhibit-light { transform: none; }
+  .pg-orbit { transform: rotateX(68deg) rotateZ(-22deg); }
+}

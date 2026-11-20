@@ -4,6 +4,7 @@ import { spawn, execFile } from 'node:child_process';
 import { once } from 'node:events';
 import { mkdtemp, rm } from 'node:fs/promises';
 import { join } from 'node:path';
+import { tmpdir } from 'node:os';
 import { promisify } from 'node:util';
 import { setTimeout as delay } from 'node:timers/promises';
 import { createContactHandlers } from '../lib/contact/server.mjs';
@@ -21,7 +22,8 @@ function request(body, ip = '203.0.113.1') {
 }
 
 test('real Redis atomically enforces contact limits across two application instances', async (t) => {
-  const directory = await mkdtemp('/private/tmp/portfolio-contact-redis-');
+  // Keep Darwin's Unix socket path short; use the system temp directory on CI.
+  const directory = await mkdtemp(join(process.platform === 'darwin' ? '/tmp' : tmpdir(), 'portfolio-contact-redis-'));
   const socket = join(directory, 'redis.sock');
   const child = spawn('redis-server', ['--port', '0', '--unixsocket', socket, '--unixsocketperm', '700', '--save', '', '--appendonly', 'no', '--dir', directory], { stdio: ['ignore', 'ignore', 'pipe'] });
   let startupError;

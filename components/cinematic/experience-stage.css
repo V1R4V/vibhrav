@@ -20,6 +20,7 @@
 .experience-step-navigation a { min-height: 44px; display: inline-flex; align-items: center; gap: 12px; color: var(--cinematic-muted); font-size: 13px; transition: color 180ms ease; }
 .experience-roles { min-width: 0; }
 .experience-role { min-height: 88svh; display: flex; flex-direction: column; justify-content: center; padding-block: 80px; border-top: 1px solid rgb(198 165 108 / 20%); scroll-margin-top: 96px; }
+.experience-role-content { transform: translate3d(0, var(--experience-role-shift, 0px), 0); opacity: var(--experience-role-opacity, 1); }
 .experience-role-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 28px; margin-bottom: 28px; color: #c6a56c; font-size: 13px; line-height: 1.6; }
 .experience-role-meta > span:first-child { max-width: 30ch; }
 .experience-role-meta > span:last-child { color: var(--cinematic-muted); }
@@ -53,5 +54,27 @@
   .experience-next { flex-direction: column; align-items: start; gap: 20px; margin-top: 8px; }
 }
 @media (max-width: 380px) { .experience-orb { max-width: 250px; } .experience-role h3 { font-size: 28px; } .experience-role-meta { font-size: 12px; } .experience-bullets li { font-size: 14px; } }
+@media (max-width: 767px) and (min-height: 501px) and (prefers-reduced-motion: no-preference) {
+  .experience-layout { gap: 0; }
+  .experience-sculpture { position: sticky; top: 72px; z-index: 5; max-width: none; width: 100%; display: grid; grid-template-columns: clamp(128px, 38vw, 152px) minmax(0, 1fr); grid-template-rows: auto 42px; gap: 0 16px; padding-block: 8px 2px; background: #0c0b0c; border-bottom: 1px solid rgb(198 165 108 / 22%); }
+  .experience-sculpture::before { content: ""; position: absolute; inset: 0 calc(var(--cinematic-gutter) * -1); z-index: -1; background: #0c0b0c; box-shadow: 0 12px 14px #0c0b0c; }
+  .experience-orb { grid-column: 1; grid-row: 1; width: 100%; max-width: none; margin: 0; }
+  .experience-brand { padding-inline: 15%; }
+  .experience-brand-mark { font-size: clamp(22px, 6vw, 28px); }
+  .experience-sculpture-caption { grid-column: 2; grid-row: 1; align-self: start; display: block; margin: 8px 0 0; padding: 0; border: 0; font-size: 11px; line-height: 1.5; }
+  .experience-sculpture-caption > span { display: block; }
+  .experience-sculpture-caption > span:last-child { margin-top: 7px; }
+  .experience-step-navigation { grid-column: 2; grid-row: 1; align-self: end; gap: 12px; justify-content: start; }
+  .experience-step-navigation a, .experience-step-navigation > span { width: 44px; min-height: 44px; justify-content: center; }
+  .experience-step-label { display: none; }
+  .experience-role-navigation { grid-column: 1 / -1; grid-row: 2; margin: 0; }
+  .experience-role-navigation a { min-height: 40px; }
+  .experience-role { scroll-margin-top: calc(var(--experience-compact-height, 196px) + 16px); padding-block: 36px 44px; }
+  .experience-role h3 { font-size: clamp(28px, 7.3vw, 34px); }
+  .experience-role-meta { gap: 8px; }
+}
 @media (prefers-reduced-motion: reduce) { .experience-layout { grid-template-columns: 1fr; gap: 32px; } .experience-sculpture { position: relative; top: auto; width: 100%; max-width: 460px; justify-self: center; } .experience-orb { max-width: 300px; max-height: none; } .experience-role { min-height: 0; padding-block: 48px; max-width: 860px; margin-inline: auto; } .experience-brand { animation: none; } .experience-role-navigation a > span { transition: none; } }
+[data-motion="paused"] .experience-role-content { transform: none; opacity: 1; }
+@media (prefers-reduced-motion: reduce), (scripting: none) { .experience-role-content { transform: none; opacity: 1; } }
+@media (scripting: none) { .experience-sculpture { position: relative; top: auto; } }
 [data-motion="paused"] .experience-brand { animation: none; }

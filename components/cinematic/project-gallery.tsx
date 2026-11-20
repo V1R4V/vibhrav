@@ -62,15 +62,35 @@ export function ProjectGallery() {
     if (!node) return
     const media = matchMedia("(prefers-reduced-motion: reduce)")
     let frame = 0
-    const screens = Array.from(node.querySelectorAll<HTMLElement>("[data-project-display]"))
+    const screens = Array.from(node.querySelectorAll<HTMLElement>("[data-project-display]")).map(screen => ({
+      screen,
+      visual: screen.closest<HTMLElement>(".pg-exhibit-visual")!,
+      article: screen.closest<HTMLElement>(".pg-exhibit")!,
+    }))
+    const clamp = (value: number, min: number, max: number) => Math.max(min, Math.min(max, value))
     const update = () => {
       frame = 0
-      const enabled = !paused && !media.matches && innerWidth > 900 && innerHeight > 740
-      const measurements = screens.map(screen => ({ screen, box: screen.getBoundingClientRect() }))
-      for (const { screen, box } of measurements) {
-        const progress = Math.max(-1, Math.min(1, (box.top + box.height / 2 - innerHeight / 2) / innerHeight))
-        screen.style.setProperty("--display-rotation", enabled ? `${progress * -6}deg` : "0deg")
-        screen.style.setProperty("--display-lift", enabled ? `${progress * 26}px` : "0px")
+      const enabled = !paused && !media.matches
+      const compact = innerWidth <= 900
+      const short = innerHeight < 540
+      node.dataset.projectMotion = enabled ? "scroll" : "static"
+      // Measure the untransformed container, so depth never feeds back into its
+      // own progress. Mobile keeps the same scene with a smaller travel budget.
+      const measurements = screens.map(item => ({ ...item, visualBox: item.visual.getBoundingClientRect(), articleBox: item.article.getBoundingClientRect() }))
+      for (const { screen, visual, article, visualBox, articleBox } of measurements) {
+        const progress = clamp((innerHeight * .8 - articleBox.top) / (articleBox.height + innerHeight * .6), 0, 1)
+        const viewportTravel = clamp((innerHeight * .5 - visualBox.top - visualBox.height * .5) / innerHeight, -1, 1)
+        const travel = clamp(viewportTravel * .65 + (progress - .5) * .7, -1, 1)
+        const lift = short ? 12 : compact ? 24 : 32
+        article.dataset.projectProgress = progress.toFixed(3)
+        screen.dataset.displayState = enabled ? "scrolling" : "static"
+        screen.style.setProperty("--display-rotation", enabled ? `${travel * 9}deg` : "0deg")
+        screen.style.setProperty("--display-turn", enabled ? `${(compact ? -4 : -8) + travel * 9}deg` : "0deg")
+        screen.style.setProperty("--display-lift", enabled ? `${travel * -lift}px` : "0px")
+        screen.style.setProperty("--display-depth", enabled ? `${24 + (1 - Math.abs(travel)) * (compact ? 18 : 30)}px` : "0px")
+        screen.style.setProperty("--display-scale", enabled ? String(.94 + (1 - Math.abs(travel)) * .06) : "1")
+        visual.style.setProperty("--orbit-turn", enabled ? `${-22 + progress * 34}deg` : "-22deg")
+        visual.style.setProperty("--ambient-lift", enabled ? `${travel * lift * .5}px` : "0px")
       }
     }
     const schedule = () => { if (!frame) frame = requestAnimationFrame(update) }

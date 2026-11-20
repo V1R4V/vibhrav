@@ -220,7 +220,7 @@ export function GoldSculpture({ paused }: { paused: boolean }) {
         }
 
         function onPointerMove(event: PointerEvent) {
-          if (pausedRef.current || !pointerMedia.matches) return
+          if (pausedRef.current || (!pointerMedia.matches && event.pointerType !== "touch")) return
           const bounds = hero.getBoundingClientRect()
           pointerX = THREE.MathUtils.clamp((event.clientX - bounds.left) / bounds.width * 2 - 1, -1, 1)
           pointerY = -THREE.MathUtils.clamp((event.clientY - bounds.top) / bounds.height * 2 - 1, -1, 1)
@@ -292,7 +292,10 @@ export function GoldSculpture({ paused }: { paused: boolean }) {
           window.removeEventListener("scroll", updateScroll)
           document.removeEventListener("visibilitychange", onVisibilityChange)
           hero.removeEventListener("pointermove", onPointerMove)
+          hero.removeEventListener("pointerdown", onPointerMove)
           hero.removeEventListener("pointerleave", resetPointer)
+          hero.removeEventListener("pointerup", resetPointer)
+          hero.removeEventListener("pointercancel", resetPointer)
           renderer?.domElement.removeEventListener("webglcontextlost", onContextLost)
           geometry?.dispose()
           materials.forEach((material) => material.dispose())
@@ -371,7 +374,10 @@ export function GoldSculpture({ paused }: { paused: boolean }) {
           window.addEventListener("scroll", updateScroll, { passive: true })
           document.addEventListener("visibilitychange", onVisibilityChange)
           hero.addEventListener("pointermove", onPointerMove, { passive: true })
+          hero.addEventListener("pointerdown", onPointerMove, { passive: true })
           hero.addEventListener("pointerleave", resetPointer)
+          hero.addEventListener("pointerup", resetPointer)
+          hero.addEventListener("pointercancel", resetPointer)
           resize()
         } catch {
           disposeScene()

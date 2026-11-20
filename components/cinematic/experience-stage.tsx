@@ -16,19 +16,30 @@ export function ExperienceStage() {
     const section = root.current
     if (!section) return
     const roles = Array.from(section.querySelectorAll<HTMLElement>("[data-experience-role]"))
+    const sculpture = section.querySelector<HTMLElement>(".experience-sculpture")
+    const compact = matchMedia("(max-width: 767px) and (min-height: 501px)")
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)")
     let frame = 0
     let within = false
     const update = () => {
       frame = 0
       if (!within) return
-      const focus = innerHeight * .52
+      const sculptureBounds = sculpture?.getBoundingClientRect()
+      const compactActive = compact.matches && !reduced.matches
+      const readingTop = compactActive && sculptureBounds ? Math.max(80, sculptureBounds.bottom + 12) : 110
+      const focus = (Math.min(readingTop, innerHeight * .55) + innerHeight) / 2
       let closest = 0
       let distance = Infinity
-      roles.forEach((role, index) => {
-        const bounds = role.getBoundingClientRect()
-        const next = Math.abs((bounds.top + bounds.bottom) / 2 - focus)
+      const measurements = roles.map(role => ({ role, bounds: role.getBoundingClientRect() }))
+      measurements.forEach(({ bounds }, index) => {
+        const next = bounds.top <= focus && bounds.bottom >= focus ? 0 : Math.min(Math.abs(bounds.top - focus), Math.abs(bounds.bottom - focus))
         if (next < distance) { distance = next; closest = index }
       })
+      for (const { role, bounds } of measurements) {
+        const entry = paused || reduced.matches ? 0 : Math.max(0, Math.min(1, (bounds.top - innerHeight * .58) / (innerHeight * .42)))
+        role.style.setProperty("--experience-role-shift", `${(entry * 18).toFixed(2)}px`)
+        role.style.setProperty("--experience-role-opacity", (1 - entry * .12).toFixed(3))
+      }
       setActive(closest)
     }
     const scroll = () => { if (within && !frame) frame = requestAnimationFrame(update) }
@@ -37,15 +48,25 @@ export function ExperienceStage() {
       if (within) scroll()
     })
     observer.observe(section)
+    const resize = new ResizeObserver(() => {
+      if (sculpture) section.style.setProperty("--experience-compact-height", `${sculpture.offsetHeight}px`)
+      scroll()
+    })
+    if (sculpture) resize.observe(sculpture)
     addEventListener("scroll", scroll, { passive: true })
     addEventListener("resize", scroll)
+    compact.addEventListener("change", scroll)
+    reduced.addEventListener("change", scroll)
     return () => {
       observer.disconnect()
+      resize.disconnect()
       cancelAnimationFrame(frame)
       removeEventListener("scroll", scroll)
       removeEventListener("resize", scroll)
+      compact.removeEventListener("change", scroll)
+      reduced.removeEventListener("change", scroll)
     }
-  }, [])
+  }, [paused])
 
   const current = experiences[active]
   if (!current) return null
@@ -70,17 +91,19 @@ export function ExperienceStage() {
             {experiences.map((experience, index) => <a key={experience.slug} href={`#experience-${experience.slug}`} aria-label={`${experience.org}, ${experience.role}`} aria-current={index === active ? "step" : undefined}><span aria-hidden="true" /></a>)}
           </nav>
           <div className="experience-step-navigation">
-            {active > 0 ? <a href={`#experience-${experiences[active - 1].slug}`} aria-label={`Previous experience: ${experiences[active - 1].org}`}><ArrowLeft size={17} aria-hidden="true" /> Previous</a> : <span />}
-            {active < experiences.length - 1 ? <a href={`#experience-${experiences[active + 1].slug}`} aria-label={`Next experience: ${experiences[active + 1].org}`}>Next <ArrowRight size={17} aria-hidden="true" /></a> : <a href="#work">Projects <ArrowDown size={17} aria-hidden="true" /></a>}
+            {active > 0 ? <a href={`#experience-${experiences[active - 1].slug}`} aria-label={`Previous experience: ${experiences[active - 1].org}`}><ArrowLeft size={17} aria-hidden="true" /><span className="experience-step-label">Previous</span></a> : <span />}
+            {active < experiences.length - 1 ? <a href={`#experience-${experiences[active + 1].slug}`} aria-label={`Next experience: ${experiences[active + 1].org}`}><span className="experience-step-label">Next</span><ArrowRight size={17} aria-hidden="true" /></a> : <a href="#work" aria-label="Explore the projects"><span className="experience-step-label">Projects</span><ArrowDown size={17} aria-hidden="true" /></a>}
           </div>
         </aside>
         <div className="experience-roles">
           {experiences.map((experience, index) => (
             <article key={experience.slug} id={`experience-${experience.slug}`} className="experience-role" data-experience-role data-active={index === active ? "true" : "false"} aria-labelledby={`experience-heading-${experience.slug}`}>
+              <div className="experience-role-content">
               <div className="experience-role-meta"><span>{experience.org}</span><span>{experience.period}</span></div>
               <h3 id={`experience-heading-${experience.slug}`}>{experience.role}</h3>
               <p className="experience-scope">{experience.summary}</p>
               <ul className="experience-bullets">{experience.bullets.map((bullet, bulletIndex) => <li key={bulletIndex}>{bullet}</li>)}</ul>
+              </div>
             </article>
           ))}
         </div>

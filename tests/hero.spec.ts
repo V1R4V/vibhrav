@@ -25,6 +25,13 @@ for (const viewport of sizes) {
     await page.goto("/cinematic")
     await expect(page.locator(".cinematic-page")).toHaveAttribute("data-intro", "complete")
     await expect(page.getByRole("heading", { level: 1 })).toHaveAccessibleName("Vibhrav Jha")
+    const copyOverlaps = await page.evaluate(() => {
+      const headline = document.querySelector(".hero-topline")!.getBoundingClientRect()
+      const name = document.querySelector(".cinematic-copy")!.getBoundingClientRect()
+      const supporting = document.querySelector(".hero-bottomline")!.getBoundingClientRect()
+      return headline.bottom > name.top || name.bottom > supporting.top
+    })
+    expect(copyOverlaps).toBe(false)
     const action = page.getByRole("link", { name: "View experience" })
     // Short landscape screens use normal flow so every control remains reachable.
     await action.scrollIntoViewIfNeeded()

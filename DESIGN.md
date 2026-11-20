@@ -38,12 +38,15 @@ Experience stays on obsidian. A luminous gold/oxblood orb carries dimensional
 company lettering while eight roles move through readable HTML panels alongside
 it. Native scrolling selects the active role; direct links and previous/next
 navigation allow shortcuts. Company lettering is a stylized wordmark, not a
-fabricated logo asset. Mobile, short viewports and reduced motion use natural flow.
+fabricated logo asset. Mobile retains a compact sticky orb above the scrolling role panels, with touch
+response and readable direct navigation. Short landscape and reduced motion use
+natural flow.
 
 Projects open on a monumental three-line title with letter reveals. Six flagship
 panels use real assets or clearly explanatory architecture diagrams on 3D display
 planes, with 24px sticky offsets on sufficiently large screens. Hover/focus restores
-image colour; mobile/reduced motion remain unpinned. The full catalogue has 33
+image colour; touch displays hold while readable copy rises over them. Scroll
+depth remains active on mobile; reduced motion remains unpinned and static. The full catalogue has 33
 approved entries, category/search/group controls and URL history. Each project is
 listed once even when it belongs to several categories. Private repository links
 are omitted. Twenty-five local roots support this inventory; those counts differ.

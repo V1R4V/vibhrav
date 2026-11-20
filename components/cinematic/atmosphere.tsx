@@ -198,14 +198,17 @@ export function Atmosphere({ variant, paused = false, className = "" }: Atmosphe
     sizeObserver.observe(element)
     const pointerTarget = element.closest("footer") ?? element.parentElement
     const move = (event: PointerEvent) => {
-      if (!canAnimate() || event.pointerType === "touch") return
+      if (!canAnimate()) return
       const bounds = element.getBoundingClientRect()
       pointer.x = ((event.clientX - bounds.left) / Math.max(bounds.width, 1) - .5) * 2
       pointer.y = -((event.clientY - bounds.top) / Math.max(bounds.height, 1) - .5) * 2
     }
     const leave = () => { pointer.x = 0; pointer.y = 0 }
     pointerTarget?.addEventListener("pointermove", move, { passive: true })
+    pointerTarget?.addEventListener("pointerdown", move, { passive: true })
     pointerTarget?.addEventListener("pointerleave", leave)
+    pointerTarget?.addEventListener("pointerup", leave)
+    pointerTarget?.addEventListener("pointercancel", leave)
     media.addEventListener("change", preference)
     document.addEventListener("visibilitychange", sync)
     if (media.matches) setState("fallback")
@@ -219,7 +222,10 @@ export function Atmosphere({ variant, paused = false, className = "" }: Atmosphe
       media.removeEventListener("change", preference)
       document.removeEventListener("visibilitychange", sync)
       pointerTarget?.removeEventListener("pointermove", move)
+      pointerTarget?.removeEventListener("pointerdown", move)
       pointerTarget?.removeEventListener("pointerleave", leave)
+      pointerTarget?.removeEventListener("pointerup", leave)
+      pointerTarget?.removeEventListener("pointercancel", leave)
       renderer?.domElement.removeEventListener("webglcontextlost", lost)
       geometry?.dispose()
       material?.dispose()
