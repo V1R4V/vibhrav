@@ -1,55 +1,40 @@
 import type { Metadata } from "next"
-import {
-  Bricolage_Grotesque,
-  Space_Grotesk,
-  Newsreader,
-  JetBrains_Mono,
-} from "next/font/google"
+import localFont from "next/font/local"
 import "./globals.css"
-import { SmoothScroll } from "@/components/site/smooth-scroll"
-import { ThemeProvider } from "@/components/site/theme-provider"
-import { Ambient } from "@/components/site/ambient"
-import { CursorGlow } from "@/components/site/cursor-glow"
-import { Toaster } from "@/components/ui/sonner"
-import { profile } from "@/lib/site-data"
+import { profile } from "@/lib/portfolio-data"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // Body / UI — clean technical grotesque.
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
+const spaceGrotesk = localFont({
+  src: "../node_modules/@fontsource-variable/space-grotesk/files/space-grotesk-latin-wght-normal.woff2",
   variable: "--font-sans",
+  weight: "300 700",
   display: "swap",
 })
 
-// Section headlines — contemporary grotesque with character + impact.
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
-})
-
-// Hero title + the one italic emphasis word per section — editorial serif.
-const newsreader = Newsreader({
-  subsets: ["latin"],
+// Editorial contrast for the contact close.
+const newsreader = localFont({
+  src: [
+    { path: "../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-standard-normal.woff2", style: "normal" },
+    { path: "../node_modules/@fontsource-variable/newsreader/files/newsreader-latin-standard-italic.woff2", style: "italic" },
+  ],
   variable: "--font-hero",
+  weight: "200 800",
   display: "swap",
-  style: ["normal", "italic"],
-  weight: ["400", "500", "600"],
-  // Newsreader has no metrics in Next's fallback DB; skip the override so the
-  // dev server stops logging "Failed to find font override values".
   adjustFontFallback: false,
 })
 
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
+const jetbrainsMono = localFont({
+  src: "../node_modules/@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2",
   variable: "--font-mono",
+  weight: "100 800",
   display: "swap",
 })
 
 export const metadata: Metadata = {
-  title: profile.name,
-  description: `${profile.name}, software engineer ${profile.tagline}. Web development, applied AI, and distributed systems.`,
+  metadataBase: new URL("https://vibhrav.vercel.app"),
+  title: { default: "Vibhrav Jha — Software engineer", template: "%s · Vibhrav Jha" },
+  description: "Software engineering across AI, web and systems. Selected projects, experience and leadership by Vibhrav Jha.",
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
     shortcut: [{ url: "/favicon.svg", type: "image/svg+xml" }],
@@ -57,7 +42,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: profile.name,
-    description: `Software engineer ${profile.tagline}.`,
+    description: "Engineering across AI, web and systems. Work, decisions and leadership.",
     type: "website",
   },
 }
@@ -68,16 +53,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <body
-        className={`${spaceGrotesk.variable} ${bricolage.variable} ${newsreader.variable} ${jetbrainsMono.variable} grain bg-paper text-ink antialiased`}
+        className={`${spaceGrotesk.variable} ${newsreader.variable} ${jetbrainsMono.variable} bg-paper text-ink antialiased`}
       >
-        <ThemeProvider>
-          <Ambient />
-          <CursorGlow />
-          <SmoothScroll>{children}</SmoothScroll>
-          <Toaster />
-        </ThemeProvider>
+        {children}
         <SpeedInsights />
       </body>
     </html>

@@ -20,13 +20,13 @@
   <rect x="90" y="120" width="1020" height="510" rx="34" fill="url(#card)" stroke="#67e8f9" stroke-opacity="0.3"/>
 
   <text x="140" y="210" fill="#e4f8ff" font-size="46" font-family="Arial, Helvetica, sans-serif" font-weight="700">Real-Time Stock Data Streaming Pipeline</text>
-  <text x="140" y="258" fill="#b9e7f5" font-size="28" font-family="Arial, Helvetica, sans-serif">MySQL to Kafka to HDFS with exactly-once style batch persistence</text>
+  <text x="140" y="258" fill="#b9e7f5" font-size="28" font-family="Arial, Helvetica, sans-serif">Simulated records, typed events and checkpointed batch persistence</text>
 
   <rect x="140" y="335" width="180" height="98" rx="18" fill="#10253a" stroke="#7dd3fc" stroke-opacity="0.35"/>
-  <text x="230" y="392" text-anchor="middle" fill="#def7ff" font-size="22" font-family="Arial, Helvetica, sans-serif">Price Feed</text>
+  <text x="230" y="392" text-anchor="middle" fill="#def7ff" font-size="22" font-family="Arial, Helvetica, sans-serif">Simulated feed</text>
 
   <rect x="390" y="335" width="150" height="98" rx="18" fill="#10253a" stroke="#7dd3fc" stroke-opacity="0.35"/>
-  <text x="465" y="392" text-anchor="middle" fill="#def7ff" font-size="22" font-family="Arial, Helvetica, sans-serif">MySQL</text>
+  <text x="465" y="392" text-anchor="middle" fill="#def7ff" font-size="22" font-family="Arial, Helvetica, sans-serif">Protobuf</text>
 
   <rect x="610" y="300" width="250" height="168" rx="24" fill="#10253a" stroke="#7dd3fc" stroke-opacity="0.35"/>
   <text x="735" y="348" text-anchor="middle" fill="#def7ff" font-size="23" font-family="Arial, Helvetica, sans-serif">Kafka Broker</text>
@@ -43,5 +43,5 @@
   <line x1="860" y1="384" x2="930" y2="384" stroke="#7dd3fc" stroke-width="4" marker-end="url(#arrow)"/>
 
   <rect x="140" y="500" width="920" height="70" rx="14" fill="#0f2235" stroke="#67e8f9" stroke-opacity="0.24"/>
-  <text x="175" y="544" fill="#d5f5ff" font-size="21" font-family="Arial, Helvetica, sans-serif">Checkpoint recovery, partitioned Parquet output, and high-throughput ingestion flow</text>
+  <text x="175" y="544" fill="#d5f5ff" font-size="21" font-family="Arial, Helvetica, sans-serif">Saved partition offsets, Parquet output and explicit recovery behavior</text>
 </svg>

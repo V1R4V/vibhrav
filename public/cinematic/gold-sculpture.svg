@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="220" y1="150" x2="740" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6f4824"/><stop offset=".18" stop-color="#e2bd78"/><stop offset=".3" stop-color="#fff0bd"/><stop offset=".4" stop-color="#916735"/><stop offset=".56" stop-color="#382718"/><stop offset=".72" stop-color="#bd9254"/><stop offset=".87" stop-color="#f3d496"/><stop offset="1" stop-color="#74512a"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="300" y1="150" x2="690" y2="840" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f4dfaa"/><stop offset=".3" stop-color="#b38b52"/><stop offset=".52" stop-color="#3b2519"/><stop offset=".8" stop-color="#ddbc7c"/><stop offset="1" stop-color="#774e2e"/>
+    </linearGradient>
+    <linearGradient id="cross" x1="380" y1="400" x2="860" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6c352a"/><stop offset=".2" stop-color="#b3894d"/><stop offset=".42" stop-color="#ffe7ad"/><stop offset=".57" stop-color="#c4a16a"/><stop offset=".76" stop-color="#543921"/><stop offset=".94" stop-color="#a27340"/><stop offset="1" stop-color="#d2b07a"/>
+    </linearGradient>
+    <mask id="front"><rect width="1000" height="1000" fill="white"/><path d="M343 500C353 566 386 633 431 681" stroke="black" stroke-width="120"/></mask>
+  </defs>
+  <!-- Original vector still. Replace with a captured render only after visual approval. -->
+  <g transform="rotate(-27 500 500)">
+    <ellipse cx="430" cy="470" rx="167" ry="280" stroke="#2d2015" stroke-width="104"/>
+    <ellipse cx="427" cy="460" rx="167" ry="280" stroke="url(#gold)" stroke-width="88"/>
+    <ellipse cx="427" cy="460" rx="167" ry="280" stroke="url(#edge)" stroke-width="2"/>
+    <g mask="url(#front)">
+      <ellipse cx="599" cy="575" rx="234" ry="131" transform="rotate(20 599 575)" stroke="#332118" stroke-width="102"/>
+      <ellipse cx="599" cy="565" rx="234" ry="131" transform="rotate(20 599 565)" stroke="url(#cross)" stroke-width="87"/>
+      <ellipse cx="599" cy="565" rx="234" ry="131" transform="rotate(20 599 565)" stroke="url(#edge)" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

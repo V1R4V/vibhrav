@@ -1,0 +1,48 @@
+import type { Metadata } from "next"
+import Image from "next/image"
+import Link from "next/link"
+import { notFound } from "next/navigation"
+import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react"
+import { projects } from "@/lib/portfolio-data"
+import { PortfolioFrame } from "@/components/cinematic/portfolio-frame"
+import "../../cinematic/cinematic.css"
+import "./project.css"
+
+type Props = { params: Promise<{ slug: string }> }
+export function generateStaticParams() { return projects.map(project => ({ slug: project.slug })) }
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const project = projects.find(item => item.slug === slug)
+  return project ? { title: project.title, description: project.summary, alternates: { canonical: `/projects/${slug}` }, openGraph: { title: project.title, description: project.summary, images: [project.image] } } : { title: "Project not found" }
+}
+export default async function ProjectPage({ params }: Props) {
+  const { slug } = await params
+  const index = projects.findIndex(item => item.slug === slug)
+  if (index < 0) notFound()
+  const project = projects[index]
+  const next = projects[(index + 1) % projects.length]
+  const stories = [["The problem", project.problem], ["A decision worth examining", project.detail], ["The approach", project.approach], ["What it demonstrates", project.outcome]].filter(([, content], storyIndex, all) => content && content !== project.summary && !all.slice(0, storyIndex).some(([, earlier]) => earlier === content))
+  return (
+    <PortfolioFrame>
+      <main id="introduction" tabIndex={-1} className="project-page">
+        <section className="project-opening" data-chapter>
+          <div className="project-title-stage">
+            <div className="project-opening-top"><Link className="project-back" href="/#project-catalogue"><ArrowLeft size={16} aria-hidden /> All projects</Link><span>{project.category}</span></div>
+            <div className="project-title-composition">
+              <h1 className={project.title.length > 20 ? "project-title-long" : project.title.length <= 10 ? "project-title-short" : undefined} data-reveal>{project.title.split(" ").map((word, wordIndex, words) => <span className="project-title-word" key={wordIndex}>{word}{wordIndex === words.length - 1 ? <span className="project-title-period" aria-hidden>.</span> : " "}</span>)}</h1>
+              <p className="project-deck">{project.eyebrow}</p>
+            </div>
+            <div className="project-meta"><p><span>My contribution</span>{project.role}</p><p><span>Field</span>{project.categories.join(" / ")}</p>{project.href && <a href={project.href} target="_blank" rel="noopener noreferrer">View repository <ArrowUpRight size={18} aria-hidden /></a>}</div>
+            <div className="project-publication"><p>{project.status}</p>{project.demo && <a href={project.demo} target="_blank" rel="noopener noreferrer">Open demo <ArrowUpRight size={18} aria-hidden /></a>}</div>
+          </div>
+          <div className="project-image-stage"><div className="project-main-image" data-exhibit><Image src={project.image} alt={project.imageAlt} fill priority sizes="(max-width: 767px) 94vw, 92vw" /></div></div>
+        </section>
+        <section className="project-narrative" data-chapter aria-labelledby="project-overview">
+          <div className="project-overview"><h2 id="project-overview" data-reveal>The work<br />behind the interface.</h2><p>{project.summary}</p><ul aria-label="Technologies">{project.stack.map(tool => <li key={tool}>{tool}</li>)}</ul></div>
+          <div className="project-stories">{stories.map(([heading, content]) => <article key={heading}><h3>{heading}</h3><p>{content}</p></article>)}</div>
+        </section>
+        <section className="project-next" data-chapter aria-labelledby="next-project-title"><div className="project-next-copy"><p>Continue exploring</p><h2 id="next-project-title" data-reveal><Link href={`/projects/${next.slug}`}>{next.title}<ArrowRight aria-hidden /></Link></h2><Link className="project-return" href="/#project-catalogue">All projects <ArrowUpRight size={18} aria-hidden /></Link></div><div className="project-next-image" data-exhibit aria-hidden><Image src={next.image} alt="" fill sizes="(max-width: 767px) 88vw, 38vw" /></div></section>
+      </main>
+    </PortfolioFrame>
+  )
+}

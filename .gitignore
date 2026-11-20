@@ -46,5 +46,29 @@ Thumbs.db
 # local content inventory
 content.md
 .gstack/
+
+# Local QA artifacts and curated bridges into this machine's installed skills
+.artifacts/
+.taste-skill/
+test-results/
+playwright-report/
+.agents/skills/threejs-webgl
+.agents/skills/gsap-scrolltrigger
+.agents/skills/gsap-react
+.agents/skills/humanizer
+.agents/skills/apple-design
 .claude
 *.tex
+
+# Additional approved, machine-local design skill bridges
+.agents/skills/awesome-design
+.agents/skills/frontend-design
+.agents/skills/motion-design
+
+# Private authoring state stays local, outside the published repository
+.agents/
+.codex/
+AGENTS.md
+PRODUCT.md
+docs/portfolio/
+output/

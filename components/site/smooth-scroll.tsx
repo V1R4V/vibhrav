@@ -2,6 +2,7 @@
 
 import { ReactLenis } from "lenis/react"
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 
 /**
  * Buttery momentum scrolling via Lenis. Disabled automatically when the user
@@ -9,6 +10,7 @@ import { useEffect, useState } from "react"
  */
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   const [reduced, setReduced] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
@@ -18,7 +20,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
     return () => mq.removeEventListener("change", onChange)
   }, [])
 
-  if (reduced) return <>{children}</>
+  if (reduced || pathname === "/cinematic") return <>{children}</>
 
   return (
     <ReactLenis
