@@ -2,6 +2,10 @@ import { expect, test } from "@playwright/test"
 import AxeBuilder from "@axe-core/playwright"
 
 test("curtain can be skipped and does not replay within the session", async ({ page }) => {
+  // Hold the entrance clock while checking keyboard/click access. On a busy
+  // runner the real 900ms entrance can finish between the focus and click.
+  await page.clock.install({ time: new Date("2026-11-20T00:00:00Z") })
+  await page.clock.pauseAt(new Date("2026-11-20T00:00:01Z"))
   await page.goto("/")
   const opening = page.getByRole("dialog", { name: "Opening portfolio" })
   await expect(opening).toBeVisible()

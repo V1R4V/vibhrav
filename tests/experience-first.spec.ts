@@ -52,6 +52,9 @@ test("orb and ink render and global pause freezes both canvases", async ({ page 
   })
   await page.goto("/#experience")
   const orb = page.locator('[data-atmosphere="orb"]')
+  // The orb initializes only when visible. Font metrics can keep it below the
+  // chapter heading on CI, so bring it into view before awaiting WebGL.
+  await orb.scrollIntoViewIfNeeded()
   await expect(orb).toHaveAttribute("data-scene-state", "ready")
   // Settle the locator's scroll before pausing; screenshot-induced scrolling
   // otherwise measures fractional-position text compositing above the canvas.
