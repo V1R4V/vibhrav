@@ -1195,14 +1195,15 @@ export const experiences: Experience[] = [
     "role": "Peer Mentor",
     "period": "August 2026–present",
     "mark": "UW–Madison · CS 574",
-    "summary": "Restored submission access and supported course releases across 434 private repositories, serving approximately 140 students per project.",
-    "detail": "Adapted and ran GitLab provisioning for 434 private repositories across 3 project releases, preparing starter files, student access and project organization for approximately 140 students per project.",
+    "summary": "Teaching and assignment development for Data Management for Data Science.",
+    "detail": "Taught SQL, MongoDB, Elasticsearch, ETL/ELT, RAG and fine-tuning in weekly office hours, helping students connect underlying concepts with implementation and debugging.",
     "bullets": [
-      "Adapted and ran GitLab provisioning for 434 private repositories across 3 project releases, preparing starter files, student access and project organization for approximately 140 students per project.",
-      "Diagnosed approximately 31 protected-branch restrictions and built a reusable repair script to restore submission access before assignment release.",
-      "Independently built a score-export tool that consolidated submissions and autograder results into one staff CSV, separating student work from setup-triggered runs.",
-      "Recorded 4 Kibana walkthrough sets that staff adopted as grading references, and tested assignments from the student’s perspective to catch setup and evaluation problems.",
-      "Contributed 3 adopted fixes to the Airbyte/Snowflake/dbt handout and held office hours on SQL, Docker and data-system workflows."
+      "Taught SQL, MongoDB, Elasticsearch, ETL/ELT, RAG and fine-tuning in weekly office hours, helping students connect underlying concepts with implementation and debugging.",
+      "Designed approximately 4–6 new questions for each of the SQL, Elasticsearch/Kibana and RAG projects to test deeper understanding of query behavior, data systems and model workflows.",
+      "Introduced a Snowflake Dynamic Tables question and wrote a five-page instructional guide. Reviewed lecture coverage across 36 topics and contributed three adopted fixes to the Airbyte/Snowflake/dbt assignment.",
+      "Proposed analyzing database query logs to examine query execution and support academic-integrity review, including concerns about uncritical AI use. Helped the teaching team monitor database-reading activity.",
+      "Consolidated submission status, autograder scores and deadline information for approximately 140 students through an independently built Python tool. Produced four Kibana walkthrough sets adopted as staff grading references.",
+      "Provisioned 434 private GitLab repositories across three assignment releases by adapting automation for starter code, student access and grading-pipeline setup."
     ],
     "sourceIds": [
       "E14",
@@ -1211,19 +1212,19 @@ export const experiences: Experience[] = [
     "logo": "/company-logos/wisc.png",
     "metrics": [
       {
+        "value": "4–6",
+        "label": "New questions per project",
+        "context": "Approximately, across SQL, Elasticsearch/Kibana and P6 RAG."
+      },
+      {
+        "value": "36",
+        "label": "Lecture topics reviewed",
+        "context": "Mapped against assignment requirements."
+      },
+      {
         "value": "434",
         "label": "Private GitLab repositories",
         "context": "Across 3 project releases, approximately 140 students per project."
-      },
-      {
-        "value": "~31",
-        "label": "Branch restrictions repaired",
-        "context": "Restored student submission access."
-      },
-      {
-        "value": "4",
-        "label": "Kibana walkthrough sets",
-        "context": "Adopted by teaching staff as grading references."
       }
     ]
   },
@@ -1233,22 +1234,29 @@ export const experiences: Experience[] = [
     "role": "Undergraduate Research Assistant",
     "period": "January 2026–present",
     "mark": "People & Robots Lab",
-    "summary": "Brought in-context security and privacy guidance into an Android research prototype for adults with intellectual and developmental disabilities. I lead code implementation.",
-    "detail": "Lead the Kotlin/Android implementation of a context-aware security overlay, connecting on-screen information with structured Gemini output. The PI leads research and design.",
+    "summary": "Accessible security guidance within everyday mobile apps. I lead code implementation; the PI leads research and study design.",
+    "detail": "Lead Kotlin/Android development of an assistive security application for adults with intellectual and developmental disabilities, supporting a controlled study with 18+ participants.",
     "bullets": [
-      "Lead the Kotlin/Android implementation of a context-aware security overlay, connecting on-screen information with structured Gemini output. The PI leads research and design.",
-      "Reworked an explanation-heavy prototype after advisor feedback into a clear warning, one recommended action and an optional explanation.",
-      "Resolved permission-dialog detection by inspecting available Android accessibility windows, excluding the assistant’s own overlay and identifying the permission-controller window.",
-      "Bring guidance into the app a person is already using, keeping the security event and the recommended action in the same interaction."
+      "Lead Kotlin/Android development of an assistive security application for adults with intellectual and developmental disabilities, supporting a controlled study with 18+ participants.",
+      "Built the model harness connecting captured screen context, structured prompts and Gemini JSON responses, giving the application a consistent format for interpreting notifications and presenting available choices.",
+      "Applied MoRA threat factors, C-HIP warning-comprehension principles and TETs explanation requirements to address likely misunderstandings, explain consequences and preserve the user’s control over decisions.",
+      "Applied human-centered design principles to reduce cognitive effort through clear visual cues, concrete explanations and progressive disclosure, while keeping users in control of security decisions.",
+      "Translated research feedback and collaborative Miro design reviews into concise, layered explanations, clear visual cues and predictable interactions, with additional detail available when needed.",
+      "Resolved permission-dialog detection by tracing Android’s accessibility-window behavior, distinguishing system permission prompts from the assistant’s overlay."
     ],
     "sourceIds": [
       "E08",
       "E09",
       "E10"
     ],
-    "logo": "/company-logos/wisc.png"
-  ,
-    "metrics": []
+    "logo": "/company-logos/wisc.png",
+    "metrics": [
+      {
+        "value": "18+",
+        "label": "Controlled-study participants",
+        "context": "Controlled study of accessible security and privacy guidance."
+      }
+    ]
   },
   {
     "slug": "cornell-acert",
@@ -1256,27 +1264,29 @@ export const experiences: Experience[] = [
     "role": "Undergraduate Research Intern",
     "period": "July 8–August 15, 2026",
     "mark": "Cornell University · ACERT",
-    "summary": "Gave the research team a basis for commercialization decisions through market, pricing and procurement analysis across five customer segments and four competing technology families.",
-    "detail": "Assessed 5 priority customer segments for portable electron-spin-resonance drug-identification technology, using government data, procurement records, equipment prices and testing volumes.",
+    "summary": "Video-fingerprinting research and ESR commercialization within the same Cornell project. The SSIM collaboration is continuing.",
+    "detail": "Reduced median video-fingerprint Hamming error from 0.225 to 0.025 for 720p copies in the recorded benchmark by normalizing input resolution before fingerprint comparison.",
     "bullets": [
-      "Assessed 5 priority customer segments for portable electron-spin-resonance drug-identification technology, using government data, procurement records, equipment prices and testing volumes.",
-      "Developed market estimates and compared customer needs, purchasing capacity and procurement complexity to identify practical entry points.",
-      "Benchmarked 4 competing technology families: Raman, FTIR, portable mass spectrometry and ion mobility.",
-      "Synthesized market, pricing, patent, licensing and sponsored-research findings into slide decks and go-to-market recommendations for the research team."
+      "Reduced median video-fingerprint Hamming error from 0.225 to 0.025 for 720p copies in the recorded benchmark by normalizing input resolution before fingerprint comparison.",
+      "Built a reproducible Python/OpenCV/FFmpeg benchmark covering 25 source videos, 75 transformed variants and 1,875 matched/non-matched comparisons to evaluate fingerprint behavior.",
+      "Extended the video-transformation toolkit with seeded emoji overlays, timed subtitles and inward white borders, producing 30 variants across six source videos with reproducible configurations and validation records.",
+      "Converted notebook experiments into repeatable generation and evaluation workflows with configuration records, manifests, validation checks and CLI tooling.",
+      "Evaluated commercialization opportunities for the project’s portable ESR drug-identification technology through market sizing, customer segmentation and competitive pricing analysis.",
+      "Revised pitch decks and created new slides covering TAM/SAM/SOM, competitive positioning, product-market-fit analysis and technology benchmarks against competing solutions to support commercialization planning."
     ],
     "sourceIds": [
       "E11"
     ],
     "metrics": [
       {
-        "value": "5",
-        "label": "Customer segments assessed",
-        "context": "Coverage of market and procurement research."
+        "value": "0.225 → 0.025",
+        "label": "Median fingerprint Hamming error",
+        "context": "Recorded 720p-copy benchmark, exploratory in-sample result."
       },
       {
-        "value": "4",
-        "label": "Competing technology families",
-        "context": "Pricing and workflow comparisons informing market entry."
+        "value": "1,875",
+        "label": "Matched/non-matched comparisons",
+        "context": "25 source videos and 75 transformed variants."
       }
     ]
   },
@@ -1287,14 +1297,16 @@ export const experiences: Experience[] = [
     "period": "May–July 2026",
     "mark": "Darukaa.Earth",
     "logo": "/company-logos/darukaa.webp",
-    "summary": "Increased audio-inference throughput 8–10× in the batch comparison and made 500-file workloads recoverable through retry-safe orchestration.",
-    "detail": "Increased audio-inference throughput 8–10× in the recorded batch comparison by moving synchronous Vertex AI calls to Batch Prediction, leading the implementation under senior engineering supervision.",
+    "summary": "Biodiversity infrastructure connecting field recordings, cloud inference and researcher workflows. I led the workstream under senior engineering supervision.",
+    "detail": "Increased audio-inference throughput 8–10× and reduced infrastructure costs by $80–$95 per environment per month by migrating synchronous Vertex AI processing to Batch Prediction.",
     "bullets": [
-      "Increased audio-inference throughput 8–10× in the recorded batch comparison by moving synchronous Vertex AI calls to Batch Prediction, leading the implementation under senior engineering supervision.",
-      "Built FastAPI and asynchronous database orchestration for 500-file batches, preserving source-file IDs and spatial metadata through submission, output reconciliation and result delivery.",
-      "Made retries safe and isolated corrupt uploads so one failed file would not abort the batch. Decoupled long-running processing from interactive requests and integrated authenticated completion callbacks.",
-      "Validated the upload-to-result workflow across 500 test files and covered orchestration with 15 unit tests; all files completed the expected path in that validation run.",
-      "Reduced the recorded infrastructure cost by $80–$95 per environment per month while making the field-recording workflow faster for downstream analysis."
+      "Increased audio-inference throughput 8–10× and reduced infrastructure costs by $80–$95 per environment per month by migrating synchronous Vertex AI processing to Batch Prediction.",
+      "Built FastAPI and asynchronous SQLAlchemy orchestration for 500-file audio batches, preserving source-file identities and geographic metadata from upload through inference and result delivery.",
+      "Made batch processing recoverable through retry-safe orchestration and per-file failure isolation, preventing a corrupt upload from aborting the remaining workload.",
+      "Moved approximately 18-minute spectrogram-processing jobs outside interactive requests and integrated OIDC-authenticated completion callbacks, allowing analysis to continue without holding client connections open.",
+      "Designed a SpeciesNet camera-trap inference service and database schema for biodiversity analysis, with local validation on 25 photographs, including 11 Indian field images.",
+      "Verified the upload-to-result workflow across 500 test files and added 15 unit tests covering orchestration and output parsing.",
+      "Clarified requirements for custom API integration, species-confidence reporting and human review of low-confidence predictions through two discussions with an enterprise client’s engineering team."
     ],
     "sourceIds": [
       "E05",
@@ -1325,13 +1337,14 @@ export const experiences: Experience[] = [
     "role": "Software Engineering Intern",
     "period": "May–August 2025",
     "mark": "VDart",
-    "summary": "Cut RFI/RFP first-draft preparation from about two weeks to under 24 hours, supporting roughly 3× proposal capacity for the internal BI team.",
-    "detail": "Brought RFI/RFP first-draft preparation from about 2 weeks to under 24 hours through a production-ready RAG application, supporting roughly 3× the team’s recorded proposal capacity.",
+    "summary": "Enterprise proposal drafting grounded in the BI team’s approved historical answers.",
+    "detail": "Cut RFI/RFP first-draft preparation from about two weeks to under 24 hours, supporting roughly 3× proposal capacity for the internal BI team.",
     "bullets": [
-      "Brought RFI/RFP first-draft preparation from about 2 weeks to under 24 hours through a production-ready RAG application, supporting roughly 3× the team’s recorded proposal capacity.",
-      "Independently built the React interface, FastAPI backend, document ingestion and retrieval with input from the BI team.",
-      "Investigated incomplete answers by inspecting retrieved context, then preserved whole historical Q&A pairs so each question remained attached to the approved evidence.",
-      "Delivered the application through BI and technical review. The team deployed it after my internship, with later production use confirmed across 50+ internal BI users."
+      "Cut RFI/RFP first-draft preparation from about two weeks to under 24 hours, supporting roughly 3× proposal capacity for the internal BI team.",
+      "Independently built a production-ready RAG application spanning a React interface, FastAPI backend, document ingestion, vector retrieval and streamed model responses.",
+      "Resolved incomplete retrieval by tracing returned context and preserving complete historical question-and-answer pairs, keeping approved answers attached to the questions they addressed.",
+      "Translated BI workflow discussions into application requirements and evaluated RAG against rule-based matching, curated repositories and fine-tuning with business and technical stakeholders.",
+      "Delivered the application through BI and technical review, followed by team-led production deployment and confirmed use across 50+ internal BI users."
     ],
     "sourceIds": [
       "E01",
@@ -1364,13 +1377,12 @@ export const experiences: Experience[] = [
     "role": "Software Development Intern",
     "period": "January 2022–March 2023",
     "mark": "PCE",
-    "summary": "Made 30+ business leads queryable in a Python/SQL CRM and built allocation tooling to connect machinery availability with operational demand.",
-    "detail": "Built a Python/SQL CRM for 30+ business leads, replacing scattered tracking with queryable lead, contractor and partnership records.",
+    "summary": "Software for lead management, machinery allocation and a logistics business’s online presence.",
+    "detail": "Built a Python contractor-allocation tool that matched machinery availability with operational demand, contributing $18,000 in additional revenue.",
     "bullets": [
-      "Built a Python/SQL CRM for 30+ business leads, replacing scattered tracking with queryable lead, contractor and partnership records.",
-      "Supported a more organized follow-up workflow as recorded successful partnerships grew from 15 to 19 over 8 months.",
-      "Implemented Python contractor-allocation tooling to match machinery availability with operational demand.",
-      "Built a responsive HTML, CSS and JavaScript website to present the business’s services and make client inquiries easier."
+      "Built a Python contractor-allocation tool that matched machinery availability with operational demand, contributing $18,000 in additional revenue.",
+      "Replaced scattered lead records with a Python/SQL CRM tracking 30+ business leads, supporting organized follow-up as recorded successful partnerships grew from 15 to 19 over eight months.",
+      "Built a responsive HTML, CSS and JavaScript website that presented the company’s services and gave prospective clients a clear path to make inquiries."
     ],
     "sourceIds": [
       "E16"
@@ -1388,7 +1400,11 @@ export const experiences: Experience[] = [
         "context": "Over 8 months in the business record."
       }
     ]
-  },
+  }
+]
+
+// Retained history, excluded from the active website chronology by user request.
+export const archivedExperiences: Experience[] = [
   {
     "slug": "science-centre",
     "org": "National Science Centre, New Delhi",

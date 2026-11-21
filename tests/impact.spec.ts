@@ -47,3 +47,35 @@ test("results and their qualifiers are server rendered without JavaScript", asyn
     await expect(page.locator(".p-recwell .impact-metrics")).toContainText("cumulatively over two years")
   } finally { await context.close() }
 })
+
+
+test("approved experience copy preserves research, client anonymity and archived history", async ({ browser }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false, reducedMotion: "reduce" })
+  try {
+    const page = await context.newPage()
+    await page.goto("/")
+    await expect(page.locator("[data-experience-role]")).toHaveCount(6)
+    await expect(page.locator("#experience-science-centre")).toHaveCount(0)
+    await expect(page.locator("[data-cinematic-hero]")).toContainText("A founder’s ambition.")
+    const teaching = page.locator("#experience-cs574 .experience-bullets")
+    await expect(teaching).toContainText("4–6 new questions")
+    await expect(teaching).toContainText("MongoDB")
+    await expect(teaching).toContainText("Dynamic Tables question")
+    const lab = page.locator("#experience-people-robots .experience-bullets")
+    await expect(lab).toContainText("18+ participants")
+    await expect(lab).toContainText("human-centered design principles")
+    await expect(lab).toContainText("MoRA")
+    const cornell = page.locator("#experience-cornell-acert .experience-bullets")
+    await expect(cornell.locator("li").first()).toContainText("Hamming error")
+    await expect(cornell).toContainText("30 variants across six source videos")
+    await expect(cornell).toContainText("TAM/SAM/SOM")
+    await expect(cornell).not.toContainText(/grant|funding awarded/i)
+    const darukaa = page.locator("#experience-darukaa .experience-bullets")
+    await expect(darukaa).toContainText("two discussions")
+    await expect(darukaa).toContainText("requirements for custom API integration")
+    await expect(darukaa).not.toContainText(/Tata|billion|75%|78%/i)
+    await expect(page.locator("#experience-vdart .experience-bullets")).toContainText("team-led production deployment")
+    await expect(page.locator("#experience-pinkcity .experience-bullets")).toContainText("$18,000")
+    await expect(page.locator(".experience-bullets")).not.toContainText(["—"])
+  } finally { await context.close() }
+})
