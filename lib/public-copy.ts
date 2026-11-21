@@ -2,7 +2,7 @@
 export const publicCopy = {
   "hero": {
     "role": "Software engineer",
-    "statement": "I build AI and data systems that save teams time.",
+    "statement": "A builder’s instinct. A researcher’s curiosity. A founder’s ambition.",
     "supporting": "Two weeks to under 24 hours for proposal preparation at VDart. 8–10× audio batch-inference throughput at Darukaa.",
     "introduction": "I study Computer Sciences, Data Science and Economics at UW-Madison. I like tracing a problem from the person experiencing it to the engineering decision that makes their work easier."
   },
@@ -12,8 +12,8 @@ export const publicCopy = {
       "introduction": "Selected projects across product engineering, AI and data infrastructure. Each starts with a concrete need and a decision worth examining."
     },
     "experience": {
-      "heading": "Engineering that changes the workflow",
-      "introduction": "From proposal preparation in under 24 hours to 8–10× batch-inference throughput. The work behind those results spans enterprise AI, biodiversity infrastructure, teaching and research."
+      "heading": "Research, engineering and teaching",
+      "introduction": "Software engineering, applied research and teaching across industry and academia."
     },
     "leadership": {
       "heading": "Preparing people to take responsibility",

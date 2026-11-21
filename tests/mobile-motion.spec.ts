@@ -68,7 +68,7 @@ test("pause and reduced motion stop mobile choreography without losing content",
   await page.emulateMedia({ reducedMotion: "reduce" })
   await expect(page.locator(".experience-sculpture")).toHaveCSS("position", "relative")
   await expect(page.locator(".pg-exhibit-visual").first()).toHaveCSS("position", "relative")
-  await expect(page.locator("[data-experience-role]")).toHaveCount(7)
+  await expect(page.locator("[data-experience-role]")).toHaveCount(6)
   await expect(page.locator("[data-catalogue-project]")).toHaveCount(34)
 })
 

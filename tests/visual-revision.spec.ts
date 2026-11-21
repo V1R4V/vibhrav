@@ -26,7 +26,7 @@ test("featured imagery keeps its colour before, during and after scrolling", asy
 test("current teaching role leads the chronology and research collaboration is a project", async ({ page }) => {
   await page.goto("/#experience")
   await expect(page.locator("[data-experience-role]").first()).toHaveAttribute("id", "experience-cs574")
-  await expect(page.locator("[data-experience-role]")).toHaveCount(7)
+  await expect(page.locator("[data-experience-role]")).toHaveCount(6)
   await expect(page.locator('[data-experience-role]')).not.toContainText(["Video fingerprinting research collaboration"])
   expect(projects.some(project => /fingerprint/i.test(project.title))).toBe(true)
   await expect(page.locator("[data-catalogue-project]")).toHaveCount(projects.length)
@@ -39,7 +39,7 @@ test("verified experience metrics have semantic emphasis and a complete roadmap"
   expect(await role.locator("li").count()).toBeGreaterThan(3)
   await expect(role.locator("strong").filter({ hasText: "50+" }).first()).toBeVisible()
   const roadmap = page.getByRole("navigation", { name: "Career roadmap" })
-  await expect(roadmap.getByRole("link")).toHaveCount(7)
+  await expect(roadmap.getByRole("link")).toHaveCount(6)
 })
 
 test("the orb has visible idle motion and pause freezes its orbital system", async ({ page }) => {
