@@ -37,7 +37,7 @@ test("work panels stack at 24px intervals and experience navigation follows focu
   await expect(cards).toHaveCount(6)
   const tops = await cards.evaluateAll(elements => elements.map(el => parseFloat(getComputedStyle(el).top)))
   for (let index = 1; index < tops.length; index++) expect(tops[index] - tops[index - 1]).toBe(24)
-  const role = page.getByRole("navigation", { name: "Select an experience" }).getByRole("link").nth(1)
+  const role = page.getByRole("navigation", { name: "Select an experience" }).getByRole("link", { name: /Darukaa/ })
   await role.focus()
   await page.keyboard.press("Enter")
   await expect(page).toHaveURL(/#experience-darukaa$/)

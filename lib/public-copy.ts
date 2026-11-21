@@ -2,8 +2,8 @@
 export const publicCopy = {
   "hero": {
     "role": "Software engineer",
-    "statement": "I build AI, web and data systems around the people using them.",
-    "supporting": "My work spans a proposal tool that brought preparation from two weeks to under 24 hours, faster biodiversity inference, and Android research on accessible security guidance.",
+    "statement": "I build AI and data systems that save teams time.",
+    "supporting": "Two weeks to under 24 hours for proposal preparation at VDart. 8–10× audio batch-inference throughput at Darukaa.",
     "introduction": "I study Computer Sciences, Data Science and Economics at UW-Madison. I like tracing a problem from the person experiencing it to the engineering decision that makes their work easier."
   },
   "chapters": {
@@ -13,7 +13,7 @@ export const publicCopy = {
     },
     "experience": {
       "heading": "Engineering that changes the workflow",
-      "introduction": "Helping proposal teams reuse approved knowledge, researchers process field recordings, and teaching staff operate a data-management course."
+      "introduction": "From proposal preparation in under 24 hours to 8–10× batch-inference throughput. The work behind those results spans enterprise AI, biodiversity infrastructure, teaching and research."
     },
     "leadership": {
       "heading": "Preparing people to take responsibility",
@@ -61,5 +61,5 @@ export const publicCopy = {
     "success": "Your message has been sent. Thank you for getting in touch.",
     "failure": "Your message could not be sent. Please try again."
   },
-  "leadershipIntroduction": "I want people to understand what good work looks like, know where they need support and feel able to make decisions. At RecWell, that means practical preparation and honest feedback. In venture communities, it means making relationships useful to the people learning and building."
+  "leadershipIntroduction": "At RecWell, I connect staff preparation and participant feedback with stronger programs. In venture communities, I connect founders and practitioners, shape useful learning experiences and test the assumptions behind an investment case."
 } as const

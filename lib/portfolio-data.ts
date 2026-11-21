@@ -1,6 +1,8 @@
 // Public-facing copy approved for integration in docs/portfolio/copy.md.
 // Source IDs are opaque review identifiers. Private evidence and paths stay out of runtime data.
 
+export type ImpactMetric = { value: string; label: string; context?: string }
+
 export type Project = {
   slug: string
   title: string
@@ -14,6 +16,7 @@ export type Project = {
   stack: string[]
   image: string
   imageAlt: string
+  imageCaption?: string
   href?: string
   demo?: string
   problem: string
@@ -21,6 +24,7 @@ export type Project = {
   outcome: string
   detail: string
   sourceIds: string[]
+  metrics?: ImpactMetric[]
 }
 
 export type Experience = {
@@ -33,6 +37,7 @@ export type Experience = {
   summary: string
   detail: string
   bullets: string[]
+  metrics?: ImpactMetric[]
   sourceIds: string[]
 }
 
@@ -46,6 +51,7 @@ export type Leadership = {
   scope: string
   bullets: string[]
   sourceIds: string[]
+  metrics?: ImpactMetric[]
 }
 
 export type Profile = {
@@ -80,8 +86,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": true,
-    "eyebrow": "Turning camera-trap images into reviewable observations",
-    "summary": "Researchers need an observation they can inspect, correct and trace to its source image. I built a wildlife-image workflow that separates upload, background classification and observation review, with explicit job states and retry-safe writes.",
+    "eyebrow": "Traceable observations, from upload to human review",
+    "summary": "Turned camera-trap images into traceable species observations through an asynchronous upload, inference and human-review workflow, with retry-safe records and visible job states.",
     "role": "Built the application workflow across the React interface, APIs, inference worker and observation model.",
     "status": "Personal project · deployed demo",
     "stack": [
@@ -104,6 +110,19 @@ export const projects: Project[] = [
     ],
     "href": "https://github.com/V1R4V/Aranyaka",
     "demo": "https://aranyaka.vercel.app"
+  ,
+    "metrics": [
+      {
+        "value": "100 jobs",
+        "label": "Queue backpressure threshold",
+        "context": "The API rejects excess queued work before processing is overloaded."
+      },
+      {
+        "value": "Top 5",
+        "label": "Prediction context retained",
+        "context": "Alternatives accompany confidence and the source image."
+      }
+    ]
   },
   {
     "slug": "dermanet",
@@ -114,8 +133,8 @@ export const projects: Project[] = [
       "Fullstack"
     ],
     "featured": true,
-    "eyebrow": "Connecting a lesion prediction with an understandable explanation",
-    "summary": "An image classifier returns probabilities, but a person still needs help interpreting the result. In a three-person team, I built the classification API and local language-model service for an offline skin-lesion analysis prototype with summaries and follow-up questions.",
+    "eyebrow": "Offline classification and follow-up explanations",
+    "summary": "Enabled offline lesion classification and follow-up explanations by building the ONNX classification API and local LLM service within a three-person team prototype.",
     "role": "ONNX classification service and local LLM-serving layer. Teammates built the frontend, segmentation and orchestration.",
     "status": "Team hackathon prototype · exploratory skin-lesion analysis",
     "stack": [
@@ -125,8 +144,8 @@ export const projects: Project[] = [
       "Ollama",
       "Qwen2.5-3B"
     ],
-    "image": "/cinematic/dermanet.webp",
-    "imageAlt": "The DermaNet team prototype running on a monitor at the hackathon",
+    "image": "/cinematic/projects/dermanet-analysis.webp",
+    "imageAlt": "DermaNet hackathon prototype showing classification output and a generated explanation",
     "problem": "An image classifier returns probabilities, but a person still needs help interpreting the result. In a three-person team, I built the classification API and local language-model service for an offline skin-lesion analysis prototype with summaries and follow-up questions.",
     "approach": "The classification endpoint exposes ONNX inference through FastAPI. A separate OpenAI-compatible service wraps Ollama and Qwen2.5-3B, with a Python client and CLI for testing the conversation flow. Keeping model serving behind a defined API let the team connect image analysis and language generation while developing the services independently.",
     "outcome": "Classification and local conversation services integrated into the team’s image-to-summary prototype.",
@@ -135,6 +154,14 @@ export const projects: Project[] = [
       "PR02"
     ],
     "href": "https://github.com/quincysorrentino/MadData2026"
+  ,
+    "metrics": [
+      {
+        "value": "2 services",
+        "label": "My implementation",
+        "context": "Classification API and local LLM serving within a 3-person team."
+      }
+    ]
   },
   {
     "slug": "private-data-rag",
@@ -145,8 +172,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": true,
-    "eyebrow": "Keeping the answer connected to the source",
-    "summary": "A public adaptation of my enterprise proposal work, showing how document structure, retrieval and generation fit together. It demonstrates the workflow with confidential company material excluded.",
+    "eyebrow": "Public proof of the retrieval workflow behind VDart",
+    "summary": "Demonstrates the retrieval workflow behind my VDart application, where first-draft preparation fell from about two weeks to under 24 hours. I adapted the public version to exclude confidential assets.",
     "role": "Implemented the retrieval workflow and adapted the demonstration for public use.",
     "status": "Public sanitized demonstration",
     "stack": [
@@ -157,8 +184,9 @@ export const projects: Project[] = [
       "Ollama",
       "Hugging Face"
     ],
-    "image": "/cinematic/diagrams/private-data-rag.svg",
-    "imageAlt": "Keeping answers connected to sources — explanatory architecture diagram",
+    "image": "/cinematic/projects/private-data-rag-concept.webp",
+    "imageAlt": "AI-generated concept illustration of source documents connected to retrieved evidence and an answer",
+    "imageCaption": "Concept illustration · command-line retrieval pipeline",
     "problem": "A public adaptation of my enterprise proposal work, showing how document structure, retrieval and generation fit together. It demonstrates the workflow with confidential company material excluded.",
     "approach": "Docling converts documents for ingestion, Sentence-Transformers embeds the retrieval units, and ChromaDB stores them for similarity search. A CLI supports questions through local Ollama or Hugging Face model paths. The important decision is what enters retrieval: preserving a complete question-and-answer pair keeps the business context attached to the answer.",
     "outcome": "An inspectable document-to-answer demonstration. The enterprise workflow’s adoption and turnaround results appear under VDart.",
@@ -167,6 +195,14 @@ export const projects: Project[] = [
       "PR03"
     ],
     "href": "https://github.com/V1R4V/rag-for-private_data"
+  ,
+    "metrics": [
+      {
+        "value": "Under 24 hours",
+        "label": "Original VDart workflow",
+        "context": "From about 2 weeks for enterprise first-draft preparation. This public demo is a sanitized adaptation."
+      }
+    ]
   },
   {
     "slug": "before-it-breaks",
@@ -178,8 +214,8 @@ export const projects: Project[] = [
       "Fullstack"
     ],
     "featured": true,
-    "eyebrow": "Turning maintenance signals into an inspection decision",
-    "summary": "Facilities teams need to know which asset deserves attention and why. I built the risk, forecast and agent backend for a team prototype that combines weather-adjusted baselines with equipment signals, ranks inspection priorities and drafts work orders for human approval.",
+    "eyebrow": "Earlier inspection signals, tested on synthetic failures",
+    "summary": "Flagged all five planted failures 6–9 days ahead in an interim synthetic backtest, with two false-alarm days. I built the risk, forecast and agent backend within the campus-maintenance team prototype.",
     "role": "Risk and forecast models, backend types and APIs, agent workflow and integration within the team product.",
     "status": "Personal team project · research prototype",
     "stack": [
@@ -191,8 +227,8 @@ export const projects: Project[] = [
       "React",
       "TypeScript"
     ],
-    "image": "/cinematic/diagrams/before-it-breaks.svg",
-    "imageAlt": "From equipment signals to inspection decisions — explanatory architecture diagram",
+    "image": "/cinematic/projects/before-it-breaks-overview.webp",
+    "imageAlt": "Before It Breaks dashboard separating real weather from synthetic equipment telemetry and estimated costs",
     "problem": "Facilities teams need to know which asset deserves attention and why. I built the risk, forecast and agent backend for a team prototype that combines weather-adjusted baselines with equipment signals, ranks inspection priorities and drafts work orders for human approval.",
     "approach": "Four forecasting methods compare calibrated risk, logistic classification, Monte Carlo risk drift and an age-based Weibull baseline over 7-, 14- and 30-day horizons. I also defined backend contracts and integrated the forecasts into the application. The energy baseline declines to extrapolate beyond its fitted temperature range, avoiding misleading alerts when the weather changes.",
     "outcome": "In the saved interim backtest, all five planted failures were flagged 6–9 days ahead, with two false-alarm days at the tested threshold. That experiment used synthetic sensor and failure data alongside real weather records.",
@@ -201,6 +237,19 @@ export const projects: Project[] = [
       "PR04"
     ],
     "href": "https://github.com/V1R4V/CampusReliability_HVAC-R"
+  ,
+    "metrics": [
+      {
+        "value": "6–9 days",
+        "label": "Warning before planted failures",
+        "context": "All 5 planted failures in the interim synthetic backtest."
+      },
+      {
+        "value": "2 days",
+        "label": "False-alarm days",
+        "context": "At threshold 3.0 on that synthetic sensor/failure seed."
+      }
+    ]
   },
   {
     "slug": "stock-streaming",
@@ -211,8 +260,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": true,
-    "eyebrow": "Making the recovery path part of the pipeline",
-    "summary": "A streaming pipeline has to account for the moment between reading a record and publishing its output. I implemented a course-built system that sends typed, simulated stock records through Kafka into HDFS and Parquet, with explicit offsets and checkpoint recovery.",
+    "eyebrow": "Stream-to-storage recovery with explicit checkpoints",
+    "summary": "Made stream recovery inspectable through saved partition offsets and predictable batch files, carrying typed, simulated stock records from Kafka into HDFS and Parquet.",
     "role": "Producer and consumer implementation, serialization, offset management and persisted output within the course project.",
     "status": "Academic project · simulated market data",
     "stack": [
@@ -243,8 +292,8 @@ export const projects: Project[] = [
       "Fullstack"
     ],
     "featured": true,
-    "eyebrow": "Making everyday spending visible beneath the large transactions",
-    "summary": "Tuition, family funding and repayments made a single spending total difficult to interpret. I built Vyaya to separate everyday activity from large obligations and settlements, so a monthly comparison answers the question I actually care about.",
+    "eyebrow": "A spending view that separates everyday activity from large obligations",
+    "summary": "Made everyday spending easier to interpret by separating it from tuition, funding and settlements. I built the personal finance app around integer-cent calculations, quarantined imports and a recorded 84-test suite.",
     "role": "Product framing, React/TypeScript application, financial calculations, import handling and visualizations.",
     "status": "Personal project · own-use application",
     "stack": [
@@ -253,14 +302,27 @@ export const projects: Project[] = [
       "Firestore",
       "SVG"
     ],
-    "image": "/cinematic/diagrams/vyaya.svg",
-    "imageAlt": "Separate the meaning before adding the amount — explanatory architecture diagram",
+    "image": "/cinematic/projects/vyaya-dashboard.webp",
+    "imageAlt": "Vyaya dashboard with clearly labeled synthetic demonstration data",
     "problem": "Tuition, family funding and repayments made a single spending total difficult to interpret. I built Vyaya to separate everyday activity from large obligations and settlements, so a monthly comparison answers the question I actually care about.",
     "approach": "Amounts use integer cents. Unrecognized imports are quarantined for review, and comparisons use equivalent elapsed periods rather than comparing an unfinished month with a complete one. Custom SVG charts expose those distinctions without combining unrelated money movements.",
     "outcome": "A personal-use finance application with separate activity lanes and a recorded 84-test suite.",
     "detail": "Define the meaning of a transaction before aggregating it.",
     "sourceIds": [
       "PR06"
+    ]
+  ,
+    "metrics": [
+      {
+        "value": "84",
+        "label": "Recorded tests",
+        "context": "Recorded project test suite."
+      },
+      {
+        "value": "3",
+        "label": "Activity lanes",
+        "context": "Everyday spending, obligations and funding, and settlements."
+      }
     ]
   },
   {
@@ -272,8 +334,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": false,
-    "eyebrow": "Keep retrieved passages and scores visible in the Streamlit interface, and evaluate language modeling separately from retrieval.",
-    "summary": "I built parallel fine-tuning and retrieval paths over 23 lecture transcripts to investigate what each contributes to study assistance.",
+    "eyebrow": "Comparing model adaptation with source-grounded retrieval",
+    "summary": "Reduced held-out language-model perplexity from 48.85 to 2.49 through LoRA adaptation, alongside a separate retrieval workflow over 23 lecture transcripts.",
     "role": "Prepared the corpus, fine-tuned the model, implemented retrieval and built the inspection interface.",
     "status": "Academic experiment",
     "stack": [
@@ -294,6 +356,14 @@ export const projects: Project[] = [
       "PR07"
     ],
     "href": "https://github.com/V1R4V/LLM-LoRA-Finetuning-vs-RAG"
+  ,
+    "metrics": [
+      {
+        "value": "48.85 → 2.49",
+        "label": "Held-out perplexity",
+        "context": "LoRA adaptation on held-out project material."
+      }
+    ]
   },
   {
     "slug": "distributed-weather",
@@ -304,8 +374,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": false,
-    "eyebrow": "Model partition and clustering keys around weather queries, with read-consistency fallback when replicas become unavailable.",
-    "summary": "Implemented a gRPC service over a three-node Cassandra cluster for NOAA time-series data.",
+    "eyebrow": "Weather queries through a tested node failure",
+    "summary": "Kept writes available during the tested loss of one Cassandra node, with read-consistency fallback in a three-node NOAA weather-data service.",
     "role": "Cassandra data modeling, gRPC service implementation and failure testing within the course project.",
     "status": "Academic project",
     "stack": [
@@ -336,8 +406,8 @@ export const projects: Project[] = [
       "Fullstack"
     ],
     "featured": false,
-    "eyebrow": "Separate LRU caching from the dataset tier and expose response sources alongside retries and backoff.",
-    "summary": "Implemented lookup and cache services with two data replicas and three cache replicas.",
+    "eyebrow": "Replicated lookups with visible cache and fallback behavior",
+    "summary": "Made property lookups inspectable across two data replicas and three cache replicas, using LRU caching, source-tagged responses and retry backoff.",
     "role": "Lookup and cache service implementation within the course project.",
     "status": "Academic project",
     "stack": [
@@ -366,8 +436,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": false,
-    "eyebrow": "Partition by county code and read selected columns, with a recovery path for DataNode loss.",
-    "summary": "Implemented a MySQL-to-HDFS pipeline with gRPC access, Parquet storage and query caching.",
+    "eyebrow": "Queryable distributed data with storage recovery",
+    "summary": "Made MySQL data queryable as partitioned Parquet in HDFS, with caching, selective column reads and a recovery path for DataNode loss.",
     "role": "Data movement, query service and storage-recovery implementation within the course project.",
     "status": "Academic project",
     "stack": [
@@ -399,8 +469,8 @@ export const projects: Project[] = [
       "ML & AI"
     ],
     "featured": false,
-    "eyebrow": "Use compatible bucketing and caching for repeated analysis, keeping query layout part of the performance reasoning.",
-    "summary": "Analyzed 8,573 CodeContests problems through Spark RDDs, DataFrames and SQL, with a difficulty model and model-assisted querying.",
+    "eyebrow": "From programming-problem records to reusable analysis",
+    "summary": "Turned 8,573 programming problems into a queryable Spark dataset, with cached analysis, difficulty modeling and schema-aware model-assisted SQL.",
     "role": "Spark analysis, query preparation and difficulty-model experimentation.",
     "status": "Academic project",
     "stack": [
@@ -430,8 +500,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": false,
-    "eyebrow": "Use six staging models and point-in-time joins before calculating trade values and profit rates.",
-    "summary": "Built an Airbyte, Snowflake and dbt workflow joining survey, trade and price data for desk-level analysis.",
+    "eyebrow": "A fact table whose joins preserve the meaning of a trade",
+    "summary": "Produced a trade-analysis fact table by cleaning three source types through six dbt staging models, with point-in-time price joins and guarded profit calculations.",
     "role": "Source integration, SQL transformations and analytical modeling.",
     "status": "Academic project",
     "stack": [
@@ -459,8 +529,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": false,
-    "eyebrow": "Express spatial joins as dependency-managed SQLX transformations and inspect bytes scanned for query-cost context.",
-    "summary": "Built a Cloud Storage-to-Dataform-to-BigQuery workflow relating Wisconsin schools to county geography.",
+    "eyebrow": "Spatial answers over 2,116 schools and 72 counties",
+    "summary": "Matched 2,116 Wisconsin schools to 72 county polygons through a dependency-managed Cloud Storage, Dataform and BigQuery pipeline.",
     "role": "Cloud ingestion, Dataform transformations and spatial SQL analysis.",
     "status": "Academic project",
     "stack": [
@@ -488,8 +558,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": false,
-    "eyebrow": "Keep relational grain and time windows explicit when moving from joins to revenue aggregation.",
-    "summary": "Loaded a music-store dataset into Dockerized MySQL and wrote 30 analytical queries.",
+    "eyebrow": "Revenue analysis with explicit relational grain and time windows",
+    "summary": "Answered revenue and customer questions through 30 SQL queries, including ranking and a three-month revenue moving average over Dockerized MySQL.",
     "role": "Database loading, SQL query design and revenue analysis.",
     "status": "Academic project",
     "stack": [
@@ -518,8 +588,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": false,
-    "eyebrow": "Use a 2dsphere index for containment, nearest-neighbor and radius searches, with map overlays for inspection.",
-    "summary": "Implemented 30 MongoDB queries connecting business information with geographic questions.",
+    "eyebrow": "Business data explored through aggregation and geography",
+    "summary": "Connected business records with geographic questions through 30 MongoDB queries, indexed spatial searches and map-based inspection.",
     "role": "MongoDB query implementation and geographic visualization.",
     "status": "Academic project",
     "stack": [
@@ -549,8 +619,8 @@ export const projects: Project[] = [
       "ML & AI"
     ],
     "featured": false,
-    "eyebrow": "Separate exact keyword fields from analyzed text and combine availability filters with lexical and vector retrieval.",
-    "summary": "Built search and exploratory dashboards over 300+ products across 13 categories.",
+    "eyebrow": "Product discovery across text, filters and semantic similarity",
+    "summary": "Made 300+ products across 13 categories searchable through exact filters, lexical matching and 384-dimensional vector retrieval.",
     "role": "Search mappings, retrieval queries and Kibana exploration.",
     "status": "Academic project",
     "stack": [
@@ -578,8 +648,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": false,
-    "eyebrow": "Preserve time order with a contiguous validation window and persist feature preparation for repeatable comparisons.",
-    "summary": "Combined five Favorita data sources and compared gradient-boosted demand models against Ridge.",
+    "eyebrow": "Demand-model comparison with time order preserved",
+    "summary": "Recorded 0.4841 validation RMSLE with XGBoost versus 0.9884 for Ridge after combining five Favorita datasets on a contiguous time-based split.",
     "role": "Data preparation, feature engineering and model comparison.",
     "status": "Academic experiment",
     "stack": [
@@ -600,6 +670,14 @@ export const projects: Project[] = [
       "PR17"
     ],
     "href": "https://github.com/V1R4V/Retail-Sales-Forecasting"
+  ,
+    "metrics": [
+      {
+        "value": "0.4841",
+        "label": "XGBoost validation RMSLE",
+        "context": "Against Ridge at 0.9884 on the July 17–31, 2017 split."
+      }
+    ]
   },
   {
     "slug": "agent-tool-graph",
@@ -610,8 +688,8 @@ export const projects: Project[] = [
       "Fullstack"
     ],
     "featured": false,
-    "eyebrow": "Link required inputs to tools that can produce the corresponding entity IDs.",
-    "summary": "Built a TypeScript analysis and interactive graph of dependencies across 1,309 Google Workspace and GitHub tool schemas.",
+    "eyebrow": "An inspectable graph of tool-call prerequisites",
+    "summary": "Made dependencies across 1,309 tool schemas inspectable by linking produced entity IDs to tools that need them, with an interactive TypeScript graph.",
     "role": "TypeScript dependency-analysis workflow and interactive graph.",
     "status": "Hiring-challenge prototype",
     "stack": [
@@ -639,8 +717,8 @@ export const projects: Project[] = [
       "ML & AI"
     ],
     "featured": false,
-    "eyebrow": "Connect cleaned USASpending.gov and SIPRI records with ontology objects and agent questions.",
-    "summary": "Prepared public contract data and organized it into a Foundry/AIP demonstration.",
+    "eyebrow": "Public records organized into an operational-data demonstration",
+    "summary": "Turned public contract records into a Foundry/AIP demonstration through data preparation, ontology design and an agent-question workflow.",
     "role": "Public-data preparation scripts, ontology and agent-prompt design, and demonstration recording.",
     "status": "Hiring-challenge demonstration",
     "stack": [
@@ -666,8 +744,8 @@ export const projects: Project[] = [
       "Fullstack"
     ],
     "featured": false,
-    "eyebrow": "Combine authenticated Firestore synchronization with local reads so a session history remains useful across connectivity changes.",
-    "summary": "Built a study tracker with stopwatch and Pomodoro modes, subject management and editable session history.",
+    "eyebrow": "A session history that supports planning and review",
+    "summary": "Made study sessions easier to track and review through timers, editable history and daily/weekly analytics, with authenticated cloud sync and local reads.",
     "role": "Tracker interface, session logic, data persistence and analytical views.",
     "status": "Personal project · deployed application",
     "stack": [
@@ -696,8 +774,8 @@ export const projects: Project[] = [
       "Fullstack"
     ],
     "featured": false,
-    "eyebrow": "Keep planning, execution and review in one data model, with JSON export for portability.",
-    "summary": "Built a weekly-planning dashboard that connects habits, daily logs, tasks and weighted grades.",
+    "eyebrow": "A single view from weekly goals to daily review",
+    "summary": "Connected weekly goals with daily execution through one dashboard for habits, logs, tasks and weighted review, backed by Supabase authentication and Postgres.",
     "role": "Planning interface, task/log workflows and weighted scoring.",
     "status": "Personal project · private-use dashboard",
     "stack": [
@@ -726,8 +804,8 @@ export const projects: Project[] = [
       "Fullstack"
     ],
     "featured": false,
-    "eyebrow": "Separate navigation, data access and interface state, with secure token storage in the mobile chat app.",
-    "summary": "Built four React web applications and three Expo/mobile applications covering chat, news, shopping and tool-assisted conversation.",
+    "eyebrow": "Seven applications across web and mobile interaction",
+    "summary": "Built seven web and mobile applications exploring navigation, chat and data access, including a seven-tool conversation agent and secure mobile token storage.",
     "role": "Web and mobile application implementations across the recorded suite.",
     "status": "Personal portfolio suite · coursework-built applications",
     "stack": [
@@ -758,8 +836,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": false,
-    "eyebrow": "Connect parsed company data with funding and valuation views so profiles can be compared.",
-    "summary": "Built startup-discovery filtering and visual exploration over 1,000+ company profiles.",
+    "eyebrow": "Startup discovery through searchable profiles and comparisons",
+    "summary": "Made 1,000+ company profiles searchable and comparable through startup filters and visual funding/valuation exploration in a hackathon prototype.",
     "role": "Startup-discovery interface and company-data exploration within the hackathon project.",
     "status": "Personal hackathon project",
     "stack": [
@@ -789,8 +867,8 @@ export const projects: Project[] = [
       "Fullstack"
     ],
     "featured": false,
-    "eyebrow": "Carry a recipe choice into saved favorites and grocery-list workflows rather than ending at search results.",
-    "summary": "Built an inventory-aware planner connecting available ingredients and dietary constraints with recipe choices.",
+    "eyebrow": "From ingredients on hand to a practical meal plan",
+    "summary": "Connected available ingredients and dietary constraints with a 10,000+ recipe API catalogue, carrying recipe choices into favorites and grocery-list workflows.",
     "role": "Inventory, recipe discovery and planning workflows.",
     "status": "Personal project",
     "stack": [
@@ -817,8 +895,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": false,
-    "eyebrow": "Compare synchronization and output formats under explicitly chosen Python runtime conditions.",
-    "summary": "Implemented configurable thread-pool processing and benchmark reporting for word-count workloads.",
+    "eyebrow": "A benchmark for examining runtime and workload tradeoffs",
+    "summary": "Made concurrency tradeoffs measurable through a configurable word-count benchmark comparing thread pools, synchronization and CSV/Parquet/Arrow output.",
     "role": "Thread-pool processing, synchronization and benchmark tooling within the course project.",
     "status": "Academic benchmark project",
     "stack": [
@@ -846,8 +924,8 @@ export const projects: Project[] = [
       "Computing Foundations"
     ],
     "featured": false,
-    "eyebrow": "Match each data structure to its information assumptions, including future-access knowledge for Belady’s policy.",
-    "summary": "Implemented graph traversal, offline cache eviction and inversion counting as separate algorithm exercises.",
+    "eyebrow": "Algorithm choices explained through their constraints",
+    "summary": "Implemented linear-time graph traversal, offline optimal cache eviction and Fenwick-tree inversion counting, with each algorithm’s information assumptions explicit.",
     "role": "Algorithm implementation and complexity analysis.",
     "status": "Academic foundations exercises",
     "stack": [
@@ -874,8 +952,8 @@ export const projects: Project[] = [
       "Fullstack"
     ],
     "featured": false,
-    "eyebrow": "Represent travel as a weighted graph and separate shortest-path computation from the HTML interface.",
-    "summary": "Built a Java route-query application over 160+ UW-Madison locations.",
+    "eyebrow": "Routes and nearby destinations over a campus graph",
+    "summary": "Enabled route and nearest-destination queries across 160+ UW-Madison locations through weighted graph modeling, Dijkstra’s algorithm and an HTML interface.",
     "role": "Graph-based route queries and application integration within the course project.",
     "status": "Academic project",
     "stack": [
@@ -903,8 +981,8 @@ export const projects: Project[] = [
       "Fullstack"
     ],
     "featured": false,
-    "eyebrow": "Separate the CLI, query logic and self-balancing tree through object-oriented interfaces.",
-    "summary": "Implemented ordered song storage and filtering behind a command-line interface.",
+    "eyebrow": "Ordered music queries backed by tree-based indexing",
+    "summary": "Enabled ordered song search and energy-range filtering through a layered Java application backed by a self-balancing red-black tree.",
     "role": "Tree-based song-query implementation within the course project.",
     "status": "Academic project",
     "stack": [
@@ -932,8 +1010,8 @@ export const projects: Project[] = [
       "ML & AI"
     ],
     "featured": false,
-    "eyebrow": "Save the best model and support resuming training so experimentation does not depend on one uninterrupted run.",
-    "summary": "Implemented a LeNet-style classifier for 100 image classes, including training and per-epoch evaluation.",
+    "eyebrow": "Image classification with repeatable training and evaluation",
+    "summary": "Made a 100-class image-training experiment resumable through best-model checkpoints and per-epoch evaluation in a roughly 151,000-parameter LeNet implementation.",
     "role": "Network, training loop, evaluation and checkpoint handling.",
     "status": "Academic experiment",
     "stack": [
@@ -960,8 +1038,8 @@ export const projects: Project[] = [
       "ML & AI"
     ],
     "featured": false,
-    "eyebrow": "Expose top-three Softmax probabilities alongside the predicted class.",
-    "summary": "Implemented a PyTorch training and evaluation pipeline for clothing-image classification.",
+    "eyebrow": "A clothing-image classifier with an inspectable training loop",
+    "summary": "Exceeded 85% accuracy within five epochs in the recorded Fashion-MNIST course experiment, with an implemented PyTorch training/evaluation loop and top-three probability output.",
     "role": "Preprocessing, training, evaluation and probability output.",
     "status": "Academic experiment",
     "stack": [
@@ -989,8 +1067,8 @@ export const projects: Project[] = [
       "ML & AI"
     ],
     "featured": false,
-    "eyebrow": "Explore how retained components trade representation size against reconstructed image detail.",
-    "summary": "Implemented PCA over 1,000 celebrity images represented by 3,000-dimensional vectors.",
+    "eyebrow": "Image representation made visible through reconstruction",
+    "summary": "Reconstructed 1,000 face images from lower-dimensional PCA representations, examining how component count and noise affect retained detail.",
     "role": "PCA, reconstruction and perturbation analysis.",
     "status": "Academic experiment",
     "stack": [
@@ -1018,8 +1096,8 @@ export const projects: Project[] = [
       "Data Engineering"
     ],
     "featured": false,
-    "eyebrow": "Compare the same objective through closed-form and iterative optimization.",
-    "summary": "Implemented regression with NumPy using both an analytical solution and gradient descent.",
+    "eyebrow": "Two optimization paths through one regression objective",
+    "summary": "Compared closed-form and gradient-descent solutions to the same ice-cover regression problem, implementing both directly in NumPy.",
     "role": "Closed-form and gradient-descent regression implementations.",
     "status": "Academic foundations exercise",
     "stack": [
@@ -1046,8 +1124,8 @@ export const projects: Project[] = [
       "ML & AI"
     ],
     "featured": false,
-    "eyebrow": "Convert observed letter counts into posterior scores through Bayes’ rule.",
-    "summary": "Implemented English-versus-Spanish inference from character-frequency evidence.",
+    "eyebrow": "Language inference with the probability calculation exposed",
+    "summary": "Turned character-frequency evidence into English-versus-Spanish posterior scores through a transparent implementation of Bayes’ rule.",
     "role": "Character-count evidence and posterior-probability implementation.",
     "status": "Academic foundations exercise",
     "stack": [
@@ -1064,21 +1142,195 @@ export const projects: Project[] = [
       "PR33"
     ],
     "href": "https://github.com/V1R4V/language_detection"
+  },
+  {
+    "slug": "video-fingerprint-benchmark",
+    "title": "Video-Fingerprint Benchmark",
+    "category": "ML & AI",
+    "categories": [
+      "ML & AI",
+      "Computing Foundations"
+    ],
+    "featured": false,
+    "eyebrow": "Controlled comparisons that explain a fingerprint-error improvement",
+    "summary": "Reduced 720p median Hamming error from 0.225 to 0.025 in an exploratory in-sample benchmark, using common-resolution preprocessing across 25 sources and 1,875 pair comparisons.",
+    "role": "Transformation tooling, experiment manifests, controlled comparisons and evaluation analysis in a continuing research collaboration.",
+    "status": "Ongoing research collaboration · exploratory results",
+    "stack": [
+      "Python",
+      "OpenCV",
+      "FFmpeg",
+      "Video fingerprinting"
+    ],
+    "image": "/ssim-benchmark.svg",
+    "imageAlt": "Explanatory diagram of the video-fingerprint benchmark: 25 sources, 75 transformed variants and 1,875 comparisons.",
+    "problem": "Changes in resolution, encoding, timing and overlays can alter a video fingerprint. A useful experiment needs repeatable transformations and non-matched controls, as well as matching source-copy pairs.",
+    "approach": "Built transformation tooling across two phases, with manifests and parameter records for resolution, encoding, timing, cropping, noise, color, watermarks and reframing, followed by emoji, subtitle and frame-effect protocols.",
+    "outcome": "In the earlier exploratory, in-sample benchmark, common-resolution preprocessing reduced median Hamming error on 720p copies from 0.225 to 0.025. A later transformation demonstration produced 30 outputs from 6 sources; it is a separate result, not an expanded matching evaluation.",
+    "detail": "The controlled benchmark used 25 sources, 75 transformed variants and 1,875 pair comparisons. Transformation validation and fingerprint-matching evaluation remain separate, and the recorded in-sample improvement is not a held-out accuracy claim.",
+    "sourceIds": [
+      "E12",
+      "E13"
+    ]
+  ,
+    "metrics": [
+      {
+        "value": "0.225 → 0.025",
+        "label": "720p median Hamming error",
+        "context": "Exploratory, in-sample controlled benchmark."
+      },
+      {
+        "value": "1,875",
+        "label": "Pair comparisons",
+        "context": "25 sources and 75 variants in the earlier benchmark."
+      }
+    ]
   }
 ]
 
 export const experiences: Experience[] = [
   {
+    "slug": "cs574",
+    "org": "UW–Madison · CS 574",
+    "role": "Peer Mentor",
+    "period": "August 2026–present",
+    "mark": "UW–Madison · CS 574",
+    "summary": "Restored submission access and supported course releases across 434 private repositories, serving approximately 140 students per project.",
+    "detail": "Adapted and ran GitLab provisioning for 434 private repositories across 3 project releases, preparing starter files, student access and project organization for approximately 140 students per project.",
+    "bullets": [
+      "Adapted and ran GitLab provisioning for 434 private repositories across 3 project releases, preparing starter files, student access and project organization for approximately 140 students per project.",
+      "Diagnosed approximately 31 protected-branch restrictions and built a reusable repair script to restore submission access before assignment release.",
+      "Independently built a score-export tool that consolidated submissions and autograder results into one staff CSV, separating student work from setup-triggered runs.",
+      "Recorded 4 Kibana walkthrough sets that staff adopted as grading references, and tested assignments from the student’s perspective to catch setup and evaluation problems.",
+      "Contributed 3 adopted fixes to the Airbyte/Snowflake/dbt handout and held office hours on SQL, Docker and data-system workflows."
+    ],
+    "sourceIds": [
+      "E14",
+      "E15"
+    ],
+    "logo": "/company-logos/wisc.png",
+    "metrics": [
+      {
+        "value": "434",
+        "label": "Private GitLab repositories",
+        "context": "Across 3 project releases, approximately 140 students per project."
+      },
+      {
+        "value": "~31",
+        "label": "Branch restrictions repaired",
+        "context": "Restored student submission access."
+      },
+      {
+        "value": "4",
+        "label": "Kibana walkthrough sets",
+        "context": "Adopted by teaching staff as grading references."
+      }
+    ]
+  },
+  {
+    "slug": "people-robots",
+    "org": "UW–Madison People & Robots Lab",
+    "role": "Undergraduate Research Assistant",
+    "period": "January 2026–present",
+    "mark": "People & Robots Lab",
+    "summary": "Brought in-context security and privacy guidance into an Android research prototype for adults with intellectual and developmental disabilities. I lead code implementation.",
+    "detail": "Lead the Kotlin/Android implementation of a context-aware security overlay, connecting on-screen information with structured Gemini output. The PI leads research and design.",
+    "bullets": [
+      "Lead the Kotlin/Android implementation of a context-aware security overlay, connecting on-screen information with structured Gemini output. The PI leads research and design.",
+      "Reworked an explanation-heavy prototype after advisor feedback into a clear warning, one recommended action and an optional explanation.",
+      "Resolved permission-dialog detection by inspecting available Android accessibility windows, excluding the assistant’s own overlay and identifying the permission-controller window.",
+      "Bring guidance into the app a person is already using, keeping the security event and the recommended action in the same interaction."
+    ],
+    "sourceIds": [
+      "E08",
+      "E09",
+      "E10"
+    ],
+    "logo": "/company-logos/wisc.png"
+  ,
+    "metrics": []
+  },
+  {
+    "slug": "cornell-acert",
+    "org": "Cornell University, ACERT",
+    "role": "Undergraduate Research Intern",
+    "period": "July 8–August 15, 2026",
+    "mark": "Cornell University · ACERT",
+    "summary": "Gave the research team a basis for commercialization decisions through market, pricing and procurement analysis across five customer segments and four competing technology families.",
+    "detail": "Assessed 5 priority customer segments for portable electron-spin-resonance drug-identification technology, using government data, procurement records, equipment prices and testing volumes.",
+    "bullets": [
+      "Assessed 5 priority customer segments for portable electron-spin-resonance drug-identification technology, using government data, procurement records, equipment prices and testing volumes.",
+      "Developed market estimates and compared customer needs, purchasing capacity and procurement complexity to identify practical entry points.",
+      "Benchmarked 4 competing technology families: Raman, FTIR, portable mass spectrometry and ion mobility.",
+      "Synthesized market, pricing, patent, licensing and sponsored-research findings into slide decks and go-to-market recommendations for the research team."
+    ],
+    "sourceIds": [
+      "E11"
+    ],
+    "metrics": [
+      {
+        "value": "5",
+        "label": "Customer segments assessed",
+        "context": "Coverage of market and procurement research."
+      },
+      {
+        "value": "4",
+        "label": "Competing technology families",
+        "context": "Pricing and workflow comparisons informing market entry."
+      }
+    ]
+  },
+  {
+    "slug": "darukaa",
+    "org": "Darukaa.Earth",
+    "role": "Software Engineer Intern, Platform",
+    "period": "May–July 2026",
+    "mark": "Darukaa.Earth",
+    "logo": "/company-logos/darukaa.webp",
+    "summary": "Increased audio-inference throughput 8–10× in the batch comparison and made 500-file workloads recoverable through retry-safe orchestration.",
+    "detail": "Increased audio-inference throughput 8–10× in the recorded batch comparison by moving synchronous Vertex AI calls to Batch Prediction, leading the implementation under senior engineering supervision.",
+    "bullets": [
+      "Increased audio-inference throughput 8–10× in the recorded batch comparison by moving synchronous Vertex AI calls to Batch Prediction, leading the implementation under senior engineering supervision.",
+      "Built FastAPI and asynchronous database orchestration for 500-file batches, preserving source-file IDs and spatial metadata through submission, output reconciliation and result delivery.",
+      "Made retries safe and isolated corrupt uploads so one failed file would not abort the batch. Decoupled long-running processing from interactive requests and integrated authenticated completion callbacks.",
+      "Validated the upload-to-result workflow across 500 test files and covered orchestration with 15 unit tests; all files completed the expected path in that validation run.",
+      "Reduced the recorded infrastructure cost by $80–$95 per environment per month while making the field-recording workflow faster for downstream analysis."
+    ],
+    "sourceIds": [
+      "E05",
+      "E06",
+      "E07"
+    ],
+    "metrics": [
+      {
+        "value": "8–10×",
+        "label": "Audio-inference throughput",
+        "context": "Audio workload in the recorded batch comparison."
+      },
+      {
+        "value": "500 files",
+        "label": "End-to-end validation",
+        "context": "Upload, processing and source-linked results."
+      },
+      {
+        "value": "15",
+        "label": "Unit tests",
+        "context": "Orchestration and output-parsing coverage."
+      }
+    ]
+  },
+  {
     "slug": "vdart",
     "org": "VDart Inc.",
     "role": "Software Engineering Intern",
     "period": "May–August 2025",
-    "mark": "VDART",
-    "summary": "An internal proposal tool that made approved company knowledge easier to find and reuse.",
-    "detail": "Brought RFI/RFP first-draft preparation from about two weeks to under 24 hours through a production-ready RAG application I independently built with the BI team’s input. The recorded workflow supported roughly 3× proposal capacity.",
+    "mark": "VDart",
+    "summary": "Cut RFI/RFP first-draft preparation from about two weeks to under 24 hours, supporting roughly 3× proposal capacity for the internal BI team.",
+    "detail": "Brought RFI/RFP first-draft preparation from about 2 weeks to under 24 hours through a production-ready RAG application, supporting roughly 3× the team’s recorded proposal capacity.",
     "bullets": [
-      "Brought RFI/RFP first-draft preparation from about two weeks to under 24 hours through a production-ready RAG application I independently built with the BI team’s input. The recorded workflow supported roughly 3× proposal capacity.",
-      "Built the React interface, FastAPI backend, document ingestion and retrieval. Inspecting incomplete answers led me to preserve whole historical Q&A pairs, keeping the question’s context attached to the evidence.",
+      "Brought RFI/RFP first-draft preparation from about 2 weeks to under 24 hours through a production-ready RAG application, supporting roughly 3× the team’s recorded proposal capacity.",
+      "Independently built the React interface, FastAPI backend, document ingestion and retrieval with input from the BI team.",
+      "Investigated incomplete answers by inspecting retrieved context, then preserved whole historical Q&A pairs so each question remained attached to the approved evidence.",
       "Delivered the application through BI and technical review. The team deployed it after my internship, with later production use confirmed across 50+ internal BI users."
     ],
     "sourceIds": [
@@ -1087,100 +1339,24 @@ export const experiences: Experience[] = [
       "E03",
       "E04"
     ],
-    "logo": "/company-logos/vdart.png"
-  },
-  {
-    "slug": "darukaa",
-    "org": "Darukaa.Earth",
-    "role": "Software Engineer Intern, Platform",
-    "period": "May–July 2026",
-    "mark": "EARTH",
-    "summary": "Biodiversity infrastructure connecting field recordings, batch inference and results researchers could use.",
-    "detail": "Increased audio-inference throughput 8–10× in the recorded batch comparison by moving synchronous Vertex AI calls to Batch Prediction. I led the batch-upload and inference implementation under senior engineering supervision.",
-    "bullets": [
-      "Increased audio-inference throughput 8–10× in the recorded batch comparison by moving synchronous Vertex AI calls to Batch Prediction. I led the batch-upload and inference implementation under senior engineering supervision.",
-      "Built FastAPI and asynchronous database orchestration for 500-file batches, preserving source-file IDs and spatial metadata through submission, output reconciliation and result delivery. Per-file isolation kept one corrupt upload from aborting the rest.",
-      "Validated the upload-to-result path across 500 test files and covered orchestration with 15 unit tests. Decoupled long-running processing from interactive requests and integrated authenticated completion callbacks."
-    ],
-    "sourceIds": [
-      "E05",
-      "E06",
-      "E07"
+    "logo": "/company-logos/vdart.png",
+    "metrics": [
+      {
+        "value": "Under 24 hours",
+        "label": "Proposal first-draft preparation",
+        "context": "From about 2 weeks before the RAG workflow."
+      },
+      {
+        "value": "~3×",
+        "label": "Proposal capacity",
+        "context": "Reported internal BI workflow improvement."
+      },
+      {
+        "value": "50+",
+        "label": "Internal BI users",
+        "context": "Production use after team-led deployment."
+      }
     ]
-  },
-  {
-    "slug": "people-robots",
-    "org": "UW-Madison People & Robots Lab",
-    "role": "Undergraduate Research Assistant",
-    "period": "January 2026–present",
-    "mark": "UW",
-    "summary": "Android research software helping adults with intellectual and developmental disabilities understand security and privacy events.",
-    "detail": "Lead code implementation of a Kotlin overlay that brings screen context and structured Gemini output into concise guidance within the app a person is using. The PI leads research and design.",
-    "bullets": [
-      "Lead code implementation of a Kotlin overlay that brings screen context and structured Gemini output into concise guidance within the app a person is using. The PI leads research and design.",
-      "Reworked an explanation-heavy prototype after advisor feedback, moving toward a clear warning, one recommended action and an optional explanation. The revision made recognizing the risk the first step in the interaction.",
-      "Resolved permission-dialog detection by inspecting Android’s available accessibility windows, excluding the assistant’s overlay and identifying the permission-controller window."
-    ],
-    "sourceIds": [
-      "E08",
-      "E09",
-      "E10"
-    ],
-    "logo": "/company-logos/wisc.png"
-  },
-  {
-    "slug": "cornell-acert",
-    "org": "Cornell University, ACERT",
-    "role": "Undergraduate Research Intern",
-    "period": "July 8–August 15, 2026",
-    "mark": "ACERT",
-    "summary": "Commercialization analysis for a portable electron-spin-resonance drug-identification technology.",
-    "detail": "Assessed five priority customer segments using government data, procurement records, equipment prices and testing-volume context to develop market estimates and identify practical entry points.",
-    "bullets": [
-      "Assessed five priority customer segments using government data, procurement records, equipment prices and testing-volume context to develop market estimates and identify practical entry points.",
-      "Benchmarked four competing technology families, including Raman, FTIR, portable mass spectrometry and ion mobility. Compared customer need, purchasing capacity, workflows and procurement complexity to inform go-to-market priorities.",
-      "Synthesized market, pricing, patent, licensing and sponsored-research findings into slide decks and recommendations, giving the research team a clearer basis for commercialization discussions."
-    ],
-    "sourceIds": [
-      "E11"
-    ]
-  },
-  {
-    "slug": "ssim",
-    "org": "Continuing SSIM collaboration",
-    "role": "Video-fingerprinting research collaboration",
-    "period": "ongoing",
-    "mark": "SSIM",
-    "summary": "Repeatable transformation tooling and controlled experiments on video-fingerprint comparisons.",
-    "detail": "Built transformation tooling across two phases, spanning resolution, encoding, timing, cropping, noise, color, watermarks and white-padding/reframing experiments, followed by emoji, subtitle and frame-effect protocols.",
-    "bullets": [
-      "Built transformation tooling across two phases, spanning resolution, encoding, timing, cropping, noise, color, watermarks and white-padding/reframing experiments, followed by emoji, subtitle and frame-effect protocols.",
-      "Created an earlier controlled benchmark of 25 source videos, 75 variants and 1,875 pair comparisons. Common-resolution preprocessing reduced median Hamming error on 720p copies from 0.225 to 0.025 in that exploratory, in-sample experiment.",
-      "Made runs traceable through manifests, parameters and validation records. A later protocol demonstration generated 30 outputs from six sources, keeping transformation correctness checks separate from fingerprint-matching results."
-    ],
-    "sourceIds": [
-      "E12",
-      "E13"
-    ]
-  },
-  {
-    "slug": "cs574",
-    "org": "UW-Madison, CS 574: Data Management for Data Science",
-    "role": "Peer Mentor",
-    "period": "Fall 2026",
-    "mark": "CS 574",
-    "summary": "Course infrastructure, assignment quality and technical explanations for approximately 140 students per project.",
-    "detail": "Adapted and ran provisioning for 434 private GitLab repositories across three project releases, handling starter material, access and project organization. Diagnosed approximately 31 protected-branch restrictions and wrote a reusable repair script to restore submission access.",
-    "bullets": [
-      "Adapted and ran provisioning for 434 private GitLab repositories across three project releases, handling starter material, access and project organization. Diagnosed approximately 31 protected-branch restrictions and wrote a reusable repair script to restore submission access.",
-      "Independently built a score-export tool that consolidated submission status and autograder results into a staff CSV. It distinguished real submissions from initialization activity, giving the teaching team cleaner evidence for follow-up.",
-      "Recorded four Kibana walkthrough sets adopted as grading references, tested assignments from the student’s perspective and contributed three adopted fixes to the Airbyte/Snowflake/dbt handout. Office hours connected those systems with explanations students could use."
-    ],
-    "sourceIds": [
-      "E14",
-      "E15"
-    ],
-    "logo": "/company-logos/wisc.png"
   },
   {
     "slug": "pinkcity",
@@ -1188,30 +1364,51 @@ export const experiences: Experience[] = [
     "role": "Software Development Intern",
     "period": "January 2022–March 2023",
     "mark": "PCE",
-    "summary": "Earlier software work supporting logistics relationships and resource allocation.",
-    "detail": "Built a Python/SQL CRM for 30+ business leads, organizing lead, contractor and partnership records into a queryable workflow for follow-up.",
+    "summary": "Made 30+ business leads queryable in a Python/SQL CRM and built allocation tooling to connect machinery availability with operational demand.",
+    "detail": "Built a Python/SQL CRM for 30+ business leads, replacing scattered tracking with queryable lead, contractor and partnership records.",
     "bullets": [
-      "Built a Python/SQL CRM for 30+ business leads, organizing lead, contractor and partnership records into a queryable workflow for follow-up.",
-      "Implemented contractor-allocation tooling to match machinery availability with operational demand, alongside a responsive business website."
+      "Built a Python/SQL CRM for 30+ business leads, replacing scattered tracking with queryable lead, contractor and partnership records.",
+      "Supported a more organized follow-up workflow as recorded successful partnerships grew from 15 to 19 over 8 months.",
+      "Implemented Python contractor-allocation tooling to match machinery availability with operational demand.",
+      "Built a responsive HTML, CSS and JavaScript website to present the business’s services and make client inquiries easier."
     ],
     "sourceIds": [
       "E16"
     ],
-    "logo": "/company-logos/pinkcity.gif"
+    "logo": "/company-logos/pinkcity.gif",
+    "metrics": [
+      {
+        "value": "30+",
+        "label": "Business leads tracked",
+        "context": "Queryable lead, contractor and partnership records."
+      },
+      {
+        "value": "15 → 19",
+        "label": "Recorded business partnerships",
+        "context": "Over 8 months in the business record."
+      }
+    ]
   },
   {
     "slug": "science-centre",
     "org": "National Science Centre, New Delhi",
     "role": "Summer Intern",
-    "period": "three summer placements, 2017–2019",
-    "mark": "NSC",
-    "summary": "Early exposure to astrophysics, robotics and circuit design.",
-    "detail": "Explored scientific and engineering topics across three summer placements, establishing an early foundation for later computing projects.",
+    "period": "Three summers · 2017–2019",
+    "mark": "National Science Centre",
+    "summary": "Built an early scientific foundation through three summer placements in astrophysics, robotics and circuit design.",
+    "detail": "Completed 3 summer placements spanning astrophysics, robotics and electrical-circuit design, building an early foundation for later computing work.",
     "bullets": [
-      "Explored scientific and engineering topics across three summer placements, establishing an early foundation for later computing projects."
+      "Completed 3 summer placements spanning astrophysics, robotics and electrical-circuit design, building an early foundation for later computing work."
     ],
     "sourceIds": [
       "E18"
+    ],
+    "metrics": [
+      {
+        "value": "3",
+        "label": "Summer placements",
+        "context": "Scientific and engineering exposure, 2017–2019."
+      }
     ]
   }
 ]
@@ -1220,13 +1417,13 @@ export const leadership: Leadership[] = [
   {
     "org": "Recreation and Wellbeing, UW-Madison",
     "role": "Intramural Sports Lead",
-    "heading": "Better-prepared officials. A better experience for players.",
-    "summary": "Staffing, scheduling, training and on-site coordination across 50+ programs, involving 250+ referees cumulatively over two years.",
-    "scope": "Staffing, scheduling, training and on-site coordination across 50+ programs, involving 250+ referees cumulatively over two years.",
+    "heading": "Higher participation. Better participant experiences.",
+    "summary": "Recorded program improvements of 30% in participation and 35% in satisfaction, alongside staff development and operations across 50+ programs.",
+    "scope": "Staff development, scheduling and on-site operations across 50+ intramural programs.",
     "bullets": [
-      "Introduced station-based field clinics so officials could practice rule knowledge, positioning, communication and difficult game situations separately. Pre-playoff staff check-ins improved coordination and preparation before higher-stakes games.",
-      "Used Green/Yellow/Red readiness tracking to guide assignments and targeted feedback, making the next development step clearer for each official. Led 10–15 staff during high-volume programming windows, balancing individual support with decisions that could not wait.",
-      "Used participant surveys to identify demand and launch cricket and pickleball leagues. Across the broader program work, recorded outcomes included 30% higher participation and 35% higher satisfaction, connecting staff development and program decisions with the experience participants received."
+      "Expanded the program around participant demand by using surveys to identify and launch cricket and pickleball leagues. The reported participation and satisfaction gains reflect the broader program work.",
+      "Improved staff preparation through station-based field clinics for rules, positioning, communication and difficult game situations, plus check-ins before playoffs.",
+      "Made development needs actionable through Green/Yellow/Red readiness tracking and targeted feedback. Led 10–15 staff in high-volume windows, matching preparation and assignments to the demands of the games."
     ],
     "sourceIds": [
       "L01",
@@ -1237,29 +1434,60 @@ export const leadership: Leadership[] = [
     ],
     "period": "November 2025–present",
     "previousRole": "Intramural Sports Supervisor · September 2023–October 2025"
+  ,
+    "metrics": [
+      {
+        "value": "250+",
+        "label": "Referee program scope",
+        "context": "Referees cumulatively over two years."
+      },
+      {
+        "value": "+30%",
+        "label": "Participation",
+        "context": "Reported program-level increase."
+      },
+      {
+        "value": "+35%",
+        "label": "Participant satisfaction",
+        "context": "Reported program-level increase."
+      }
+    ]
   },
   {
     "org": "Badger VC",
     "role": "Vice President of External Relations",
-    "heading": "Building a venture community that learns together",
-    "summary": "Founder relationships, practitioner engagement and a connected series of venture events.",
-    "scope": "Founder relationships, practitioner engagement and a connected series of venture events.",
+    "heading": "15+ venture events connecting founders and investment practitioners",
+    "summary": "Connected 20+ student founders with the venture community and coordinated 15+ events designed as a continuing learning series.",
+    "scope": "Founder relationships and a connected learning series with venture-capital practitioners, including managing partners.",
     "bullets": [
-      "Built relationships with 20+ student founders and coordinated 15+ venture events, bringing founders, industry partners and investment professionals into the student venture community.",
-      "Brought venture-capital managing partners into the speaker series and organized events to build on one another, connecting practitioners’ experiences with due diligence, venture-capital concepts and VC math.",
-      "Coordinated speaker relationships, follow-up and event logistics around what members could learn and apply, giving the series a progression beyond individual guest talks."
+      "Built relationships with 20+ student founders and coordinated 15+ venture events, connecting members with founders, industry partners and investment professionals.",
+      "Shaped events to build on one another, bringing managing partners’ practical experience into discussions of due diligence, VC concepts and VC math.",
+      "Coordinated speaker relationships, follow-up and logistics around what members could learn and apply, making the series useful beyond an individual guest talk."
     ],
     "sourceIds": [
       "L06",
       "L07"
     ]
+  ,
+    "metrics": [
+      {
+        "value": "15+",
+        "label": "Venture events coordinated",
+        "context": "Connected discussions of VC, due diligence and VC math."
+      },
+      {
+        "value": "20+",
+        "label": "Student-founder relationships",
+        "context": "External engagement across the student venture community."
+      }
+    ]
   },
   {
     "org": "Strato VC",
     "role": "Investment Analyst",
-    "heading": "Testing the business behind the pitch",
-    "summary": "Market, financial, competitive and technical diligence supporting investment decisions.",
-    "scope": "Market, financial, competitive and technical diligence supporting investment decisions.",
+    "heading": "Investment decisions grounded in market and technical evidence",
+    "summary": "Turned research on 10+ startups per quarter into investment memos testing market, financial and technical assumptions.",
+    "scope": "Market, financial, competitive and technical diligence supporting the investment team’s decisions.",
     "bullets": [
       "Analyzed 10+ startups per quarter, using PitchBook, company financials and competitive research to test market opportunity and business assumptions.",
       "Developed investment memos that connected market evidence with financial projections, product architecture and technical roadmaps, giving the investment team a clearer view of the case and its risks."
@@ -1267,26 +1495,47 @@ export const leadership: Leadership[] = [
     "sourceIds": [
       "L08"
     ]
+  ,
+    "metrics": [
+      {
+        "value": "10+",
+        "label": "Startups analyzed per quarter",
+        "context": "Diligence workload supporting investment memos."
+      }
+    ]
   },
   {
     "org": "DapperFits",
     "role": "Founder",
-    "heading": "Owning the product beyond the design",
-    "summary": "A custom-apparel business spanning design, marketing, suppliers and fulfillment.",
-    "scope": "A custom-apparel business spanning design, marketing, suppliers and fulfillment.",
+    "heading": "600+ apparel sales from a five-person venture",
+    "summary": "Generated 600+ apparel sales with a five-person team spanning product design, marketing and fulfillment.",
+    "scope": "A custom-apparel venture connecting product decisions, supplier coordination, launches and customer feedback.",
     "bullets": [
-      "Founded the brand and led a five-person team across design, marketing and fulfillment, generating 600+ apparel sales.",
-      "Coordinated product drops, supplier decisions and customer feedback so designs could move from a mockup to a delivered product. The work connected creative decisions with acquisition, delivery and repeat business."
+      "Generated 600+ apparel sales after founding the brand and leading a five-person team across design, marketing and fulfillment.",
+      "Connected designs, supplier decisions and product drops with customer feedback, carrying responsibility from the first mockup through delivery and repeat business."
     ],
     "sourceIds": [
       "E17"
     ],
     "period": "June 2022–June 2023"
+  ,
+    "metrics": [
+      {
+        "value": "600+",
+        "label": "Apparel sales",
+        "context": "Team business outcome, June 2022–June 2023."
+      },
+      {
+        "value": "5",
+        "label": "Team members",
+        "context": "Design, marketing and fulfillment."
+      }
+    ]
   },
   {
     "org": "Earlier school sports leadership",
     "role": "Sports events and coaching",
-    "heading": "Earlier school sports leadership",
+    "heading": "Sports programs for 900+ students",
     "summary": "Coordinated sports events for 900+ students and contributed to facilities planning, extending responsibility beyond the team on the field.",
     "scope": "",
     "bullets": [
@@ -1297,5 +1546,13 @@ export const leadership: Leadership[] = [
       "L09"
     ],
     "period": "April 2021–August 2022"
+  ,
+    "metrics": [
+      {
+        "value": "900+",
+        "label": "Students in sports-event scope",
+        "context": "School leadership, separate from RecWell program counts."
+      }
+    ]
   }
 ]

@@ -13,7 +13,7 @@ test("all chapters, project exhibits and honest contact fallback are present", a
   await expect(page.getByRole("heading", { level: 1 })).toHaveAccessibleName("Vibhrav Jha")
   for (const id of ["work", "experience", "leadership", "about", "contact"]) await expect(page.locator(`#${id}`)).toBeAttached()
   await expect(page.locator("[data-stack-card]")).toHaveCount(6)
-  await expect(page.locator("[data-catalogue-project]")).toHaveCount(33)
+  await expect(page.locator("[data-catalogue-project]")).toHaveCount(34)
   await expect(page.locator("#cinematic-contact-title")).toHaveText("Let’s talk about what you’re building.")
   await expect(page.locator("#leadership")).toContainText("cumulatively over two years")
   await page.locator("#contact").scrollIntoViewIfNeeded()
@@ -35,7 +35,7 @@ test("name has its own upright letter motion and settles without skew", async ({
 
 test("experience role navigation works with keyboard", async ({ page }) => {
   await page.goto("/")
-  const role = page.getByRole("navigation", { name: "Select an experience" }).getByRole("link").nth(2)
+  const role = page.getByRole("navigation", { name: "Select an experience" }).getByRole("link").nth(1)
   await role.focus()
   await page.keyboard.press("Enter")
   await expect(page).toHaveURL(/#experience-people-robots$/)
@@ -85,13 +85,14 @@ test("unknown project returns 404", async ({ page }) => {
 test("contact renders pending and provider-acceptance confirmation", async ({ page }) => {
   await page.route("**/api/contact", async route => {
     if (route.request().method() === "GET") return route.fulfill({ json: { challenge: "browser-test-challenge" } })
-    await new Promise(resolve => setTimeout(resolve, 250))
+    await new Promise(resolve => setTimeout(resolve, 900))
     return route.fulfill({ status: 202, json: { message: "Accepted" } })
   })
   await page.goto("/")
   await page.getByLabel("Name", { exact: true }).fill("Test visitor")
   await page.getByLabel("Email", { exact: true }).fill("visitor@example.com")
   await page.getByLabel("Message", { exact: true }).fill("I would like to discuss an engineering project with you.")
+  await expect(page.getByRole("button", { name: "Send message" })).toBeEnabled()
   await page.getByRole("button", { name: "Send message" }).click()
   await expect(page.getByRole("button", { name: "Sending…" })).toBeDisabled()
   await expect(page.getByText("Your message has been sent. Thank you for getting in touch.")).toBeVisible()

@@ -27,9 +27,26 @@ export function MotionDirector({ root, paused }: { root: RefObject<HTMLDivElemen
     if (paused) { root.current.dataset.motionEngine = "static"; return }
     let cancelled = false
     let revert = () => {}
-    void Promise.all([import("gsap"), import("gsap/ScrollTrigger")]).then(([{ gsap }, { ScrollTrigger }]) => {
+    void Promise.all([import("gsap"), import("gsap/ScrollTrigger"), import("lenis")]).then(([{ gsap }, { ScrollTrigger }, { default: Lenis }]) => {
       if (cancelled || !root.current) return
       gsap.registerPlugin(ScrollTrigger)
+      // Smooth wheel input on laptops, while touch and keyboard keep native
+      // browser scrolling. One ticker drives both scroll and scene choreography.
+      const pointer = matchMedia("(hover: hover) and (pointer: fine)")
+      let lenis: InstanceType<typeof Lenis> | undefined
+      const tick = (time: number) => lenis?.raf(time * 1000)
+      const syncScrolling = () => {
+        lenis?.destroy()
+        lenis = undefined
+        if (pointer.matches) {
+          lenis = new Lenis({ lerp: .14, smoothWheel: true, syncTouch: false, autoRaf: false, anchors: false, prevent: element => /^(INPUT|TEXTAREA|SELECT)$/.test(element.tagName) || element.id === "mobile-navigation" })
+          lenis.on("scroll", ScrollTrigger.update)
+        }
+        if (root.current) root.current.dataset.scrollEngine = lenis ? "smooth-wheel" : "native"
+      }
+      syncScrolling()
+      gsap.ticker.add(tick)
+      pointer.addEventListener("change", syncScrolling)
       const context = gsap.context(() => {
         const hero = root.current!.querySelector("[data-cinematic-hero]")
         const stage = root.current!.querySelector(".cinematic-stage")
@@ -68,7 +85,13 @@ export function MotionDirector({ root, paused }: { root: RefObject<HTMLDivElemen
           ScrollTrigger.create({ trigger: section, start: "top 55%", end: "bottom 55%", toggleClass: "chapter-active" })
         })
       }, root.current)
-      revert = () => context.revert()
+      revert = () => {
+        pointer.removeEventListener("change", syncScrolling)
+        gsap.ticker.remove(tick)
+        lenis?.destroy()
+        context.revert()
+        if (root.current) root.current.dataset.scrollEngine = "native"
+      }
       ScrollTrigger.refresh()
       root.current.dataset.motionEngine = "ready"
     }).catch(() => {

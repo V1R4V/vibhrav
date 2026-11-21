@@ -2,6 +2,8 @@ import { ArrowDown } from "lucide-react"
 import { leadership, publicCopy } from "@/lib/portfolio-data"
 import { ExperienceStage } from "./experience-stage"
 import { ProjectGallery } from "./project-gallery"
+import { EvidenceText } from "./evidence-text"
+import { ImpactMetrics } from "./impact-metrics"
 import "./chapters.css"
 
 function FieldDrawing() {
@@ -36,11 +38,11 @@ export function PortfolioChapters() {
         </div>
         {recwell && <article className="p-recwell" aria-labelledby="recwell-title">
           <div className="p-leadership-role"><p className="p-label">{recwell.org}</p><p>{recwell.role}</p><p className="leadership-period">{recwell.period}</p><p className="leadership-period">Previously {recwell.previousRole}</p></div>
-          <div className="p-recwell-story"><h3 id="recwell-title">{recwell.heading}</h3><p className="p-recwell-scope">{recwell.scope}</p><ul className="leadership-bullets">{recwell.bullets.map(bullet => <li key={bullet}>{bullet}</li>)}</ul></div>
+          <div className="p-recwell-story"><h3 id="recwell-title">{recwell.heading}</h3><p className="p-recwell-scope"><EvidenceText text={recwell.scope} /></p><ImpactMetrics metrics={recwell.metrics} title={recwell.org} /><ul className="leadership-bullets">{recwell.bullets.map(bullet => <li key={bullet}><EvidenceText text={bullet} /></li>)}</ul></div>
         </article>}
         <div className="p-venture-roles">{ventureRoles.map(role => <article className="p-venture-role" key={role.org}>
           <p className="p-label">{role.org}</p><p className="p-venture-position">{role.role}{role.period && <><br />{role.period}</>}</p>
-          <h3>{role.heading}</h3><p>{role.scope}</p><ul className="leadership-bullets">{role.bullets.map(bullet => <li key={bullet}>{bullet}</li>)}</ul>
+          <h3>{role.heading}</h3><p><EvidenceText text={role.scope} /></p><ImpactMetrics metrics={role.metrics} title={role.org} /><ul className="leadership-bullets">{role.bullets.map(bullet => <li key={bullet}><EvidenceText text={bullet} /></li>)}</ul>
         </article>)}</div>
         <div className="recognition"><span>Academic recognition</span><p>{publicCopy.about.recognition}</p></div>
       </div>

@@ -17,6 +17,7 @@
 .project-image-stage { padding: clamp(24px, 4vw, 64px); background: #c9c1b3; }
 .project-main-image { position: relative; overflow: clip; height: min(82svh, 900px); min-height: 380px; background: #e8e1d5; }
 .project-main-image img { object-fit: contain; padding: clamp(12px, 2vw, 32px); }
+.project-image-note { color: #322a23; font-size: 14px; line-height: 1.6; margin: 20px 0 0; }
 .project-narrative { padding: 144px var(--cinematic-gutter) 152px; display: grid; grid-template-columns: 1fr 1.12fr; gap: clamp(48px, 8vw, 128px); align-items: start; background: var(--cinematic-ivory); color: #211e1b; }
 .project-overview { position: sticky; top: 128px; }
 .project-overview h2 { max-width: 12ch; font-size: clamp(36px, 4vw, 64px); letter-spacing: -.04em; font-weight: 500; line-height: 1.07; margin: 0 0 40px; }
@@ -33,6 +34,17 @@
 .project-next-image { position: relative; aspect-ratio: 1.18; overflow: clip; background: #d7cec0; transform: translateY(48px); }
 .project-next-image img { object-fit: contain; padding: clamp(12px, 2vw, 32px); }
 .project-return { min-height: 44px; display: inline-flex; align-items: center; gap: 12px; margin-top: 40px; color: var(--cinematic-ivory); border-bottom: 1px solid rgb(242 234 220 / 45%); font-size: 14px; }
+.project-evidence { padding: 100px var(--cinematic-gutter); background: #151114; }
+.project-evidence-heading { margin-bottom: 48px; }
+.project-evidence-heading h2 { font-size: clamp(40px, 5vw, 76px); line-height: 1.05; letter-spacing: -.04em; font-weight: 500; margin: 0 0 20px; }
+.project-evidence-heading p { color: #d6ccbd; font-size: 17px; }
+.project-evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 32px; }
+.project-evidence-grid figure { margin: 0; min-width: 0; }
+.project-evidence-grid figure:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.project-evidence-image { position: relative; aspect-ratio: 1.6; background: #0c0b0c; }
+.project-evidence-image img { object-fit: contain; }
+.project-evidence-grid figcaption { max-width: 68ch; margin-top: 18px; font-size: 15px; line-height: 1.7; color: #d6ccbd; }
+@media (max-width: 767px) { .project-evidence { padding-block: 64px; } .project-evidence-grid { grid-template-columns: 1fr; gap: 36px; } .project-evidence-image { aspect-ratio: 1.35; } }
 @media (hover: hover) and (pointer: fine) {
   .project-back:hover, .project-meta > a:hover { color: var(--cinematic-ivory); }
   .project-next h2 a:hover { color: #e0c49a; }

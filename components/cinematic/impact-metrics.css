@@ -1,0 +1,14 @@
+.impact-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); gap: 24px; margin: 24px 0 30px; padding: 22px 0; border-block: 1px solid currentColor; border-color: color-mix(in srgb, currentColor 24%, transparent); }
+.impact-metrics > div { display: flex; flex-direction: column; min-width: 0; }
+.impact-metrics dt { margin-bottom: 9px; font-size: 12px; font-weight: 500; line-height: 1.5; }
+.impact-metrics dd { margin: 0; }
+.impact-metrics dd strong { display: block; font-size: clamp(25px, 2.8vw, 40px); font-weight: 600; line-height: 1.12; letter-spacing: -.04em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.impact-metrics dd > span { display: block; margin-top: 10px; max-width: 28ch; font-size: 12px; line-height: 1.6; }
+.experience-role .impact-metrics { color: #e1bb7b; }
+.experience-role .impact-metrics dt, .experience-role .impact-metrics dd > span { color: #e1d8cb; }
+.p-leadership .impact-metrics { color: #f2ddba; }
+.p-leadership .impact-metrics dt, .p-leadership .impact-metrics dd > span { color: #f2eadc; }
+.pg-exhibit .impact-metrics { max-width: 43ch; color: #4e3825; }
+.pg-exhibit .impact-metrics dd strong { font-size: clamp(23px, 2.2vw, 32px); }
+.project-opening .impact-metrics { max-width: 980px; margin: 32px 0; }
+@media (max-width: 639px) { .impact-metrics { gap: 20px; } .p-recwell .impact-metrics { grid-template-columns: 1fr; } .p-recwell .impact-metrics > div + div { padding-top: 18px; border-top: 1px solid rgb(242 234 220 / 20%); } }

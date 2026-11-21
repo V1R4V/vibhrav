@@ -2,12 +2,13 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useRef, useState } from "react"
+import { Fragment, useEffect, useRef, useState } from "react"
 import type { CSSProperties } from "react"
 import { ArrowDown, ArrowUpRight, Search, X } from "lucide-react"
 import { projects } from "@/lib/portfolio-data"
 import type { Project } from "@/lib/portfolio-data"
 import { usePortfolioMotion } from "./portfolio-frame"
+import { ImpactMetrics } from "./impact-metrics"
 import "./project-gallery.css"
 
 const categoryOrder = ["Fullstack", "Distributed Systems", "ML & AI", "Data Engineering", "Computing Foundations"]
@@ -62,45 +63,61 @@ export function ProjectGallery() {
     if (!node) return
     const media = matchMedia("(prefers-reduced-motion: reduce)")
     let frame = 0
-    const screens = Array.from(node.querySelectorAll<HTMLElement>("[data-project-display]")).map(screen => ({
-      screen,
-      visual: screen.closest<HTMLElement>(".pg-exhibit-visual")!,
-      article: screen.closest<HTMLElement>(".pg-exhibit")!,
-    }))
+    let visible = false
+    let lastTime = 0
+    const depths = new Map<HTMLElement, number>()
+    const screens = Array.from(node.querySelectorAll<HTMLElement>("[data-project-display]")).map(screen => {
+      const article = screen.closest<HTMLElement>(".pg-exhibit")!
+      return { screen, article, visual: screen.closest<HTMLElement>(".pg-exhibit-visual")!, anchor: article.previousElementSibling as HTMLElement }
+    })
     const clamp = (value: number, min: number, max: number) => Math.max(min, Math.min(max, value))
-    const update = () => {
+    const update = (time = performance.now()) => {
       frame = 0
       const enabled = !paused && !media.matches
+      const delta = lastTime ? Math.min((time - lastTime) / 1000, .05) : 1 / 60
+      lastTime = time
+      const settle = 1 - Math.exp(-delta * 15)
+      let moving = false
       const compact = innerWidth <= 900
       const short = innerHeight < 540
       node.dataset.projectMotion = enabled ? "scroll" : "static"
       // Measure the untransformed container, so depth never feeds back into its
       // own progress. Mobile keeps the same scene with a smaller travel budget.
-      const measurements = screens.map(item => ({ ...item, visualBox: item.visual.getBoundingClientRect(), articleBox: item.article.getBoundingClientRect() }))
-      for (const { screen, visual, article, visualBox, articleBox } of measurements) {
-        const progress = clamp((innerHeight * .8 - articleBox.top) / (articleBox.height + innerHeight * .6), 0, 1)
+      const measurements = screens.map(item => ({ ...item, visualBox: item.visual.getBoundingClientRect(), articleBox: item.article.getBoundingClientRect(), anchorTop: item.anchor.getBoundingClientRect().top }))
+      for (const { screen, visual, article, visualBox, articleBox, anchorTop } of measurements) {
+        // A normal-flow marker keeps advancing after the card becomes sticky.
+        const progress = clamp((innerHeight * .8 - anchorTop) / (articleBox.height + innerHeight * .6), 0, 1)
         const viewportTravel = clamp((innerHeight * .5 - visualBox.top - visualBox.height * .5) / innerHeight, -1, 1)
-        const travel = clamp(viewportTravel * .65 + (progress - .5) * .7, -1, 1)
-        const lift = short ? 12 : compact ? 24 : 32
+        const target = clamp(viewportTravel * .65 + (progress - .5) * .7, -1, 1)
+        const previous = depths.get(screen) ?? target
+        const travel = enabled ? previous + (target - previous) * settle : target
+        depths.set(screen, travel)
+        if (Math.abs(target - travel) > .001) moving = true
+        const lift = short ? 12 : compact ? 24 : 44
         article.dataset.projectProgress = progress.toFixed(3)
         screen.dataset.displayState = enabled ? "scrolling" : "static"
-        screen.style.setProperty("--display-rotation", enabled ? `${travel * 9}deg` : "0deg")
-        screen.style.setProperty("--display-turn", enabled ? `${(compact ? -4 : -8) + travel * 9}deg` : "0deg")
+        screen.style.setProperty("--display-rotation", enabled ? `${travel * 12}deg` : "0deg")
+        screen.style.setProperty("--display-turn", enabled ? `${(compact ? -3 : -5) + travel * 15}deg` : "0deg")
         screen.style.setProperty("--display-lift", enabled ? `${travel * -lift}px` : "0px")
         screen.style.setProperty("--display-depth", enabled ? `${24 + (1 - Math.abs(travel)) * (compact ? 18 : 30)}px` : "0px")
         screen.style.setProperty("--display-scale", enabled ? String(.94 + (1 - Math.abs(travel)) * .06) : "1")
         visual.style.setProperty("--orbit-turn", enabled ? `${-22 + progress * 34}deg` : "-22deg")
         visual.style.setProperty("--ambient-lift", enabled ? `${travel * lift * .5}px` : "0px")
       }
+      if (moving && enabled && visible) frame = requestAnimationFrame(update)
     }
     const schedule = () => { if (!frame) frame = requestAnimationFrame(update) }
-    addEventListener("scroll", schedule, { passive: true })
+    const onScroll = () => { if (visible) schedule() }
+    const observer = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; if (visible) schedule() }, { rootMargin: "200px" })
+    observer.observe(node)
+    addEventListener("scroll", onScroll, { passive: true })
     addEventListener("resize", schedule)
     media.addEventListener("change", schedule)
     update()
     return () => {
       cancelAnimationFrame(frame)
-      removeEventListener("scroll", schedule)
+      observer.disconnect()
+      removeEventListener("scroll", onScroll)
       removeEventListener("resize", schedule)
       media.removeEventListener("change", schedule)
     }
@@ -118,30 +135,34 @@ export function ProjectGallery() {
   return (
     <section ref={root} id="work" className="pg-work p-chapter" data-chapter aria-labelledby="work-title">
       <div className="pg-intro p-wrap" data-work-intro>
-        <p className="pg-intro-label">Selected projects</p>
-        <h2 id="work-title" className="pg-title" aria-label="The problem, the decisions, the result">{["The problem,", "the decisions,", "the result."].map(line => <span key={line} aria-hidden>{line.split("").map((letter, index) => <span className="work-title-letter" key={index}>{letter === " " ? "\u00a0" : letter}</span>)}</span>)}</h2>
+        <p className="pg-intro-label">The problem. The decisions. The result.</p>
+        <h2 id="work-title" className="pg-title" aria-label="Selected projects">{["Selected", "projects."].map(line => <span key={line} aria-hidden>{line.split("").map((letter, index) => <span className="work-title-letter" key={index}>{letter === " " ? "\u00a0" : letter}</span>)}</span>)}</h2>
         <div className="pg-intro-foot"><p>Selected projects across product engineering, AI and data infrastructure. Each starts with a concrete need and a decision worth examining.</p><a href="#project-catalogue">Browse all {projects.length} projects <ArrowDown size={18} aria-hidden /></a></div>
       </div>
       <div className="pg-exhibits">
         {featured.map((project, index) => (
-          <article className="pg-exhibit p-wrap" key={project.slug} data-stack-card data-project={project.slug} aria-labelledby={`project-${project.slug}`} style={{ "--stack-index": index, "--exhibit-accent": index % 2 === 0 ? "#554634" : "#4e2730" } as CSSProperties}>
+          <Fragment key={project.slug}>
+          <div className="pg-scene-anchor" aria-hidden="true" />
+          <article className="pg-exhibit p-wrap" key={project.slug} data-stack-card data-project={project.slug} data-artwork={project.imageCaption ? "concept" : project.image.endsWith(".svg") ? "architecture" : "interface"} aria-labelledby={`project-${project.slug}`} style={{ "--stack-index": index, "--exhibit-accent": index % 2 === 0 ? "#554634" : "#4e2730" } as CSSProperties}>
             <div className="pg-exhibit-copy">
               <p className="pg-exhibit-index"><span>{String(index + 1).padStart(2, "0")} / {String(featured.length).padStart(2, "0")}</span>{project.categories.slice(0, 2).join(" / ")}</p>
               <h3 id={`project-${project.slug}`}>{project.title}</h3>
               <p className="pg-exhibit-summary">{project.summary}</p>
+              <ImpactMetrics metrics={project.metrics} title={project.title} />
               <p className="pg-exhibit-status">{project.status}</p>
               <Link className="pg-details" href={`/projects/${project.slug}`}>Read the technical details <ArrowUpRight size={18} aria-hidden /><span className="pg-sr-only">: {project.title}</span></Link>
             </div>
             <Link className="pg-exhibit-visual" href={`/projects/${project.slug}`} aria-label={`Read the ${project.title} technical details`}>
-              <div className="pg-orbit" aria-hidden /><div className="pg-exhibit-light" aria-hidden />
+              <div className="pg-orbit" aria-hidden /><div className="pg-orbit pg-orbit-secondary" aria-hidden /><div className="pg-exhibit-light" aria-hidden />
               <div className="pg-display" data-project-display>
                 <div className="pg-display-edge" aria-hidden />
+                <div className="pg-display-toolbar" aria-hidden><span /><span /><span /><b>{project.image.endsWith(".svg") ? "System architecture" : project.title}</b></div>
                 <div className="pg-display-surface"><Image src={project.image} alt={project.imageAlt} fill sizes="(max-width: 900px) 90vw, 54vw" /></div>
-                <div className="pg-display-base" aria-hidden />
               </div>
-              <span className="pg-visual-caption"><span>{project.eyebrow}</span><ArrowUpRight size={20} aria-hidden /></span>
+              <span className="pg-visual-caption"><span>{project.imageCaption || project.eyebrow}</span><ArrowUpRight size={20} aria-hidden /></span>
             </Link>
           </article>
+          </Fragment>
         ))}
       </div>
       <section id="project-catalogue" className="pg-catalogue p-wrap" aria-labelledby="catalogue-title">

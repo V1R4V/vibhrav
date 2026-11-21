@@ -2,15 +2,39 @@
 
 import { useEffect, useRef, useState } from "react"
 import { ArrowDown, ArrowLeft, ArrowRight } from "lucide-react"
+import Image from "next/image"
 import { experiences } from "@/lib/portfolio-data"
+import { publicCopy } from "@/lib/public-copy"
 import { usePortfolioMotion } from "./portfolio-frame"
 import { Atmosphere } from "./atmosphere"
+import { ExperienceRoadmap } from "./experience-roadmap"
+import { EvidenceText } from "./evidence-text"
+import { ImpactMetrics } from "./impact-metrics"
 import "./experience-stage.css"
 
 export function ExperienceStage() {
   const root = useRef<HTMLElement>(null)
   const [active, setActive] = useState(0)
   const { paused } = usePortfolioMotion()
+
+  useEffect(() => {
+    const section = root.current
+    const orb = section?.querySelector(".experience-orb")
+    if (!section || !orb) return
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)")
+    let visible = false
+    const sync = () => { section.dataset.orbMotion = visible && !paused && !reduced.matches && !document.hidden ? "running" : "paused" }
+    const observer = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; sync() }, { threshold: .01 })
+    observer.observe(orb)
+    document.addEventListener("visibilitychange", sync)
+    reduced.addEventListener("change", sync)
+    sync()
+    return () => {
+      observer.disconnect()
+      document.removeEventListener("visibilitychange", sync)
+      reduced.removeEventListener("change", sync)
+    }
+  }, [paused])
 
   useEffect(() => {
     const section = root.current
@@ -74,15 +98,17 @@ export function ExperienceStage() {
   return (
     <section ref={root} id="experience" className="experience-chapter p-chapter" data-chapter aria-labelledby="experience-title">
       <header className="experience-heading p-wrap">
-        <div><p className="experience-kicker">Experience</p><h2 id="experience-title">Engineering that<br />changes the workflow.</h2></div>
-        <p>Helping proposal teams reuse approved knowledge, researchers process field recordings, and teaching staff operate a data-management course.</p>
+        <div><p className="experience-kicker">Experience</p><h2 id="experience-title">{publicCopy.chapters.experience.heading}.</h2></div>
+        <p>{publicCopy.chapters.experience.introduction}</p>
       </header>
       <div className="experience-layout p-wrap">
         <aside className="experience-sculpture" aria-label="Explore experience">
           <div className="experience-orb" aria-hidden="true">
             <Atmosphere variant="orb" paused={paused} />
-            <div className="experience-orbit" />
-            <div className="experience-brand" key={current.slug}>
+            <div className="experience-orbit experience-orbit--outer"><span /></div>
+            <div className="experience-orbit experience-orbit--inner"><span /></div>
+            <div className="experience-brand" key={current.slug} data-brand={current.slug}>
+              {current.logo && <span className={`experience-company-logo experience-company-logo--${current.slug}`}><Image src={current.logo} alt="" width={100} height={76} unoptimized /></span>}
               <span className="experience-brand-mark">{current.mark}</span>
             </div>
           </div>
@@ -102,12 +128,15 @@ export function ExperienceStage() {
               <div className="experience-role-meta"><span>{experience.org}</span><span>{experience.period}</span></div>
               <h3 id={`experience-heading-${experience.slug}`}>{experience.role}</h3>
               <p className="experience-scope">{experience.summary}</p>
-              <ul className="experience-bullets">{experience.bullets.map((bullet, bulletIndex) => <li key={bulletIndex}>{bullet}</li>)}</ul>
+
+              <ImpactMetrics metrics={experience.metrics} title={experience.org} />
+              <ul className="experience-bullets">{experience.bullets.map((bullet, bulletIndex) => <li key={bulletIndex}><EvidenceText text={bullet} /></li>)}</ul>
               </div>
             </article>
           ))}
         </div>
       </div>
+      <ExperienceRoadmap />
       <div className="experience-next p-wrap"><p>Different settings. A shared need to understand the work around the software.</p><a href="#work">Explore the projects <ArrowDown size={19} aria-hidden="true" /></a></div>
     </section>
   )

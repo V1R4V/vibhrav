@@ -1,0 +1,48 @@
+.experience-roadmap { padding-block: 112px 64px; }
+.experience-roadmap-heading { margin-bottom: 68px; }
+.experience-roadmap-heading h3 { margin: 0 0 22px; font-size: clamp(40px, 5.6vw, 80px); font-weight: 500; line-height: 1.04; letter-spacing: -.045em; }
+.experience-roadmap-heading > p:last-child { max-width: 50ch; color: #d6ccbd; font-size: 17px; line-height: 1.7; }
+.experience-roadmap-track { position: relative; }
+.experience-roadmap-spine { position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: rgb(198 165 108 / 18%); }
+.experience-roadmap-progress { display: block; height: 100%; background: #c6a56c; transform-origin: top; box-shadow: 0 0 14px rgb(198 165 108 / 24%); }
+.experience-roadmap-track > ol { position: relative; list-style: none; margin: 0; padding: 0; }
+.experience-roadmap-stop { position: relative; display: grid; grid-template-columns: 1fr 1fr; column-gap: 96px; padding-block: 0 36px; }
+.experience-roadmap-stop:last-child { padding-bottom: 0; }
+.experience-roadmap-node { position: absolute; left: 50%; top: 34px; width: 11px; height: 11px; border-radius: 50%; transform: translateX(-5px); border: 2px solid #c6a56c; background: #0c0b0c; box-shadow: 0 0 0 7px #0c0b0c; }
+.experience-roadmap-card { position: relative; display: block; min-width: 0; padding: 28px 0 32px; border-top: 1px solid rgb(198 165 108 / 32%); color: #f2eadc; }
+.experience-roadmap-stop[data-side="right"] .experience-roadmap-card { grid-column: 2; }
+.experience-roadmap-period { margin: 0 0 18px; color: #c6a56c; font-size: 13px; letter-spacing: .025em; line-height: 1.7; }
+.experience-roadmap-identity { display: flex; align-items: center; gap: 16px; }
+.experience-roadmap-identity > div { min-width: 0; flex: 1; }
+.experience-roadmap-identity > svg { flex-shrink: 0; color: #c6a56c; transition: transform 200ms cubic-bezier(.23,1,.32,1); }
+.experience-roadmap-identity p { margin: 0 0 9px; color: #e3d5c0; font-size: 15px; line-height: 1.5; }
+.experience-roadmap-identity h4 { margin: 0; font-size: clamp(22px, 2vw, 31px); line-height: 1.18; font-weight: 500; letter-spacing: -.03em; text-wrap: balance; }
+.experience-roadmap-logo { flex: 0 0 52px; width: 52px; height: 52px; display: grid; place-items: center; padding: 7px; background: #f2eadc; border-radius: 3px; }
+.experience-roadmap-logo img { max-width: 100%; width: auto; height: auto; max-height: 100%; object-fit: contain; }
+.experience-roadmap-logo--darukaa { flex-basis: 80px; width: 80px; background: #10241c; }
+.experience-roadmap-summary { margin: 20px 0 0; max-width: 58ch; font-size: 15px; line-height: 1.75; color: #d6ccbd; }
+.experience-roadmap-metrics { display: flex; flex-wrap: wrap; gap: 18px 28px; list-style: none; margin: 22px 0 0; padding: 0; }
+.experience-roadmap-metrics li { display: flex; flex-direction: column; gap: 5px; }
+.experience-roadmap-metrics strong { color: #f2eadc; font-size: 23px; font-weight: 650; letter-spacing: -.03em; line-height: 1.2; }
+.experience-roadmap-metrics span { color: #d0c3ae; font-size: 12px; line-height: 1.5; }
+.experience-roadmap-card:focus-visible { outline: 2px solid #c6a56c; outline-offset: 8px; }
+@media (hover: hover) and (pointer: fine) { .experience-roadmap-card:hover .experience-roadmap-identity > svg { transform: translate3d(3px, -3px, 0); } .experience-roadmap-card:hover h4 { color: #e0bb7c; } }
+@media (max-width: 1000px) { .experience-roadmap-stop { column-gap: 56px; } .experience-roadmap-identity { gap: 12px; } .experience-roadmap-logo { flex-basis: 44px; width: 44px; height: 44px; } }
+@media (max-width: 767px) {
+  .experience-roadmap { padding-block: 72px 32px; }
+  .experience-roadmap-heading { margin-bottom: 36px; }
+  .experience-roadmap-heading > p:last-child { font-size: 16px; }
+  .experience-roadmap-spine { left: 5px; }
+  .experience-roadmap-stop { display: block; padding: 0 0 28px 32px; }
+  .experience-roadmap-node { left: 5px; top: 30px; }
+  .experience-roadmap-card { padding-block: 24px; }
+  .experience-roadmap-identity { align-items: start; }
+  .experience-roadmap-identity h4 { font-size: clamp(21px, 5.5vw, 28px); }
+  .experience-roadmap-identity p { font-size: 14px; }
+  .experience-roadmap-summary { font-size: 15px; }
+  .experience-roadmap-metrics { gap: 18px; }
+  .experience-roadmap-metrics strong { font-size: 21px; }
+}
+@media (max-width: 380px) { .experience-roadmap-logo { display: none; } .experience-roadmap-stop { padding-left: 26px; } }
+@media (prefers-reduced-motion: reduce), (scripting: none) { .experience-roadmap-card { transform: none !important; opacity: 1 !important; } .experience-roadmap-progress { transform: none !important; } .experience-roadmap-identity > svg { transition: none; } }
+[data-motion="paused"] .experience-roadmap-card { transform: none; opacity: 1; }

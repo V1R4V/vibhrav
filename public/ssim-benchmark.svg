@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title description">
+  <title id="title">Video fingerprinting benchmark</title>
+  <desc id="description">Explanatory diagram: 25 source videos, 75 total transformed variants and 1,875 pairwise comparisons, consisting of 75 matched and 1,800 nonmatched pairs. This illustrates the research workflow; it is not an application screenshot.</desc>
+  <defs>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17151a"/><stop offset="1" stop-color="#0b0c10"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#653443" stop-opacity=".5"/><stop offset="1" stop-color="#28141b" stop-opacity="0"/></radialGradient>
+    <linearGradient id="panel"><stop stop-color="#302a2b"/><stop offset="1" stop-color="#151419"/></linearGradient>
+    <linearGradient id="gold"><stop stop-color="#f0d4a0"/><stop offset="1" stop-color="#9d7345"/></linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="8" refY="5" orient="auto"><path d="m0 0 8 5-8 5" fill="none" stroke="#c9a970" stroke-width="1.5"/></marker>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity=".035"/></pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#ground)"/>
+  <ellipse cx="980" cy="540" rx="720" ry="480" fill="url(#light)"/>
+  <rect x="0" y="0" width="1600" height="1000" fill="url(#grid)"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#eee6d7">
+    <text x="94" y="94" font-size="19" letter-spacing="4" fill="#c9a970">RESEARCH / COMPUTER VISION</text>
+    <text x="94" y="172" font-size="58" letter-spacing="-2">What survives a changed frame?</text>
+    <text x="96" y="218" font-size="24" fill="#bcb2a5">SSIM video fingerprints across resizing and black-border transformations.</text>
+    <g transform="translate(96 328)">
+      <rect x="20" y="-20" width="330" height="244" rx="10" fill="#201c21" stroke="#5d4d3c"/>
+      <rect x="10" y="-10" width="330" height="244" rx="10" fill="#282329" stroke="#7b6145"/>
+      <rect width="330" height="244" rx="10" fill="url(#panel)" stroke="#c9a970"/>
+      <path d="m142 77 70 45-70 45Z" fill="url(#gold)"/>
+      <path d="M24 215H306" stroke="#75634b" stroke-width="2"/>
+      <text x="0" y="308" font-size="64" fill="#e6c994">25</text>
+      <text x="0" y="349" font-size="25">source videos</text>
+    </g>
+    <path d="M470 452H564" fill="none" stroke="#c9a970" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(610 328)">
+      <rect width="360" height="70" rx="7" fill="#262027" stroke="#76614d"/>
+      <rect x="24" y="18" width="54" height="34" rx="2" fill="#b99162" fill-opacity=".3" stroke="#d3b780"/>
+      <text x="100" y="45" font-size="23">25 × 720p</text>
+      <rect y="86" width="360" height="70" rx="7" fill="#262027" stroke="#76614d"/>
+      <rect x="28" y="109" width="46" height="26" rx="2" fill="#b99162" fill-opacity=".3" stroke="#d3b780"/>
+      <text x="100" y="131" font-size="23">25 × 480p</text>
+      <rect y="172" width="360" height="70" rx="7" fill="#262027" stroke="#76614d"/>
+      <rect x="24" y="187" width="54" height="40" rx="2" fill="#09090b" stroke="#d3b780"/>
+      <rect x="32" y="197" width="38" height="20" fill="#b99162" fill-opacity=".4"/>
+      <text x="100" y="217" font-size="23">25 × bordered</text>
+      <text x="0" y="308" font-size="64" fill="#e6c994">75</text>
+      <text x="0" y="349" font-size="25">total transformed variants</text>
+    </g>
+    <path d="M1010 452H1104" fill="none" stroke="#c9a970" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(1150 328)">
+      <rect width="354" height="244" rx="10" fill="url(#panel)" stroke="#c9a970"/>
+      <text x="28" y="58" font-size="18" letter-spacing="2" fill="#c9a970">PAIRWISE EVALUATION</text>
+      <text x="28" y="127" font-size="61" fill="#e6c994">1,875</text>
+      <text x="28" y="177" font-size="22">75 matched pairs</text>
+      <text x="28" y="214" font-size="22" fill="#bcb2a5">1,800 nonmatched pairs</text>
+      <text x="0" y="349" font-size="25">compare the fingerprints</text>
+    </g>
+    <path d="M96 775H1504" stroke="#514338"/>
+    <text x="96" y="834" font-size="21" fill="#c9a970">THE ENGINEERING QUESTION</text>
+    <text x="96" y="878" font-size="28">Normalize the image before fingerprinting, then measure the error.</text>
+    <text x="96" y="946" font-size="17" fill="#a89f94">Explanatory research diagram · Exploratory benchmark · No accuracy or production-deployment claim</text>
+  </g>
+</svg>
