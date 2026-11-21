@@ -1,8 +1,7 @@
 .experience-chapter { position: relative; z-index: 3; padding-block: 136px 80px; background: #0c0b0c; scroll-margin-top: 86px; }
-.experience-heading { display: grid; grid-template-columns: 1.5fr 1fr; align-items: end; gap: 72px; padding-bottom: 70px; }
+.experience-heading { display: grid; grid-template-columns: 1fr; align-items: end; gap: 0; padding-bottom: 70px; }
 .experience-kicker { margin: 0 0 30px; color: var(--cinematic-gold); font-size: 14px; }
 .experience-heading h2 { max-width: 920px; margin: 0; font-size: clamp(40px, 5.7vw, 84px); font-weight: 500; line-height: 1.06; letter-spacing: -.045em; text-wrap: balance; }
-.experience-heading > p { max-width: 340px; margin: 0 0 5px auto; color: var(--cinematic-muted); font-size: 16px; line-height: 1.85; }
 .experience-layout { position: relative; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(48px, 7vw, 112px); align-items: start; }
 .experience-sculpture { position: sticky; top: 110px; align-self: start; min-width: 0; padding-top: 28px; }
 .experience-orb { position: relative; width: 100%; aspect-ratio: 1; max-height: 60svh; margin-inline: auto; isolation: isolate; perspective: 800px; }
@@ -57,7 +56,6 @@
   .experience-chapter { padding-block: 88px 48px; }
   .experience-heading { grid-template-columns: 1fr; gap: 28px; padding-bottom: 32px; }
   .experience-heading h2 { font-size: clamp(36px, 8vw, 64px); }
-  .experience-heading > p { margin-left: 0; max-width: 48ch; font-size: 15px; }
   .experience-layout { grid-template-columns: 1fr; gap: 32px; }
   .experience-sculpture { position: relative; top: auto; max-width: 460px; width: 100%; justify-self: center; padding-top: 0; }
   .experience-orb { max-width: 300px; max-height: none; margin-inline: auto; }

@@ -45,7 +45,7 @@ export function PortfolioFrame({ children, home = false }: { children: React.Rea
         <header className="cinematic-nav">
           <Link className="cinematic-wordmark" href="/" aria-label="Vibhrav Jha home">VJ<span>.</span></Link>
           <nav className="desktop-navigation" aria-label="Main navigation">
-            {[["experience", "Experience"], ["work", "Projects"], ["leadership", "Leadership"], ["about", "About"]].map(([id, label]) => <Link key={id} href={`${prefix}#${id}`}>{label}</Link>)}
+            {[["experience", "Experience"], ["work", "Projects"], ["skills", "Skills"], ["leadership", "Leadership"], ["about", "About"]].map(([id, label]) => <Link key={id} href={`${prefix}#${id}`}>{label}</Link>)}
           </nav>
           <Link className="cinematic-contact" href={`${prefix}#contact`}>Let’s talk <ArrowUpRight size={16} aria-hidden /></Link>
           {!reduced && <button type="button" className="motion-toggle" onClick={() => setPaused(value => !value)} aria-label={paused ? "Resume animation" : "Pause animation"} aria-pressed={paused}>{paused ? <Play size={14} aria-hidden /> : <Pause size={14} aria-hidden />}<span>Motion {paused ? "off" : "on"}</span></button>}
@@ -53,7 +53,7 @@ export function PortfolioFrame({ children, home = false }: { children: React.Rea
             {menuOpen ? <X size={22} aria-hidden /> : <Menu size={22} aria-hidden />}
           </button>
           <nav id="mobile-navigation" className="mobile-navigation" hidden={!menuOpen} aria-label="Mobile navigation">
-            {[["experience", "Experience"], ["work", "Projects"], ["leadership", "Leadership"], ["about", "About"], ["contact", "Contact"]].map(([id, label]) => <Link key={id} href={`${prefix}#${id}`} onClick={() => setMenuOpen(false)}>{label}<ArrowUpRight size={20} aria-hidden /></Link>)}
+            {[["experience", "Experience"], ["work", "Projects"], ["skills", "Skills"], ["leadership", "Leadership"], ["about", "About"], ["contact", "Contact"]].map(([id, label]) => <Link key={id} href={`${prefix}#${id}`} onClick={() => setMenuOpen(false)}>{label}<ArrowUpRight size={20} aria-hidden /></Link>)}
           </nav>
           <div className="reading-progress" aria-hidden><span data-reading-progress /></div>
         </header>

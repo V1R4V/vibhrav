@@ -37,12 +37,6 @@
 .p-field-route { stroke: #c6a56c; stroke-width: 2; stroke-dasharray: 6 8; }
 .p-field-ball { fill: #c6a56c; }
 .p-field-arrow { stroke: #c6a56c; stroke-width: 2; }
-.about-tools { grid-column: 1 / -1; padding-top: 40px; border-top: 1px solid rgb(198 165 108 / 25%); }
-.about-tools h3 { margin: 0 0 32px; font-size: 26px; font-weight: 500; letter-spacing: -.03em; }
-.about-tools dl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; margin: 0; }
-.about-tools dt { color: var(--cinematic-ivory); font-size: 14px; margin-bottom: 12px; }
-.about-tools dd { color: var(--cinematic-muted); font-size: 14px; line-height: 1.8; margin: 0; }
 .p-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-@media (max-width: 1000px) { .p-leadership-head { grid-template-columns: 1fr; gap: 32px; margin-bottom: 64px; } .p-leadership-intro { justify-self: start; max-width: 650px; } .p-recwell { grid-template-columns: 1fr; gap: 28px; } .p-venture-roles { gap: 48px; } .p-about { gap: 48px; } .about-tools dl { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 639px) { .p-leadership, .p-about { padding-block: 80px; } .p-heading { font-size: clamp(39px, 10.5vw, 66px); } .p-leadership-head { margin-bottom: 48px; } .p-leadership-intro p { font-size: 16px; } .p-recwell { padding-block: 32px 40px; } .p-recwell-story h3 { font-size: 32px; } .leadership-bullets { font-size: 15px; } .p-venture-roles { grid-template-columns: 1fr; gap: 36px; } .p-venture-role + .p-venture-role { border-top: 1px solid rgb(242 234 220 / 25%); padding-top: 36px; } .recognition { grid-template-columns: 1fr; gap: 20px; margin-top: 48px; } .p-about { grid-template-columns: 1fr; gap: 40px; } .p-about-visual { max-width: 270px; justify-self: center; } .about-tools dl { gap: 32px 24px; } .about-tools dd { font-size: 13px; } }
-@media (max-width: 370px) { .about-tools dl { grid-template-columns: 1fr; } }
+@media (max-width: 1000px) { .p-leadership-head { grid-template-columns: 1fr; gap: 32px; margin-bottom: 64px; } .p-leadership-intro { justify-self: start; max-width: 650px; } .p-recwell { grid-template-columns: 1fr; gap: 28px; } .p-venture-roles { gap: 48px; } .p-about { gap: 48px; } }
+@media (max-width: 639px) { .p-leadership, .p-about { padding-block: 80px; } .p-heading { font-size: clamp(39px, 10.5vw, 66px); } .p-leadership-head { margin-bottom: 48px; } .p-leadership-intro p { font-size: 16px; } .p-recwell { padding-block: 32px 40px; } .p-recwell-story h3 { font-size: 32px; } .leadership-bullets { font-size: 15px; } .p-venture-roles { grid-template-columns: 1fr; gap: 36px; } .p-venture-role + .p-venture-role { border-top: 1px solid rgb(242 234 220 / 25%); padding-top: 36px; } .recognition { grid-template-columns: 1fr; gap: 20px; margin-top: 48px; } .p-about { grid-template-columns: 1fr; gap: 40px; } .p-about-visual { max-width: 270px; justify-self: center; } }

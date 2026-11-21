@@ -99,7 +99,6 @@ export function ExperienceStage() {
     <section ref={root} id="experience" className="experience-chapter p-chapter" data-chapter aria-labelledby="experience-title">
       <header className="experience-heading p-wrap">
         <div><p className="experience-kicker">Experience</p><h2 id="experience-title">{publicCopy.chapters.experience.heading}.</h2></div>
-        <p>{publicCopy.chapters.experience.introduction}</p>
       </header>
       <div className="experience-layout p-wrap">
         <aside className="experience-sculpture" aria-label="Explore experience">

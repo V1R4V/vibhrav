@@ -2,6 +2,7 @@ import { ArrowDown } from "lucide-react"
 import { leadership, publicCopy } from "@/lib/portfolio-data"
 import { ExperienceStage } from "./experience-stage"
 import { ProjectGallery } from "./project-gallery"
+import { SkillsChapter } from "./skills-chapter"
 import { EvidenceText } from "./evidence-text"
 import { ImpactMetrics } from "./impact-metrics"
 import "./chapters.css"
@@ -30,6 +31,7 @@ export function PortfolioChapters() {
   return <>
     <ExperienceStage />
     <ProjectGallery />
+    <SkillsChapter />
     <section id="leadership" className="p-leadership p-chapter" data-chapter aria-labelledby="leadership-title">
       <div className="p-wrap">
         <div className="p-leadership-head">
@@ -55,7 +57,6 @@ export function PortfolioChapters() {
         <a className="p-text-link" href="#contact">Get in touch <ArrowDown size={17} aria-hidden /></a>
       </div>
       <div className="p-about-visual"><FieldDrawing /></div>
-      <div className="about-tools"><h3>Tools chosen for the problem.</h3><dl>{publicCopy.about.skills.map(skill => <div key={skill.label}><dt>{skill.label}</dt><dd>{skill.tools}</dd></div>)}</dl></div>
     </section>
   </>
 }
