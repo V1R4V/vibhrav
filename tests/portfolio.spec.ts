@@ -15,7 +15,7 @@ test("all chapters, project exhibits and honest contact fallback are present", a
   await expect(page.locator("[data-stack-card]")).toHaveCount(6)
   await expect(page.locator("[data-catalogue-project]")).toHaveCount(34)
   await expect(page.locator("#cinematic-contact-title")).toHaveText("Let’s talk about what you’re building.")
-  await expect(page.locator("#leadership")).toContainText("cumulatively over two years")
+  await expect(page.locator("#leadership-role-0")).toContainText("2,000+ participants and staff across five intramural programs")
   await page.locator("#contact").scrollIntoViewIfNeeded()
   await expect(page.getByText("The form is temporarily unavailable. Please email me directly.")).toBeVisible()
   await expect(page.getByRole("button", { name: "Send message" })).toBeDisabled()

@@ -43,6 +43,9 @@ export type Experience = {
 
 export type Leadership = {
   org: string
+  displayOrg?: string
+  logo?: string
+  spotlight?: ImpactMetric
   role: string
   period?: string
   previousRole?: string
@@ -1433,10 +1436,13 @@ export const archivedExperiences: Experience[] = [
 export const leadership: Leadership[] = [
   {
     "org": "Recreation and Wellbeing, UW-Madison",
+    "displayOrg": "UW–Madison RecWell",
+    "logo": "/leadership/uw-crest.svg",
+    "spotlight": { "value": "2,000+", "label": "Participants and staff managed", "context": "Players, referees and supervisors across five programs." },
     "role": "Intramural Sports Lead",
-    "heading": "Higher participation. Better participant experiences.",
-    "summary": "Recorded program improvements of 30% in participation and 35% in satisfaction, alongside staff development and operations across 50+ programs.",
-    "scope": "Staff development, scheduling and on-site operations across 50+ intramural programs.",
+    "heading": "Managed 2,000+ participants and staff across five intramural programs.",
+    "summary": "Managed 2,000+ players, referees and supervisors across five programs, with staff development and participant feedback shaping stronger league operations.",
+    "scope": "At RecWell, I coordinate league operations, prepare officials through station-based clinics and playoff check-ins, and use participant feedback to improve the programs we run.",
     "bullets": [
       "Expanded the program around participant demand by using surveys to identify and launch cricket and pickleball leagues. The reported participation and satisfaction gains reflect the broader program work.",
       "Improved staff preparation through station-based field clinics for rules, positioning, communication and difficult game situations, plus check-ins before playoffs.",
@@ -1454,24 +1460,25 @@ export const leadership: Leadership[] = [
   ,
     "metrics": [
       {
-        "value": "250+",
-        "label": "Referee program scope",
-        "context": "Referees cumulatively over two years."
+        "value": "5",
+        "label": "Programs managed",
+        "context": "Combined scope includes players, referees and supervisors."
       },
       {
         "value": "+30%",
         "label": "Participation",
-        "context": "Reported program-level increase."
+        "context": "Program-wide increase in participation."
       },
       {
         "value": "+35%",
         "label": "Participant satisfaction",
-        "context": "Reported program-level increase."
+        "context": "Program-wide increase in participant satisfaction."
       }
     ]
   },
   {
     "org": "Badger VC",
+    "logo": "/leadership/badger-vc.png",
     "role": "Vice President of External Relations",
     "heading": "15+ venture events connecting founders and investment practitioners",
     "summary": "Connected 20+ student founders with the venture community and coordinated 15+ events designed as a continuing learning series.",
@@ -1501,6 +1508,7 @@ export const leadership: Leadership[] = [
   },
   {
     "org": "Strato VC",
+    "logo": "/leadership/strato-vc.png",
     "role": "Investment Analyst",
     "heading": "Investment decisions grounded in market and technical evidence",
     "summary": "Turned research on 10+ startups per quarter into investment memos testing market, financial and technical assumptions.",
@@ -1551,6 +1559,8 @@ export const leadership: Leadership[] = [
   },
   {
     "org": "Earlier school sports leadership",
+    "displayOrg": "Birla Vidya Niketan",
+    "logo": "/leadership/birla-vidya-niketan.png",
     "role": "Sports events and coaching",
     "heading": "Sports programs for 900+ students",
     "summary": "Coordinated sports events for 900+ students and contributed to facilities planning, extending responsibility beyond the team on the field.",

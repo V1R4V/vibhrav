@@ -16,7 +16,7 @@ export const publicCopy = {
       "introduction": "Software engineering, applied research and teaching across industry and academia."
     },
     "leadership": {
-      "heading": "Preparing people to take responsibility",
+      "heading": "“We did it ourselves.”",
       "introduction": "Developing officials, improving sports programs and connecting student founders with the venture community."
     },
     "about": {
@@ -73,5 +73,15 @@ export const publicCopy = {
     "success": "Your message has been sent. Thank you for getting in touch.",
     "failure": "Your message could not be sent. Please try again."
   },
-  "leadershipIntroduction": "At RecWell, I connect staff preparation and participant feedback with stronger programs. In venture communities, I connect founders and practitioners, shape useful learning experiences and test the assumptions behind an investment case."
+  "leadershipIntroduction": "I want people to leave a team more capable and confident than when they joined. My job is to create the conditions for that growth.",
+  "leadershipPrinciples": [
+    { "title": "Build ownership", "body": "Give people the preparation and trust to say, ‘we did it ourselves.’" },
+    { "title": "Make mistakes useful", "body": "Treat an error as information about what to practise next, not a verdict on someone’s ability." },
+    { "title": "Practise deliberately", "body": "Create room to attempt difficult things, make mistakes and build the skill to try again." },
+    { "title": "Make growth visible", "body": "Help people see a future self they want to work toward and learn from people who show what is possible." },
+    { "title": "Build a place of craft", "body": "Put meaningful work and practice ahead of comfort or appearances." },
+    { "title": "Improve consistently", "body": "Make small, repeatable improvements part of the everyday work." },
+    { "title": "Learn from others", "body": "Give people opportunities to observe, ask questions and learn from the people around them." },
+    { "title": "Grow together", "body": "Create conditions where people can develop together and take responsibility for the result." }
+  ]
 } as const

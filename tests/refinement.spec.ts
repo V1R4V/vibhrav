@@ -41,6 +41,26 @@ test("leadership preserves approved copy and direct links select the dimensional
   await expect(page.locator(".leadership-navigation a").nth(1)).toHaveAttribute("aria-current", "location")
 })
 
+test("leadership leads with personal principles, clear scope and prominent roles", async ({ page }) => {
+  await page.goto("/#leadership")
+  await expect(page.locator("#leadership-title")).toHaveText("“We did it ourselves.”")
+  await expect(page.locator(".leadership-plane--front > span")).toHaveText("2,000+")
+  await expect(page.locator("#leadership-role-0")).toContainText("five intramural programs")
+  await expect(page.locator("#leadership")).not.toContainText("Referee program scope")
+  await expect(page.locator(".leadership-plane--front")).toHaveCSS("background-image", "none")
+  await expect(page.locator(".leadership-logo")).toHaveCount(4)
+  await expect(page.locator("#leadership-heading-0")).toHaveText("Intramural Sports Lead")
+  await expect(page.locator("#leadership-heading-0")).toHaveCSS("font-weight", "700")
+  expect(await page.locator("#leadership-heading-0").evaluate(el => parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(30)
+  await page.locator(".leadership-principles summary").click()
+  await expect(page.locator(".leadership-principles li")).toHaveCount(8)
+  await expect(page.locator(".leadership-principles")).toContainText("Practise deliberately")
+  for (const logo of await page.locator(".leadership-logo").all()) {
+    await logo.scrollIntoViewIfNeeded()
+    await expect.poll(() => logo.evaluate((image: HTMLImageElement) => image.naturalWidth)).toBeGreaterThan(0)
+  }
+})
+
 test("motion is enabled by default, device preference works, and footer uses a gold vector arrow", async ({ page }) => {
   await page.goto("/#skills")
   await expect(page.locator(".motion-toggle")).toHaveCount(0)

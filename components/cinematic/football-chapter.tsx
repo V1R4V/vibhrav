@@ -1,13 +1,12 @@
 import Image from "next/image"
 import { publicCopy } from "@/lib/portfolio-data"
-import { BernabeuScene } from "./bernabeu-scene"
+import { BernabeuViewer } from "./bernabeu-viewer"
 import "./football-chapter.css"
 
 export function FootballChapter() {
   return <div className="football-chapter" aria-labelledby="football-title">
     <figure className="football-stadium">
-      <BernabeuScene />
-      <figcaption>Santiago Bernabéu, Madrid</figcaption>
+      <BernabeuViewer />
     </figure>
     <div className="football-story">
       <div className="football-club"><Image src="/football/real-madrid-crest.png" alt="Real Madrid crest" width={64} height={64} /><span>Madridista since seven.</span></div>

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import { ArrowUpRight } from "lucide-react"
+import Image from "next/image"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { leadership, publicCopy } from "@/lib/portfolio-data"
 import { usePortfolioMotion } from "./portfolio-frame"
@@ -52,12 +53,18 @@ export function LeadershipChapter() {
     return () => context.revert()
   }, [paused])
 
+  const selected = leadership[active]
+  const spotlight = selected.spotlight ?? selected.metrics?.[0]
+
   return (
     <section ref={root} id="leadership" className="p-leadership p-chapter" data-chapter aria-labelledby="leadership-title">
       <div className="p-wrap">
         <header className="p-leadership-head">
           <h2 id="leadership-title" className="p-heading">{publicCopy.chapters.leadership.heading}</h2>
-          <div className="p-leadership-intro"><p>{publicCopy.leadershipIntroduction}</p></div>
+          <div className="p-leadership-intro"><p>{publicCopy.leadershipIntroduction}</p>
+            <ul className="leadership-principle-preview">{[0, 1, 7].map(index => <li key={publicCopy.leadershipPrinciples[index].title}><strong>{publicCopy.leadershipPrinciples[index].title}.</strong> {publicCopy.leadershipPrinciples[index].body}</li>)}</ul>
+            <details className="leadership-principles"><summary>All eight leadership principles</summary><ol>{publicCopy.leadershipPrinciples.map(principle => <li key={principle.title}><strong>{principle.title}.</strong> {principle.body}</li>)}</ol></details>
+          </div>
         </header>
         <div className="leadership-layout">
           <aside className="leadership-stage">
@@ -65,18 +72,21 @@ export function LeadershipChapter() {
               <div className="leadership-sculpture">
                 <div className="leadership-plane leadership-plane--back" />
                 <div className="leadership-plane leadership-plane--middle" />
-                <div className="leadership-plane leadership-plane--front"><span>{leadership[active].metrics?.[0]?.value}</span><small>{leadership[active].metrics?.[0]?.label}</small></div>
+                <div className="leadership-plane leadership-plane--front"><span data-value={spotlight?.value}>{spotlight?.value}</span><small>{spotlight?.label}</small></div>
                 <span className="leadership-connector" />
               </div>
             </div>
             <nav className="leadership-navigation" aria-label="Leadership roles">
-              {leadership.map((role, index) => <a key={role.org} href={`#leadership-role-${index}`} aria-current={active === index ? "location" : undefined}><span>{role.org}</span><ArrowUpRight size={16} aria-hidden="true" /></a>)}
+              {leadership.map((role, index) => <a key={role.org} href={`#leadership-role-${index}`} aria-current={active === index ? "location" : undefined}><span>{role.displayOrg ?? role.org}</span><ArrowUpRight size={16} aria-hidden="true" /></a>)}
             </nav>
           </aside>
           <div className="leadership-stories">
             {leadership.map((role, index) => <article id={`leadership-role-${index}`} data-leadership-role className="leadership-story" key={role.org} aria-labelledby={`leadership-heading-${index}`}>
-              <header className="leadership-role-meta"><p>{role.org}</p><p>{role.role}{role.period && <><br />{role.period}</>}{role.previousRole && <><br />Previously {role.previousRole}</>}</p></header>
-              <h3 id={`leadership-heading-${index}`}>{role.heading}</h3>
+              <header className="leadership-role-meta">
+                <div className="leadership-identity">{role.logo && <Image className={`leadership-logo leadership-logo--${index}`} src={role.logo} alt="" width={80} height={64} unoptimized />}<div><p>{role.displayOrg ?? role.org}</p><h3 id={`leadership-heading-${index}`}>{role.role}</h3></div></div>
+                {(role.period || role.previousRole) && <p className="leadership-dates">{role.period}{role.previousRole && <><br />Previously {role.previousRole}</>}</p>}
+              </header>
+              <p className="leadership-outcome"><EvidenceText text={role.heading} /></p>
               {role.scope && <p className="leadership-scope"><EvidenceText text={role.scope} /></p>}
               <ImpactMetrics metrics={role.metrics} title={role.org} />
               <ul className="leadership-bullets">{role.bullets.map(bullet => <li key={bullet}><EvidenceText text={bullet} /></li>)}</ul>

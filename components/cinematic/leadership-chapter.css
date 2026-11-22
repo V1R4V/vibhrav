@@ -1,14 +1,14 @@
 .leadership-layout { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(48px, 8vw, 140px); align-items: start; }
 .leadership-stage { position: sticky; top: 100px; min-width: 0; }
 .leadership-sculpture-space { perspective: 1000px; height: clamp(240px, 28vw, 430px); display: grid; place-items: center; }
-.leadership-sculpture { position: relative; width: min(70%, 300px); height: 65%; transform-style: preserve-3d; }
-.leadership-plane { position: absolute; inset: 0; border: 1px solid #b58d60; border-radius: 50% 50% 4px 4px; }
-.leadership-plane--back { transform: translate3d(-35px, -22px, -85px); background: #571d26; box-shadow: 12px 22px 28px rgb(24 3 9 / 25%); }
-.leadership-plane--middle { transform: translate3d(18px, 8px, -38px); background: #6a2730; box-shadow: 10px 18px 26px rgb(24 3 9 / 24%); }
-.leadership-plane--front { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 28px; border: 0; background: linear-gradient(130deg, #e3c899, #ba905b 53%, #8c603e); color: #30121a; box-shadow: 12px 22px 32px rgb(24 3 9 / 36%), inset 1px 1px 0 rgb(255 242 212 / 55%); transform: translateZ(30px); }
-.leadership-plane--front > span { font-size: clamp(44px, 6vw, 86px); line-height: 1.1; letter-spacing: -.04em; font-weight: 600; }
-.leadership-plane--front small { max-width: 20ch; margin-top: 10px; font-size: 13px; line-height: 1.5; text-align: center; }
-.leadership-connector { position: absolute; top: 35%; left: -30%; width: 160%; border-top: 1px solid rgb(237 208 162 / 40%); transform: rotateY(50deg) rotateZ(-30deg); }
+.leadership-sculpture { position: relative; width: 100%; height: 75%; transform-style: preserve-3d; }
+.leadership-plane { position: absolute; inset: 20% 0; border: 1px solid rgb(224 193 144 / 55%); border-radius: 0; }
+.leadership-plane--back { transform: rotateX(68deg) rotateZ(-24deg) translateZ(-65px); border-width: 1px 1px 0; background: none; }
+.leadership-plane--middle { transform: rotateX(68deg) rotateZ(-24deg) translateZ(-15px); border-width: 0 1px 1px; background: none; }
+.leadership-plane--front { inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px 0; border: 0; background: none; color: #f0d1a0; transform: translateZ(45px); }
+.leadership-plane--front > span { position: relative; font-size: clamp(62px, 7.5vw, 115px); line-height: 1.1; letter-spacing: -.04em; font-weight: 650; text-shadow: 1px 2px #84633e, 2px 4px #674729, 6px 12px 24px rgb(24 3 9 / 30%); }
+.leadership-plane--front small { max-width: 24ch; margin-top: 16px; color: #f2eadc; font-size: 15px; line-height: 1.5; text-align: center; }
+.leadership-connector { position: absolute; top: 76%; left: 10%; width: 80%; border-top: 1px solid rgb(237 208 162 / 40%); transform: rotateY(50deg) rotateZ(-24deg); }
 .leadership-navigation { display: grid; margin-top: 24px; border-top: 1px solid rgb(242 234 220 / 24%); }
 .leadership-navigation a { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 52px; padding-block: 12px; border-bottom: 1px solid rgb(242 234 220 / 18%); color: #e0c9c8; font-size: 13px; line-height: 1.5; transition: color 200ms ease; }
 .leadership-navigation a[aria-current] { color: #f2d9a6; }
@@ -16,12 +16,36 @@
 .leadership-stories { min-width: 0; perspective: 1200px; }
 .leadership-story { border-top: 1px solid rgb(242 234 220 / 28%); padding-block: 36px 80px; scroll-margin-top: 110px; transform-origin: left center; }
 .leadership-story:last-child { padding-bottom: 0; }
-.leadership-role-meta { display: grid; gap: 12px; margin-bottom: 36px; }
-.leadership-role-meta p { margin: 0; color: #ebd5ce; font-size: 13px; line-height: 1.7; }
-.leadership-role-meta p:first-child { color: #e4c38b; font-size: 15px; }
-.leadership-story h3 { margin: 0 0 28px; font-size: clamp(28px, 3.1vw, 45px); font-weight: 500; line-height: 1.15; letter-spacing: -.035em; text-wrap: balance; }
+.leadership-role-meta { display: grid; gap: 20px; margin-bottom: 28px; }
+.leadership-role-meta p { margin: 0; color: #ebd5ce; font-size: 14px; line-height: 1.7; }
+.leadership-identity > div > p { margin: 0 0 10px; color: #e4c38b; font-size: 17px; font-weight: 600; }
+.leadership-story h3 { margin: 0; font-size: clamp(30px, 3.3vw, 48px); font-weight: 700; line-height: 1.12; letter-spacing: -.035em; text-wrap: balance; }
 .leadership-scope { margin: 0 0 28px; color: #f2eadc; font-size: 18px; line-height: 1.65; }
 .leadership-bullets { max-width: 70ch; }
 @media (max-width: 1000px) { .leadership-layout { gap: 44px; grid-template-columns: minmax(0,.7fr) minmax(0,1.3fr); } .leadership-sculpture-space { height: 240px; } .leadership-plane--front { padding: 15px; } }
-@media (max-width: 767px) { .leadership-layout { grid-template-columns: 1fr; gap: 48px; } .leadership-stage { position: relative; top: auto; } .leadership-sculpture-space { height: 280px; max-width: 390px; margin-inline: auto; } .leadership-sculpture { width: 200px; } .leadership-plane--front > span { font-size: 64px; } .leadership-navigation { grid-template-columns: 1fr 1fr; column-gap: 24px; } .leadership-navigation a { font-size: 12px; } .leadership-story { padding-bottom: 56px; } }
+@media (max-width: 767px) { .leadership-layout { grid-template-columns: 1fr; gap: 48px; } .leadership-stage { position: relative; top: auto; } .leadership-sculpture-space { height: 280px; max-width: 390px; margin-inline: auto; } .leadership-sculpture { width: min(100%, 360px); } .leadership-plane--front > span { font-size: 76px; } .leadership-navigation { grid-template-columns: 1fr 1fr; column-gap: 24px; } .leadership-navigation a { font-size: 12px; } .leadership-story { padding-bottom: 56px; } }
 @media (prefers-reduced-motion: reduce), (scripting: none) { .leadership-sculpture, .leadership-story { transform: none !important; } }
+
+.p-leadership-head { grid-template-columns: 1.1fr 1fr; gap: clamp(48px, 8vw, 140px); align-items: start; }
+.p-leadership-head .p-heading { max-width: 13ch; }
+.p-leadership-intro { max-width: 580px; }
+.leadership-principle-preview { list-style: none; margin: 28px 0 16px; padding: 0; color: #ecd6d1; font-size: 15px; line-height: 1.75; }
+.leadership-principle-preview li { margin-top: 16px; }
+.leadership-principle-preview strong, .leadership-principles strong { color: #f4dfbd; font-weight: 650; }
+.leadership-principles { color: #ecd6d1; font-size: 14px; line-height: 1.75; }
+.leadership-principles summary { display: list-item; min-height: 44px; padding-block: 12px; color: #f4dfbd; cursor: pointer; }
+.leadership-principles summary:focus-visible { outline: 2px solid #e4c38b; outline-offset: 4px; }
+.leadership-principles ol { list-style: decimal outside; padding-left: 20px; }
+.leadership-principles li { padding-left: 6px; margin-bottom: 18px; }
+.leadership-identity { display: flex; align-items: center; gap: 22px; }
+.leadership-identity > div { min-width: 0; }
+.leadership-logo { display: block; width: 66px; height: 66px; object-fit: contain; flex: 0 0 66px; }
+.leadership-logo--0 { width: 43px; flex-basis: 43px; }
+.leadership-logo--1 { background: #fff; border-radius: 4px; }
+.leadership-logo--2 { width: 124px; flex-basis: 124px; }
+.leadership-logo--4 { width: 130px; height: auto; flex-basis: 130px; }
+.leadership-dates { max-width: 70ch; }
+.leadership-outcome { margin: 0 0 22px; color: #f2eadc; font-size: clamp(22px, 2.4vw, 34px); line-height: 1.35; font-weight: 500; letter-spacing: -.02em; text-wrap: balance; }
+.leadership-scope { color: #ecd6d1; font-size: 16px; line-height: 1.8; }
+@media (max-width: 1000px) { .p-leadership-head { grid-template-columns: 1fr; gap: 32px; } .p-leadership-head .p-heading { max-width: 16ch; } .p-leadership-intro { max-width: 74ch; justify-self: start; } .leadership-identity { flex-wrap: wrap; } .leadership-logo--2, .leadership-logo--4 { height: 42px; } }
+@media (max-width: 639px) { .leadership-identity { gap: 16px; } .leadership-logo { width: 52px; height: 52px; flex-basis: 52px; } .leadership-logo--0 { width: 34px; flex-basis: 34px; } .leadership-logo--2, .leadership-logo--4 { width: 116px; height: 38px; flex-basis: 116px; } .leadership-identity > div > p { font-size: 15px; } .leadership-story h3 { font-size: 31px; } .leadership-outcome { font-size: 23px; } }

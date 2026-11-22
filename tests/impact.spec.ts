@@ -18,9 +18,10 @@ for (const viewport of [{ width: 1440, height: 1000 }, { width: 390, height: 844
     const recwell = page.locator("#leadership-role-0")
     await recwell.scrollIntoViewIfNeeded()
     const results = recwell.locator(".impact-metrics")
-    await expect(results).toContainText("250+")
-    await expect(results).toContainText("cumulatively over two years")
-    await expect(results).toContainText("program-level")
+    await expect(recwell).toContainText("2,000+")
+    await expect(results).toContainText("Programs managed")
+    await expect(results).toContainText("players, referees and supervisors")
+    await expect(results).toContainText("Program-wide")
     await expect(results).toContainText("35%")
     await expect(page.locator("#leadership-role-1 .impact-metrics").first()).toContainText("20+")
     expect(await results.evaluate(node => node.scrollWidth <= node.clientWidth + 1)).toBe(true)
@@ -45,7 +46,8 @@ test("results and their qualifiers are server rendered without JavaScript", asyn
     const page = await context.newPage()
     await page.goto("/")
     await expect(page.locator("#experience-darukaa .impact-metrics")).toContainText("batch")
-    await expect(page.locator("#leadership-role-0 .impact-metrics")).toContainText("cumulatively over two years")
+    await expect(page.locator("#leadership-role-0")).toContainText("2,000+")
+    await expect(page.locator("#leadership-role-0 .impact-metrics")).toContainText("players, referees and supervisors")
   } finally { await context.close() }
 })
 
