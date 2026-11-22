@@ -1249,7 +1249,7 @@ export const experiences: Experience[] = [
       "E09",
       "E10"
     ],
-    "logo": "/company-logos/wisc.png",
+    "logo": "/company-logos/people-robots.png",
     "metrics": [
       {
         "value": "18+",
@@ -1277,6 +1277,7 @@ export const experiences: Experience[] = [
     "sourceIds": [
       "E11"
     ],
+    "logo": "/company-logos/cornell.png",
     "metrics": [
       {
         "value": "0.225 → 0.025",
