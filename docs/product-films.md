@@ -14,8 +14,8 @@ JavaScript, native playback and direct film-page links remain available.
 | Film | Duration | Narration | SHA-256 |
 | --- | --- | --- | --- |
 | Vyaya | 26.1 seconds | Female | `7594e9370d1ed11ecb9e804bcb448235f5ec4654dd71e3f89d73088d8f3d8ce0` |
-| StudyFlow | 81 seconds | Male | See the deployed MP4 |
-| Nura | 80 seconds | Female | See the deployed MP4 |
+| StudyFlow | 81 seconds | Male | `858dfec3d323e9ef259ec2de09fcccf90d17fbcfd7ffb476d8826543c626c616` |
+| Nura | 80 seconds | Female | `19c529084c61bd6e6acd17a749211673dda11e93212305242fe0c263df25d474` |
 
 Vyaya is the exact user-approved export. All films show independently prepared
 synthetic app data. Raw captures and production material are outside public assets.
