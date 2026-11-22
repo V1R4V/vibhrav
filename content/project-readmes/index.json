@@ -1,0 +1,232 @@
+{
+  "captured": "2026-11-21",
+  "source": "Unauthenticated public GitHub README responses only. Private/local source never ingested.",
+  "entries": {
+    "aranyaka": {
+      "file": "aranyaka.md",
+      "sourceUrl": "https://github.com/V1R4V/Aranyaka/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Aranyaka/main/README.md",
+      "blobSha": "7f6f227e2a142bad3dce502d4638851dedd1721d",
+      "sha256": "188508f6f5921b00142cf8599ba790e6e8480cba2efc86bf45d7d3b5431309b8",
+      "captured": "2026-11-21"
+    },
+    "dermanet": {
+      "file": "dermanet.md",
+      "sourceUrl": "https://github.com/quincysorrentino/MadData2026/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/quincysorrentino/MadData2026/main/README.md",
+      "blobSha": "7efb950bd39bedcec747698591cdb9afa77c8009",
+      "sha256": "b613694c5825048e61237247073f8fd4541cc4f918d656b811e6f694aa078904",
+      "captured": "2026-11-21"
+    },
+    "private-data-rag": {
+      "file": "private-data-rag.md",
+      "sourceUrl": "https://github.com/V1R4V/rag-for-private_data/blob/main/README.MD",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/rag-for-private_data/main/README.MD",
+      "blobSha": "c0051178406723d822d3cdb9ed20d4b981870d55",
+      "sha256": "e8ea27baa6e7f7a7828d502448cc51a594609ea5beaca0053eb3a2e60a7dec8f",
+      "captured": "2026-11-21"
+    },
+    "before-it-breaks": {
+      "file": "before-it-breaks.md",
+      "sourceUrl": "https://github.com/V1R4V/CampusReliability_HVAC-R/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/CampusReliability_HVAC-R/main/README.md",
+      "blobSha": "4d3798bddb6559b51f643a0276050ef0f9205130",
+      "sha256": "9fbcbf1795e0cc56c48042a9b0e8d9219270095b06bff21c1d13aa5230516cfc",
+      "captured": "2026-11-21"
+    },
+    "stock-streaming": {
+      "file": "stock-streaming.md",
+      "sourceUrl": "https://github.com/V1R4V/Real-Time-Stock-Data-Streaming-Kafka/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Real-Time-Stock-Data-Streaming-Kafka/main/README.md",
+      "blobSha": "0ff75d644de624789815f3e3d496bd9e58359905",
+      "sha256": "69663ee934162f59ad8d401af9c8ba61c3aad3dc6407672004cac5c854568c42",
+      "captured": "2026-11-21"
+    },
+    "exam-prep-assistant": {
+      "file": "exam-prep-assistant.md",
+      "sourceUrl": "https://github.com/V1R4V/LLM-LoRA-Finetuning-vs-RAG/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/LLM-LoRA-Finetuning-vs-RAG/main/README.md",
+      "blobSha": "30bfc710d95cf2cf449ce5bc5644946ef7b30ed5",
+      "sha256": "90643baa24c119ca16e1019fd355c8acdc3fcb784a965fa674f71294d56e99fd",
+      "captured": "2026-11-21"
+    },
+    "distributed-weather": {
+      "file": "distributed-weather.md",
+      "sourceUrl": "https://github.com/V1R4V/Distributed-Weather-Data-System-with-Cassandra/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Distributed-Weather-Data-System-with-Cassandra/main/README.md",
+      "blobSha": "28e78327537d163224ee5dc946185e72d746d646",
+      "sha256": "0395af0d7d8f1be49311140d6458511f273d5bfe276099a2c3e16c56797db235",
+      "captured": "2026-11-21"
+    },
+    "property-lookup": {
+      "file": "property-lookup.md",
+      "sourceUrl": "https://github.com/V1R4V/Distributed-Property-Lookup-Service/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Distributed-Property-Lookup-Service/main/README.md",
+      "blobSha": "bb1f5ac0ac2b0b3c14599a1ad0db1512ca20f30b",
+      "sha256": "1e1cd5fdbef9624b8a383ebfa10a4065443e36bb022aa08ef56a41aa4650888d",
+      "captured": "2026-11-21"
+    },
+    "hdfs-sql": {
+      "file": "hdfs-sql.md",
+      "sourceUrl": "https://github.com/V1R4V/Data-Pipeline-with-HDFS-SQL-Integration/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Data-Pipeline-with-HDFS-SQL-Integration/main/README.md",
+      "blobSha": "fa8b9f9d47ebe2d5525d24457d385a86cefb4502",
+      "sha256": "0c6165c9aeee63c5974fc290f01afe4cdb1f4efd929ea4106d23854c04654bfe",
+      "captured": "2026-11-21"
+    },
+    "spark-analytics": {
+      "file": "spark-analytics.md",
+      "sourceUrl": "https://github.com/V1R4V/Competitive-Programming-Analytics-with-Apache-Spark/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Competitive-Programming-Analytics-with-Apache-Spark/main/README.md",
+      "blobSha": "adec8862336b4a7f9ee928962cf288a643d3a409",
+      "sha256": "b1e905e3896b24871b161c0e2e957cf194001a2a17e89f3ff85331731d78cf88",
+      "captured": "2026-11-21"
+    },
+    "multi-source-elt": {
+      "file": "multi-source-elt.md",
+      "sourceUrl": "https://github.com/V1R4V/Snowflake-dbt-ELT-Pipeline/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Snowflake-dbt-ELT-Pipeline/main/README.md",
+      "blobSha": "7f7c13dff9701119030f8e3a16edc80f57adc899",
+      "sha256": "a76616d17b0f1829cd0e5f9d229d03be5070d3ad3bc09daf983ed63cb7ee9521",
+      "captured": "2026-11-21"
+    },
+    "gcp-geospatial": {
+      "file": "gcp-geospatial.md",
+      "sourceUrl": "https://github.com/V1R4V/GCP-BigQuery-Geospatial-Pipeline/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/GCP-BigQuery-Geospatial-Pipeline/main/README.md",
+      "blobSha": "8ff7226b8d1ed46f78b3f8a1da6394b20e0adac4",
+      "sha256": "24900c3df783df73cb7662b4736941772ef9ad98b6907e8a4d4e4d0a4bd93a94",
+      "captured": "2026-11-21"
+    },
+    "chinook-analytics": {
+      "file": "chinook-analytics.md",
+      "sourceUrl": "https://github.com/V1R4V/Chinook-SQL-Analytics/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Chinook-SQL-Analytics/main/README.md",
+      "blobSha": "c7727cbc94170498b656d31768810b5158f87432",
+      "sha256": "1e07ed8f630643cdea35e6555d006adfb855a9a09a54433f9c63eb056782582f",
+      "captured": "2026-11-21"
+    },
+    "yelp-geospatial": {
+      "file": "yelp-geospatial.md",
+      "sourceUrl": "https://github.com/V1R4V/Yelp-MongoDB-Geospatial-Analytics/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Yelp-MongoDB-Geospatial-Analytics/main/README.md",
+      "blobSha": "ab176a25ffdccf5b0eeb8e52fa06c04b3c087529",
+      "sha256": "1694f8438122923e85a0d8696b42f270c78b4fd9cfeaebe9b852a7b9224f8043",
+      "captured": "2026-11-21"
+    },
+    "retail-forecasting": {
+      "file": "retail-forecasting.md",
+      "sourceUrl": "https://github.com/V1R4V/Retail-Sales-Forecasting/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Retail-Sales-Forecasting/main/README.md",
+      "blobSha": "e8a002b6f098f26a69d8b41fa46817c2c04bc3aa",
+      "sha256": "717f73d87722e08ab6323f3924dad71dc04455aed9c69a36cc0d3ddf8f46aa42",
+      "captured": "2026-11-21"
+    },
+    "studyflow": {
+      "file": "studyflow.md",
+      "sourceUrl": "https://github.com/V1R4V/StudyFlow/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/StudyFlow/main/README.md",
+      "blobSha": "baa9e9ad169c242d326681797fbefb535a4fee8d",
+      "sha256": "2aafa455c313d85e53a98c1d7596d5b51e9bbd27b079cce0b34f26313f2149bf",
+      "captured": "2026-11-21"
+    },
+    "habit-command-center": {
+      "file": "habit-command-center.md",
+      "sourceUrl": "https://github.com/V1R4V/HabitTracker/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/HabitTracker/main/README.md",
+      "blobSha": "9c3de9f0b47c910052bfe9f7dd2c17551023c3a3",
+      "sha256": "e591905357fd962a36c7008ed43cc913e1568c1a2bc2245c2da12875a8710f19",
+      "captured": "2026-11-21"
+    },
+    "react-web-mobile": {
+      "file": "react-web-mobile.md",
+      "sourceUrl": "https://github.com/V1R4V/React-Web-and-Mobile-Apps/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/React-Web-and-Mobile-Apps/main/README.md",
+      "blobSha": "878baa8335592198b086d4987066a8217fdf8a3f",
+      "sha256": "9cc70fb62ddb3a11b8cae2ea165ca591800f8ac38c89ba737570b8cbe276089e",
+      "captured": "2026-11-21"
+    },
+    "startup-scout": {
+      "file": "startup-scout.md",
+      "sourceUrl": "https://github.com/V1R4V/Startupscout/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Startupscout/main/README.md",
+      "blobSha": "09452ca30430a57ae4a0f9b844e920e08a0da013",
+      "sha256": "9dc4f9d779866a417e6f9b60042a41bcea0a303252e44077503ae4331ca4e9b4",
+      "captured": "2026-11-21"
+    },
+    "concurrent-wordcount": {
+      "file": "concurrent-wordcount.md",
+      "sourceUrl": "https://github.com/V1R4V/Concurrent-Word-Count-Performance-Benchmarking-System/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Concurrent-Word-Count-Performance-Benchmarking-System/main/README.md",
+      "blobSha": "1510198e4025ba67e918c7f4b3803ce9eb6bdf83",
+      "sha256": "fba0f5d3c57ad212f40c43c8e9b3ac2427fdab13b5472ea86e0b27a4091d041f",
+      "captured": "2026-11-21"
+    },
+    "algorithm-design": {
+      "file": "algorithm-design.md",
+      "sourceUrl": "https://github.com/V1R4V/Algorithm-Design-Python/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Algorithm-Design-Python/main/README.md",
+      "blobSha": "fd94f6ef0d8b92d262a7c1357f6566e36aaa052c",
+      "sha256": "bc5bf2cab9edcb0eff6fca16613ccae635a92b07cfa8cdca9cebf098de60e8d6",
+      "captured": "2026-11-21"
+    },
+    "campus-navigator": {
+      "file": "campus-navigator.md",
+      "sourceUrl": "https://github.com/V1R4V/CampusNavigator/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/CampusNavigator/main/README.md",
+      "blobSha": "b598af082502d2cad67fc650231d6ae3fbe4fef1",
+      "sha256": "81bc0456a279b41f8f6172b2b17a8d77f74eed43c3c8e9f0afa083c629b6cc20",
+      "captured": "2026-11-21"
+    },
+    "i-songly": {
+      "file": "i-songly.md",
+      "sourceUrl": "https://github.com/V1R4V/iSongLy/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/iSongLy/main/README.md",
+      "blobSha": "92789a5477b8f0b8409e9189034b0af417898559",
+      "sha256": "17fb22ae500eaedaccd368e51d0f2d6ed22a07d38d361e025d899900729355dd",
+      "captured": "2026-11-21"
+    },
+    "cifar100-lenet": {
+      "file": "cifar100-lenet.md",
+      "sourceUrl": "https://github.com/V1R4V/CIFAR100-LeNet-PyTorch/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/CIFAR100-LeNet-PyTorch/main/README.md",
+      "blobSha": "9630668ff9bd7c637727b5357d7f62fe1cb094f4",
+      "sha256": "78bd45c1425ade8b5ddf16a4df0d58dd00ab7841621f33d6b08fe7f3b332a289",
+      "captured": "2026-11-21"
+    },
+    "pca-eigenfaces": {
+      "file": "pca-eigenfaces.md",
+      "sourceUrl": "https://github.com/V1R4V/image_compression_pca/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/image_compression_pca/main/README.md",
+      "blobSha": "2a74d0382b544e645d3a4070fc137df5902138fa",
+      "sha256": "60ff3a992e96ca1be024c9dcab2c70a36eb9d6031e977ecf15895587e0f9bc39",
+      "captured": "2026-11-21",
+      "images": [
+        {
+          "src": "https://github.com/user-attachments/assets/c0e53928-1d0a-479f-a3c5-b9bb71e85608",
+          "alt": "image"
+        },
+        {
+          "src": "https://github.com/user-attachments/assets/2cc72660-18d2-46c1-ada5-b12c88d800ca",
+          "alt": "image"
+        }
+      ]
+    },
+    "lake-mendota": {
+      "file": "lake-mendota.md",
+      "sourceUrl": "https://github.com/V1R4V/Lake-Mendota-Ice-Regression/blob/main/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/Lake-Mendota-Ice-Regression/main/README.md",
+      "blobSha": "ad23d78d1eefc8b350070127866ca0de2323ad8b",
+      "sha256": "7d366083345257111a0807371eab2ee5e66b091564fee32612bafd432b80415a",
+      "captured": "2026-11-21"
+    },
+    "bayesian-language": {
+      "file": "bayesian-language.md",
+      "sourceUrl": "https://github.com/V1R4V/language_detection/blob/master/README.md",
+      "rawUrl": "https://raw.githubusercontent.com/V1R4V/language_detection/master/README.md",
+      "blobSha": "79a209aa023d634d9ab6bef402c32d0ca5f006a9",
+      "sha256": "0718b135cf68b9cfa95644b411d5eca2b79fc96f79c4651c4f7aeaf286f662a8",
+      "captured": "2026-11-21"
+    }
+  }
+}
