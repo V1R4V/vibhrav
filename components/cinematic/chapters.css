@@ -14,7 +14,7 @@
 .p-leadership-role > .leadership-period { font-size: 13px; }
 .p-recwell-story h3 { max-width: 650px; margin: 0 0 28px; font-size: clamp(30px, 3.6vw, 54px); font-weight: 500; letter-spacing: -.035em; line-height: 1.13; }
 .p-recwell-story .p-recwell-scope { max-width: 660px; margin: 0 0 32px; color: #f2eadc; font-size: clamp(20px, 2vw, 30px); line-height: 1.5; letter-spacing: -.025em; }
-.leadership-bullets { padding-left: 20px; margin: 0; color: #e0c9c8; font-size: 16px; line-height: 1.85; }
+.leadership-bullets { list-style: disc outside; padding-left: 20px; margin: 0; color: #e0c9c8; font-size: 16px; line-height: 1.85; }
 .leadership-bullets li { padding-left: 6px; margin-bottom: 18px; }
 .leadership-bullets li::marker { color: #cfb17b; }
 .p-venture-roles { display: grid; grid-template-columns: 1fr 1fr; gap: 64px 80px; padding-top: 48px; border-top: 1px solid rgb(242 234 220 / 25%); }

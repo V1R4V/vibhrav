@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { ArrowDown, ArrowLeft, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import { brandAsset } from "@/lib/brand-marks"
 import { experiences } from "@/lib/portfolio-data"
 import { publicCopy } from "@/lib/public-copy"
 import { usePortfolioMotion } from "./portfolio-frame"
@@ -107,7 +108,7 @@ export function ExperienceStage() {
             <div className="experience-orbit experience-orbit--outer"><span /></div>
             <div className="experience-orbit experience-orbit--inner"><span /></div>
             <div className="experience-brand" key={current.slug} data-brand={current.slug}>
-              {current.logo && <span className={`experience-company-logo experience-company-logo--${current.slug}`}><Image src={current.logo} alt="" width={100} height={76} unoptimized /></span>}
+              {current.logo && <span className={`experience-company-logo experience-company-logo--${current.slug}`}><Image src={brandAsset(current.slug, current.logo)} alt="" width={100} height={76} unoptimized /></span>}
               <span className="experience-brand-mark">{current.mark}</span>
             </div>
           </div>

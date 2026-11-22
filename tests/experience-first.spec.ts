@@ -42,7 +42,7 @@ test("direct catalogue URL restores filters and browser reload keeps the selecti
   await expect(page.locator("[data-catalogue-project]")).toHaveCount(count)
 })
 
-test("orb and ink render and global pause freezes both canvases", async ({ page }) => {
+test("orb and ink render, and device reduced motion freezes both canvases", async ({ page }) => {
   await page.addInitScript(() => {
     const original = WebGL2RenderingContext.prototype.drawElements
     WebGL2RenderingContext.prototype.drawElements = function (...args: Parameters<typeof original>) {
@@ -52,36 +52,27 @@ test("orb and ink render and global pause freezes both canvases", async ({ page 
   })
   await page.goto("/#experience")
   const orb = page.locator('[data-atmosphere="orb"]')
-  // The orb initializes only when visible. Font metrics can keep it below the
-  // chapter heading on CI, so bring it into view before awaiting WebGL.
   await orb.scrollIntoViewIfNeeded()
   await expect(orb).toHaveAttribute("data-scene-state", "ready")
-  // Settle the locator's scroll before pausing; screenshot-induced scrolling
-  // otherwise measures fractional-position text compositing above the canvas.
-  await orb.locator("canvas").scrollIntoViewIfNeeded()
-  await page.getByRole("button", { name: "Pause animation" }).click()
-  await expect(page.getByRole("button", { name: "Resume animation" })).toHaveAttribute("aria-pressed", "true")
-  await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))))
-  // The company lettering is a separate HTML overlay with fractional 3D text
-  // antialiasing. Mask it to compare the actual decorative canvas pixels.
-  const before = await orb.locator("canvas").screenshot({ mask: [page.locator(".experience-brand")] })
-  const orbDraws = await orb.locator("canvas").getAttribute("data-test-draws")
-  expect(Number(orbDraws)).toBeGreaterThan(0)
-  await page.waitForTimeout(150)
-  expect((await orb.locator("canvas").screenshot({ mask: [page.locator(".experience-brand")] })).equals(before)).toBe(true)
-  await expect(orb.locator("canvas")).toHaveAttribute("data-test-draws", orbDraws!)
-  await page.getByRole("button", { name: "Resume animation" }).click()
+  await expect(orb.locator("canvas")).toHaveCount(1)
   const ink = page.locator('[data-atmosphere="ink"]')
   await ink.scrollIntoViewIfNeeded()
   await expect(ink).toHaveAttribute("data-scene-state", "ready")
-  await page.getByRole("button", { name: "Pause animation" }).click()
-  const inkBefore = await ink.locator("canvas").screenshot()
+  await expect(ink.locator("canvas")).toHaveCount(1)
+  await page.emulateMedia({ reducedMotion: "reduce" })
+  await expect(page.locator(".cinematic-page")).toHaveAttribute("data-motion", "paused")
+  await page.waitForTimeout(100)
+  const orbDraws = await orb.locator("canvas").getAttribute("data-test-draws")
   const inkDraws = await ink.locator("canvas").getAttribute("data-test-draws")
+  expect(Number(orbDraws)).toBeGreaterThan(0)
   expect(Number(inkDraws)).toBeGreaterThan(0)
-  await page.mouse.move(500, 500)
-  await page.waitForTimeout(150)
-  expect((await ink.locator("canvas").screenshot()).equals(inkBefore)).toBe(true)
+  await page.waitForTimeout(200)
+  await expect(orb.locator("canvas")).toHaveAttribute("data-test-draws", orbDraws!)
   await expect(ink.locator("canvas")).toHaveAttribute("data-test-draws", inkDraws!)
+  await expect(page.locator("[data-experience-role]")).toHaveCount(6)
+  await page.emulateMedia({ reducedMotion: "no-preference" })
+  await expect(ink).toHaveAttribute("data-scene-state", "ready")
+  await expect.poll(async () => Number(await ink.locator("canvas").getAttribute("data-test-draws"))).toBeGreaterThan(Number(inkDraws))
 })
 
 test("reduced motion and no JavaScript retain every experience and catalogue entry", async ({ browser }) => {
@@ -91,9 +82,9 @@ test("reduced motion and no JavaScript retain every experience and catalogue ent
   await expect(page.locator("[data-experience-role]")).toHaveCount(6)
   await expect(page.locator("[data-catalogue-project]")).toHaveCount(34)
   await expect(page.locator("canvas")).toHaveCount(0)
-  const refereeScope = page.locator(".p-recwell").getByRole("definition").filter({ hasText: "250+" })
+  const refereeScope = page.locator("#leadership-role-0").getByRole("definition").filter({ hasText: "250+" })
   await expect(refereeScope).toContainText("Referees cumulatively over two years")
-  const participation = page.locator(".p-recwell").getByRole("definition").filter({ hasText: "+30%" })
+  const participation = page.locator("#leadership-role-0").getByRole("definition").filter({ hasText: "+30%" })
   await expect(participation).toContainText("Reported program-level increase")
   await expect(page.locator("#leadership")).toContainText("Three-time Dean’s List")
   await context.close()
@@ -122,7 +113,7 @@ test("mobile footer action and arrow remain inside the viewport", async ({ page 
   const bounds = await page.locator(".footer-invitation").boundingBox()
   expect(bounds!.x).toBeGreaterThanOrEqual(0)
   expect(bounds!.x + bounds!.width).toBeLessThanOrEqual(320)
-  await expect(page.locator(".footer-invitation > span")).toBeInViewport()
+  await expect(page.locator(".footer-invitation > svg")).toBeInViewport()
 })
 
 for (const project of projects) {
@@ -149,10 +140,8 @@ test("experience precedes projects and the hero contains one visual identity", a
   )
   expect(await page.locator("#experience").evaluate(el => Boolean(el.compareDocumentPosition(document.querySelector("#work")!) & Node.DOCUMENT_POSITION_FOLLOWING))).toBe(true)
   await expect(page.locator(".hero-name-foot")).not.toContainText("Vibhrav Jha")
-  const pause = page.getByRole("button", { name: "Pause animation" })
-  await expect(page.locator("header").getByRole("button", { name: "Pause animation" })).toBeVisible()
-  await pause.click()
-  await expect(page.getByRole("button", { name: "Resume animation" })).toHaveAttribute("aria-pressed", "true")
+  await expect(page.locator(".motion-toggle")).toHaveCount(0)
+  await expect(page.locator(".cinematic-page")).toHaveAttribute("data-motion", "playing")
 })
 
 test("approved catalogue is complete and private repositories have no public action", async ({ page }) => {

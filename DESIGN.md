@@ -32,7 +32,7 @@ shrinking the desktop scene. No name skew or italic treatment.
 The latest approved reading order is Hero → Experience → Projects → Leadership
 and recognition → About → Contact and the interactive footer. The hero has one
 visual name composition, one aligned role/statement block and an experience CTA.
-Motion controls belong to the navigation, never a floating content overlay.
+Motion runs by default without an on/off control. The device reduced-motion preference still provides a static reading mode.
 
 Experience stays on obsidian. A luminous gold/oxblood orb carries dimensional
 company lettering while eight roles move through readable HTML panels alongside
@@ -74,8 +74,7 @@ keyboard-accessible links. No autoplay audio or custom replacement cursor.
 
 Use lazy native Three.js for hero, orb and ink scenes and scoped GSAP contexts for authored
 scroll motion. Keep native scrolling, clean up effects on navigation, cap pixel
-ratio, suspend hidden/offscreen rendering and dispose resources. The visible pause
-control stops all live scenes and scroll choreography. Scenes suspend offscreen so
+ratio, suspend hidden/offscreen rendering and dispose resources. The device reduced-motion preference stops live scenes and scroll choreography. Scenes suspend offscreen so
 only the visible environment animates. The curtain plays once per
 session; it must never block access after an asset failure. No autoplay audio.
 The user's cinematic full-width typography and large stage transitions are explicit
@@ -85,8 +84,20 @@ Performance statements require actual browser measurements and their limitations
 ## Hero review gate
 
 Test 1440×900, 1366×768, 1024×768, 820×1180, 768×1024, 390×844,
-and 320×640. Check screenshots, fold, contrast, keyboard, pause/resume,
+and 320×640. Check screenshots, fold, contrast, keyboard, device motion-preference changes,
 reduced motion, no-JavaScript readability, WebGL failure, console errors and
 resource cleanup. Capture performance locally and label it as local browser
 evidence, not field Core Web Vitals. The latest user instruction authorizes full V1 before review; the former
 hero-only approval gate is removed.
+
+
+## November 22 refinement
+
+Both experience presentations read the same finalized bullet arrays. The compact roadmap exposes the complete list through native contribution disclosures. Experience and leadership lists explicitly retain disc markers despite the global CSS reset. Company lockups use fitted official vectors where available; PCE’s existing raster blends into the shared ivory plaque without an inner white rectangle. Sources live beside the local marks.
+
+The skills chapter places recognizable original technology marks on a dimensional orbital model and beside the existing grouped tool names. Native scrolling changes the model’s viewing angle; quiet orbital motion runs only while the chapter is visible. Leadership uses a separate layered gold/oxblood sculpture with current-role scope, direct role navigation and a single aligned reading column. Text remains upright while the sculpture changes depth. Complete content stays readable with reduced motion or no JavaScript. The footer uses the same drawn diagonal-arrow family as the navigation, colored antique gold, never an emoji glyph.
+
+The featured-project set stays at six until Vibhrav chooses the ten projects, order and images in a later discussion. The full catalogue and README previews are unchanged.
+
+
+About now pairs the academic introduction with a separate football story: play and Real Madrid support since age seven, academy history and separately scoped team/individual honours. The local Three.js Bernabéu architectural study uses a silver louvred envelope, open roof, blue seating and pitch. It initializes near view, suspends while hidden/offscreen, and disposes on navigation or reduced motion. A captured image of the same scene preserves the composition without WebGL or JavaScript. The club crest is an official transparent asset, used alongside explicit supporter wording. UW intramural titles list the three user-confirmed seasons separately from academy competitions.

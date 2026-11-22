@@ -36,3 +36,26 @@
 @media (max-width: 900px) { .skills-layout { grid-template-columns: 1fr; gap: 54px; } .skills-planetarium-model { width: min(72vw, 420px); } }
 @media (max-width: 639px) { .skills-chapter { padding-block: 88px; } .skills-heading { margin-bottom: 48px; } .skills-heading .p-heading { font-size: clamp(42px, 11vw, 64px); } .skills-layout { gap: 40px; } .skills-planetarium-model { width: min(82vw, 340px); } .skills-node { width: 52px; height: 52px; font-size: 9px; } .skills-groups { grid-template-columns: 1fr; } .skills-group, .skills-group:nth-child(odd), .skills-group:nth-child(even) { padding: 21px 0 23px; border-left: 0; } .skills-group dt { margin-bottom: 15px; font-size: 16px; } .skills-tool { min-height: 30px; font-size: 11px; } .skills-diagram-caption { font-size: 9px; } }
 @media (prefers-reduced-motion: reduce) { .skills-planetarium-model { transform: none !important; } .skills-group { opacity: 1 !important; transform: none !important; } }
+
+.skill-mark { display: block; width: 24px; height: 24px; flex: 0 0 24px; object-fit: contain; }
+.skill-mark--nextjs-original, .skill-mark--apachekafka-original, .skill-mark--ollama-original, .skill-mark--onnx, .skill-mark--airbyte, .skill-mark--snowflake { filter: invert(1); }
+.skills-tool { border: 0; border-radius: 0; padding: 5px 0; gap: 9px; font-size: 13px; color: #ded4c7; }
+.skills-group dd { gap: 12px 22px; }
+.skills-tool .skill-mark { width: 21px; height: 21px; flex-basis: 21px; }
+.skills-orbit-carrier { position: absolute; inset: 0; transform-style: preserve-3d; animation: skills-revolve 80s linear infinite; animation-play-state: paused; }
+.skills-chapter.chapter-active .skills-orbit-carrier { animation-play-state: running; }
+.skills-node { width: 70px; height: 70px; gap: 5px; align-content: center; border-radius: 12px; transform-style: preserve-3d; }
+.skills-node > span { font: 9px/1.2 var(--font-sans), sans-serif; letter-spacing: 0; text-align: center; }
+.skills-node .skill-mark { width: 30px; height: 30px; justify-self: center; }
+.skills-node--1 { top: 0; left: 45%; transform: translateZ(64px); }
+.skills-node--2 { top: 16%; right: 0; left: auto; transform: translateZ(30px); }
+.skills-node--3 { top: 48%; right: -3%; bottom: auto; left: auto; transform: translateZ(80px); }
+.skills-node--4 { top: auto; bottom: 2%; right: 10%; left: auto; transform: translateZ(22px); }
+.skills-node--5 { bottom: -4%; left: 32%; transform: translateZ(60px); }
+.skills-node--6 { bottom: 20%; left: -2%; transform: translateZ(18px); }
+.skills-node--7 { top: 22%; left: -6%; transform: translateZ(70px); }
+.skills-node--8 { top: 2%; left: 14%; transform: translateZ(8px); }
+@keyframes skills-revolve { 0%,100% { transform: rotateZ(-5deg) rotateY(-10deg); } 50% { transform: rotateZ(9deg) rotateY(16deg); } }
+@media (min-width: 901px) { .skills-planetarium { position: sticky; top: 130px; align-self: start; } .skills-layout { align-items: start; } }
+@media (max-width: 639px) { .skills-node { width: 56px; height: 56px; } .skills-node .skill-mark { width: 25px; height: 25px; } .skills-node > span { font-size: 8px; } .skills-group dd { gap: 10px 18px; } }
+@media (prefers-reduced-motion: reduce), (scripting: none) { .skills-orbit-carrier { animation: none; } }

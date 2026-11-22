@@ -59,39 +59,29 @@ for (const viewport of sizes) {
   })
 }
 
-test("keyboard reaches content and pause controls", async ({ page }) => {
+test("keyboard reaches content and navigation without a motion toggle", async ({ page }) => {
   await page.goto("/cinematic")
   await expect(page.locator(".cinematic-page")).toHaveAttribute("data-intro", "complete")
   await page.keyboard.press("Tab")
   await expect(page.getByRole("link", { name: "Skip to content" })).toBeFocused()
   await page.keyboard.press("Enter")
   await expect(page.locator("#introduction")).toBeFocused()
-  const pause = page.getByRole("button", { name: "Pause animation" })
-  await pause.focus()
-  await page.keyboard.press("Enter")
-  await expect(page.getByRole("button", { name: "Resume animation" })).toHaveAttribute("aria-pressed", "true")
-  await page.keyboard.press("Enter")
-  await expect(pause).toHaveAttribute("aria-pressed", "false")
+  await expect(page.locator(".motion-toggle")).toHaveCount(0)
+  const projects = page.getByRole("navigation", { name: "Main navigation" }).getByRole("link", { name: "Projects" })
+  await projects.focus()
+  await expect(projects).toBeFocused()
 })
 
-test("WebGL draws the sculpture and pause freezes the actual canvas", async ({ page }) => {
+test("WebGL draws the sculpture and device reduced motion releases the canvas", async ({ page }) => {
   await page.goto("/cinematic")
   const sculpture = page.locator(".gold-sculpture")
   await expect(sculpture).toHaveAttribute("data-scene-state", "ready")
   await expect(sculpture).toHaveAttribute("data-draw-calls", "4")
   expect(Number(await sculpture.getAttribute("data-triangles"))).toBeLessThan(25_000)
   await expect(page.locator(".name-letter").last()).toHaveCSS("transform", "matrix(1, 0, 0, 1, 0, 0)")
-  await page.getByRole("button", { name: "Pause animation" }).click()
-  await expect(page.getByRole("button", { name: "Resume animation" })).toHaveAttribute("aria-pressed", "true")
-  // The transparent canvas overlaps the control's hover transition. Settle that
-  // separate UI feedback before comparing the frozen WebGL pixels.
-  await page.mouse.move(0, 0)
-  await expect(page.getByRole("button", { name: "Resume animation" })).toHaveCSS("color", "rgb(198, 165, 108)")
-  const canvas = sculpture.locator("canvas")
-  const before = await canvas.screenshot()
-  await page.waitForTimeout(300)
-  const after = await canvas.screenshot()
-  expect(after.equals(before)).toBe(true)
+  await page.emulateMedia({ reducedMotion: "reduce" })
+  await expect(sculpture.locator("canvas")).toHaveCount(0)
+  await expect(sculpture.locator("img")).toBeVisible()
 })
 
 test("changing motion preference releases the live canvas", async ({ page }) => {

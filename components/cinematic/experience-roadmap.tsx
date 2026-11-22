@@ -4,6 +4,8 @@ import Image from "next/image"
 import { useEffect, useRef } from "react"
 import { ArrowUpRight } from "lucide-react"
 import { experiences } from "@/lib/portfolio-data"
+import { EvidenceText } from "./evidence-text"
+import { brandAsset } from "@/lib/brand-marks"
 import { usePortfolioMotion } from "./portfolio-frame"
 import "./experience-roadmap.css"
 
@@ -69,18 +71,22 @@ export function ExperienceRoadmap() {
           {experiences.map((experience, index) => (
             <li key={experience.slug} className="experience-roadmap-stop" data-side={index % 2 ? "right" : "left"}>
               <span className="experience-roadmap-node" aria-hidden="true" />
-              <a href={`#experience-${experience.slug}`} className="experience-roadmap-card" data-side={index % 2 ? "right" : "left"}>
+              <div className="experience-roadmap-card" data-side={index % 2 ? "right" : "left"}>
                 <p className="experience-roadmap-period">{experience.period}</p>
-                <div className="experience-roadmap-identity">
-                  {experience.logo && <span className={`experience-roadmap-logo experience-roadmap-logo--${experience.slug}`}><Image src={experience.logo} alt="" width={48} height={48} /></span>}
+                <a href={`#experience-${experience.slug}`} className="experience-roadmap-identity">
+                  {experience.logo && <span className={`experience-roadmap-logo experience-roadmap-logo--${experience.slug}`}><Image src={brandAsset(experience.slug, experience.logo)} alt="" width={48} height={48} /></span>}
                   <div><p>{experience.org}</p><h4>{experience.role}</h4></div>
                   <ArrowUpRight size={20} aria-hidden="true" />
-                </div>
+                </a>
                 <p className="experience-roadmap-summary">{experience.summary}</p>
                 {experience.metrics && <ul className="experience-roadmap-metrics" aria-label={`${experience.org} scope`}>
                   {experience.metrics.slice(0, 2).map(metric => <li key={metric.label}><strong>{metric.value}</strong><span>{metric.label}</span></li>)}
                 </ul>}
-              </a>
+                <details className="experience-roadmap-details">
+                  <summary>Read {experience.bullets.length} contributions</summary>
+                  <ul className="experience-bullets">{experience.bullets.map(bullet => <li key={bullet}><EvidenceText text={bullet} /></li>)}</ul>
+                </details>
+              </div>
             </li>
           ))}
         </ol>

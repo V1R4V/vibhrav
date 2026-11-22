@@ -33,9 +33,21 @@ export const publicCopy = {
       "I study Computer Sciences, Data Science and Economics at UW-Madison, with graduation expected in May 2027. That combination keeps me interested in both the implementation and the decision around it: whether a proposal team can find an approved answer, a researcher can recover a failed batch, or an investment team can test a business assumption.",
       "My experience has also taught me that useful systems depend on how people work together. Teaching SQL, developing officials and organizing venture events have made clear explanations, preparation and feedback part of how I approach a team."
     ],
-    "personalHeading": "Still on the field",
-    "personal": "Soccer has been a constant, from youth competition and school teams to UW intramurals. Playing, coaching and officiating have each given me a different view of responsibility: preparing yourself, understanding another person’s strengths and making a clear decision under pressure.",
+    "personalHeading": "Football, since seven.",
+    "personal": "I started playing football at seven and have supported Real Madrid ever since. I’ve competed at high-school, district and state levels, and played with Conscient Football / Barça Academy in Delhi from December 2017 to February 2020.",
     "recognition": "Three-time Dean’s List · UW-Madison",
+    "football": {
+      "role": "Football athlete",
+      "academy": "Conscient Football / Barça Academy, Delhi",
+      "period": "December 2017–February 2020",
+      "achievements": [
+        "Asia-Pacific champions (U-15)",
+        "All-India champions (U-18)",
+        "8× Player of the Month",
+        "I-League North Zone, U-13",
+        "UW–Madison intramural soccer champions: Spring 2024, Spring 2025 and Fall 2025"
+      ]
+    },
     "skills": [
       {
         "label": "Interfaces",

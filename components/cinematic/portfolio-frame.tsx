@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useEffect, useRef, useState, createContext, useContext } from "react"
-import { ArrowUpRight, Menu, X, Pause, Play } from "lucide-react"
+import { ArrowUpRight, Menu, X } from "lucide-react"
 import { MotionDirector } from "./motion-director"
 import { CurtainLoader } from "./curtain-loader"
 import type { IntroPhase } from "./curtain-loader"
@@ -12,7 +12,6 @@ const MotionContext = createContext({ paused: false })
 export const usePortfolioMotion = () => useContext(MotionContext)
 
 export function PortfolioFrame({ children, home = false }: { children: React.ReactNode; home?: boolean }) {
-  const [paused, setPaused] = useState(false)
   const [reduced, setReduced] = useState(true)
   const [menuOpen, setMenuOpen] = useState(false)
   const [intro, setIntro] = useState<IntroPhase>(home ? "pending" : "complete")
@@ -38,8 +37,8 @@ export function PortfolioFrame({ children, home = false }: { children: React.Rea
 
   const prefix = home ? "" : "/"
   return (
-    <MotionContext.Provider value={{ paused: paused || reduced }}>
-      <div ref={root} className="cinematic-page" data-motion={paused ? "paused" : "playing"} data-intro={intro}>
+    <MotionContext.Provider value={{ paused: reduced }}>
+      <div ref={root} className="cinematic-page" data-motion={reduced ? "paused" : "playing"} data-intro={intro}>
         {home && <CurtainLoader root={root} onPhase={setIntro} />}
         <a className="cinematic-skip" href="#introduction">Skip to content</a>
         <header className="cinematic-nav">
@@ -48,7 +47,6 @@ export function PortfolioFrame({ children, home = false }: { children: React.Rea
             {[["experience", "Experience"], ["work", "Projects"], ["skills", "Skills"], ["leadership", "Leadership"], ["about", "About"]].map(([id, label]) => <Link key={id} href={`${prefix}#${id}`}>{label}</Link>)}
           </nav>
           <Link className="cinematic-contact" href={`${prefix}#contact`}>Let’s talk <ArrowUpRight size={16} aria-hidden /></Link>
-          {!reduced && <button type="button" className="motion-toggle" onClick={() => setPaused(value => !value)} aria-label={paused ? "Resume animation" : "Pause animation"} aria-pressed={paused}>{paused ? <Play size={14} aria-hidden /> : <Pause size={14} aria-hidden />}<span>Motion {paused ? "off" : "on"}</span></button>}
           <button ref={menuButton} className="mobile-menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label={menuOpen ? "Close navigation" : "Open navigation"} onClick={() => setMenuOpen(value => !value)}>
             {menuOpen ? <X size={22} aria-hidden /> : <Menu size={22} aria-hidden />}
           </button>
@@ -59,11 +57,11 @@ export function PortfolioFrame({ children, home = false }: { children: React.Rea
         </header>
         {children}
         <footer className="site-footer">
-          <div className="footer-atmosphere" aria-hidden><Atmosphere variant="ink" paused={paused || reduced} /></div>
-          <div className="footer-closing"><p>Vibhrav Jha · Madison, Wisconsin</p><a className="footer-invitation" href={`${prefix}#contact`}>Get in touch<span aria-hidden>↗</span></a></div>
+          <div className="footer-atmosphere" aria-hidden><Atmosphere variant="ink" paused={reduced} /></div>
+          <div className="footer-closing"><p>Vibhrav Jha · Madison, Wisconsin</p><a className="footer-invitation" href={`${prefix}#contact`}>Get in touch<ArrowUpRight className="footer-invitation-arrow" aria-hidden="true" strokeWidth={1.35} /></a></div>
           <div className="footer-baseline"><Link href="/" className="footer-signature" aria-label="Vibhrav Jha home">VJ<span>.</span></Link><nav aria-label="Social links"><a href="https://github.com/V1R4V" target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={14} aria-hidden /></a><a href="https://www.linkedin.com/in/vibhrav-jha-4846a3275/" target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight size={14} aria-hidden /></a><a href="#introduction">Back to top <ArrowUpRight size={14} aria-hidden /></a></nav></div>
         </footer>
-        <MotionDirector root={root} paused={paused || reduced} />
+        <MotionDirector root={root} paused={reduced} />
       </div>
     </MotionContext.Provider>
   )

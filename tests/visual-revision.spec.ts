@@ -42,7 +42,7 @@ test("verified experience metrics have semantic emphasis and a complete roadmap"
   await expect(roadmap.getByRole("link")).toHaveCount(6)
 })
 
-test("the orb has visible idle motion and pause freezes its orbital system", async ({ page }) => {
+test("the orb has visible idle motion and device reduced motion freezes its orbital system", async ({ page }) => {
   await page.goto("/#experience-darukaa")
   const orb = page.locator('[data-atmosphere="orb"]')
   await orb.scrollIntoViewIfNeeded()
@@ -53,7 +53,7 @@ test("the orb has visible idle motion and pause freezes its orbital system", asy
   await expect.poll(() => ring.evaluate(el => getComputedStyle(el).transform)).not.toBe(before)
   const logo = page.locator(".experience-company-logo img")
   await expect.poll(() => logo.evaluate((el: HTMLImageElement) => el.naturalWidth)).toBeGreaterThan(0)
-  await page.getByRole("button", { name: "Pause animation" }).click()
+  await page.emulateMedia({ reducedMotion: "reduce" })
   await expect(page.locator("#experience")).toHaveAttribute("data-orb-motion", "paused")
   const stopped = await ring.evaluate(el => getComputedStyle(el).transform)
   await page.waitForTimeout(250)

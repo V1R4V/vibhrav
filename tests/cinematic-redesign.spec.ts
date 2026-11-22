@@ -54,14 +54,14 @@ test("reduced motion bypasses the curtain and renders an unpinned project list",
   await expect(page.locator(".gold-sculpture canvas")).toHaveCount(0)
 })
 
-test("paused identity remains readable when motion preferences change", async ({ page }) => {
+test("identity remains readable and motion returns when device preferences change", async ({ page }) => {
   await page.addInitScript(() => sessionStorage.setItem("vibhrav:introduction:v2", "seen"))
   await page.goto("/")
-  await page.getByRole("button", { name: "Pause animation" }).click()
   await page.emulateMedia({ reducedMotion: "reduce" })
   await expect(page.locator(".gold-sculpture canvas")).toHaveCount(0)
   await page.emulateMedia({ reducedMotion: "no-preference" })
-  await expect(page.getByRole("button", { name: "Resume animation" })).toBeVisible()
+  await expect(page.locator(".gold-sculpture canvas")).toHaveCount(1)
+  await expect(page.locator(".motion-toggle")).toHaveCount(0)
   await expect(page.locator(".name-letter").last()).toHaveCSS("transform", "matrix(1, 0, 0, 1, 0, 0)")
 })
 

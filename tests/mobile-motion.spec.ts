@@ -59,9 +59,9 @@ test("mobile project display changes in depth while its visual remains pinned", 
   await expect(page).toHaveURL(/\/projects\/aranyaka$/)
 })
 
-test("pause and reduced motion stop mobile choreography without losing content", async ({ page }) => {
+test("device reduced motion stops mobile choreography without losing content", async ({ page }) => {
   await page.goto("/#work")
-  await page.getByRole("button", { name: "Pause animation" }).tap()
+  await page.emulateMedia({ reducedMotion: "reduce" })
   await expect(page.locator("#work")).toHaveAttribute("data-project-motion", "static")
   const display = page.locator("[data-project-display]").first()
   await expect(display).toHaveCSS("transform", "none")

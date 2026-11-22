@@ -4,10 +4,17 @@ import { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { publicCopy } from "@/lib/portfolio-data"
+import Image from "next/image"
+import { skillMarks } from "@/lib/skill-marks"
 import { usePortfolioMotion } from "./portfolio-frame"
 import "./skills-chapter.css"
 
-const orbitLabels = ["AI", "DATA", "WEB", "PRODUCT"]
+const orbitLabels = ["Python", "React", "PostgreSQL", "Docker", "PyTorch", "TypeScript", "Google Cloud", "Kafka"]
+
+function SkillMark({ tool }: { tool: string }) {
+  const src = skillMarks[tool]
+  return src ? <Image className={`skill-mark skill-mark--${src.split("/").pop()?.replace(".svg", "")}`} src={src} alt="" width={24} height={24} unoptimized /> : null
+}
 
 export function SkillsChapter() {
   const section = useRef<HTMLElement>(null)
@@ -24,14 +31,6 @@ export function SkillsChapter() {
         rotateY: 22,
         ease: "none",
         scrollTrigger: { trigger: root, start: "top bottom", end: "bottom top", scrub: 0.7 },
-      })
-      gsap.from(".skills-group", {
-        y: 22,
-        opacity: 0,
-        stagger: 0.1,
-        duration: 0.55,
-        ease: "power2.out",
-        scrollTrigger: { trigger: root, start: "top 68%", once: true },
       })
     }, root)
 
@@ -51,7 +50,7 @@ export function SkillsChapter() {
               <div className="skills-halo skills-halo--middle" />
               <div className="skills-halo skills-halo--inner" />
               <div className="skills-core"><span>VJ</span></div>
-              {orbitLabels.map((label, index) => <span className={`skills-node skills-node--${index + 1}`} key={label}>{label}</span>)}
+              <div className="skills-orbit-carrier">{orbitLabels.map((label, index) => <span className={`skills-node skills-node--${index + 1}`} key={label}><SkillMark tool={label} /><span>{label}</span></span>)}</div>
               <span className="skills-satellite skills-satellite--one" />
               <span className="skills-satellite skills-satellite--two" />
             </div>
@@ -61,7 +60,7 @@ export function SkillsChapter() {
             {publicCopy.about.skills.map((skill) => (
               <div className="skills-group" key={skill.label}>
                 <dt>{skill.label}</dt>
-                <dd>{skill.tools.split(/,\s*/).map((tool) => <span className="skills-tool" key={tool.replace(/\.$/, "")}>{tool.replace(/\.$/, "")}</span>)}</dd>
+                <dd>{skill.tools.split(/,\s*/).map((tool) => { const name = tool.replace(/\.$/, ""); return <span className="skills-tool" key={name}><SkillMark tool={name} />{name}</span> })}</dd>
               </div>
             ))}
           </dl>
