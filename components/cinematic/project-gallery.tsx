@@ -9,6 +9,7 @@ import { projects } from "@/lib/portfolio-data"
 import type { Project } from "@/lib/portfolio-data"
 import { usePortfolioMotion } from "./portfolio-frame"
 import { ImpactMetrics } from "./impact-metrics"
+import { FilmShelf } from "./project-film"
 import "./project-gallery.css"
 
 const categoryOrder = ["Fullstack", "Distributed Systems", "ML & AI", "Data Engineering", "Computing Foundations"]
@@ -165,6 +166,7 @@ export function ProjectGallery() {
           </Fragment>
         ))}
       </div>
+      <FilmShelf />
       <section id="project-catalogue" className="pg-catalogue p-wrap" aria-labelledby="catalogue-title">
         <div className="pg-catalogue-head"><div><p className="pg-intro-label">The complete collection</p><h3 id="catalogue-title">More work,<br />different constraints.</h3></div><p>Interfaces, data pipelines, machine learning and computing foundations. Explore the work by field or find a particular tool.</p></div>
         <div className="pg-catalogue-controls">

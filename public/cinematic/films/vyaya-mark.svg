@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="chrome" x1="0.1" y1="0" x2="0.32" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="10%" stop-color="#F2F0FB"/>
+      <stop offset="26%" stop-color="#B2AFD0"/>
+      <stop offset="40%" stop-color="#FFFFFF"/>
+      <stop offset="55%" stop-color="#DCD8F6"/>
+      <stop offset="70%" stop-color="#A99AF0"/>
+      <stop offset="86%" stop-color="#7E6BE6"/>
+      <stop offset="100%" stop-color="#5B49D4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.52">
+      <stop offset="0%" stop-color="#8B7BF0" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#8B7BF0" stop-opacity="0"/>
+    </radialGradient>
+    <!-- The gap between the chevrons, carved out of the upper one. -->
+    <mask id="cut">
+      <rect width="512" height="512" fill="#fff"/>
+      <path d="M87 199 L256 410 L425 199 L371 199 L256 343 L141 199 Z"
+            fill="#000" stroke="#000" stroke-width="15" stroke-linejoin="miter"/>
+    </mask>
+  </defs>
+  <rect width="512" height="512" rx="114" fill="#08080B"/>
+  <rect width="512" height="512" rx="114" fill="url(#glow)"/>
+  <g stroke="#2A2150" stroke-width="4.6" stroke-linejoin="miter">
+    <path d="M87 103 L256 314 L425 103 L371 103 L256 247 L141 103 Z" fill="url(#chrome)" mask="url(#cut)"/>
+    <path d="M87 199 L256 410 L425 199 L371 199 L256 343 L141 199 Z" fill="url(#chrome)"/>
+  </g>
+</svg>

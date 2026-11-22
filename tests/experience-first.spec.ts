@@ -1,3 +1,4 @@
+import { getProductFilm } from "../lib/project-films"
 import { expect, test } from "@playwright/test"
 import { projects } from "../lib/portfolio-data"
 
@@ -126,8 +127,17 @@ for (const project of projects) {
     expect(response?.status()).toBe(200)
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(new RegExp(project.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")))
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
-    const image = page.locator(".project-main-image img")
-    await expect.poll(() => image.evaluate((el: HTMLImageElement) => el.naturalWidth)).toBeGreaterThan(0)
+    const film = getProductFilm(project.slug)
+    if (film) {
+      const video = page.locator(".project-image-stage video")
+      await expect(video).toBeVisible()
+      await expect(video.locator("source")).toHaveAttribute("src", film.src)
+      await expect(video).toHaveAttribute("poster", film.poster)
+      expect((await page.request.get(film.poster)).status()).toBe(200)
+    } else {
+      const image = page.locator(".project-main-image img")
+      await expect.poll(() => image.evaluate((el: HTMLImageElement) => el.naturalWidth)).toBeGreaterThan(0)
+    }
     await expect(page.locator("main")).not.toContainText("/Users/")
     expect(errors).toEqual([])
   })

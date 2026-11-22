@@ -1,3 +1,4 @@
+import { getProductFilm } from "../lib/project-films"
 import { expect, test } from "@playwright/test"
 import AxeBuilder from "@axe-core/playwright"
 
@@ -64,9 +65,18 @@ for (const slug of slugs) {
     const response = await page.goto(`/projects/${slug}`)
     expect(response!.status()).toBe(200)
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible()
-    const image = page.locator(".project-main-image img")
-    await expect(image).toBeVisible()
-    await expect.poll(() => image.evaluate((element: HTMLImageElement) => element.naturalWidth)).toBeGreaterThan(0)
+    const film = getProductFilm(slug)
+    if (film) {
+      const video = page.locator(".project-image-stage video")
+      await expect(video).toBeVisible()
+      await expect(video.locator("source")).toHaveAttribute("src", film.src)
+      await expect(video).toHaveAttribute("poster", film.poster)
+      expect((await page.request.get(film.poster)).status()).toBe(200)
+    } else {
+      const image = page.locator(".project-main-image img")
+      await expect(image).toBeVisible()
+      await expect.poll(() => image.evaluate((element: HTMLImageElement) => element.naturalWidth)).toBeGreaterThan(0)
+    }
     await expect(page.getByRole("heading", { name: "A decision worth examining" })).toBeAttached()
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
     const next = page.locator(".project-next h2 a")
