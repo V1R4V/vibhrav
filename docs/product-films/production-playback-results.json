@@ -1,0 +1,267 @@
+{
+  "origin": "https://vibhrav.vercel.app",
+  "mode": "production smoke",
+  "films": {
+    "nura": {
+      "native": {
+        "duration": 46,
+        "muted": false,
+        "controls": true,
+        "preload": "none",
+        "src": "https://vibhrav.vercel.app/cinematic/films/nura-46-v3.mp4",
+        "playsInline": true
+      },
+      "requestsAfterIntent": 1,
+      "rangeStatus": 206,
+      "captions": {
+        "cues": 8,
+        "active": [
+          "Nura brings your Apple Watch data into one view."
+        ]
+      },
+      "axeViolations": 0,
+      "preexistingPageViolations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "tags": [
+            "cat.semantics",
+            "wcag21a",
+            "wcag253",
+            "EN-301-549",
+            "EN-9.2.5.3",
+            "RGAAv4",
+            "RGAA-6.1.5"
+          ],
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "label-content-name-mismatch",
+                  "data": null,
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Text inside the element is not included in the accessible name"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<a class=\"cinematic-wordmark\" aria-label=\"Vibhrav Jha home\" href=\"/\">VJ<span>.</span></a>",
+              "target": [
+                ".cinematic-wordmark"
+              ],
+              "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "any": [
+                {
+                  "id": "label-content-name-mismatch",
+                  "data": null,
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Text inside the element is not included in the accessible name"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<a class=\"footer-signature\" aria-label=\"Vibhrav Jha home\" href=\"/\">VJ<span>.</span></a>",
+              "target": [
+                ".footer-signature"
+              ],
+              "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "playback": null,
+      "halfSpeedTransitions": [],
+      "mobileBounds": {
+        "x": 24,
+        "y": 299.140625,
+        "width": 342,
+        "height": 192.375
+      }
+    },
+    "studyflow": {
+      "native": {
+        "duration": 44,
+        "muted": false,
+        "controls": true,
+        "preload": "none",
+        "src": "https://vibhrav.vercel.app/cinematic/films/studyflow-44-v3.mp4",
+        "playsInline": true
+      },
+      "requestsAfterIntent": 1,
+      "rangeStatus": 206,
+      "captions": {
+        "cues": 7,
+        "active": [
+          "Plan your week. See your study time count."
+        ]
+      },
+      "axeViolations": 0,
+      "preexistingPageViolations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "tags": [
+            "cat.semantics",
+            "wcag21a",
+            "wcag253",
+            "EN-301-549",
+            "EN-9.2.5.3",
+            "RGAAv4",
+            "RGAA-6.1.5"
+          ],
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "label-content-name-mismatch",
+                  "data": null,
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Text inside the element is not included in the accessible name"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<a class=\"cinematic-wordmark\" aria-label=\"Vibhrav Jha home\" href=\"/\">VJ<span>.</span></a>",
+              "target": [
+                ".cinematic-wordmark"
+              ],
+              "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "any": [
+                {
+                  "id": "label-content-name-mismatch",
+                  "data": null,
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Text inside the element is not included in the accessible name"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<a class=\"footer-signature\" aria-label=\"Vibhrav Jha home\" href=\"/\">VJ<span>.</span></a>",
+              "target": [
+                ".footer-signature"
+              ],
+              "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "playback": null,
+      "halfSpeedTransitions": [],
+      "mobileBounds": {
+        "x": 24,
+        "y": 271.09375,
+        "width": 342,
+        "height": 192.375
+      }
+    },
+    "vyaya": {
+      "native": {
+        "duration": 34.005,
+        "muted": false,
+        "controls": true,
+        "preload": "none",
+        "src": "https://vibhrav.vercel.app/cinematic/films/vyaya-34-v3.mp4",
+        "playsInline": true
+      },
+      "requestsAfterIntent": 1,
+      "rangeStatus": 206,
+      "captions": {
+        "cues": 6,
+        "active": [
+          "Vyaya keeps your spending in view."
+        ]
+      },
+      "axeViolations": 0,
+      "preexistingPageViolations": [
+        {
+          "id": "label-content-name-mismatch",
+          "impact": "serious",
+          "tags": [
+            "cat.semantics",
+            "wcag21a",
+            "wcag253",
+            "EN-301-549",
+            "EN-9.2.5.3",
+            "RGAAv4",
+            "RGAA-6.1.5"
+          ],
+          "description": "Ensure that elements labelled through their content must have their visible text as part of their accessible name",
+          "help": "Elements must have their visible text as part of their accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright",
+          "nodes": [
+            {
+              "any": [
+                {
+                  "id": "label-content-name-mismatch",
+                  "data": null,
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Text inside the element is not included in the accessible name"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<a class=\"cinematic-wordmark\" aria-label=\"Vibhrav Jha home\" href=\"/\">VJ<span>.</span></a>",
+              "target": [
+                ".cinematic-wordmark"
+              ],
+              "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "any": [
+                {
+                  "id": "label-content-name-mismatch",
+                  "data": null,
+                  "relatedNodes": [],
+                  "impact": "serious",
+                  "message": "Text inside the element is not included in the accessible name"
+                }
+              ],
+              "all": [],
+              "none": [],
+              "impact": "serious",
+              "html": "<a class=\"footer-signature\" aria-label=\"Vibhrav Jha home\" href=\"/\">VJ<span>.</span></a>",
+              "target": [
+                ".footer-signature"
+              ],
+              "failureSummary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "playback": null,
+      "halfSpeedTransitions": [],
+      "mobileBounds": {
+        "x": 24,
+        "y": 299.140625,
+        "width": 342,
+        "height": 192.375
+      }
+    }
+  },
+  "errors": [],
+  "dialog": {
+    "closed": true,
+    "focusRestored": true,
+    "videoUnmounted": true
+  }
+}

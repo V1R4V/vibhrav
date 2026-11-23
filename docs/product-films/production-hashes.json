@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "nura",
+    "url": "https://vibhrav.vercel.app/cinematic/films/nura-46-v3.mp4",
+    "status": 200,
+    "bytes": 3109604,
+    "sha256": "8e09ee4d997fc9324c84454f288df28a0c6babe81e07ea4106c5ed258b45d518"
+  },
+  {
+    "slug": "studyflow",
+    "url": "https://vibhrav.vercel.app/cinematic/films/studyflow-44-v3.mp4",
+    "status": 200,
+    "bytes": 2416824,
+    "sha256": "20284a730fe3c4856fd9de31ce58ffb7b2879ee9b6c6b769c03ae0711d488f07"
+  },
+  {
+    "slug": "vyaya",
+    "url": "https://vibhrav.vercel.app/cinematic/films/vyaya-34-v3.mp4",
+    "status": 200,
+    "bytes": 1733634,
+    "sha256": "91e67e464020f2bef81d4647ac7d964229fdbd4044813fa474454c97c2d59002"
+  }
+]

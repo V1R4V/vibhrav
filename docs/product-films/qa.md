@@ -175,3 +175,9 @@ A local incremental rebuild hit an internal WebpackWasmHashcache exception. A
 clean generated-cache rebuild passed; no source check was skipped or weakened.
 The first failed targeted test and the paused-animation regression are retained
 in local QA logs; final post-fix results are separate.
+
+Final outcome: the post-fix6-test suite passed, including both rapid Escape and
+paused CSS exit regression. The public production smoke also passed allthree
+films and dialog cleanup. Production movie SHA256values match the reviewed local
+exports. See `release.md`, `production-hashes.json` and
+`production-playback-results.json` for the concrete final delivery evidence.
