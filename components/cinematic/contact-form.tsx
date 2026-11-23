@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState, type FormEvent } from "react"
 import { ArrowUpRight } from "lucide-react"
 import { publicCopy } from "@/lib/portfolio-data"
+import { sendBrowserContact } from "@/lib/contact/browser.mjs"
 import "./contact.css"
 
 type Field = "name" | "email" | "message"
@@ -10,6 +11,8 @@ type FieldErrors = Partial<Record<Field, string>>
 const fallback = "The form is temporarily unavailable. Please email me directly."
 
 export function ContactForm() {
+  const browserProvider = useRef("")
+  const [deliveryUncertain, setDeliveryUncertain] = useState(false)
   const [challenge, setChallenge] = useState("")
   const [preparing, setPreparing] = useState(true)
   const [pending, setPending] = useState(false)
@@ -45,6 +48,7 @@ export function ContactForm() {
       const wait = typeof data.readyAfterMs === "number" ? Math.max(1500, data.readyAfterMs) : 1500
       const lifetime = typeof data.expiresAfterMs === "number" ? Math.min(600000, data.expiresAfterMs) : 600000
       uncertain.current = false
+      browserProvider.current = data.provider === "web3forms" && typeof data.accessKey === "string" ? data.accessKey : ""
       readyAt.current = Date.now() + wait
       expiresAt.current = Date.now() + lifetime
       setChallenge(data.challenge)
@@ -88,7 +92,7 @@ export function ContactForm() {
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    if (pending || preparing || !challenge) return
+    if (pending || preparing || !challenge || deliveryUncertain) return
     if (Date.now() >= expiresAt.current) { void prepare(); return }
     if (Date.now() < readyAt.current) return
     const form = event.currentTarget
@@ -103,9 +107,10 @@ export function ContactForm() {
     const timeout = window.setTimeout(() => controller.abort(), 15000)
     let sent = false
     try {
-      const response = await fetch("/api/contact", {
+      const payload = { name: values.get("name"), email: values.get("email"), message: values.get("message"), website: values.get("website") }
+      const response = browserProvider.current ? await sendBrowserContact(browserProvider.current, payload, controller.signal) : await fetch("/api/contact", {
         method: "POST", headers: { "Content-Type": "application/json" }, signal: controller.signal,
-        body: JSON.stringify({ name: values.get("name"), email: values.get("email"), message: values.get("message"), website: values.get("website"), challenge }),
+        body: JSON.stringify({ ...payload, challenge }),
       })
       const data = await response.json()
       if (response.status === 202) {
@@ -122,11 +127,13 @@ export function ContactForm() {
         focusError.current = (["name", "email", "message"] as const).find((field) => errors[field])
         setFieldErrors(errors)
         setOutcome("error")
-        setStatus(response.status === 429 ? "Too many messages. Please try again later or email me directly." : response.status === 400 ? "Please check your details and try again. Your message has not been sent." : response.status === 409 ? "This message cannot be retried safely. Please email me directly." : "Sending could not be confirmed. Retry without editing your message, or email me directly.")
+        if (browserProvider.current && uncertain.current) setDeliveryUncertain(true)
+        setStatus(response.status === 429 ? "Too many messages. Please try again later or email me directly." : response.status === 400 ? "Please check your details and try again. Your message has not been sent." : response.status === 409 ? "This message cannot be retried safely. Please email me directly." : browserProvider.current ? "Delivery could not be confirmed. Please email me directly before resending." : "Sending could not be confirmed. Retry without editing your message, or email me directly.")
       }
     } catch {
       setOutcome("error")
-      setStatus("Sending could not be confirmed. Retry without editing your message, or email me directly.")
+      if (browserProvider.current) setDeliveryUncertain(true)
+      setStatus(browserProvider.current ? "Delivery could not be confirmed. Please email me directly before resending." : "Sending could not be confirmed. Retry without editing your message, or email me directly.")
     } finally {
       window.clearTimeout(timeout)
       setPending(false)
@@ -169,7 +176,7 @@ export function ContactForm() {
           <input id="cinematic-contact-website" name="website" tabIndex={-1} autoComplete="off" disabled={pending} />
         </div>
         <div className="cinematic-contact-actions">
-          <button type="submit" disabled={pending || preparing || !challenge}>{pending ? "Sending…" : "Send message"} <ArrowUpRight size={18} aria-hidden /></button>
+          <button type="submit" disabled={pending || preparing || !challenge || deliveryUncertain}>{pending ? "Sending…" : "Send message"} <ArrowUpRight size={18} aria-hidden /></button>
           <span className="cinematic-contact-note">Straight to my email.</span>
         </div>
         <p className="cinematic-contact-status" data-outcome={outcome} role="status" aria-live="polite" aria-atomic="true">{status}</p>

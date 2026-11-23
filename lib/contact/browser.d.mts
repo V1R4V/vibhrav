@@ -1,0 +1,2 @@
+export function browserContactConfiguration(env: Record<string, string | undefined>): { provider: 'web3forms'; accessKey: string; challenge: string; readyAfterMs: number; expiresAfterMs: number } | null;
+export function sendBrowserContact(accessKey: string, values: { name: FormDataEntryValue | null; email: FormDataEntryValue | null; message: FormDataEntryValue | null; website: FormDataEntryValue | null }, signal?: AbortSignal, fetcher?: typeof fetch): Promise<Response>;

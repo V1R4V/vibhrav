@@ -169,3 +169,31 @@ body { background: #0c0b0c; }
 @media (max-width: 370px), (max-height: 700px) { .hero-bottomline .hero-proof { font-size: 12px; max-width: 38ch; } }
 
 .footer-invitation-arrow { width: .85em; height: .85em; flex-shrink: 0; align-self: center; color: var(--cinematic-gold); }
+
+/* Consistent title-case signature and quiet, product-independent quick links. */
+.cinematic-wordmark { white-space: nowrap; font-size: clamp(18px, 1.7vw, 24px); letter-spacing: -.045em; }
+.cinematic-title { font-size: 16vw; }
+.hero-bottomline { justify-content: space-between; align-items: center; }
+.cinematic-social-links { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 24px; }
+.cinematic-social-links a { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; font-size: 13px; color: var(--cinematic-muted); transition: color 180ms ease; }
+.cinematic-social-links svg { flex-shrink: 0; stroke-width: 1.5; }
+.cinematic-social-links a:focus-visible, .cinematic-social-links a:hover { color: var(--cinematic-gold); }
+.footer-signature { white-space: nowrap; }
+.footer-back-top { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 13px; color: var(--cinematic-muted); }
+@media (max-width: 1023px) and (min-width: 768px) { .desktop-navigation { gap: 14px; } .cinematic-nav { gap: 16px; } }
+@media (max-width: 767px) {
+  .cinematic-title { font-size: 24vw; }
+  .hero-bottomline { display: flex; flex-direction: column; align-items: stretch; gap: 12px; }
+  .cinematic-social-links { gap: 6px 20px; }
+  .cinematic-social-links a { font-size: 12px; gap: 7px; }
+  .footer-baseline { flex-wrap: wrap; gap: 12px 24px; }
+  .footer-baseline .cinematic-social-links { order: 3; width: 100%; max-width: none; justify-content: flex-start; gap: 6px 20px; }
+  .footer-signature { font-size: 22px; }
+  .footer-back-top { margin-left: auto; }
+}
+@media (max-width: 370px) { .cinematic-nav { gap: 8px; } .cinematic-wordmark { font-size: 18px; } .cinematic-social-links { gap: 4px 14px; } .cinematic-social-links a { gap: 6px; } }
+@media (max-width: 370px) {
+  .cinematic-social-links { gap: 4px 10px; }
+  .cinematic-social-links a { font-size: 11px; gap: 6px; }
+  .cinematic-social-links svg { width: 16px; height: 16px; }
+}

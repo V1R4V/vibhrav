@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .ts,.tsx,.mjs --ignore-pattern .next --ignore-pattern node_modules --ignore-pattern .artifacts",
     "typecheck": "tsc --noEmit",
     "test:hero": "playwright test tests/hero.spec.ts",
-    "test:contact": "node --test tests/contact.test.mjs tests/contact-redis.test.mjs",
+    "test:contact": "node --test tests/contact.test.mjs tests/contact-redis.test.mjs tests/contact-web3forms.test.mjs",
     "test:browser": "playwright test",
     "test": "npm run test:contact"
   },

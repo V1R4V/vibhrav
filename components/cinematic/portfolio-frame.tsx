@@ -6,6 +6,7 @@ import { ArrowUpRight, Menu, X } from "lucide-react"
 import { MotionDirector } from "./motion-director"
 import { CurtainLoader } from "./curtain-loader"
 import type { IntroPhase } from "./curtain-loader"
+import { SocialLinks } from "./social-links"
 import { Atmosphere } from "./atmosphere"
 
 const MotionContext = createContext({ paused: false })
@@ -42,7 +43,7 @@ export function PortfolioFrame({ children, home = false }: { children: React.Rea
         {home && <CurtainLoader root={root} onPhase={setIntro} />}
         <a className="cinematic-skip" href="#introduction">Skip to content</a>
         <header className="cinematic-nav">
-          <Link className="cinematic-wordmark" href="/" aria-label="Vibhrav Jha home">VJ<span>.</span></Link>
+          <Link className="cinematic-wordmark" href="/" aria-label="Vibhrav Jha home">Vibhrav Jha<span>.</span></Link>
           <nav className="desktop-navigation" aria-label="Main navigation">
             {[["experience", "Experience"], ["work", "Projects"], ["skills", "Skills"], ["leadership", "Leadership"], ["about", "About"]].map(([id, label]) => <Link key={id} href={`${prefix}#${id}`}>{label}</Link>)}
           </nav>
@@ -59,7 +60,7 @@ export function PortfolioFrame({ children, home = false }: { children: React.Rea
         <footer className="site-footer">
           <div className="footer-atmosphere" aria-hidden><Atmosphere variant="ink" paused={reduced} /></div>
           <div className="footer-closing"><p>Vibhrav Jha · Madison, Wisconsin</p><a className="footer-invitation" href={`${prefix}#contact`}>Get in touch<ArrowUpRight className="footer-invitation-arrow" aria-hidden="true" strokeWidth={1.35} /></a></div>
-          <div className="footer-baseline"><Link href="/" className="footer-signature" aria-label="Vibhrav Jha home">VJ<span>.</span></Link><nav aria-label="Social links"><a href="https://github.com/V1R4V" target="_blank" rel="noopener noreferrer">GitHub <ArrowUpRight size={14} aria-hidden /></a><a href="https://www.linkedin.com/in/vibhrav-jha-4846a3275/" target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight size={14} aria-hidden /></a><a href="#introduction">Back to top <ArrowUpRight size={14} aria-hidden /></a></nav></div>
+          <div className="footer-baseline"><Link href="/" className="footer-signature" aria-label="Vibhrav Jha home">Vibhrav Jha<span>.</span></Link><SocialLinks label="Social links" /><a className="footer-back-top" href={`${prefix}#introduction`}>Back to top <ArrowUpRight size={14} aria-hidden /></a></div>
         </footer>
         <MotionDirector root={root} paused={reduced} />
       </div>
