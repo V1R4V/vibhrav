@@ -11,14 +11,14 @@ Output #0, null, to 'pipe:':
   Stream #0:0: Audio: pcm_s16le, 192000 Hz, stereo, s16, 6144 kb/s
     Metadata:
       encoder         : Lavc62.28.102 pcm_s16le
-size=N/A time=00:00:03.60 bitrate=N/A speed=7.16x elapsed=0:00:00.50    
-size=N/A time=00:00:09.90 bitrate=N/A speed=9.83x elapsed=0:00:01.00    
-size=N/A time=00:00:15.70 bitrate=N/A speed=10.4x elapsed=0:00:01.50    
-size=N/A time=00:00:22.50 bitrate=N/A speed=11.2x elapsed=0:00:02.01    
-size=N/A time=00:00:29.30 bitrate=N/A speed=11.6x elapsed=0:00:02.51    
-size=N/A time=00:00:36.10 bitrate=N/A speed=11.9x elapsed=0:00:03.02    
-size=N/A time=00:00:42.90 bitrate=N/A speed=12.2x elapsed=0:00:03.52    
-[Parsed_loudnorm_0 @ 0x7fdfced04dc0] 
+size=N/A time=00:00:03.60 bitrate=N/A speed=7.16x elapsed=0:00:00.50
+size=N/A time=00:00:09.90 bitrate=N/A speed=9.83x elapsed=0:00:01.00
+size=N/A time=00:00:15.70 bitrate=N/A speed=10.4x elapsed=0:00:01.50
+size=N/A time=00:00:22.50 bitrate=N/A speed=11.2x elapsed=0:00:02.01
+size=N/A time=00:00:29.30 bitrate=N/A speed=11.6x elapsed=0:00:02.51
+size=N/A time=00:00:36.10 bitrate=N/A speed=11.9x elapsed=0:00:03.02
+size=N/A time=00:00:42.90 bitrate=N/A speed=12.2x elapsed=0:00:03.52
+[Parsed_loudnorm_0 @ 0x7fdfced04dc0]
 {
 	"input_i" : "-16.87",
 	"input_tp" : "-1.82",
@@ -32,7 +32,7 @@ size=N/A time=00:00:42.90 bitrate=N/A speed=12.2x elapsed=0:00:03.52
 	"target_offset" : "0.23"
 }
 [out#0/null @ 0x7fdfd1a04780] video:0KiB audio:34500KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
-size=N/A time=00:00:46.00 bitrate=N/A speed=12.6x elapsed=0:00:03.66    
+size=N/A time=00:00:46.00 bitrate=N/A speed=12.6x elapsed=0:00:03.66
 
 SECOND PASS
 ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers
@@ -58,14 +58,14 @@ Output #0, wav, to '/private/tmp/vibhrav-film-rebuild/film-production/public/aud
   Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s16, 1536 kb/s
     Metadata:
       encoder         : Lavc62.28.102 pcm_s16le
-size=     768KiB time=00:00:05.19 bitrate=1210.0kbits/s speed=10.3x elapsed=0:00:00.50    
-size=    2048KiB time=00:00:11.69 bitrate=1434.0kbits/s speed=11.6x elapsed=0:00:01.00    
-size=    3328KiB time=00:00:18.09 bitrate=1506.3kbits/s speed=  12x elapsed=0:00:01.51    
-size=    4352KiB time=00:00:24.39 bitrate=1461.2kbits/s speed=12.1x elapsed=0:00:02.01    
-size=    5632KiB time=00:00:30.59 bitrate=1507.8kbits/s speed=12.1x elapsed=0:00:02.52    
-size=    6656KiB time=00:00:36.79 bitrate=1481.7kbits/s speed=12.2x elapsed=0:00:03.02    
-size=    7936KiB time=00:00:43.09 bitrate=1508.4kbits/s speed=12.2x elapsed=0:00:03.52    
-[Parsed_loudnorm_0 @ 0x7fca52104880] 
+size=     768KiB time=00:00:05.19 bitrate=1210.0kbits/s speed=10.3x elapsed=0:00:00.50
+size=    2048KiB time=00:00:11.69 bitrate=1434.0kbits/s speed=11.6x elapsed=0:00:01.00
+size=    3328KiB time=00:00:18.09 bitrate=1506.3kbits/s speed=  12x elapsed=0:00:01.51
+size=    4352KiB time=00:00:24.39 bitrate=1461.2kbits/s speed=12.1x elapsed=0:00:02.01
+size=    5632KiB time=00:00:30.59 bitrate=1507.8kbits/s speed=12.1x elapsed=0:00:02.52
+size=    6656KiB time=00:00:36.79 bitrate=1481.7kbits/s speed=12.2x elapsed=0:00:03.02
+size=    7936KiB time=00:00:43.09 bitrate=1508.4kbits/s speed=12.2x elapsed=0:00:03.52
+[Parsed_loudnorm_0 @ 0x7fca52104880]
 {
 	"input_i" : "-16.87",
 	"input_tp" : "-1.82",
@@ -79,4 +79,4 @@ size=    7936KiB time=00:00:43.09 bitrate=1508.4kbits/s speed=12.2x elapsed=0:00
 	"target_offset" : "0.02"
 }
 [out#0/wav @ 0x7fca4fe053c0] video:0KiB audio:8625KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.000883%
-size=    8625KiB time=00:00:46.00 bitrate=1536.0kbits/s speed=12.4x elapsed=0:00:03.71    
+size=    8625KiB time=00:00:46.00 bitrate=1536.0kbits/s speed=12.4x elapsed=0:00:03.71

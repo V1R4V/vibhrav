@@ -96,3 +96,82 @@ listen on speakers/headphones; measurements alone cannot certify naturalness.
 Dense native interface details are best inspected in fullscreen on a phone;
 feature headlines, principal figures, captions and transcripts carry the story
 in smaller inline players.
+
+## Final technical delivery measurements
+
+| Film | Integrated loudness | True peak | Captions | Complete decode |
+|---|---:|---:|---:|---|
+| nura | -16.01 LUFS | -1.95 dBTP | 8 cues | Passed |
+| studyflow | -16.70 LUFS | -1.90 dBTP | 7 cues | Passed |
+| vyaya | -16.42 LUFS | -1.96 dBTP | 6 cues | Passed |
+
+All video streams are1920×1080,30FPS,H.264/yuv420p. Exact frame counts are
+1380/1320/1020. AAC/video end times differ by less than50ms. All caption
+text and cue bounds match measured narration; no overlap/overflow. Complete
+FFmpeg decode reports no error and no unexpected black interval≥100ms.
+
+The portfolio production build, separate Remotion lint/typecheck, root
+typecheck/lint and19contact tests pass. Root lint retains six pre-existing
+image warnings. The full browser suite and extended playback checks have
+separate reports; their final outcomes are recorded in the release notes.
+
+## Browser playback and integration results
+
+All three web exports played to the end at1× in actual Chrome. The player's
+reported decoded frame statistics show0dropped frames and no waiting events
+for each complete playback. Then11Nura,10StudyFlow and9Vyaya transition intervals
+were exercised at.5×. These are automated playback measurements, not human
+continuous viewing/listening claims. `playback-results.json` retains exact values.
+
+All three films load only after viewer intent, return206for byte-range seeking,
+load the correct8/7/6English caption cues, fit342×192.375px in a390px viewport,
+and have0axe violations within the film player. A complete-page axe scan also
+records an existing name mismatch on the header/footerVJwordmarks, confirmed
+unchanged from baseline6e129082; those unrelated labels have not been rewritten.
+The scan fails on any unexpected rule or target instead of hiding the baseline.
+
+The full133-test portfolio regression suite passed in9minutes, alongside19contact
+tests. A separately repeated rapid Escape test exposed an intermittent existing
+CSS-presence problem: a closed dialog could remain mounted until an animation
+finished. A new paused-exit regression test fails on the old player. The fix
+makes portal lifetime follow actual open state, so closing immediately unmounts
+and pauses the video and restores focus, independent of CSS animation events.
+Opening keeps its original entrance; a stalled exit cannot retain audio/focus.
+The post-fix focused tests and production verification are recorded at release.
+
+## Evidence-based editorial self-assessment
+
+These are this editor's judgments from decoded output, full-resolution crops,
+source verification and browser/technical measurements. They are not independent
+certification or a claim that a numeric score proves premium craft.
+
+| Dimension | Nura | StudyFlow | Vyaya | Observed basis |
+|---|---:|---:|---:|---|
+| Story /20 |19|19|18|Product visible immediately; ordered context, one coherent session, concrete ledger action|
+| Native UI /20 |19|19|19|DPR2captures, measured crops, source-derived/validated records, actual saves|
+| Motion /20 |18|18|18|No empty fades; stable reading holds, continuous camera, distinct cuts/scope masks; ordered transition strips|
+| Compositing /10 |9|9|9|Purposeful flat UI, consistent fine edges/shadows; unnecessary3D removed|
+| Type /10 |9|9|9|Actual variable fonts, product-specific hierarchy, readable principal figures and deliberate end cards|
+| Sound /10 |8|8|8|Measured cues, sparse interaction sound, licensed beds and final loudness/peak checks; human listening limit retained|
+| Delivery /10 |9|9|9|Responsive intent-loaded player, captions/transcripts, byte seeking, small web files and preserved originals|
+| Total /100 |91|91|90|Subjective, bounded by the inspection limitations above|
+
+No failed delivery gate is waived by these scores. Remaining limitations are the
+human audiovisual review, dense small-phone UI details, unavailable Vyaya public
+URL and the explicitly recorded pre-existing page-wordmark accessibility issue.
+
+## Source and delivery review
+
+Correctness: the new close regression reproduces on the old production build;
+portal lifetime now follows open state and video cleanup is immediate.
+Readability: one controlled boolean; no extra timer or animation-event coupling.
+Architecture: separate pinned Remotion/React19toolchain; root Next remainsReact18.
+Security: fictional local capture contexts, no private accounts or secrets in
+footage; source music is not separately distributed. Performance: total new web
+video7.26MBversus20.84MBpreviously (about65%smaller), no pre-intent movie fetch,
+native byte seeking, and static composed posters. Old exports remain untouched.
+
+A local incremental rebuild hit an internal WebpackWasmHashcache exception. A
+clean generated-cache rebuild passed; no source check was skipped or weakened.
+The first failed targeted test and the paused-animation regression are retained
+in local QA logs; final post-fix results are separate.

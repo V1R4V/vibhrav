@@ -81,52 +81,52 @@ $173.82
 Breakdown
 9 rows
 Category mix, Everyday, All time
-Name	
+Name
 Share bar
 	Amount	Share
 
 🛒
 Groceries
-	
+
 	$1,505.20	30.1%
 
 🛍️
 Shopping
-	
+
 	$711.70	14.2%
 
 🍽️
 Dining
-	
+
 	$641.20	12.8%
 
 🧾
 Bills
-	
+
 	$480.00	9.6%
 
 🛵
 Delivery
-	
+
 	$467.19	9.3%
 
 🚗
 Transport
-	
+
 	$405.20	8.1%
 
 📚
 Books & study
-	
+
 	$318.20	6.4%
 
 🎟️
 Entertainment
-	
+
 	$302.94	6.1%
 
 🔁
 Subscriptions
-	
+
 	$173.82	3.5%
 Total		$5,005.45	100.0%

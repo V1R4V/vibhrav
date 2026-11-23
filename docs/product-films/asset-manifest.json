@@ -11,13 +11,13 @@
   "assets": [
     {
       "file": "film-production/public/brand/instrumentserif-OFL.txt",
-      "bytes": 4405,
-      "sha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521"
+      "bytes": 4404,
+      "sha256": "b6b2292aa580937fb63796878d65a027a27f8c3db2d97601d0c34d9031f4ca17"
     },
     {
       "file": "film-production/public/brand/inter-OFL.txt",
-      "bytes": 4377,
-      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+      "bytes": 4376,
+      "sha256": "5dd548d31a85f756e01d63e00d7faf1e324103ed3e9102fcbbabf2cc2db6dd39"
     },
     {
       "file": "film-production/public/brand/inter.ttf",
@@ -36,8 +36,8 @@
     },
     {
       "file": "film-production/public/brand/plusjakartasans-OFL.txt",
-      "bytes": 4402,
-      "sha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99"
+      "bytes": 4401,
+      "sha256": "f9a8e776b4b048227f2f046b8716083eb04b1539d9ad1d4b87e81c1df28f86e3"
     },
     {
       "file": "film-production/public/brand/serif.ttf",
@@ -136,8 +136,8 @@
     },
     {
       "file": "film-production/public/sounds/LICENSE.txt",
-      "bytes": 574,
-      "sha256": "f7966c773bbed0eca6a9c75081c44a178b38eae112724dbb5fdfbd4192d118a9"
+      "bytes": 553,
+      "sha256": "cefbf7ebb51b02ecf4748b1112d5c6a2d04aa0ea82e885e74680b62ea6d3a712"
     },
     {
       "file": "film-production/public/sounds/click.ogg",
@@ -276,8 +276,8 @@
     },
     {
       "file": "film-production/capture/nura/calendar-text.txt",
-      "bytes": 2531,
-      "sha256": "da5216c7636346a5aa173b860500ea8f57b1c0fa1ede162b9868ffd88e58d215"
+      "bytes": 2507,
+      "sha256": "2e61c70a264adb78cd2740271e3cff4e400cb8afc6c23d8fdf6e4cec0ef68fe7"
     },
     {
       "file": "film-production/capture/nura/capture.mjs",
@@ -291,8 +291,8 @@
     },
     {
       "file": "film-production/capture/nura/cardio-text.txt",
-      "bytes": 4667,
-      "sha256": "b946b0fb81c9952b4c172b5252f5e7408fc647e71c7f0700ae073c36e1525704"
+      "bytes": 4668,
+      "sha256": "4051ebaf6fe48e4a20239a8908030d3df4a81b3a706711293be7854df1a3bed8"
     },
     {
       "file": "film-production/capture/nura/data-validation.json",
@@ -301,18 +301,18 @@
     },
     {
       "file": "film-production/capture/nura/health-day-text.txt",
-      "bytes": 6638,
-      "sha256": "57e929ea9f287da83dee0fcae40a6e33bac423dab63d56ef8508d615c25b2f39"
+      "bytes": 6639,
+      "sha256": "051097e9f5123a91bf54d9cd6400ffbb79b091bdb34bdacebb247f8269ae4f40"
     },
     {
       "file": "film-production/capture/nura/health-month-text.txt",
-      "bytes": 6726,
-      "sha256": "f1296a20eacc8b363d6507b6af917dd2bdf296c7489ad7e47877bbf19f9b835c"
+      "bytes": 6727,
+      "sha256": "e71eb2ae11e0b08d24d9e48806f38054e56f9a3e6df85717b469bcaf6cbefb74"
     },
     {
       "file": "film-production/capture/nura/health-trend-text.txt",
-      "bytes": 6638,
-      "sha256": "57e929ea9f287da83dee0fcae40a6e33bac423dab63d56ef8508d615c25b2f39"
+      "bytes": 6639,
+      "sha256": "051097e9f5123a91bf54d9cd6400ffbb79b091bdb34bdacebb247f8269ae4f40"
     },
     {
       "file": "film-production/capture/nura/health-values.json",
@@ -326,13 +326,13 @@
     },
     {
       "file": "film-production/capture/nura/historical-summary-text.txt",
-      "bytes": 2177,
-      "sha256": "d532b0de3cca7c0a33deae643f793c67040e41f5790d677b728b4d7807b0f02f"
+      "bytes": 2178,
+      "sha256": "8c2805966570d1a023bd031d740d70979c2b1769c414c3b4d974cf03f37f009c"
     },
     {
       "file": "film-production/capture/nura/historical-top-text.txt",
-      "bytes": 2177,
-      "sha256": "d532b0de3cca7c0a33deae643f793c67040e41f5790d677b728b4d7807b0f02f"
+      "bytes": 2178,
+      "sha256": "8c2805966570d1a023bd031d740d70979c2b1769c414c3b4d974cf03f37f009c"
     },
     {
       "file": "film-production/capture/nura/inspect.mjs",
@@ -346,18 +346,18 @@
     },
     {
       "file": "film-production/capture/nura/overview-28-text.txt",
-      "bytes": 2256,
-      "sha256": "dd68df973862b21f5b9870485566d69a5d1ca6d3b1bbff7d6e8b0965f1ddf7df"
+      "bytes": 2257,
+      "sha256": "0079cbb2b047ef1f763273fd795efa3a8d2afa16df134c571dfeface9d659db9"
     },
     {
       "file": "film-production/capture/nura/overview-text.txt",
-      "bytes": 2202,
-      "sha256": "147374de1fd797cd7bdaff1c830b9628e224632b5ebadd7853e51851a41a81e8"
+      "bytes": 2203,
+      "sha256": "7ca143de74cef5e86e8a6d4036b1d931f668a9647d0134c4c0445f870344d5a9"
     },
     {
       "file": "film-production/capture/nura/recovery-text.txt",
-      "bytes": 4994,
-      "sha256": "772836a1c8c18216edf1bad6b6d5c2842e15780b1595d9edeafcf4efbb11236c"
+      "bytes": 4995,
+      "sha256": "98bf4ba456ff77bc5d64c655c844dcdedb2e0d580d7a5905f24fd898d04761a7"
     },
     {
       "file": "film-production/capture/nura/seed.mts",
@@ -366,18 +366,18 @@
     },
     {
       "file": "film-production/capture/nura/sleep-text.txt",
-      "bytes": 6035,
-      "sha256": "2e2cdc4b034079566df3825a30c44eeac7462ba11d39c66a6e6ee63960b5fe9d"
+      "bytes": 6036,
+      "sha256": "f38ba434c6c2cd9b0e123438cf470de24d70aeeee1d9ce622f81695754e60c33"
     },
     {
       "file": "film-production/capture/nura/strain-text.txt",
-      "bytes": 5123,
-      "sha256": "24357f7eefe74ad85692a35be732feafad10df747aee4b05380483ee94d995fa"
+      "bytes": 5124,
+      "sha256": "9762a6c24c63a41e785aa2b722375fc6237125d4c2d68b610aa75b394a481d5a"
     },
     {
       "file": "film-production/capture/nura/summary-top-text.txt",
-      "bytes": 2202,
-      "sha256": "147374de1fd797cd7bdaff1c830b9628e224632b5ebadd7853e51851a41a81e8"
+      "bytes": 2203,
+      "sha256": "7ca143de74cef5e86e8a6d4036b1d931f668a9647d0134c4c0445f870344d5a9"
     },
     {
       "file": "film-production/capture/nura/validate.mjs",
@@ -386,18 +386,18 @@
     },
     {
       "file": "film-production/capture/nura/workout-detail-text.txt",
-      "bytes": 2327,
-      "sha256": "c4d4ee69d4c707c2fcbac8408bfba40e82894b87da708ef69d50170b947ac818"
+      "bytes": 2328,
+      "sha256": "5c3426722681ed765316077903eaa12eee76a1d7d0b3db704a30b96b941f4129"
     },
     {
       "file": "film-production/capture/nura/workout-zones-text.txt",
-      "bytes": 2327,
-      "sha256": "c4d4ee69d4c707c2fcbac8408bfba40e82894b87da708ef69d50170b947ac818"
+      "bytes": 2328,
+      "sha256": "5c3426722681ed765316077903eaa12eee76a1d7d0b3db704a30b96b941f4129"
     },
     {
       "file": "film-production/capture/nura/workouts-text.txt",
-      "bytes": 1935,
-      "sha256": "57e7a659680ac76c7ab55aafadf7f0c4456b79092d36558b360691b8b0e6d105"
+      "bytes": 1936,
+      "sha256": "72bf400263adbc4fa7199d88452d4139bc514dc843a2383f81da9638990d2b2d"
     },
     {
       "file": "film-production/capture/studyflow/capture.mjs",
@@ -501,18 +501,18 @@
     },
     {
       "file": "film-production/capture/vyaya/category-groceries-text.txt",
-      "bytes": 1996,
-      "sha256": "0b015a310eb43f6f9c2f05fae3ae4fc0535d16df36d9ec40242f050f9b0f76e1"
+      "bytes": 1997,
+      "sha256": "73d7f09f5c1be17c028e896d46019093f1dc0c3786062e821e8ae9cecd571940"
     },
     {
       "file": "film-production/capture/vyaya/category-mix-text.txt",
-      "bytes": 1117,
-      "sha256": "83c0c475fb62d423b4f8c53199be3d687672f3066774e9441777ef72227fe171"
+      "bytes": 1108,
+      "sha256": "0575de9aaafa422f6a20cbeff23f545b438c86b94c5d3c9b570f28ea49b728d5"
     },
     {
       "file": "film-production/capture/vyaya/category-purchases-text.txt",
-      "bytes": 1996,
-      "sha256": "0b015a310eb43f6f9c2f05fae3ae4fc0535d16df36d9ec40242f050f9b0f76e1"
+      "bytes": 1997,
+      "sha256": "73d7f09f5c1be17c028e896d46019093f1dc0c3786062e821e8ae9cecd571940"
     },
     {
       "file": "film-production/capture/vyaya/data-validation.json",
@@ -531,18 +531,18 @@
     },
     {
       "file": "film-production/capture/vyaya/entry-empty-text.txt",
-      "bytes": 2834,
-      "sha256": "8ea686274693f1c59e481d0fbb416a0466146147e96b97ae500aa93881cfadca"
+      "bytes": 2835,
+      "sha256": "614e3e1574ea4a91471e5a3a7e1d09b622e38ee581cb7e42a83987abd02e1110"
     },
     {
       "file": "film-production/capture/vyaya/entry-filled-text.txt",
-      "bytes": 2920,
-      "sha256": "7885b7453d39db0d6964cca5f0c383b9af19a4b603b4dff47150aeb504da396d"
+      "bytes": 2921,
+      "sha256": "b22a61e5a8423c17209e67973290d8f5fad5190b74e2efe15623a7a2c3f3d24e"
     },
     {
       "file": "film-production/capture/vyaya/fees-funding-text.txt",
-      "bytes": 1528,
-      "sha256": "f9fd0eef9d58991a50d0b63fa867d5684ce6ae3fa942d251c04e6df14c1f937b"
+      "bytes": 1529,
+      "sha256": "069f5a9d203334818128b2acf61eb7f2f44c0a02eee930ee28128b72441fc418"
     },
     {
       "file": "film-production/capture/vyaya/final-native-ledger.json",
@@ -576,8 +576,8 @@
     },
     {
       "file": "film-production/capture/vyaya/ledger-text.txt",
-      "bytes": 11750,
-      "sha256": "87ca8b942c820e75ae886ecbcf4dcbcfebfc3cee7343305483c1c21a765959b2"
+      "bytes": 11751,
+      "sha256": "93e8d2afeace567069bf411b31fe03987de0f53f714fc737270a597accba9232"
     },
     {
       "file": "film-production/capture/vyaya/make-demo.mjs",
@@ -591,18 +591,18 @@
     },
     {
       "file": "film-production/capture/vyaya/overview-saved-text.txt",
-      "bytes": 2389,
-      "sha256": "e185ef15c0769d4b132d89047cf6ad18afa5460ba8988e074a413f5745e63211"
+      "bytes": 2390,
+      "sha256": "0464c6c4e58b77df18ec713de0ef6f60cfa40ec43289ac841f252326960dc87d"
     },
     {
       "file": "film-production/capture/vyaya/overview-text.txt",
-      "bytes": 2269,
-      "sha256": "d6d8681688659a7166b4c37d312fc75d306783ff3b94c6a31175dc220b6b5a59"
+      "bytes": 2270,
+      "sha256": "92d9d9f3fbae57995051e0fb24eba792833039024bbd932bc24d3856ce1b8beb"
     },
     {
       "file": "film-production/capture/vyaya/settlements-text.txt",
-      "bytes": 1441,
-      "sha256": "4690a39369437dbb389354e60e56f265a2a26275c0ce76285c067d4e444cee17"
+      "bytes": 1442,
+      "sha256": "0732dcde0a4045fa7fcb93c6142bce602a83956cbf5afbf200e6a9dd82d5d745"
     },
     {
       "file": "film-production/capture/vyaya/source-verification.json",
@@ -611,8 +611,8 @@
     },
     {
       "file": "film-production/capture/vyaya/spending-flow-text.txt",
-      "bytes": 1048,
-      "sha256": "eb5a6d05a28e164fa28f981b6f433ec74e9a6092f520651dd63b741492758107"
+      "bytes": 1039,
+      "sha256": "5930eeecfc727903f7e8c1a55bdbcb1398025b910ac853c4e88288cacd973d1b"
     }
   ],
   "exports": [

@@ -1,0 +1,38 @@
+{
+  "nura": {
+    "input_i": "-15.99",
+    "input_tp": "-1.99",
+    "input_lra": "4.70",
+    "input_thresh": "-27.54",
+    "output_i": "-16.01",
+    "output_tp": "-2.00",
+    "output_lra": "5.80",
+    "output_thresh": "-27.37",
+    "normalization_type": "dynamic",
+    "target_offset": "0.01"
+  },
+  "studyflow": {
+    "input_i": "-16.68",
+    "input_tp": "-1.97",
+    "input_lra": "5.30",
+    "input_thresh": "-27.20",
+    "output_i": "-16.79",
+    "output_tp": "-2.00",
+    "output_lra": "4.90",
+    "output_thresh": "-27.28",
+    "normalization_type": "dynamic",
+    "target_offset": "0.79"
+  },
+  "vyaya": {
+    "input_i": "-16.40",
+    "input_tp": "-2.00",
+    "input_lra": "6.80",
+    "input_thresh": "-27.72",
+    "output_i": "-17.33",
+    "output_tp": "-2.00",
+    "output_lra": "4.50",
+    "output_thresh": "-28.39",
+    "normalization_type": "dynamic",
+    "target_offset": "1.33"
+  }
+}

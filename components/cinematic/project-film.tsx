@@ -58,22 +58,23 @@ export function FilmPlayer({ film, autoStart = false }: { film: ProductFilm; aut
 }
 
 function FilmLaunch({ film }: { film: ProductFilm }) {
+  const [open, setOpen] = useState(false)
   return (
-    <Dialog.Root>
+    <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger asChild>
         <button className="film-card" type="button" aria-label={`Watch ${film.name} film, ${filmLength(film.duration)}`}>
           <span className="film-card-heading"><span><Image src={film.mark} alt="" width={30} height={30} />{film.name}</span><span>{filmLength(film.duration)}</span></span>
           <span className="film-card-picture"><Image src={film.poster} alt={`${film.name} product preview`} fill sizes="(max-width: 767px) 88vw, 29vw" /><span className="film-card-play"><Play size={24} fill="currentColor" aria-hidden /></span></span>
         </button>
       </Dialog.Trigger>
-      <Dialog.Portal>
+      {open && <Dialog.Portal>
         <Dialog.Overlay className="film-overlay" />
         <Dialog.Content className="film-dialog" aria-describedby={undefined}>
           <div className="film-dialog-toolbar"><Dialog.Title>{film.name} film <span>{filmLength(film.duration)}</span></Dialog.Title><Dialog.Close className="film-close" aria-label="Close film"><X size={24} aria-hidden /></Dialog.Close></div>
           <FilmPlayer film={film} autoStart />
           <div className="film-dialog-links"><Link href={`/films/${film.slug}`}>Open film page <ArrowUpRight size={15} aria-hidden /></Link>{film.appUrl && <a href={film.appUrl} target="_blank" rel="noopener noreferrer">Try {film.name} <ArrowUpRight size={15} aria-hidden /></a>}</div>
         </Dialog.Content>
-      </Dialog.Portal>
+      </Dialog.Portal>}
     </Dialog.Root>
   )
 }

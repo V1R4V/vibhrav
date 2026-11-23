@@ -82,10 +82,3 @@
 .film-page .p-wrap { margin-inline: var(--cinematic-gutter); }
 .cinematic-page:has(.film-page) > .cinematic-nav { background: #0c0b0c; }
 .film-shelf.p-wrap { margin-inline: 0; padding-inline: var(--cinematic-gutter); }
-.film-overlay[data-state="closed"] { animation: film-backdrop-out .2s ease both; }
-.film-dialog[data-state="closed"] { animation: film-dialog-out .2s ease both; }
-@keyframes film-backdrop-out { to { opacity: 0; } }
-@keyframes film-dialog-out { to { opacity: 0; transform: translate(-50%, calc(-50% + 10px)) scale(.99); } }
-@media (prefers-reduced-motion: reduce) {
-  .film-overlay[data-state="closed"], .film-dialog[data-state="closed"] { animation: none; }
-}

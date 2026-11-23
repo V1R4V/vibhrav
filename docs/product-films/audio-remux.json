@@ -1,0 +1,33 @@
+{
+  "nura": [
+    {
+      "file": "film-production/deliverables/nura/master.mp4",
+      "picturePacketsSHA256": "SHA256=96deb399106cf6f2016d1dbee409e17df8d9562233b9540a2fa98792aa66a924",
+      "pictureUnchanged": true
+    },
+    {
+      "file": "public/cinematic/films/nura-46-v3.mp4",
+      "picturePacketsSHA256": "SHA256=e51cc2e68b71ae9de81695545b43625e641a9781fdd6690dcd9fe163e7c6f6c9",
+      "pictureUnchanged": true
+    }
+  ],
+  "studyflow": [
+    {
+      "file": "film-production/deliverables/studyflow/master.mp4",
+      "picturePacketsSHA256": "SHA256=9d9391413d6a671212ff97412a691b5b5852c2d2f52df448432b86ffa3d3d2e8",
+      "pictureUnchanged": true
+    },
+    {
+      "file": "public/cinematic/films/studyflow-44-v3.mp4",
+      "picturePacketsSHA256": "SHA256=eae0551f68b9669b2d697d1b4d7799a2a294e455035940a86756ce02c541c50f",
+      "pictureUnchanged": true
+    }
+  ],
+  "vyaya": [
+    {
+      "file": "film-production/deliverables/vyaya/master.mp4",
+      "picturePacketsSHA256": "SHA256=5c763800b5c48dc06ac42060aa72cb8cfae7ea1ccc107a3467642ff59f459c7f",
+      "pictureUnchanged": true
+    }
+  ]
+}
