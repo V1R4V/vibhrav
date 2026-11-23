@@ -1,0 +1,1159 @@
+Skip to content
+Vyaya
+Add transaction
+Dashboard
+Income
+Logs
+Import
+Settings
+Logs
+Everyday
+Fees & Funding
+Settlements
+7 days
+1 month
+3 months
+6 months
+1 year
+All time
+Custom
+
+What you earned and what you spent. Fixed costs excluded.
+
+every transaction ever logged
+
+Everyday
+· All time
+Earned
++$11,430.00
+Spent
+−$5,005.45
+Net
+$6,424.55
+Search by merchant, person or purpose
+Paid with
+Any payment
+💳 Chase Freedom
+🍎 Apple Card
+💵 Cash
+🔁 Zelle
+🏷️ Other
+💳 Credit Card
+🏦 Bank Transfer
+💳 Debit Card
+Not recorded
+All
+Earned
+Spent
+Merchant
+Category
+Paid with
+Amount
+Thu, Nov 19
+1 row
+💼
+Salary
+Salary
+🏦 Bank Transfer
++$925.00
+Wed, Nov 18
+2 rows
+🚌
+Metro
+Transport
+💳 Debit Card
+−$13.80
+🎬
+Cinema
+Entertainment
+💳 Credit Card
+−$24.99
+Tue, Nov 17
+1 row
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$9.45
+Mon, Nov 16
+2 rows
+🎯
+Target
+Groceries
+💳 Credit Card
+−$53.85
+🔁
+Adobe
+Subscriptions
+💳 Credit Card
+−$19.99
+Sun, Nov 15
+1 row
+📶
+Internet
+Bills
+🏦 Bank Transfer
+−$45.00
+Sat, Nov 14
+1 row
+🛵
+Uber Eats
+Green Bowl
+Delivery
+💳 Credit Card
+−$32.40
+Fri, Nov 13
+1 row
+🍕
+Ian’s Pizza
+Dining
+💳 Credit Card
+−$21.95
+Thu, Nov 12
+2 rows
+🚗
+Lyft
+Transport
+💳 Debit Card
+−$24.75
+📚
+Bookstore
+Books & study
+💳 Credit Card
+−$28.95
+Wed, Nov 11
+1 row
+👕
+Uniqlo
+Shopping
+💳 Credit Card
+−$86.50
+Tue, Nov 10
+2 rows
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$16.90
+☁️
+iCloud
+Subscriptions
+💳 Credit Card
+−$2.99
+Sun, Nov 8
+1 row
+🛒
+Woodman’s
+Groceries
+💳 Credit Card
+−$78.40
+Sat, Nov 7
+1 row
+🛵
+DoorDash
+Noodle House
+Delivery
+💳 Credit Card
+−$27.65
+Fri, Nov 6
+1 row
+🍜
+Noodles & Co
+Dining
+💳 Credit Card
+−$24.80
+Thu, Nov 5
+1 row
+💼
+Salary
+Salary
+🏦 Bank Transfer
++$925.00
+Wed, Nov 4
+1 row
+🚗
+Uber
+Transport
+💳 Debit Card
+−$19.45
+Tue, Nov 3
+2 rows
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$13.75
+🎵
+Spotify
+Subscriptions
+💳 Credit Card
+−$5.99
+Mon, Nov 2
+1 row
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$62.15
+Sun, Nov 1
+1 row
+📱
+Phone plan
+Bills
+🏦 Bank Transfer
+−$35.00
+Thu, Oct 29
+1 row
+🎮
+Steam
+Entertainment
+💳 Credit Card
+−$28.99
+Wed, Oct 28
+1 row
+🛵
+DoorDash
+Pizzeria
+Delivery
+💳 Credit Card
+−$38.60
+Tue, Oct 27
+1 row
+🍜
+Noodles & Co
+Dining
+💳 Credit Card
+−$27.60
+Mon, Oct 26
+1 row
+🚗
+Uber
+Transport
+💳 Debit Card
+−$22.95
+Sun, Oct 25
+1 row
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$81.94
+Sat, Oct 24
+1 row
+📦
+Amazon
+Shopping
+💳 Credit Card
+−$38.50
+Mon, Oct 19
+1 row
+💼
+Salary
+Salary
+🏦 Bank Transfer
++$980.00
+Sun, Oct 18
+2 rows
+🚌
+Metro
+Transport
+💳 Debit Card
+−$15.20
+🎬
+Cinema
+Entertainment
+💳 Credit Card
+−$42.00
+Sat, Oct 17
+2 rows
+🎯
+Target
+Groceries
+💳 Credit Card
+−$53.68
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$11.85
+Fri, Oct 16
+1 row
+🔁
+Adobe
+Subscriptions
+💳 Credit Card
+−$19.99
+Thu, Oct 15
+1 row
+📶
+Internet
+Bills
+🏦 Bank Transfer
+−$45.00
+Wed, Oct 14
+1 row
+🛵
+Uber Eats
+Green Bowl
+Delivery
+💳 Credit Card
+−$29.25
+Tue, Oct 13
+1 row
+🍕
+Ian’s Pizza
+Dining
+💳 Credit Card
+−$32.40
+Mon, Oct 12
+2 rows
+🚗
+Lyft
+Transport
+💳 Debit Card
+−$26.50
+📚
+Bookstore
+Books & study
+💳 Credit Card
+−$34.50
+Sun, Oct 11
+1 row
+👕
+Uniqlo
+Shopping
+💳 Credit Card
+−$124.00
+Sat, Oct 10
+2 rows
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$19.80
+☁️
+iCloud
+Subscriptions
+💳 Credit Card
+−$2.99
+Fri, Oct 9
+1 row
+🛒
+Woodman’s
+Groceries
+💳 Credit Card
+−$74.20
+Wed, Oct 7
+1 row
+🛵
+DoorDash
+Noodle House
+Delivery
+💳 Credit Card
+−$34.50
+Tue, Oct 6
+1 row
+🍜
+Noodles & Co
+Dining
+💳 Credit Card
+−$22.35
+Mon, Oct 5
+1 row
+💼
+Salary
+Salary
+🏦 Bank Transfer
++$980.00
+Sun, Oct 4
+1 row
+🚗
+Uber
+Transport
+💳 Debit Card
+−$18.40
+Sat, Oct 3
+2 rows
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$14.95
+🎵
+Spotify
+Subscriptions
+💳 Credit Card
+−$5.99
+Fri, Oct 2
+1 row
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$68.75
+Thu, Oct 1
+1 row
+📱
+Phone plan
+Bills
+🏦 Bank Transfer
+−$35.00
+Tue, Sep 29
+1 row
+🎮
+Steam
+Entertainment
+💳 Credit Card
+−$24.99
+Mon, Sep 28
+1 row
+🛵
+DoorDash
+Pizzeria
+Delivery
+💳 Credit Card
+−$24.80
+Sun, Sep 27
+1 row
+🍜
+Noodles & Co
+Dining
+💳 Credit Card
+−$21.40
+Fri, Sep 25
+1 row
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$49.28
+Thu, Sep 24
+1 row
+📦
+Amazon
+Shopping
+💳 Credit Card
+−$45.00
+Sat, Sep 19
+1 row
+💼
+Salary
+Salary
+🏦 Bank Transfer
++$920.00
+Fri, Sep 18
+2 rows
+🚌
+Metro
+Transport
+💳 Debit Card
+−$12.50
+🎬
+Cinema
+Entertainment
+💳 Credit Card
+−$18.00
+Thu, Sep 17
+2 rows
+🎯
+Target
+Groceries
+💳 Credit Card
+−$84.20
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$9.60
+Wed, Sep 16
+1 row
+🔁
+Adobe
+Subscriptions
+💳 Credit Card
+−$19.99
+Tue, Sep 15
+1 row
+📶
+Internet
+Bills
+🏦 Bank Transfer
+−$45.00
+Mon, Sep 14
+1 row
+🛵
+Uber Eats
+Green Bowl
+Delivery
+💳 Credit Card
+−$32.60
+Sun, Sep 13
+1 row
+🍕
+Ian’s Pizza
+Dining
+💳 Credit Card
+−$26.75
+Sat, Sep 12
+2 rows
+🚗
+Lyft
+Transport
+💳 Debit Card
+−$17.40
+📚
+Bookstore
+Books & study
+💳 Credit Card
+−$64.25
+Fri, Sep 11
+1 row
+👕
+Uniqlo
+Shopping
+💳 Credit Card
+−$69.90
+Thu, Sep 10
+2 rows
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$15.45
+☁️
+iCloud
+Subscriptions
+💳 Credit Card
+−$2.99
+Wed, Sep 9
+1 row
+🛒
+Woodman’s
+Groceries
+💳 Credit Card
+−$63.75
+Mon, Sep 7
+1 row
+🛵
+DoorDash
+Noodle House
+Delivery
+💳 Credit Card
+−$29.45
+Sun, Sep 6
+1 row
+🍜
+Noodles & Co
+Dining
+💳 Credit Card
+−$18.70
+Sat, Sep 5
+1 row
+💼
+Salary
+Salary
+🏦 Bank Transfer
++$920.00
+Fri, Sep 4
+1 row
+🚗
+Uber
+Transport
+💳 Debit Card
+−$21.65
+Thu, Sep 3
+2 rows
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$12.95
+🎵
+Spotify
+Subscriptions
+💳 Credit Card
+−$5.99
+Wed, Sep 2
+1 row
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$58.40
+Tue, Sep 1
+1 row
+📱
+Phone plan
+Bills
+🏦 Bank Transfer
+−$35.00
+Sat, Aug 29
+1 row
+🎮
+Steam
+Entertainment
+💳 Credit Card
+−$32.00
+Thu, Aug 27
+1 row
+🍜
+Noodles & Co
+Dining
+💳 Credit Card
+−$22.40
+Wed, Aug 26
+1 row
+🚗
+Uber
+Transport
+💳 Debit Card
+−$12.00
+Tue, Aug 25
+1 row
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$68.28
+Mon, Aug 24
+1 row
+📦
+Amazon
+Shopping
+💳 Credit Card
+−$87.50
+Wed, Aug 19
+1 row
+💼
+Salary
+Salary
+🏦 Bank Transfer
++$960.00
+Tue, Aug 18
+2 rows
+🚌
+Metro
+Transport
+💳 Debit Card
+−$24.55
+🎬
+Cinema
+Entertainment
+💳 Credit Card
+−$24.99
+Mon, Aug 17
+2 rows
+🎯
+Target
+Groceries
+💳 Credit Card
+−$56.25
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$9.85
+Sun, Aug 16
+1 row
+🔁
+Adobe
+Subscriptions
+💳 Credit Card
+−$19.99
+Sat, Aug 15
+1 row
+📶
+Internet
+Bills
+🏦 Bank Transfer
+−$45.00
+Fri, Aug 14
+1 row
+🛵
+Uber Eats
+Green Bowl
+Delivery
+💳 Credit Card
+−$38.15
+Thu, Aug 13
+1 row
+🍕
+Ian’s Pizza
+Dining
+💳 Credit Card
+−$31.50
+Wed, Aug 12
+2 rows
+🚗
+Lyft
+Transport
+💳 Debit Card
+−$18.95
+📚
+Bookstore
+Books & study
+💳 Credit Card
+−$128.00
+Tue, Aug 11
+1 row
+👕
+Uniqlo
+Shopping
+💳 Credit Card
+−$54.90
+Mon, Aug 10
+2 rows
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$17.90
+☁️
+iCloud
+Subscriptions
+💳 Credit Card
+−$2.99
+Sun, Aug 9
+1 row
+🛒
+Woodman’s
+Groceries
+💳 Credit Card
+−$82.60
+Fri, Aug 7
+1 row
+🛵
+DoorDash
+Noodle House
+Delivery
+💳 Credit Card
+−$26.74
+Thu, Aug 6
+1 row
+🍜
+Noodles & Co
+Dining
+💳 Credit Card
+−$24.60
+Wed, Aug 5
+1 row
+💼
+Salary
+Salary
+🏦 Bank Transfer
++$960.00
+Tue, Aug 4
+1 row
+🚗
+Uber
+Transport
+💳 Debit Card
+−$32.50
+Mon, Aug 3
+2 rows
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$13.45
+🎵
+Spotify
+Subscriptions
+💳 Credit Card
+−$5.99
+Sun, Aug 2
+1 row
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$71.34
+Sat, Aug 1
+1 row
+📱
+Phone plan
+Bills
+🏦 Bank Transfer
+−$35.00
+Wed, Jul 29
+1 row
+🎮
+Steam
+Entertainment
+💳 Credit Card
+−$17.99
+Tue, Jul 28
+1 row
+🛵
+DoorDash
+Pizzeria
+Delivery
+💳 Credit Card
+−$36.21
+Mon, Jul 27
+1 row
+🍜
+Noodles & Co
+Dining
+💳 Credit Card
+−$11.20
+Sat, Jul 25
+1 row
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$68.63
+Sun, Jul 19
+1 row
+💼
+Salary
+Salary
+🏦 Bank Transfer
++$990.00
+Sat, Jul 18
+2 rows
+🚌
+Metro
+Transport
+💳 Debit Card
+−$14.50
+🎬
+Cinema
+Entertainment
+💳 Credit Card
+−$45.00
+Fri, Jul 17
+2 rows
+🎯
+Target
+Groceries
+💳 Credit Card
+−$51.87
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$32.60
+Thu, Jul 16
+1 row
+🔁
+Adobe
+Subscriptions
+💳 Credit Card
+−$19.99
+Wed, Jul 15
+1 row
+📶
+Internet
+Bills
+🏦 Bank Transfer
+−$45.00
+Tue, Jul 14
+1 row
+🛵
+Uber Eats
+Green Bowl
+Delivery
+💳 Credit Card
+−$27.85
+Mon, Jul 13
+1 row
+🍕
+Ian’s Pizza
+Dining
+💳 Credit Card
+−$18.95
+Sun, Jul 12
+2 rows
+🚗
+Lyft
+Transport
+💳 Debit Card
+−$22.35
+📚
+Bookstore
+Books & study
+💳 Credit Card
+−$24.00
+Sat, Jul 11
+1 row
+👕
+Uniqlo
+Shopping
+💳 Credit Card
+−$98.00
+Fri, Jul 10
+2 rows
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$8.75
+☁️
+iCloud
+Subscriptions
+💳 Credit Card
+−$2.99
+Thu, Jul 9
+1 row
+🛒
+Woodman’s
+Groceries
+💳 Credit Card
+−$73.25
+Tue, Jul 7
+1 row
+🛵
+DoorDash
+Noodle House
+Delivery
+💳 Credit Card
+−$32.48
+Mon, Jul 6
+1 row
+🍜
+Noodles & Co
+Dining
+💳 Credit Card
+−$24.25
+Sun, Jul 5
+1 row
+💼
+Salary
+Salary
+🏦 Bank Transfer
++$990.00
+Sat, Jul 4
+1 row
+🚗
+Uber
+Transport
+💳 Debit Card
+−$18.70
+Fri, Jul 3
+2 rows
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$14.50
+🎵
+Spotify
+Subscriptions
+💳 Credit Card
+−$5.99
+Thu, Jul 2
+1 row
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$62.48
+Wed, Jul 1
+1 row
+📱
+Phone plan
+Bills
+🏦 Bank Transfer
+−$35.00
+Mon, Jun 29
+1 row
+🎮
+Steam
+Entertainment
+💳 Credit Card
+−$15.99
+Sat, Jun 27
+1 row
+🍜
+Noodles & Co
+Dining
+💳 Credit Card
+−$8.20
+Thu, Jun 25
+1 row
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$49.95
+Wed, Jun 24
+1 row
+📦
+Amazon
+Shopping
+💳 Credit Card
+−$32.50
+Fri, Jun 19
+1 row
+💼
+Salary
+Salary
+🏦 Bank Transfer
++$940.00
+Thu, Jun 18
+2 rows
+🚌
+Metro
+Transport
+💳 Debit Card
+−$31.00
+🎬
+Cinema
+Entertainment
+💳 Credit Card
+−$28.00
+Wed, Jun 17
+2 rows
+🎯
+Target
+Groceries
+💳 Credit Card
+−$71.36
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$15.75
+Tue, Jun 16
+1 row
+🔁
+Adobe
+Subscriptions
+💳 Credit Card
+−$19.99
+Mon, Jun 15
+1 row
+📶
+Internet
+Bills
+🏦 Bank Transfer
+−$45.00
+Sun, Jun 14
+1 row
+🛵
+Uber Eats
+Green Bowl
+Delivery
+💳 Credit Card
+−$31.67
+Sat, Jun 13
+1 row
+🍕
+Ian’s Pizza
+Dining
+💳 Credit Card
+−$26.35
+Fri, Jun 12
+2 rows
+🚗
+Lyft
+Transport
+💳 Debit Card
+−$14.65
+📚
+Bookstore
+Books & study
+💳 Credit Card
+−$38.50
+Thu, Jun 11
+1 row
+👕
+Uniqlo
+Shopping
+💳 Credit Card
+−$74.90
+Wed, Jun 10
+2 rows
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$9.40
+☁️
+iCloud
+Subscriptions
+💳 Credit Card
+−$2.99
+Tue, Jun 9
+1 row
+🛒
+Woodman’s
+Groceries
+💳 Credit Card
+−$62.47
+Sun, Jun 7
+1 row
+🛵
+DoorDash
+Noodle House
+Delivery
+💳 Credit Card
+−$24.84
+Sat, Jun 6
+1 row
+🍜
+Noodles & Co
+Dining
+💳 Credit Card
+−$18.50
+Fri, Jun 5
+1 row
+💼
+Salary
+Salary
+🏦 Bank Transfer
++$940.00
+Thu, Jun 4
+1 row
+🚗
+Uber
+Transport
+💳 Debit Card
+−$23.40
+Wed, Jun 3
+2 rows
+☕️
+Campus café
+Dining
+💳 Credit Card
+−$12.40
+🎵
+Spotify
+Subscriptions
+💳 Credit Card
+−$5.99
+Tue, Jun 2
+1 row
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$58.12
+Mon, Jun 1
+1 row
+📱
+Phone plan
+Bills
+🏦 Bank Transfer
+−$35.00
+
+162 transactions
+
+Summary
+Everyday · whole period
+Transactions
+162
+Largest spent
+$128.00
+Largest earned
+$990.00
+Average spent
+$33.37
+First
+Mon, Jun 1
+Last
+Thu, Nov 19
+
+Follows the lane and range above. Search, payment and the earned/spent filter narrow the list only. Rows that need a lane are listed, marked, and left out of every total.

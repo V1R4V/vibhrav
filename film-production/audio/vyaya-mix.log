@@ -1,0 +1,80 @@
+[aist#0:0/pcm_f32le @ 0x7fc995b04200] Guessed Channel Layout: stereo
+Input #0, wav, from '/private/tmp/vibhrav-film-rebuild/film-production/.artifacts/tts/vyaya-premix.wav':
+  Duration: 00:00:34.00, bitrate: 1536 kb/s
+  Stream #0:0: Audio: pcm_f32le ([3][0][0][0] / 0x0003), 24000 Hz, stereo, flt, 1536 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_f32le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf62.12.102
+  Stream #0:0: Audio: pcm_s16le, 192000 Hz, stereo, s16, 6144 kb/s
+    Metadata:
+      encoder         : Lavc62.28.102 pcm_s16le
+size=N/A time=00:00:04.10 bitrate=N/A speed=8.13x elapsed=0:00:00.50    
+size=N/A time=00:00:10.40 bitrate=N/A speed=10.4x elapsed=0:00:01.00    
+size=N/A time=00:00:16.10 bitrate=N/A speed=10.7x elapsed=0:00:01.50    
+size=N/A time=00:00:22.50 bitrate=N/A speed=11.2x elapsed=0:00:02.00    
+size=N/A time=00:00:28.80 bitrate=N/A speed=11.5x elapsed=0:00:02.51    
+[Parsed_loudnorm_0 @ 0x7fc991b04940] 
+{
+	"input_i" : "-17.97",
+	"input_tp" : "-1.78",
+	"input_lra" : "11.40",
+	"input_thresh" : "-29.78",
+	"output_i" : "-17.29",
+	"output_tp" : "-2.00",
+	"output_lra" : "6.40",
+	"output_thresh" : "-28.55",
+	"normalization_type" : "dynamic",
+	"target_offset" : "1.29"
+}
+[out#0/null @ 0x7fc995804240] video:0KiB audio:25500KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:34.00 bitrate=N/A speed=  12x elapsed=0:00:02.83    
+
+SECOND PASS
+ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 16.0.0 (clang-1600.0.26.6)
+  configuration: --prefix=/usr/local/Cellar/ffmpeg/8.1.2 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox
+  libavutil      60. 26.102 / 60. 26.102
+  libavcodec     62. 28.102 / 62. 28.102
+  libavformat    62. 12.102 / 62. 12.102
+  libavdevice    62.  3.102 / 62.  3.102
+  libavfilter    11. 14.102 / 11. 14.102
+  libswscale      9.  5.102 /  9.  5.102
+  libswresample   6.  3.102 /  6.  3.102
+[aist#0:0/pcm_f32le @ 0x7ff13fb08f80] Guessed Channel Layout: stereo
+Input #0, wav, from '/private/tmp/vibhrav-film-rebuild/film-production/.artifacts/tts/vyaya-premix.wav':
+  Duration: 00:00:34.00, bitrate: 1536 kb/s
+  Stream #0:0: Audio: pcm_f32le ([3][0][0][0] / 0x0003), 24000 Hz, stereo, flt, 1536 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_f32le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to '/private/tmp/vibhrav-film-rebuild/film-production/public/audio/vyaya-mix.wav':
+  Metadata:
+    ISFT            : Lavf62.12.102
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s16, 1536 kb/s
+    Metadata:
+      encoder         : Lavc62.28.102 pcm_s16le
+size=     768KiB time=00:00:04.59 bitrate=1367.8kbits/s speed=9.13x elapsed=0:00:00.50    
+size=    1280KiB time=00:00:08.99 bitrate=1165.1kbits/s speed=8.93x elapsed=0:00:01.00    
+size=    2048KiB time=00:00:12.09 bitrate=1386.6kbits/s speed=   8x elapsed=0:00:01.51    
+size=    3072KiB time=00:00:16.89 bitrate=1489.1kbits/s speed=8.38x elapsed=0:00:02.01    
+size=    3840KiB time=00:00:21.69 bitrate=1449.7kbits/s speed=8.61x elapsed=0:00:02.52    
+size=    4864KiB time=00:00:26.79 bitrate=1486.8kbits/s speed=8.86x elapsed=0:00:03.02    
+size=    5632KiB time=00:00:31.09 bitrate=1483.5kbits/s speed=8.82x elapsed=0:00:03.52    
+[Parsed_loudnorm_0 @ 0x7ff13fc04280] 
+{
+	"input_i" : "-17.97",
+	"input_tp" : "-1.78",
+	"input_lra" : "11.40",
+	"input_thresh" : "-29.78",
+	"output_i" : "-16.19",
+	"output_tp" : "-2.00",
+	"output_lra" : "6.40",
+	"output_thresh" : "-27.41",
+	"normalization_type" : "dynamic",
+	"target_offset" : "0.19"
+}
+[out#0/wav @ 0x7ff13fb05500] video:0KiB audio:6375KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.001195%
+size=    6375KiB time=00:00:34.00 bitrate=1536.0kbits/s speed=9.34x elapsed=0:00:03.64    

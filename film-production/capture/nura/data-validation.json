@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "checks": 2865,
+  "fictional": true,
+  "engineDerived": true,
+  "sourceFile": "/tmp/nura-brag-capture-20261121/data/film-rebuild-dataset.json",
+  "sha256": "b01142c1106e8419c2e08b168838f5915b6a0116b3291738b8026272d77ce4ee",
+  "days": 252,
+  "workouts": 179,
+  "missingDays": [
+    "2026-05-03",
+    "2026-07-03",
+    "2026-09-02"
+  ],
+  "activities": [
+    "running",
+    "traditionalStrengthTraining",
+    "cycling",
+    "walking"
+  ],
+  "durations": [
+    32,
+    36,
+    38,
+    40,
+    42,
+    44,
+    46,
+    48,
+    51,
+    54,
+    64,
+    68,
+    72,
+    76
+  ],
+  "range": {
+    "first": "2026-03-16",
+    "last": "2026-11-22"
+  },
+  "lastDay": {
+    "date": "2026-11-22",
+    "steps": 11247,
+    "exerciseMin": 40,
+    "recovery": 31.89250446508947,
+    "sleep": 78.23028972350917,
+    "strain": 4.007636070452943
+  }
+}

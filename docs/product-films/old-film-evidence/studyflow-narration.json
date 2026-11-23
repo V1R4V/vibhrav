@@ -1,0 +1,68 @@
+[
+  {
+    "scene": "intro",
+    "at": 0.35,
+    "end": 4.25,
+    "text": "Know what you are studying. Make time for it."
+  },
+  {
+    "scene": "subjects",
+    "at": 5.05,
+    "end": 11.85,
+    "text": "Name your subjects and give each one a colour. Your plan, sessions, and statistics stay connected."
+  },
+  {
+    "scene": "planner",
+    "at": 12.65,
+    "end": 20.75,
+    "text": "Set a weekly goal in Command Center. Spread the hours across your week, beside the time already studied."
+  },
+  {
+    "scene": "modes",
+    "at": 21.55,
+    "end": 28.75,
+    "text": "Choose Pomodoro, a custom countdown, or a stopwatch. Breaks are tracked separately."
+  },
+  {
+    "scene": "focus",
+    "at": 29.55,
+    "end": 37.75,
+    "text": "Choose a subject and start. Pause, log a distraction, then resume the same session."
+  },
+  {
+    "scene": "save",
+    "at": 38.55,
+    "end": 46.75,
+    "text": "Rate your focus and note what you worked on. Save the session, and the time counts toward your goals."
+  },
+  {
+    "scene": "history",
+    "at": 47.55,
+    "end": 54.75,
+    "text": "Find past sessions by subject or date, with notes, ratings, and distractions."
+  },
+  {
+    "scene": "statistics",
+    "at": 55.55,
+    "end": 63.75,
+    "text": "See where your time went, by subject, weekday, and hour. Change the range to compare another period."
+  },
+  {
+    "scene": "whatif",
+    "at": 64.55,
+    "end": 72.75,
+    "text": "Try a daily study target. Move the slider to see whether your pace meets the week's remaining goals."
+  },
+  {
+    "scene": "heatmap",
+    "at": 73.55,
+    "end": 77.05,
+    "text": "See your study pattern, day by day."
+  },
+  {
+    "scene": "outro",
+    "at": 77.85,
+    "end": 80.75,
+    "text": "Try Study Flow."
+  }
+]

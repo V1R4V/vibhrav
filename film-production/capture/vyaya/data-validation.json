@@ -1,0 +1,85 @@
+{
+  "fictional": true,
+  "date": "2026-11-20",
+  "rows": 189,
+  "checks": {
+    "allPositiveIntegerCents": true,
+    "uniqueIds": true,
+    "allCategoriesResolve": true,
+    "noFutureRows": true,
+    "noPersonalNames": true,
+    "settlementsExcludedFromEveryday": true,
+    "categoryTotalsEqualEverydayOutflow": true,
+    "bagClosedLoop": true,
+    "monthlyTotalsEqualEverydayOutflow": true
+  },
+  "lanes": {
+    "everyday": {
+      "rows": 163,
+      "inflowCents": 1143000,
+      "outflowCents": 501070,
+      "netCents": 641930
+    },
+    "bag": {
+      "rows": 14,
+      "inflowCents": 1850000,
+      "outflowCents": 1850000,
+      "netCents": 0
+    },
+    "settlement": {
+      "rows": 12,
+      "inflowCents": 11445,
+      "outflowCents": 60000,
+      "netCents": -48555
+    }
+  },
+  "months": [
+    {
+      "month": "2026-06",
+      "inflowCents": 188000,
+      "outflowCents": 75692,
+      "partial": false
+    },
+    {
+      "month": "2026-07",
+      "inflowCents": 198000,
+      "outflowCents": 81253,
+      "partial": false
+    },
+    {
+      "month": "2026-08",
+      "inflowCents": 192000,
+      "outflowCents": 98742,
+      "partial": false
+    },
+    {
+      "month": "2026-09",
+      "inflowCents": 184000,
+      "outflowCents": 82999,
+      "partial": false
+    },
+    {
+      "month": "2026-10",
+      "inflowCents": 196000,
+      "outflowCents": 96988,
+      "partial": false
+    },
+    {
+      "month": "2026-11",
+      "inflowCents": 185000,
+      "outflowCents": 65396,
+      "partial": true
+    }
+  ],
+  "categoryTotals": {
+    "Dining": 64645,
+    "Delivery": 46719,
+    "Groceries": 150520,
+    "Shopping": 71170,
+    "Transport": 40520,
+    "Subscriptions": 17382,
+    "Entertainment": 30294,
+    "Books & study": 31820,
+    "Bills": 48000
+  }
+}

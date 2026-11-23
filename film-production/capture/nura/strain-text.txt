@@ -1,0 +1,243 @@
+Nura
+Summary
+Health score
+Cardio
+Recovery
+Sleep
+Strain
+Workouts
+Body Age
+Browse
+Method
+Account
+
+Scores are estimates from Apple Watch data, not medical advice.
+
+Strain
+
+Cardiovascular load from every heart-rate sample, relative to your own heart-rate reserve.
+
+D
+W
+M
+3M
+6M
+Y
+All
+Oct 24 – Nov 22, 2026
+Strain, Oct 24 – Nov 22
+7.1
+average
+30 days with a score
+Best
+14.7
+Nov 14
+Lowest
+0.0
+Oct 28
+Change during this period
+Down 0.5
+The latest 15 scored days averaged 6.8. The 15 before them averaged 7.3.
+Strain
+Average of 30 days
+7.1
+of 21 · latest day 4.0
+Light
+
+On an average day in this period, workouts added 53 load and the rest of the day added 0. A higher number means more effort, not better health.
+
+Latest day in range · Sun, Nov 22
+
+Your maximum heart rate is estimated at 178 bpm, give or take 5 (from workout peaks near 174 bpm, blended with the age formula). The likely range on the ring comes from that uncertainty.
+
+Lifting raises heart rate very little, so a strength session is scored by whichever is larger: its heart-rate load or a load based on how hard it felt.
+
+A typical week by intensity
+
+Minutes at each effort level, a week on average, across the range you chose. The percentages are how far your heart rate was between resting and maximum.
+
+Zone 1, very light
+50–60%
+30 min
+Zone 2, light
+60–70%
+62 min
+Zone 3, moderate
+70–80%
+57 min
+Zone 4, hard
+80–90%
+0 min
+Zone 5, all out
+90% and up
+18 min
+Moderate or harder, a week on average
+217 min
+Meets the 150-minute target
+Hard or all out, a week on average
+18 min
+Target: 75 min a week
+Daily strain
+
+30 days with the watch on · average 7.1
+
+0.0
+10.5
+21.0
+Moderate
+High
+All out
+Oct 24
+Oct 27
+Oct 30
+Nov 3
+Nov 6
+Nov 9
+Nov 12
+Nov 16
+Nov 19
+Nov 22
+This week against your usual
+101%
+Typical for you
+100% means this week matches your last four weeks.
+7-day load
+53
+Your load over the last week. Recent days count more.
+28-day load
+53
+Your load over the last four weeks: what your body is used to.
+How alike your days are
+1.1
+Hard and easy days mixed
+Average daily load divided by how much it varies. Above 2 means too little variety.
+Training load
+
+Your last 7 days against your last 28. It shows whether you are doing more or less than you are used to. Research does not support using it to predict injury.
+
+0
+34
+68
+Oct 24
+Oct 27
+Oct 30
+Nov 3
+Nov 6
+Nov 9
+Nov 12
+Nov 16
+Nov 19
+Nov 22
+7-day load
+28-day load
+Workouts in this period
+All workouts
+Walking
+Sun, Nov 22 · 0h 40m
+4.0
+Cycling
+Sat, Nov 21 · 1h 12m
+14.2
+Running
+Thu, Nov 19 · 0h 48m
+13.4
+Strength
+Tue, Nov 17 · 0h 48m
+9.0
+Running
+Mon, Nov 16 · 0h 38m
+8.0
+Walking
+Sun, Nov 15 · 0h 36m
+3.5
+Cycling
+Sat, Nov 14 · 1h 16m
+14.7
+Running
+Thu, Nov 12 · 0h 46m
+13.0
+Strength
+Tue, Nov 10 · 0h 54m
+11.1
+Running
+Mon, Nov 9 · 0h 40m
+8.4
+Walking
+Sun, Nov 8 · 0h 32m
+3.2
+Cycling
+Sat, Nov 7 · 1h 04m
+12.9
+Understand your strain
+What strain means for your health
+
+Strain is how much work your heart did over the day. Regular moderate and vigorous activity is one of the strongest levers on long-term health: it raises cardio fitness, which is closely tied to living longer.
+
+Guidelines suggest at least 150 minutes of moderate or 75 minutes of vigorous activity a week. More helps, up to the point where you stop recovering from it.
+
+How strain is scored
+
+Every heart-rate reading is placed between your resting rate and your maximum (178 bpm). Minutes at higher intensity count for much more than easy minutes, and the total is squeezed onto a 0 to 21 scale.
+
+The scale flattens at the top: going from 4 to 8 takes a brisk walk, going from 16 to 18 takes a long, hard session. Workouts added 53 load on an average day in this period and the rest of the day added 0.
+
+For lifting, heart rate under-reports the effort, so effort rating × duration is used when it is higher.
+
+What raises it
+Time in zones 4 and 5 (above 80% of your range): intervals, matches, hard climbs.
+Long sessions, even at moderate intensity.
+An active day around the workout: walking, stairs, standing work.
+What keeps it low, and when high is bad
+Sedentary days and short, easy sessions keep strain under 8.
+Not wearing the watch: missing hours cannot be counted and the day is marked partial.
+High strain is not bad in itself. It becomes a problem when it stays well above your usual for a week or more while recovery sits in the red.
+How to use it
+
+Match strain to recovery: about 14 to 18 on a green day, 10 to 14 on yellow, under 10 on red. Across a week, mix two or three hard days with easy ones rather than making every day medium. In this period you averaged 217 moderate or harder minutes a week, above the 150 that guidelines suggest.
+
+Day by day
+
+Open a day to see what built its strain.
+
+Sun, Nov 22
+32 active min
+4.0
+Sat, Nov 21
+67 active min
+14.2
+Fri, Nov 20
+0 active min
+0.0
+Thu, Nov 19
+43 active min
+13.4
+Wed, Nov 18
+0 active min
+0.0
+Tue, Nov 17
+40 active min
+9.0
+Mon, Nov 16
+33 active min
+8.0
+Sun, Nov 15
+25 active min
+3.5
+Sat, Nov 14
+71 active min
+14.7
+Fri, Nov 13
+0 active min
+0.0
+Thu, Nov 12
+42 active min
+13.0
+Wed, Nov 11
+0 active min
+0.0
+Tue, Nov 10
+47 active min
+11.1
+Mon, Nov 9
+34 active min
+8.4

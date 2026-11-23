@@ -1,0 +1,170 @@
+Nura
+Summary
+Health score
+Cardio
+Recovery
+Sleep
+Strain
+Workouts
+Body Age
+Browse
+Method
+Account
+
+Scores are estimates from Apple Watch data, not medical advice.
+
+Cardio
+
+Your heart and lungs: cardio fitness, how your heart works at rest and after effort, and how you breathe at night.
+
+D
+W
+M
+3M
+6M
+Y
+All
+Oct 24 – Nov 22, 2026
+Cardio fitness
+45.6
+mL/kg/min
+
+Above average for your age and sex: fitter than about 67 in 100.
+
+Median of 8 readings from Apple Watch in this period. Nura counts it as 47.0, because the watch reads low in fit adults. Percentiles come from the FRIEND treadmill tables.
+
+Up 0.6 from Oct 2026 to Nov 2026.
+
+Where you stand
+
+Fitness groups from a study of 122,007 adults who did a treadmill test, by percentile for age and sex.
+
+Low
+Below average
+Above average
+High
+Elite
+
+People one group lower, below average, had about 1.4 times the death rate of this group.
+
+Fitness score
+69
+Cardio fitness part of your health score, 35% of it
+Target for your age
+43
+mL/kg/min
+You are at or above it
+Fitness age
+20 or under
+The age at which your VO2 max is the target
+VO2 max over time
+
+Each dot is one reading, or an average for long ranges. The dashes are the target for your age.
+
+42.6
+44.5
+46.4
+Oct 24
+Oct 27
+Oct 30
+Nov 3
+Nov 6
+Nov 9
+Nov 12
+Nov 16
+Nov 19
+Nov 22
+Heart
+Resting heart rate
+58
+bpm
+Average for this period. Lower is usually fitter.
+Sleeping heart rate
+55.4
+bpm
+The steadiest reading the watch gives
+Walking heart rate
+91
+bpm
+Average during steady walks. It falls as fitness rises.
+Overnight HRV
+49
+ms
+Compare with your own usual, not with others
+Resting heart rate
+
+Each dot is one day. The line is the 7-day average.
+
+57
+58
+59
+Oct 24
+Nov 3
+Nov 12
+Nov 22
+Cardio recovery
+
+How far heart rate fell in the minute after a workout. Average 27 bpm over 18 workouts; 0 at 12 bpm or less.
+
+0
+15
+29
+Oct 24
+Nov 3
+Nov 12
+Nov 22
+12 bpm or less: slower than healthy
+
+Not recorded in this period: blood pressure, AFib burden, breathing disturbances.
+
+Lungs and breathing
+Breathing rate while asleep
+
+Average 14.3 breaths a minute. Adults usually breathe 12 to 20 times a minute at rest.
+
+13.9
+14.2
+14.5
+Oct 24
+Nov 3
+Nov 12
+Nov 22
+Blood oxygen while asleep
+
+Average 97.2%. 95% and above is typical; one watch reading can be off by about 4 points.
+
+97.1
+98.5
+100.0
+Oct 24
+Nov 3
+Nov 12
+Nov 22
+Understand your cardio health
+Why cardio fitness matters most
+
+VO2 max is the most oxygen your body can use during hard exercise. Of everything a watch measures, it is among the strongest predictors of a long life. In 122,007 adults, the least fit quarter had about 5 times the death rate of the fittest 2 to 3 in 100, and no level was found where more fitness stopped helping (Mandsager 2018).
+
+Across 33 studies, each 3.5 mL/kg/min higher was linked with about 13% lower risk of death from any cause (Kodama 2009). That is why cardio fitness is 35% of your health score and the largest part of Body Age.
+
+How these numbers are made
+
+VO2 max is Apple's estimate from heart rate and pace on outdoor walks, runs and hikes. It reads about 6 mL/kg/min low in fit adults (Lambe 2025), so Nura adds up to 4 back before comparing you with others. Your place among people of your age and sex uses the FRIEND registry's treadmill results (Kaminsky 2015).
+
+Cardio recovery is how many beats your heart rate drops in the first minute after a workout. A drop of 12 bpm or less after a treadmill test was linked with higher risk of death in a study of 2,428 adults (Cole 1999). The watch measures it after the workout, not on a treadmill, so treat it as a guide.
+
+Resting heart rate: every 10 bpm higher goes with about 9% more risk (Zhang 2016). Breathing rate and blood oxygen are read while you sleep. They are most useful against your own usual: a rise in breathing rate can come before you feel ill.
+
+What raises cardio fitness
+One or two sessions a week of hard intervals, such as 4 rounds of 4 minutes at a hard pace with 3 easy minutes between.
+Two or three easy sessions of 30 minutes or more where you can still talk.
+Outdoor walks and runs with your watch, so it can update VO2 max at all.
+What lowers it
+Weeks without exercise: fitness starts to drop within a few weeks of stopping.
+Weight gain, since VO2 max is per kilogram.
+Poor sleep and illness, which raise resting and sleeping heart rate.
+Your best next step
+
+You are at or above the target for your age. Keep two or three cardio sessions a week to hold it, and one hard one to keep raising it.
+
+Sources: Mandsager 2018, JAMA Network Open; Kodama 2009, JAMA; Kaminsky 2015, Mayo Clinic Proceedings (FRIEND); Lambe 2025 (Apple VO2 max accuracy); Cole 1999, New England Journal of Medicine; Zhang 2016, CMAJ.

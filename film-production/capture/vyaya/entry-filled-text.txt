@@ -1,0 +1,326 @@
+Skip to content
+Vyaya
+Add transaction
+Dashboard
+Income
+Logs
+Import
+Settings
+Dashboard
+Everyday
+Fees & Funding
+Settlements
+7 days
+1 month
+3 months
+6 months
+1 year
+All time
+Custom
+
+What you earned and what you spent. Fixed costs excluded.
+
+every transaction ever logged
+
+Everyday net
+All time
+On this device
+$1,123
+$1,167
+$933
+$1,010
+$990
+$1,201
+Jun
+Jul
+Aug
+Sep
+Oct
+Nov 1–20
+Net by month. Dashed: this month is not over yet.
+$6,424
+.55
+Earned
++$11,430.00
+Spent
+−$5,005.45
+Kept of earned
+56%
+This period
+All time
+Spent rows
+150
+Average spent
+$33.37
+Largest spent
+$128.00
+Bookstore
+Busiest month
+Aug 26
+$987.42
+Recent
+See all
+💼
+Salary
+Salary
++$925.00
+🚌
+Metro
+Transport
+−$13.80
+🎬
+Cinema
+Entertainment
+−$24.99
+☕️
+Campus café
+Dining
+−$9.45
+Where the money goes
+earned, then spent
+Earned
+Spent
+Salary
+$11,430.00
+Groceries
+$1,505.20
+Shopping
+$711.70
+Dining
+$641.20
+Bills
+$480.00
+Delivery
+$467.19
+Transport
+$405.20
+Books & study
+$318.20
+All other (2)
+$476.76
+Not spent
+$6,424.55
+Spent vs Earned
+by month
+Earned
+Spent
+$0
+$1.0k
+$2.0k
+Jun
+Jul
+Aug
+Sep
+Oct
+Nov
+Breakdown
+Category mix
+share of spent
+Spent
+$5,005.45
+🛒
+Groceries
+30.1%
+$1,505.20
+🛍️
+Shopping
+14.2%
+$711.70
+🍽️
+Dining
+12.8%
+$641.20
+🧾
+Bills
+9.6%
+$480.00
+🛵
+Delivery
+9.3%
+$467.19
+🚗
+Transport
+8.1%
+$405.20
+📚
+Books & study
+6.4%
+$318.20
+🎟️
+Entertainment
+6.1%
+$302.94
+🔁
+Subscriptions
+3.5%
+$173.82
+Restaurants in delivery orders
+part of existing spending
+
+Included in the categories above. Tap a restaurant or unrecorded orders to see transactions.
+
+🧾
+Green Bowl
+41.1%
+$191.92
+🏠
+Noodle House
+37.6%
+$175.66
+🧾
+Pizzeria
+21.3%
+$99.61
+Top merchants
+by total
+🛒
+Trader Joe’s
+$699.32
+👕
+Uniqlo
+$508.20
+🛒
+Woodman’s
+$434.67
+🎯
+Target
+$371.21
+📚
+Bookstore
+$318.20
+🛵
+DoorDash
+$275.27
+📶
+Internet
+$270.00
+☕️
+Campus café
+$259.30
+🍜
+Noodles & Co
+$224.00
+📱
+Phone plan
+$210.00
+➕
+All other (11)
+$1,435.28
+Payment method
+share of spend
+Spent
+$5,005.45
+💳
+Credit Card
+82.3%
+$4,120.25
+🏦
+Bank Transfer
+9.6%
+$480.00
+💳
+Debit Card
+8.1%
+$405.20
+When you spend
+by day of week
+$784
+Sun
+$651
+Mon
+$679
+Tue
+$797
+Wed
+$780
+Thu
+$616
+Fri
+$699
+Sat
+Net by month
+in minus out
+$0
+$1.2k
+Jun
+Jul
+Aug
+Sep
+Oct
+Nov
+More analysis
+Monthly breakdown and month × category
+
+New transaction
+Spent
+Earned
+Amount, spent
+−
+$
+5.25
+
+Lane
+Everyday
+Fees & Funding
+Settlements
+Frequent in Everyday
+☕️
+Campus café
+💼
+Salary
+🍜
+Noodles & Co
+🛒
+Trader Joe’s
+🛵
+DoorDash
+🚗
+Uber
+🎬
+Cinema
+🚌
+Metro
+☕️
+Merchant or person
+In your ledger
+
+Category filled from your last Campus café
+Undo
+
+Category
+from your last visit
+💼
+Salary
+🚗
+Transport
+🎟️
+Entertainment
+🍽️
+Dining
+🛒
+Groceries
+🔁
+Subscriptions
+More
+category options
+Paid with
+🏦
+Bank Transfer
+💳
+Credit Card
+💳
+Debit Card
+🔁
+Zelle
+💳
+Chase Freedom
+💵
+Cash
+More
+paid with options
+Date
+Today
+Yesterday
+Pick a date
+Note
+Save $5.25

@@ -1,0 +1,199 @@
+Nura
+Summary
+Health score
+Cardio
+Recovery
+Sleep
+Strain
+Workouts
+Body Age
+Browse
+Method
+Account
+
+Scores are estimates from Apple Watch data, not medical advice.
+
+Sunday, Nov 22
+
+Your latest scored day. Data up to Nov 22, iPhone sync is not set up
+
+Latest · Nov 22
+Open this day
+Readiness today
+You are poorly recovered. Keep today easy.
+
+HRV is 13% below your usual and sleeping heart rate is 3 bpm higher than usual.
+
+See why
+High confidence
+Train
+Keep strain under 10
+Sleep tonight
+8.6 hours
+Recovery
+Poorly recovered
+32
+likely 23–42
+M
+T
+W
+T
+F
+S
+S
+7-day average 56%
+Strain
+Light
+4.0
+target under 10
+M
+T
+W
+T
+F
+S
+S
+7-day average 6.9
+Sleep
+Good
+78
+7h 23m asleep
+M
+T
+W
+T
+F
+S
+S
+7-day average 86
+Health score
+How it works
+
+Cardio fitness, activity, sleep and resting heart
+
+Day
+28 days
+81
+Excellent
+Up 4 vs 28-day score
+Sleep25% of score
+78
+
+Slept 7 h 23 min
+
+Activity30% of score
+93
+
+11,247 steps · 40 exercise min · 1 workout, 40 min
+
+Cardio fitness35% of score
+71
+
+VO2 max 47.8
+
+Resting heart10% of score
+83
+
+Resting heart rate 57 bpm
+
+What to work on
+
+From the last four weeks, most important first.
+
+All
+
+Nothing stands out in this period.
+
+Body Age is below your real age
+You exercise enough
+You sleep at regular times
+Overnight HRV (SDNN)
+43
+ms
+13% below usual
+Your usual is 50 ms
+Sleeping heart rate
+58
+bpm
+3 bpm above usual
+Your usual is 55 bpm
+Body Age
+29.4
+years
+3.2 years younger
+Likely between 26 and 33
+Sleep regularity
+92
+of 100
+Regular
+Bed 10:47 pm, up 6:25 am
+Energy burned
+2,501
+kcal
+12% above your average
+Sat, Nov 21, of which 764 active
+Steps
+6,650
+18% below your average
+Sat, Nov 21, goal 10,000
+VO2 max
+46.8
+mL/kg/min
+3.8 above age target
+Apple measured 46.0, corrected for its low bias
+Sleep debt
+1.3
+hours
+Low
+Aim for 8.6 h tonight
+Recovery, last 14 days
+All
+0
+50
+100
+Nov 9
+Nov 16
+Nov 22
+Last night · 7h 23m asleep
+
+10:47 pm – 6:25 am · 95% efficient · awake 0h 15m
+
+Sleep
+Awake
+REM
+Core
+Deep
+11 pm
+12 am
+1 am
+2 am
+3 am
+4 am
+5 am
+6 am
+Recent workouts
+All workouts
+Walking
+Sun, Nov 22 · 0h 40m
+103
+avg bpm
+164
+kcal ± 25%
+4.0
+strain
+Cycling
+Sat, Nov 21 · 1h 12m
+138
+avg bpm
+598
+kcal ± 25%
+14.2
+strain
+Running
+Thu, Nov 19 · 0h 48m
+145
+avg bpm
+538
+kcal ± 20%
+13.4
+strain

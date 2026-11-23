@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-22",
+  "daily": {
+    "score": 80.52502145853764,
+    "band": "Excellent",
+    "pillars": [
+      {
+        "key": "sleep",
+        "label": "Sleep",
+        "weight": 0.25,
+        "score": 78.23028972350917,
+        "href": "/day/2026-11-22",
+        "detail": "Slept 7 h 23 min"
+      },
+      {
+        "key": "activity",
+        "label": "Activity",
+        "weight": 0.3,
+        "score": 93.33333333333334,
+        "href": "/day/2026-11-22",
+        "detail": "11,247 steps · 40 exercise min · 1 workout, 40 min"
+      },
+      {
+        "key": "fitness",
+        "label": "Cardio fitness",
+        "weight": 0.35,
+        "score": 70.6212829361724,
+        "href": "/cardio",
+        "detail": "VO2 max 47.8"
+      },
+      {
+        "key": "heart",
+        "label": "Resting heart",
+        "weight": 0.1,
+        "score": 82.5,
+        "href": "/browse/resting-hr",
+        "detail": "Resting heart rate 57 bpm"
+      }
+    ],
+    "coverage": 1,
+    "days": 1
+  },
+  "trailing28": {
+    "score": 77.31281940885653,
+    "band": "Good",
+    "pillars": [
+      {
+        "key": "sleep",
+        "label": "Sleep",
+        "weight": 0.25,
+        "score": 80.79722409117478,
+        "href": "/sleep",
+        "detail": "Average sleep score 81"
+      },
+      {
+        "key": "activity",
+        "label": "Activity",
+        "weight": 0.3,
+        "score": 83.27990476190477,
+        "href": "/workouts",
+        "detail": "8,095 steps a day · 243 exercise min a week · 5.0 workouts a week (243 min)"
+      },
+      {
+        "key": "fitness",
+        "label": "Cardio fitness",
+        "weight": 0.35,
+        "score": 69.22216069487342,
+        "href": "/cardio",
+        "detail": "VO2 max 47.0 against others your age"
+      },
+      {
+        "key": "heart",
+        "label": "Resting heart",
+        "weight": 0.1,
+        "score": 79.01785714285714,
+        "href": "/browse/resting-hr",
+        "detail": "Resting heart rate 58 bpm"
+      }
+    ],
+    "coverage": 1,
+    "days": 28
+  },
+  "range30": {
+    "score": 77.5911708586472,
+    "band": "Good",
+    "pillars": [
+      {
+        "key": "sleep",
+        "label": "Sleep",
+        "weight": 0.25,
+        "score": 80.96704512843267,
+        "href": "/sleep",
+        "detail": "Average sleep score 81"
+      },
+      {
+        "key": "activity",
+        "label": "Activity",
+        "weight": 0.3,
+        "score": 83.98884444444445,
+        "href": "/workouts",
+        "detail": "8,158 steps a day · 252 exercise min a week · 5.1 workouts a week (252 min)"
+      },
+      {
+        "key": "fitness",
+        "label": "Cardio fitness",
+        "weight": 0.35,
+        "score": 69.22216069487342,
+        "href": "/cardio",
+        "detail": "VO2 max 47.0 against others your age"
+      },
+      {
+        "key": "heart",
+        "label": "Resting heart",
+        "weight": 0.1,
+        "score": 79.25,
+        "href": "/browse/resting-hr",
+        "detail": "Resting heart rate 58 bpm"
+      }
+    ],
+    "coverage": 1,
+    "days": 30
+  }
+}

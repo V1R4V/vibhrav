@@ -1,0 +1,1617 @@
+{
+  "product": "Nura",
+  "fictional": true,
+  "sourceHead": "878caede",
+  "origin": "http://127.0.0.1:3238",
+  "source": "/Users/vibhravjha/Code/health-tracker",
+  "seed": "seed.mts",
+  "validation": "data-validation.json",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "dpr": 2,
+  "shots": [
+    {
+      "name": "summary-top",
+      "file": "nura/summary-top.png",
+      "route": "/",
+      "scrollY": 0,
+      "purpose": "Native unified dashboard top, context only. Not hero sleep-first.",
+      "focal": [
+        {
+          "tag": "H1",
+          "label": "Sunday, Nov 22",
+          "x": 300,
+          "y": 40,
+          "width": 421.046875,
+          "height": 32
+        },
+        {
+          "tag": "SECTION",
+          "label": "Readiness todayYou are poorly recovered. Keep today easy.HRV is 13% below your usual and sleeping heart rate is 3 bpm higher than usual.See ",
+          "x": 300,
+          "y": 121,
+          "width": 1072,
+          "height": 269.125
+        },
+        {
+          "tag": "H2",
+          "label": "You are poorly recovered. Keep today easy.",
+          "x": 329,
+          "y": 180.75,
+          "width": 400.421875,
+          "height": 68.375
+        },
+        {
+          "tag": "A",
+          "label": "RecoveryPoorly recovered32likely 23–42MTWTFSS7-day average 56%",
+          "x": 300,
+          "y": 402.125,
+          "width": 349.328125,
+          "height": 340.5
+        },
+        {
+          "tag": "A",
+          "label": "StrainLight4.0target under 10MTWTFSS7-day average 6.9",
+          "x": 661.328125,
+          "y": 402.125,
+          "width": 349.328125,
+          "height": 340.5
+        },
+        {
+          "tag": "A",
+          "label": "SleepGood787h 23m asleepMTWTFSS7-day average 86",
+          "x": 1022.65625,
+          "y": 402.125,
+          "width": 349.34375,
+          "height": 340.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "Health scoreHow it works Cardio fitness, activity, sleep and resting heartDay28 days81ExcellentUp 4 vs 28-day scoreSleep25% of score78Slept ",
+          "x": 300,
+          "y": 754.625,
+          "width": 638.390625,
+          "height": 404
+        },
+        {
+          "tag": "H2",
+          "label": "Health scoreHow it works ",
+          "x": 325,
+          "y": 779.625,
+          "width": 254.765625,
+          "height": 22.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "What to work onFrom the last four weeks, most important first.All Nothing stands out in this period.Body Age is below your real ageYou exerc",
+          "x": 950.390625,
+          "y": 754.625,
+          "width": 421.609375,
+          "height": 404
+        },
+        {
+          "tag": "H2",
+          "label": "What to work on",
+          "x": 971.390625,
+          "y": 775.625,
+          "width": 263.703125,
+          "height": 22
+        }
+      ],
+      "sha256": "efc8d47da7a061addaa127a6c1951cb2173ddbd9a7dc622f24ef3b35ed9bfce0"
+    },
+    {
+      "name": "overview",
+      "file": "nura/overview.png",
+      "route": "/",
+      "scrollY": 700,
+      "purpose": "Summary health overview with daily health contributions and other metrics; native dashboard scroll.",
+      "focal": [
+        {
+          "tag": "A",
+          "label": "RecoveryPoorly recovered32likely 23–42MTWTFSS7-day average 56%",
+          "x": 300,
+          "y": -297.875,
+          "width": 349.328125,
+          "height": 340.5
+        },
+        {
+          "tag": "A",
+          "label": "StrainLight4.0target under 10MTWTFSS7-day average 6.9",
+          "x": 661.328125,
+          "y": -297.875,
+          "width": 349.328125,
+          "height": 340.5
+        },
+        {
+          "tag": "A",
+          "label": "SleepGood787h 23m asleepMTWTFSS7-day average 86",
+          "x": 1022.65625,
+          "y": -297.875,
+          "width": 349.34375,
+          "height": 340.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "Health scoreHow it works Cardio fitness, activity, sleep and resting heartDay28 days81ExcellentUp 4 vs 28-day scoreSleep25% of score78Slept ",
+          "x": 300,
+          "y": 54.625,
+          "width": 638.390625,
+          "height": 404
+        },
+        {
+          "tag": "H2",
+          "label": "Health scoreHow it works ",
+          "x": 325,
+          "y": 79.625,
+          "width": 254.765625,
+          "height": 22.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "What to work onFrom the last four weeks, most important first.All Nothing stands out in this period.Body Age is below your real ageYou exerc",
+          "x": 950.390625,
+          "y": 54.625,
+          "width": 421.609375,
+          "height": 404
+        },
+        {
+          "tag": "H2",
+          "label": "What to work on",
+          "x": 971.390625,
+          "y": 75.625,
+          "width": 263.703125,
+          "height": 22
+        },
+        {
+          "tag": "A",
+          "label": "Overnight HRV (SDNN)43ms13% below usualYour usual is 50 ms",
+          "x": 300,
+          "y": 470.625,
+          "width": 259,
+          "height": 199
+        },
+        {
+          "tag": "A",
+          "label": "Sleeping heart rate58bpm3 bpm above usualYour usual is 55 bpm",
+          "x": 571,
+          "y": 470.625,
+          "width": 259,
+          "height": 199
+        },
+        {
+          "tag": "A",
+          "label": "Body Age29.4years3.2 years youngerLikely between 26 and 33",
+          "x": 842,
+          "y": 470.625,
+          "width": 259,
+          "height": 199
+        },
+        {
+          "tag": "A",
+          "label": "Sleep regularity92of 100RegularBed 10:47 pm, up 6:25 am",
+          "x": 1113,
+          "y": 470.625,
+          "width": 259,
+          "height": 199
+        },
+        {
+          "tag": "A",
+          "label": "Energy burned2,501kcal12% above your averageSat, Nov 21, of which 764 active",
+          "x": 300,
+          "y": 681.625,
+          "width": 259,
+          "height": 216
+        },
+        {
+          "tag": "A",
+          "label": "Steps6,65018% below your averageSat, Nov 21, goal 10,000",
+          "x": 571,
+          "y": 681.625,
+          "width": 259,
+          "height": 216
+        },
+        {
+          "tag": "A",
+          "label": "VO2 max46.8mL/kg/min3.8 above age targetApple measured 46.0, corrected for its low bias",
+          "x": 842,
+          "y": 681.625,
+          "width": 259,
+          "height": 216
+        },
+        {
+          "tag": "A",
+          "label": "Sleep debt1.3hoursLowAim for 8.6 h tonight",
+          "x": 1113,
+          "y": 681.625,
+          "width": 259,
+          "height": 216
+        },
+        {
+          "tag": "SECTION",
+          "label": "Recovery, last 14 daysAll 050100Nov 9Nov 16Nov 22",
+          "x": 300,
+          "y": 909.625,
+          "width": 421.59375,
+          "height": 272
+        },
+        {
+          "tag": "H2",
+          "label": "Recovery, last 14 days",
+          "x": 321,
+          "y": 930.625,
+          "width": 152.234375,
+          "height": 22
+        },
+        {
+          "tag": "SECTION",
+          "label": "Last night · 7h 23m asleep10:47 pm – 6:25 am · 95% efficient · awake 0h 15mSleep AwakeREMCoreDeep11 pm12 am1 am2 am3 am4 am5 am6 am",
+          "x": 733.59375,
+          "y": 909.625,
+          "width": 638.40625,
+          "height": 272
+        },
+        {
+          "tag": "H2",
+          "label": "Last night · 7h 23m asleep",
+          "x": 754.59375,
+          "y": 930.625,
+          "width": 297.484375,
+          "height": 22
+        }
+      ],
+      "sha256": "ed3148e3ed27911a797e1622d0d93c6db3a80c0a300b7cd9e02402bdeb3b5539"
+    },
+    {
+      "name": "overview-28",
+      "file": "nura/overview-28.png",
+      "route": "/",
+      "scrollY": 700,
+      "purpose": "Same dashboard, actual 28-day tab selected; separate construct from Day.",
+      "focal": [
+        {
+          "tag": "A",
+          "label": "RecoveryPoorly recovered32likely 23–42MTWTFSS7-day average 56%",
+          "x": 300,
+          "y": -297.875,
+          "width": 349.328125,
+          "height": 340.5
+        },
+        {
+          "tag": "A",
+          "label": "StrainLight4.0target under 10MTWTFSS7-day average 6.9",
+          "x": 661.328125,
+          "y": -297.875,
+          "width": 349.328125,
+          "height": 340.5
+        },
+        {
+          "tag": "A",
+          "label": "SleepGood787h 23m asleepMTWTFSS7-day average 86",
+          "x": 1022.65625,
+          "y": -297.875,
+          "width": 349.34375,
+          "height": 340.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "Health scoreHow it works Cardio fitness, activity, sleep and resting heartDay28 days77GoodLevel with prior 4 weeksSleep25% of score81Average",
+          "x": 300,
+          "y": 54.625,
+          "width": 638.390625,
+          "height": 421
+        },
+        {
+          "tag": "H2",
+          "label": "Health scoreHow it works ",
+          "x": 325,
+          "y": 79.625,
+          "width": 254.765625,
+          "height": 22.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "What to work onFrom the last four weeks, most important first.All Nothing stands out in this period.Body Age is below your real ageYou exerc",
+          "x": 950.390625,
+          "y": 54.625,
+          "width": 421.609375,
+          "height": 421
+        },
+        {
+          "tag": "H2",
+          "label": "What to work on",
+          "x": 971.390625,
+          "y": 75.625,
+          "width": 263.703125,
+          "height": 22
+        },
+        {
+          "tag": "A",
+          "label": "Overnight HRV (SDNN)43ms13% below usualYour usual is 50 ms",
+          "x": 300,
+          "y": 487.625,
+          "width": 259,
+          "height": 199
+        },
+        {
+          "tag": "A",
+          "label": "Sleeping heart rate58bpm3 bpm above usualYour usual is 55 bpm",
+          "x": 571,
+          "y": 487.625,
+          "width": 259,
+          "height": 199
+        },
+        {
+          "tag": "A",
+          "label": "Body Age29.4years3.2 years youngerLikely between 26 and 33",
+          "x": 842,
+          "y": 487.625,
+          "width": 259,
+          "height": 199
+        },
+        {
+          "tag": "A",
+          "label": "Sleep regularity92of 100RegularBed 10:47 pm, up 6:25 am",
+          "x": 1113,
+          "y": 487.625,
+          "width": 259,
+          "height": 199
+        },
+        {
+          "tag": "A",
+          "label": "Energy burned2,501kcal12% above your averageSat, Nov 21, of which 764 active",
+          "x": 300,
+          "y": 698.625,
+          "width": 259,
+          "height": 216
+        },
+        {
+          "tag": "A",
+          "label": "Steps6,65018% below your averageSat, Nov 21, goal 10,000",
+          "x": 571,
+          "y": 698.625,
+          "width": 259,
+          "height": 216
+        },
+        {
+          "tag": "A",
+          "label": "VO2 max46.8mL/kg/min3.8 above age targetApple measured 46.0, corrected for its low bias",
+          "x": 842,
+          "y": 698.625,
+          "width": 259,
+          "height": 216
+        },
+        {
+          "tag": "A",
+          "label": "Sleep debt1.3hoursLowAim for 8.6 h tonight",
+          "x": 1113,
+          "y": 698.625,
+          "width": 259,
+          "height": 216
+        },
+        {
+          "tag": "SECTION",
+          "label": "Recovery, last 14 daysAll 050100Nov 9Nov 16Nov 22",
+          "x": 300,
+          "y": 926.625,
+          "width": 421.59375,
+          "height": 272
+        },
+        {
+          "tag": "H2",
+          "label": "Recovery, last 14 days",
+          "x": 321,
+          "y": 947.625,
+          "width": 152.234375,
+          "height": 22
+        },
+        {
+          "tag": "SECTION",
+          "label": "Last night · 7h 23m asleep10:47 pm – 6:25 am · 95% efficient · awake 0h 15mSleep AwakeREMCoreDeep11 pm12 am1 am2 am3 am4 am5 am6 am",
+          "x": 733.59375,
+          "y": 926.625,
+          "width": 638.40625,
+          "height": 272
+        },
+        {
+          "tag": "H2",
+          "label": "Last night · 7h 23m asleep",
+          "x": 754.59375,
+          "y": 947.625,
+          "width": 297.484375,
+          "height": 22
+        }
+      ],
+      "sha256": "083dcfd27469be6da46d6be42a664ab807e80b84857e0a510caf07246ffff5f5"
+    },
+    {
+      "name": "health-month",
+      "file": "nura/health-month.png",
+      "route": "/health?range=1m",
+      "scrollY": 0,
+      "purpose": "Native period health score, explicitly Month and Oct24–Nov22.",
+      "focal": [
+        {
+          "tag": "H1",
+          "label": "Health score",
+          "x": 300,
+          "y": 40,
+          "width": 707.453125,
+          "height": 32
+        },
+        {
+          "tag": "SECTION",
+          "label": "Health scoreHow it works Cardio fitness, activity, sleep and resting heartDayMonth78of 100Up 1 vs the month beforeGoodThis is your score for",
+          "x": 300,
+          "y": 177,
+          "width": 1072,
+          "height": 612.5
+        },
+        {
+          "tag": "H2",
+          "label": "Health scoreHow it works ",
+          "x": 325,
+          "y": 202,
+          "width": 254.765625,
+          "height": 22.5
+        },
+        {
+          "tag": "H3",
+          "label": "Where the 78 points come from",
+          "x": 325,
+          "y": 530,
+          "width": 1022,
+          "height": 19.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "What it takes to score higherPick a target. These are the fewest changes that get you there, worked out from your own numbers in this period",
+          "x": 300,
+          "y": 801.5,
+          "width": 1072,
+          "height": 338.5
+        },
+        {
+          "tag": "H2",
+          "label": "What it takes to score higher",
+          "x": 351,
+          "y": 822.5,
+          "width": 650.109375,
+          "height": 22
+        }
+      ],
+      "sha256": "8e812970ff63cee3e6ebc9bf7a7155c7b2af4f69d13ef8562cf1fa51da46e119"
+    },
+    {
+      "name": "health-day",
+      "file": "nura/health-day.png",
+      "route": "/health?range=1m",
+      "scrollY": 0,
+      "purpose": "Same native health card switched to Day; selected period remains chart scope.",
+      "focal": [
+        {
+          "tag": "H1",
+          "label": "Health score",
+          "x": 300,
+          "y": 40,
+          "width": 707.453125,
+          "height": 32
+        },
+        {
+          "tag": "SECTION",
+          "label": "Health scoreHow it works Cardio fitness, activity, sleep and resting heartDayMonth81of 100Up 3 vs month scoreExcellentThis is the score for ",
+          "x": 300,
+          "y": 177,
+          "width": 1072,
+          "height": 612.5
+        },
+        {
+          "tag": "H2",
+          "label": "Health scoreHow it works ",
+          "x": 325,
+          "y": 202,
+          "width": 254.765625,
+          "height": 22.5
+        },
+        {
+          "tag": "H3",
+          "label": "Where the 81 points come from",
+          "x": 325,
+          "y": 530,
+          "width": 1022,
+          "height": 19.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "What it takes to score higherPick a target. These are the fewest changes that get you there, worked out from your own numbers in this period",
+          "x": 300,
+          "y": 801.5,
+          "width": 1072,
+          "height": 338.5
+        },
+        {
+          "tag": "H2",
+          "label": "What it takes to score higher",
+          "x": 351,
+          "y": 822.5,
+          "width": 650.109375,
+          "height": 22
+        }
+      ],
+      "sha256": "d1aa582a057d93a94532cd9a51fef4004c6905eed3266829542069745416cc86"
+    },
+    {
+      "name": "health-trend",
+      "file": "nura/health-trend.png",
+      "route": "/health?range=1m",
+      "scrollY": 584,
+      "purpose": "Actual daily bars and rolling 28-day score line; no animated invented values.",
+      "focal": [
+        {
+          "tag": "SECTION",
+          "label": "Health scoreHow it works Cardio fitness, activity, sleep and resting heartDayMonth81of 100Up 3 vs month scoreExcellentThis is the score for ",
+          "x": 300,
+          "y": -407,
+          "width": 1072,
+          "height": 612.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "What it takes to score higherPick a target. These are the fewest changes that get you there, worked out from your own numbers in this period",
+          "x": 300,
+          "y": 217.5,
+          "width": 1072,
+          "height": 338.5
+        },
+        {
+          "tag": "H2",
+          "label": "What it takes to score higher",
+          "x": 351,
+          "y": 238.5,
+          "width": 650.109375,
+          "height": 22
+        },
+        {
+          "tag": "SECTION",
+          "label": "Day by dayEach bar is one day's score. The line is the 28-day average. Tap a bar to open that day.050100Oct 24Oct 27Oct 30Nov 3Nov 6Nov 9Nov",
+          "x": 300,
+          "y": 568,
+          "width": 1072,
+          "height": 350
+        },
+        {
+          "tag": "H2",
+          "label": "Day by day",
+          "x": 351,
+          "y": 589,
+          "width": 501.859375,
+          "height": 22
+        },
+        {
+          "tag": "SECTION",
+          "label": "What to work onFrom the period you chose. An item appears only when your number is past a limit taken from published research.Nothing stands",
+          "x": 300,
+          "y": 930,
+          "width": 530,
+          "height": 162.25
+        },
+        {
+          "tag": "H2",
+          "label": "What to work on",
+          "x": 351,
+          "y": 951,
+          "width": 458,
+          "height": 22
+        },
+        {
+          "tag": "SECTION",
+          "label": "What is going wellNumbers that already meet their target.ActivityOn targetYou exercise enough252 min a weektarget: 150 or moreYou get about ",
+          "x": 842,
+          "y": 930,
+          "width": 530,
+          "height": 728
+        },
+        {
+          "tag": "H2",
+          "label": "What is going well",
+          "x": 893,
+          "y": 951,
+          "width": 226.171875,
+          "height": 22
+        }
+      ],
+      "sha256": "5ecaf7926e1212839b69e99a7828bc7457c75336f5a925a1bbd49198a6baa65b"
+    },
+    {
+      "name": "cardio",
+      "file": "nura/cardio.png",
+      "route": "/cardio?range=1m",
+      "scrollY": 0,
+      "purpose": "Cardio fitness and source-derived trend.",
+      "focal": [
+        {
+          "tag": "H1",
+          "label": "Cardio",
+          "x": 300,
+          "y": 40,
+          "width": 689.53125,
+          "height": 32
+        },
+        {
+          "tag": "SECTION",
+          "label": "Cardio fitness45.6mL/kg/minAbove average for your age and sex: fitter than about 67 in 100.Median of 8 readings from Apple Watch in this per",
+          "x": 300,
+          "y": 177,
+          "width": 421.59375,
+          "height": 337.25
+        },
+        {
+          "tag": "SECTION",
+          "label": "Where you standFitness groups from a study of 122,007 adults who did a treadmill test, by percentile for age and sex.LowBelow averageAbove a",
+          "x": 733.59375,
+          "y": 177,
+          "width": 638.40625,
+          "height": 337.25
+        },
+        {
+          "tag": "H2",
+          "label": "Where you stand",
+          "x": 784.59375,
+          "y": 198,
+          "width": 566.40625,
+          "height": 22
+        },
+        {
+          "tag": "A",
+          "label": "Fitness score69Cardio fitness part of your health score, 35% of it",
+          "x": 754.59375,
+          "y": 365.25,
+          "width": 190.796875,
+          "height": 128
+        },
+        {
+          "tag": "DIV",
+          "label": "Target for your age43mL/kg/minYou are at or above it",
+          "x": 957.390625,
+          "y": 365.25,
+          "width": 190.796875,
+          "height": 128
+        },
+        {
+          "tag": "A",
+          "label": "Fitness age20 or underThe age at which your VO2 max is the target",
+          "x": 1160.1875,
+          "y": 365.25,
+          "width": 190.796875,
+          "height": 128
+        },
+        {
+          "tag": "SECTION",
+          "label": "VO2 max over timeEach dot is one reading, or an average for long ranges. The dashes are the target for your age.42.644.546.4Oct 24Oct 27Oct ",
+          "x": 300,
+          "y": 526.25,
+          "width": 1072,
+          "height": 320
+        },
+        {
+          "tag": "H2",
+          "label": "VO2 max over time",
+          "x": 351,
+          "y": 547.25,
+          "width": 546.84375,
+          "height": 22
+        },
+        {
+          "tag": "H2",
+          "label": "Heart",
+          "x": 300,
+          "y": 870.25,
+          "width": 1072,
+          "height": 22.5
+        },
+        {
+          "tag": "A",
+          "label": "Resting heart rate58bpmAverage for this period. Lower is usually fitter.",
+          "x": 300,
+          "y": 904.75,
+          "width": 259,
+          "height": 188
+        },
+        {
+          "tag": "A",
+          "label": "Sleeping heart rate55.4bpmThe steadiest reading the watch gives",
+          "x": 571,
+          "y": 904.75,
+          "width": 259,
+          "height": 188
+        },
+        {
+          "tag": "A",
+          "label": "Walking heart rate91bpmAverage during steady walks. It falls as fitness rises.",
+          "x": 842,
+          "y": 904.75,
+          "width": 259,
+          "height": 188
+        },
+        {
+          "tag": "A",
+          "label": "Overnight HRV49msCompare with your own usual, not with others",
+          "x": 1113,
+          "y": 904.75,
+          "width": 259,
+          "height": 188
+        }
+      ],
+      "sha256": "824c6813036910abebe918ec56e488262d56ff8e70d8c6c2e22231db3d536675"
+    },
+    {
+      "name": "strain",
+      "file": "nura/strain.png",
+      "route": "/strain?range=1m",
+      "scrollY": 0,
+      "purpose": "Native activity intensity and total period view, not fake zone drilldown.",
+      "focal": [
+        {
+          "tag": "H1",
+          "label": "Strain",
+          "x": 300,
+          "y": 40,
+          "width": 555.578125,
+          "height": 32
+        },
+        {
+          "tag": "SECTION",
+          "label": "Strain, Oct 24 – Nov 227.1 average30 days with a scoreBest14.7Nov 14Lowest0.0Oct 28Change during this periodDown 0.5The latest 15 scored day",
+          "x": 300,
+          "y": 177,
+          "width": 1072,
+          "height": 122.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "StrainAverage of 30 days7.1of 21 · latest day 4.0LightOn an average day in this period, workouts added 53 load and the rest of the day added",
+          "x": 300,
+          "y": 311.5,
+          "width": 421.59375,
+          "height": 634.5
+        },
+        {
+          "tag": "H2",
+          "label": "Strain",
+          "x": 353,
+          "y": 337.125,
+          "width": 216.6875,
+          "height": 24
+        },
+        {
+          "tag": "SECTION",
+          "label": "A typical week by intensityMinutes at each effort level, a week on average, across the range you chose. The percentages are how far your hea",
+          "x": 733.59375,
+          "y": 311.5,
+          "width": 638.40625,
+          "height": 634.5
+        },
+        {
+          "tag": "H2",
+          "label": "A typical week by intensity",
+          "x": 784.59375,
+          "y": 332.5,
+          "width": 566.40625,
+          "height": 22
+        },
+        {
+          "tag": "SECTION",
+          "label": "Daily strain30 days with the watch on · average 7.10.010.521.0ModerateHighAll outOct 24Oct 27Oct 30Nov 3Nov 6Nov 9Nov 12Nov 16Nov 19Nov 22",
+          "x": 300,
+          "y": 958,
+          "width": 1072,
+          "height": 320
+        },
+        {
+          "tag": "H2",
+          "label": "Daily strain",
+          "x": 351,
+          "y": 979,
+          "width": 229.8125,
+          "height": 22
+        }
+      ],
+      "sha256": "bd011698eda1c346fd9cfa6a582c16905e7f60becf475c62f45b71409aae6545"
+    },
+    {
+      "name": "workouts",
+      "file": "nura/workouts.png",
+      "route": "/workouts?range=1m",
+      "scrollY": 0,
+      "purpose": "Actual workout sessions within the chosen period.",
+      "focal": [
+        {
+          "tag": "H1",
+          "label": "Workouts",
+          "x": 300,
+          "y": 40,
+          "width": 404.6875,
+          "height": 32
+        },
+        {
+          "tag": "DIV",
+          "label": "Sessions225.1 a week",
+          "x": 300,
+          "y": 121,
+          "width": 259,
+          "height": 102
+        },
+        {
+          "tag": "DIV",
+          "label": "Time17h 59m0h 49m a session",
+          "x": 571,
+          "y": 121,
+          "width": 259,
+          "height": 102
+        },
+        {
+          "tag": "DIV",
+          "label": "Average strain9.6of 21 per session",
+          "x": 842,
+          "y": 121,
+          "width": 259,
+          "height": 102
+        },
+        {
+          "tag": "DIV",
+          "label": "Active energy8,480kcal, estimated",
+          "x": 1113,
+          "y": 121,
+          "width": 259,
+          "height": 102
+        },
+        {
+          "tag": "H2",
+          "label": "November 202616 sessions · 12h 51m",
+          "x": 300,
+          "y": 287,
+          "width": 1072,
+          "height": 43.5
+        },
+        {
+          "tag": "UL",
+          "label": "WalkingSun, Nov 220h 40mtime103avg bpm164kcal4.0strainCyclingSat, Nov 211h 12mtime138avg bpm598kcal14.2strainRunningThu, Nov 190h 48mtime145",
+          "x": 300,
+          "y": 330.5,
+          "width": 1072,
+          "height": 1297
+        }
+      ],
+      "sha256": "aeefbd108c56412910d07c7a8ae335f1506c64b3f1711a936327992c4b7e9b48"
+    },
+    {
+      "name": "workout-detail",
+      "file": "nura/workout-detail.png",
+      "route": "/workouts/1795131300000-running",
+      "scrollY": 0,
+      "purpose": "Actual linked running session summary; timestamps/duration/HR all from one record.",
+      "focal": [
+        {
+          "tag": "H1",
+          "label": "Running",
+          "x": 300,
+          "y": 40,
+          "width": 311.78125,
+          "height": 32
+        },
+        {
+          "tag": "DETAILS",
+          "label": "Strain13.4/ 21Moderate · day total 13.4Strain turns the session's load into a 0–21 scale that rises slowly near the top, so going from 18 to",
+          "x": 300,
+          "y": 180,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "Heart rate145bpm avgLow 57 · peak 174 bpmLowest 57 bpm, average 145, peak 174.Average was 81% of your maximum (178 bpm) and 73% of your hear",
+          "x": 571,
+          "y": 180,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "Active energy538kcal11.2 kcal a minuteApple's estimate is 538 kcal; the likely true value is 430–646 kcal (±20% for this kind of activity).T",
+          "x": 842,
+          "y": 180,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "High-intensity time21minAbove 160 bpmMinutes at 85% or more of your heart-rate reserve, which for you means above 160 bpm.You spent 21 of 48",
+          "x": 1113,
+          "y": 180,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "Distance8.35km5:35 PM – 6:23 PMStarted 5:35 PM, finished 6:23 PM: 0h 48m.Average pace 5:45 min/km.",
+          "x": 300,
+          "y": 302,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "Effort–No ratingNo effort was recorded. Rate the workout on your watch afterwards to improve strain for lifting and sport.",
+          "x": 571,
+          "y": 302,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "Going in52%Recovery that morningRecovery that morning: 52%.Resting heart rate that day: 57 bpm.Slept 7h 37m the night before, sleeping heart",
+          "x": 842,
+          "y": 302,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "Coming out53%Recovery next morningRecovery next morning: 53% (+1 on the day before).Next night: 7h 51m asleep, sleeping heart rate 56 bpm.Se",
+          "x": 1113,
+          "y": 302,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "SECTION",
+          "label": "Heart rate192 readings · bands are zones of your heart-rate reserve (rest 55, max 178 bpm)Z1Z2Z3Z4Z50:000:120:240:360:48",
+          "x": 300,
+          "y": 424,
+          "width": 1072,
+          "height": 360
+        },
+        {
+          "tag": "H2",
+          "label": "Heart rate",
+          "x": 321,
+          "y": 445,
+          "width": 471.140625,
+          "height": 22
+        },
+        {
+          "tag": "SECTION",
+          "label": "Time in zonesZone 1 · 50–60%1 minZone 2 · 60–70%11 minZone 3 · 70–80%8 minZone 4 · 80–90%1 minZone 5 · 90%+20 min",
+          "x": 300,
+          "y": 796,
+          "width": 530,
+          "height": 242.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "Session detailEfforts above 90%7High-intensity minutes21Second half vs first+6 ptsHeart-rate load110Recovery next morning53%",
+          "x": 842,
+          "y": 796,
+          "width": 530,
+          "height": 242.5
+        }
+      ],
+      "sha256": "2b6d02a9578f4a765bfa0e3eaafcfaca6c16483580bf59557cd284c23f572858"
+    },
+    {
+      "name": "workout-zones",
+      "file": "nura/workout-zones.png",
+      "route": "/workouts/1795131300000-running",
+      "scrollY": 280,
+      "purpose": "Native workout heart-rate trace and time in zones.",
+      "focal": [
+        {
+          "tag": "DETAILS",
+          "label": "Strain13.4/ 21Moderate · day total 13.4Strain turns the session's load into a 0–21 scale that rises slowly near the top, so going from 18 to",
+          "x": 300,
+          "y": -100,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "Heart rate145bpm avgLow 57 · peak 174 bpmLowest 57 bpm, average 145, peak 174.Average was 81% of your maximum (178 bpm) and 73% of your hear",
+          "x": 571,
+          "y": -100,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "Active energy538kcal11.2 kcal a minuteApple's estimate is 538 kcal; the likely true value is 430–646 kcal (±20% for this kind of activity).T",
+          "x": 842,
+          "y": -100,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "High-intensity time21minAbove 160 bpmMinutes at 85% or more of your heart-rate reserve, which for you means above 160 bpm.You spent 21 of 48",
+          "x": 1113,
+          "y": -100,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "Distance8.35km5:35 PM – 6:23 PMStarted 5:35 PM, finished 6:23 PM: 0h 48m.Average pace 5:45 min/km.",
+          "x": 300,
+          "y": 22,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "Effort–No ratingNo effort was recorded. Rate the workout on your watch afterwards to improve strain for lifting and sport.",
+          "x": 571,
+          "y": 22,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "Going in52%Recovery that morningRecovery that morning: 52%.Resting heart rate that day: 57 bpm.Slept 7h 37m the night before, sleeping heart",
+          "x": 842,
+          "y": 22,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "DETAILS",
+          "label": "Coming out53%Recovery next morningRecovery next morning: 53% (+1 on the day before).Next night: 7h 51m asleep, sleeping heart rate 56 bpm.Se",
+          "x": 1113,
+          "y": 22,
+          "width": 259,
+          "height": 110
+        },
+        {
+          "tag": "SECTION",
+          "label": "Heart rate192 readings · bands are zones of your heart-rate reserve (rest 55, max 178 bpm)Z1Z2Z3Z4Z50:000:120:240:360:48",
+          "x": 300,
+          "y": 144,
+          "width": 1072,
+          "height": 360
+        },
+        {
+          "tag": "H2",
+          "label": "Heart rate",
+          "x": 321,
+          "y": 165,
+          "width": 471.140625,
+          "height": 22
+        },
+        {
+          "tag": "SECTION",
+          "label": "Time in zonesZone 1 · 50–60%1 minZone 2 · 60–70%11 minZone 3 · 70–80%8 minZone 4 · 80–90%1 minZone 5 · 90%+20 min",
+          "x": 300,
+          "y": 516,
+          "width": 530,
+          "height": 242.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "Session detailEfforts above 90%7High-intensity minutes21Second half vs first+6 ptsHeart-rate load110Recovery next morning53%",
+          "x": 842,
+          "y": 516,
+          "width": 530,
+          "height": 242.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "Understand this workoutWhat this session did for youYou spent 21 minutes above 80% of your heart-rate range. Time up there is what raises VO",
+          "x": 300,
+          "y": 770.5,
+          "width": 1072,
+          "height": 327.5
+        },
+        {
+          "tag": "H2",
+          "label": "Understand this workout",
+          "x": 301,
+          "y": 771.5,
+          "width": 1070,
+          "height": 50.5
+        }
+      ],
+      "sha256": "9eaf3ce22d2c0e32ab4f16d6cb3a45d31223ef26e9f60653e812b1727043eb76"
+    },
+    {
+      "name": "calendar",
+      "file": "nura/calendar.png",
+      "route": "/",
+      "scrollY": 0,
+      "purpose": "Actual historical date picker with daily health-score legend.",
+      "focal": [
+        {
+          "tag": "H1",
+          "label": "Sunday, Nov 22",
+          "x": 300,
+          "y": 40,
+          "width": 421.046875,
+          "height": 32
+        },
+        {
+          "tag": "SECTION",
+          "label": "Readiness todayYou are poorly recovered. Keep today easy.HRV is 13% below your usual and sleeping heart rate is 3 bpm higher than usual.See ",
+          "x": 300,
+          "y": 121,
+          "width": 1072,
+          "height": 269.125
+        },
+        {
+          "tag": "H2",
+          "label": "You are poorly recovered. Keep today easy.",
+          "x": 329,
+          "y": 180.75,
+          "width": 400.421875,
+          "height": 68.375
+        },
+        {
+          "tag": "A",
+          "label": "RecoveryPoorly recovered32likely 23–42MTWTFSS7-day average 56%",
+          "x": 300,
+          "y": 402.125,
+          "width": 349.328125,
+          "height": 340.5
+        },
+        {
+          "tag": "A",
+          "label": "StrainLight4.0target under 10MTWTFSS7-day average 6.9",
+          "x": 661.328125,
+          "y": 402.125,
+          "width": 349.328125,
+          "height": 340.5
+        },
+        {
+          "tag": "A",
+          "label": "SleepGood787h 23m asleepMTWTFSS7-day average 86",
+          "x": 1022.65625,
+          "y": 402.125,
+          "width": 349.34375,
+          "height": 340.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "Health scoreHow it works Cardio fitness, activity, sleep and resting heartDay28 days81ExcellentUp 4 vs 28-day scoreSleep25% of score78Slept ",
+          "x": 300,
+          "y": 754.625,
+          "width": 638.390625,
+          "height": 404
+        },
+        {
+          "tag": "H2",
+          "label": "Health scoreHow it works ",
+          "x": 325,
+          "y": 779.625,
+          "width": 254.765625,
+          "height": 22.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "What to work onFrom the last four weeks, most important first.All Nothing stands out in this period.Body Age is below your real ageYou exerc",
+          "x": 950.390625,
+          "y": 754.625,
+          "width": 421.609375,
+          "height": 404
+        },
+        {
+          "tag": "H2",
+          "label": "What to work on",
+          "x": 971.390625,
+          "y": 775.625,
+          "width": 263.703125,
+          "height": 22
+        }
+      ],
+      "sha256": "4456918ca9e59ad5e02bdf571bf7eccd8f49f9c86d7a11c92ebe7b436e61b6f7"
+    },
+    {
+      "name": "historical-top",
+      "file": "nura/historical-top.png",
+      "route": "/?date=2026-11-19",
+      "scrollY": 0,
+      "purpose": "Actual historical navigation; native date and past-day wording.",
+      "focal": [
+        {
+          "tag": "H1",
+          "label": "Thursday, Nov 19",
+          "x": 300,
+          "y": 40,
+          "width": 287.6875,
+          "height": 32
+        },
+        {
+          "tag": "SECTION",
+          "label": "Readiness that dayYou were partly recovered that day.HRV was 6% below your usual and sleeping heart rate was 2 bpm higher than usual.See why",
+          "x": 300,
+          "y": 121,
+          "width": 1072,
+          "height": 269.125
+        },
+        {
+          "tag": "H2",
+          "label": "You were partly recovered that day.",
+          "x": 329,
+          "y": 180.75,
+          "width": 400.421875,
+          "height": 68.375
+        },
+        {
+          "tag": "A",
+          "label": "RecoveryPartly recovered52likely 40–60FSSMTWT7-day average 70%",
+          "x": 300,
+          "y": 402.125,
+          "width": 349.328125,
+          "height": 340.5
+        },
+        {
+          "tag": "A",
+          "label": "StrainModerate13.4target 10–14FSSMTWT7-day average 6.9",
+          "x": 661.328125,
+          "y": 402.125,
+          "width": 349.328125,
+          "height": 340.5
+        },
+        {
+          "tag": "A",
+          "label": "SleepExcellent877h 37m asleepFSSMTWT7-day average 86",
+          "x": 1022.65625,
+          "y": 402.125,
+          "width": 349.34375,
+          "height": 340.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "Health scoreHow it works Cardio fitness, activity, sleep and resting heartDay28 days85ExcellentUp 8 vs 28-day scoreSleep25% of score87Slept ",
+          "x": 300,
+          "y": 754.625,
+          "width": 638.390625,
+          "height": 404
+        },
+        {
+          "tag": "H2",
+          "label": "Health scoreHow it works ",
+          "x": 325,
+          "y": 779.625,
+          "width": 254.765625,
+          "height": 22.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "What to work onFrom the last four weeks, most important first.All Nothing stands out in this period.Body Age is below your real ageYou exerc",
+          "x": 950.390625,
+          "y": 754.625,
+          "width": 421.609375,
+          "height": 404
+        },
+        {
+          "tag": "H2",
+          "label": "What to work on",
+          "x": 971.390625,
+          "y": 775.625,
+          "width": 263.703125,
+          "height": 22
+        }
+      ],
+      "sha256": "80523c72cfac17dbbc5e95e4754c84a6b6be9f9e5d32acf6fc51b99640c1ca9a"
+    },
+    {
+      "name": "historical-summary",
+      "file": "nura/historical-summary.png",
+      "route": "/?date=2026-11-19",
+      "scrollY": 700,
+      "purpose": "Historical daily summary with four-week context leading up to that selected day.",
+      "focal": [
+        {
+          "tag": "A",
+          "label": "RecoveryPartly recovered52likely 40–60FSSMTWT7-day average 70%",
+          "x": 300,
+          "y": -297.875,
+          "width": 349.328125,
+          "height": 340.5
+        },
+        {
+          "tag": "A",
+          "label": "StrainModerate13.4target 10–14FSSMTWT7-day average 6.9",
+          "x": 661.328125,
+          "y": -297.875,
+          "width": 349.328125,
+          "height": 340.5
+        },
+        {
+          "tag": "A",
+          "label": "SleepExcellent877h 37m asleepFSSMTWT7-day average 86",
+          "x": 1022.65625,
+          "y": -297.875,
+          "width": 349.34375,
+          "height": 340.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "Health scoreHow it works Cardio fitness, activity, sleep and resting heartDay28 days85ExcellentUp 8 vs 28-day scoreSleep25% of score87Slept ",
+          "x": 300,
+          "y": 54.625,
+          "width": 638.390625,
+          "height": 404
+        },
+        {
+          "tag": "H2",
+          "label": "Health scoreHow it works ",
+          "x": 325,
+          "y": 79.625,
+          "width": 254.765625,
+          "height": 22.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "What to work onFrom the last four weeks, most important first.All Nothing stands out in this period.Body Age is below your real ageYou exerc",
+          "x": 950.390625,
+          "y": 54.625,
+          "width": 421.609375,
+          "height": 404
+        },
+        {
+          "tag": "H2",
+          "label": "What to work on",
+          "x": 971.390625,
+          "y": 75.625,
+          "width": 263.703125,
+          "height": 22
+        },
+        {
+          "tag": "A",
+          "label": "Overnight HRV (SDNN)47ms6% below usualYour usual is 50 ms",
+          "x": 300,
+          "y": 470.625,
+          "width": 259,
+          "height": 199
+        },
+        {
+          "tag": "A",
+          "label": "Sleeping heart rate57bpm2 bpm above usualYour usual is 55 bpm",
+          "x": 571,
+          "y": 470.625,
+          "width": 259,
+          "height": 199
+        },
+        {
+          "tag": "A",
+          "label": "Body Age29.4years3.2 years youngerLikely between 26 and 33",
+          "x": 842,
+          "y": 470.625,
+          "width": 259,
+          "height": 199
+        },
+        {
+          "tag": "A",
+          "label": "Sleep regularity92of 100RegularBed 10:51 pm, up 6:40 am",
+          "x": 1113,
+          "y": 470.625,
+          "width": 259,
+          "height": 199
+        },
+        {
+          "tag": "A",
+          "label": "Energy burned2,329kcalAbout your 2-week averageThu, Nov 19, of which 596 active",
+          "x": 300,
+          "y": 681.625,
+          "width": 259,
+          "height": 216
+        },
+        {
+          "tag": "A",
+          "label": "Steps12,92810,000 reachedThu, Nov 19, goal 10,000",
+          "x": 571,
+          "y": 681.625,
+          "width": 259,
+          "height": 216
+        },
+        {
+          "tag": "A",
+          "label": "VO2 max46.8mL/kg/min3.8 above age targetApple measured 46.0, corrected for its low bias",
+          "x": 842,
+          "y": 681.625,
+          "width": 259,
+          "height": 216
+        },
+        {
+          "tag": "A",
+          "label": "Sleep debt1.3hoursLowNeed was 8.1 h",
+          "x": 1113,
+          "y": 681.625,
+          "width": 259,
+          "height": 216
+        },
+        {
+          "tag": "SECTION",
+          "label": "Recovery, last 14 daysAll 050100Nov 6Nov 13Nov 19",
+          "x": 300,
+          "y": 909.625,
+          "width": 421.59375,
+          "height": 272
+        },
+        {
+          "tag": "H2",
+          "label": "Recovery, last 14 days",
+          "x": 321,
+          "y": 930.625,
+          "width": 152.234375,
+          "height": 22
+        },
+        {
+          "tag": "SECTION",
+          "label": "Thu, Nov 19 · 7h 37m asleep10:51 pm – 6:40 am · 95% efficient · awake 0h 12mSleep AwakeREMCoreDeep11 pm12 am1 am2 am3 am4 am5 am6 am",
+          "x": 733.59375,
+          "y": 909.625,
+          "width": 638.40625,
+          "height": 272
+        },
+        {
+          "tag": "H2",
+          "label": "Thu, Nov 19 · 7h 37m asleep",
+          "x": 754.59375,
+          "y": 930.625,
+          "width": 297.484375,
+          "height": 22
+        }
+      ],
+      "sha256": "2a2161e6b7f9a99f18152acd696c1e7d0c034e7707e8b3c45b753faeeb545c47"
+    },
+    {
+      "name": "sleep",
+      "file": "nura/sleep.png",
+      "route": "/sleep?range=1m",
+      "scrollY": 0,
+      "purpose": "Supporting sleep score and actual last-night stages.",
+      "focal": [
+        {
+          "tag": "H1",
+          "label": "Sleep",
+          "x": 300,
+          "y": 40,
+          "width": 485.09375,
+          "height": 32
+        },
+        {
+          "tag": "SECTION",
+          "label": "Sleep score, Oct 24 – Nov 2281 average30 days with a scoreBest89Nov 17Lowest72Nov 1Change during this periodUp 4The latest 15 scored days av",
+          "x": 300,
+          "y": 177,
+          "width": 1072,
+          "height": 122.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "Sleep scoreAverage of 30 nights81latest night 78GoodOver these 30 nights you averaged 7h 19m against a need of 8h 33m, 1h 14m short each nig",
+          "x": 300,
+          "y": 311.5,
+          "width": 421.59375,
+          "height": 447.5
+        },
+        {
+          "tag": "H2",
+          "label": "Sleep score",
+          "x": 353,
+          "y": 337.125,
+          "width": 210.296875,
+          "height": 24
+        },
+        {
+          "tag": "SECTION",
+          "label": "7h 23m asleep10:47 pm – 6:25 am · 95% efficientLatest day in range · Sun, Nov 22AwakeREMCoreDeep11 pm12 am1 am2 am3 am4 am5 am6 amDeep1h 10m",
+          "x": 733.59375,
+          "y": 311.5,
+          "width": 638.40625,
+          "height": 447.5
+        },
+        {
+          "tag": "H2",
+          "label": "7h 23m asleep",
+          "x": 784.59375,
+          "y": 332.5,
+          "width": 201.390625,
+          "height": 22
+        },
+        {
+          "tag": "SECTION",
+          "label": "What made up the scoreAverages over the 30 nights in this period. Each part is scored 0 to 100 and weighted as shown.Sleep amount35% of scor",
+          "x": 300,
+          "y": 771,
+          "width": 1072,
+          "height": 380.5
+        },
+        {
+          "tag": "H2",
+          "label": "What made up the score",
+          "x": 351,
+          "y": 792,
+          "width": 551.15625,
+          "height": 22
+        }
+      ],
+      "sha256": "99ec1e4e3f4d615457c5d70ed6684acf961a9c9eb1ac7a306f75a84cbf90a100"
+    },
+    {
+      "name": "recovery",
+      "file": "nura/recovery.png",
+      "route": "/recovery?range=1m",
+      "scrollY": 0,
+      "purpose": "Supporting recovery estimate and own-baseline inputs, distinct from health score.",
+      "focal": [
+        {
+          "tag": "H1",
+          "label": "Recovery",
+          "x": 300,
+          "y": 40,
+          "width": 474.703125,
+          "height": 32
+        },
+        {
+          "tag": "SECTION",
+          "label": "Recovery, Oct 24 – Nov 2257% average30 days with a scoreBest81%Nov 14Lowest23%Oct 25Change during this periodUp 20%The latest 15 scored days",
+          "x": 300,
+          "y": 177,
+          "width": 1072,
+          "height": 122.5
+        },
+        {
+          "tag": "SECTION",
+          "label": "RecoveryAverage of 30 nights57%latest night 32%Partly recoveredYour sleep amount was worse than your usual on average in this period.Latest ",
+          "x": 300,
+          "y": 311.5,
+          "width": 421.59375,
+          "height": 482.25
+        },
+        {
+          "tag": "H2",
+          "label": "Recovery",
+          "x": 353,
+          "y": 337.125,
+          "width": 210.296875,
+          "height": 24
+        },
+        {
+          "tag": "SECTION",
+          "label": "What moved the scoreEach bar is the average over the 30 nights in this period, every night compared with the 28 nights before it. Green to t",
+          "x": 733.59375,
+          "y": 311.5,
+          "width": 638.40625,
+          "height": 482.25
+        },
+        {
+          "tag": "H2",
+          "label": "What moved the score",
+          "x": 784.59375,
+          "y": 332.5,
+          "width": 566.40625,
+          "height": 22
+        },
+        {
+          "tag": "SECTION",
+          "label": "Recovery over time30 scored nights · 37% green · 53% yellow · 10% red050100Oct 24Oct 27Oct 30Nov 3Nov 6Nov 9Nov 12Nov 16Nov 19Nov 22Green 67",
+          "x": 300,
+          "y": 805.75,
+          "width": 1072,
+          "height": 350
+        },
+        {
+          "tag": "H2",
+          "label": "Recovery over time",
+          "x": 351,
+          "y": 826.75,
+          "width": 307.109375,
+          "height": 22
+        }
+      ],
+      "sha256": "30c622e8fa487aa04e0afaf0e34ac76d65cc72ede0f9b732082fd6a115d4f06e"
+    }
+  ],
+  "errors": []
+}

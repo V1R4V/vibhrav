@@ -1,0 +1,51 @@
+[
+  {
+    "start": 0.4,
+    "end": 3.408,
+    "text": "Plan your week. See your study time count.",
+    "speed": 0.88,
+    "voice": "am_michael"
+  },
+  {
+    "start": 4.5,
+    "end": 8.681333333333333,
+    "text": "Give each subject a goal. Put the hours on your calendar.",
+    "speed": 0.88,
+    "voice": "am_michael"
+  },
+  {
+    "start": 10.4,
+    "end": 16.16,
+    "text": "Choose a subject and start. Pause when you need to, then return to the same session.",
+    "speed": 0.88,
+    "voice": "am_michael"
+  },
+  {
+    "start": 18.4,
+    "end": 22.624,
+    "text": "Keep the time, rate your focus, and note what you worked on.",
+    "speed": 0.88,
+    "voice": "am_michael"
+  },
+  {
+    "start": 24.4,
+    "end": 29.541333333333334,
+    "text": "Save once. Your session appears in the log, and your goal progress updates.",
+    "speed": 0.88,
+    "voice": "am_michael"
+  },
+  {
+    "start": 31.4,
+    "end": 35.965333333333334,
+    "text": "Find the session later, or step back and see where your study time went.",
+    "speed": 0.88,
+    "voice": "am_michael"
+  },
+  {
+    "start": 38.7,
+    "end": 41.98533333333334,
+    "text": "Plan. Focus. Follow through. With Study Flow.",
+    "speed": 0.88,
+    "voice": "am_michael"
+  }
+]

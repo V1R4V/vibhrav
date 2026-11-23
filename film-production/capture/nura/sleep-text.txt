@@ -1,0 +1,276 @@
+Nura
+Summary
+Health score
+Cardio
+Recovery
+Sleep
+Strain
+Workouts
+Body Age
+Browse
+Method
+Account
+
+Scores are estimates from Apple Watch data, not medical advice.
+
+Sleep
+
+A score built on duration, regularity and continuity, with stages weighted lightly.
+
+D
+W
+M
+3M
+6M
+Y
+All
+Oct 24 – Nov 22, 2026
+Sleep score, Oct 24 – Nov 22
+81
+average
+30 days with a score
+Best
+89
+Nov 17
+Lowest
+72
+Nov 1
+Change during this period
+Up 4
+The latest 15 scored days averaged 83. The 15 before them averaged 79.
+Sleep score
+Average of 30 nights
+81
+latest night 78
+Good
+
+Over these 30 nights you averaged 7h 19m against a need of 8h 33m, 1h 14m short each night. Go to bed that much earlier.
+
+Latest day in range · Sun, Nov 22
+7h 23m asleep
+
+10:47 pm – 6:25 am · 95% efficient
+
+Latest day in range · Sun, Nov 22
+Awake
+REM
+Core
+Deep
+11 pm
+12 am
+1 am
+2 am
+3 am
+4 am
+5 am
+6 am
+Deep
+1h 10m
+15%
+REM
+1h 33m
+20%
+Core
+4h 40m
+61%
+Awake
+0h 15m
+3%
+
+Apple Watch finds about half the deep sleep a sleep lab would (around 43 minutes too little), so deep sleep is shown here but counts for little in the score.
+
+What made up the score
+
+Averages over the 30 nights in this period. Each part is scored 0 to 100 and weighted as shown.
+
+Sleep amount35% of score
+61
+
+7h 19m a night on average vs 8h 33m needed. 100 means you slept as much as you need.
+
+Regularity25% of score
+100
+
+Regularity averaged 92 of 100. 100 means the same sleep and wake times every day.
+
+Continuity25% of score
+87
+
+Awake for 0h 23m a night on average, with 2.0 wake-ups of 5 minutes or more. 10 minutes are added because the watch misses short wake-ups.
+
+Timing5% of score
+98
+
+How close each night was to your usual sleep hours
+
+Overnight heart rate5% of score
+62
+
+Lower than your usual scores higher
+
+Stages5% of score
+100
+
+Share of deep and REM sleep against your own typical night
+
+Average time asleep
+7h 29m
+Over 30 nights. The dashed line is your need, 8h 36m.
+Average bedtime
+10:39 pm
+Average wake time 6:20 am
+Sleep debt
+1.3
+hours
+Sleep you still owed on Nov 22. A quarter of it clears each day.
+Later on days off
+0.3
+hours
+How much later the middle of your sleep falls on days off than on work days. Under 1 hour is the target.
+Hours asleep by stage
+
+The line is how much sleep you needed each night.
+
+0.0
+5.0
+10.0
+Oct 24
+Oct 27
+Oct 30
+Nov 3
+Nov 6
+Nov 9
+Nov 12
+Nov 16
+Nov 19
+Nov 22
+Deep
+Core
+REM
+Need
+Sleep score
+
+The shaded band is the likely range, given how far off the watch can be.
+
+0
+50
+100
+Oct 24
+Nov 3
+Nov 12
+Nov 22
+Regularity
+
+Out of 100. It is the chance that you are doing the same thing, sleeping or awake, at the same clock time on two days in a row.
+
+0
+50
+100
+Study median 81
+Oct 24
+Nov 3
+Nov 12
+Nov 22
+
+In a 61,000-person study, regularity predicted mortality better than sleep duration (Windred 2024). That cohort averaged 63 years old.
+
+Bedtime
+
+The clock time you fell asleep each night. Dots close to one level mean a steady bedtime.
+
+9:31 pm
+10:35 pm
+11:38 pm
+Oct 24
+Nov 3
+Nov 12
+Nov 22
+Sleep debt
+
+Hours of sleep you still owe. Each night you sleep less than you need adds to it, and a quarter clears each day.
+
+0.0
+2.0
+4.0
+Oct 24
+Nov 3
+Nov 12
+Nov 22
+Understand your sleep score
+Why sleep matters for your health
+
+Sleep is when your body repairs muscle, files away memory and resets heart rate and blood pressure. Too little of it, or sleep at shifting hours, shows up the next day as a higher resting heart rate, lower HRV, a worse mood and slower reactions.
+
+Over years, short and irregular sleep is linked with higher risk of heart disease, weight gain and early death. In a 61,000-person study, how regular sleep was predicted that risk better than how long it was.
+
+How your sleep score is built
+
+Six parts, each scored 0 to 100, then weighted. Your averages over these 30 nights:
+
+Sleep amount, 35% (61/100). Hours asleep, naps included, against your personal need of 8h 33m. The closer to your need, the higher it goes; it tops out once the need is met.
+Regularity, 25% (100/100). How closely your asleep and awake hours match from one day to the next.
+Continuity, 25% (87/100). Less time awake in the night and fewer long wake-ups score higher.
+Timing, overnight heart rate and stages, 5% each (98/100, 62/100, 100/100).
+
+More deep and REM sleep does raise the score, but only a little. The watch misses about half of true deep sleep, so leaning on it would make the score less trustworthy, not more.
+
+What makes it good
+Sleeping your full need (8h 33m for you). Hard training days and built-up debt raise the need.
+Going to bed and getting up at about the same time, weekends included.
+Sleeping through, with few wake-ups longer than five minutes.
+A heart rate that drops early in the night and stays low.
+What makes it bad
+Short nights. Missed sleep is carried as debt (1.3 h on your latest night) and is repaid slowly.
+Bedtimes that swing by more than an hour, and long weekend lie-ins.
+Alcohol, a heavy meal or hard exercise close to bedtime: they fragment sleep and keep heart rate up.
+A warm or bright room, and caffeine after early afternoon.
+What to do next
+
+Your weakest part in this period is sleep amount at 61/100. Aim to be in bed by a time that allows 8h 33m of sleep, and move bedtime earlier by 15 minutes a night until you get there.
+
+Night by night
+
+Open a night to see everything recorded that day.
+
+Sun, Nov 22
+7h 23m asleep · 10:47 pm – 6:25 am
+78
+Sat, Nov 21
+7h 45m asleep · 11:26 pm – 7:24 am
+87
+Fri, Nov 20
+7h 51m asleep · 10:52 pm – 6:54 am
+84
+Thu, Nov 19
+7h 37m asleep · 10:51 pm – 6:40 am
+87
+Wed, Nov 18
+7h 52m asleep · 10:46 pm – 6:52 am
+88
+Tue, Nov 17
+7h 55m asleep · 10:40 pm – 6:47 am
+89
+Mon, Nov 16
+7h 54m asleep · 10:34 pm – 6:41 am
+88
+Sun, Nov 15
+7h 39m asleep · 10:27 pm – 6:17 am
+79
+Sat, Nov 14
+7h 49m asleep · 10:57 pm – 6:59 am
+86
+Fri, Nov 13
+7h 45m asleep · 10:19 pm – 6:18 am
+82
+Thu, Nov 12
+7h 28m asleep · 10:18 pm – 5:58 am
+82
+Wed, Nov 11
+7h 40m asleep · 10:21 pm – 6:11 am
+82
+Tue, Nov 10
+7h 30m asleep · 10:25 pm – 6:10 am
+80
+Mon, Nov 9
+7h 27m asleep · 10:32 pm – 6:12 am
+80

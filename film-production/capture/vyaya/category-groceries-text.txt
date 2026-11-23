@@ -1,0 +1,201 @@
+Skip to content
+Vyaya
+Add transaction
+Dashboard
+Income
+Logs
+Import
+Settings
+Category
+Everyday
+Fees & Funding
+Settlements
+7 days
+1 month
+3 months
+6 months
+1 year
+All time
+Custom
+
+What you earned and what you spent. Fixed costs excluded.
+
+every transaction ever logged
+
+Back
+
+Everyday · All time
+
+🛒
+Groceries
+
+Category
+
+Spent, all time
+
+−$1,505
+.20
+Entries
+23
+Average
+$65.44
+per entry
+Largest
+$84.20
+Target · Sep 17
+Latest
+Nov 16
+By month
+$242
+Jun
+$256
+Jul
+$278
+Aug
+$256
+Sep
+$279
+Oct
+$194
+Nov
+By merchant
+🛒
+Trader Joe’s
+46.5%
+$699.32
+🛒
+Woodman’s
+28.9%
+$434.67
+🎯
+Target
+24.7%
+$371.21
+23 entries
+November 2026
+−$194.40
+🎯
+Target
+Groceries
+💳 Credit Card
+−$53.85
+🛒
+Woodman’s
+Groceries
+💳 Credit Card
+−$78.40
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$62.15
+October 2026
+−$278.57
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$81.94
+🎯
+Target
+Groceries
+💳 Credit Card
+−$53.68
+🛒
+Woodman’s
+Groceries
+💳 Credit Card
+−$74.20
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$68.75
+September 2026
+−$255.63
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$49.28
+🎯
+Target
+Groceries
+💳 Credit Card
+−$84.20
+🛒
+Woodman’s
+Groceries
+💳 Credit Card
+−$63.75
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$58.40
+August 2026
+−$278.47
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$68.28
+🎯
+Target
+Groceries
+💳 Credit Card
+−$56.25
+🛒
+Woodman’s
+Groceries
+💳 Credit Card
+−$82.60
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$71.34
+July 2026
+−$256.23
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$68.63
+🎯
+Target
+Groceries
+💳 Credit Card
+−$51.87
+🛒
+Woodman’s
+Groceries
+💳 Credit Card
+−$73.25
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$62.48
+June 2026
+−$241.90
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$49.95
+🎯
+Target
+Groceries
+💳 Credit Card
+−$71.36
+🛒
+Woodman’s
+Groceries
+💳 Credit Card
+−$62.47
+🛒
+Trader Joe’s
+Groceries
+💳 Credit Card
+−$58.12

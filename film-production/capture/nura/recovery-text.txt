@@ -1,0 +1,229 @@
+Nura
+Summary
+Health score
+Cardio
+Recovery
+Sleep
+Strain
+Workouts
+Body Age
+Browse
+Method
+Account
+
+Scores are estimates from Apple Watch data, not medical advice.
+
+Recovery
+
+How ready your body is each morning, measured against your own baseline.
+
+D
+W
+M
+3M
+6M
+Y
+All
+Oct 24 – Nov 22, 2026
+Recovery, Oct 24 – Nov 22
+57
+% average
+30 days with a score
+Best
+81%
+Nov 14
+Lowest
+23%
+Oct 25
+Change during this period
+Up 20%
+The latest 15 scored days averaged 67%. The 15 before them averaged 47%.
+Recovery
+Average of 30 nights
+57%
+latest night 32%
+Partly recovered
+
+Your sleep amount was worse than your usual on average in this period.
+
+Latest day in range · Sun, Nov 22
+What moved the score
+
+Each bar is the average over the 30 nights in this period, every night compared with the 28 nights before it. Green to the right is better than usual, red to the left is worse.
+
+HRV (SDNN)24% of score
+49 ms · +1 vs usual
+Sleeping heart rate29% of score
+55 bpm · −0 vs usual
+Sleep against your need29% of score
+92% of need
+Breathing rate12% of score
+14.3 br/min · +0.0 vs usual
+Wrist temperature6% of score
+36.27 °C · +0.01 vs usual
+
+Blood oxygen averaged 97% (your usual is 97%). It is not part of the score, because one watch reading can be off by 4 points.
+
+Recovery over time
+
+30 scored nights · 37% green · 53% yellow · 10% red
+
+0
+50
+100
+Oct 24
+Oct 27
+Oct 30
+Nov 3
+Nov 6
+Nov 9
+Nov 12
+Nov 16
+Nov 19
+Nov 22
+Green 67+
+Yellow 34–66
+Red under 34
+Average recovery
+57
+%
+Over 30 nights in this period
+Average HRV
+49
+ms
+Measured overnight, while asleep
+Average sleeping heart rate
+55.4
+bpm
+Mean heart rate while asleep
+Unusual nights
+0
+Nights when two or more readings were far from your usual
+Overnight HRV
+
+Each dot is one night. The line is the 7-night average and the dashes are your 28-night average.
+
+38
+48
+57
+Oct 24
+Nov 3
+Nov 12
+Nov 22
+
+Worked out from the time between heartbeats during sleep. One night can be off by about 30%, so read the weekly line, not single dots.
+
+Sleeping heart rate
+
+Mean heart rate while asleep, after the first 30 minutes.
+
+51.9
+55.9
+59.9
+Oct 24
+Nov 3
+Nov 12
+Nov 22
+
+Averaged over a night, this is the most accurate reading the watch gives: within about 1.5 bpm.
+
+Breathing rate
+
+Median breaths per minute during sleep.
+
+13.9
+14.2
+14.5
+Oct 24
+Nov 3
+Nov 12
+Nov 22
+Blood oxygen
+
+Median overnight reading.
+
+97.1
+98.5
+100.0
+Oct 24
+Nov 3
+Nov 12
+Nov 22
+Understand your recovery score
+What recovery tells you about your body
+
+Recovery reads how settled your nervous system was overnight. When training, short sleep, alcohol, stress or an oncoming illness has taxed your body, heart rate stays higher and beat-to-beat variation (HRV) drops. When you have absorbed the load, the opposite happens.
+
+Training hard on repeated low-recovery days tends to add fatigue without adding fitness. Matching effort to recovery is how you improve without running yourself down.
+
+How your recovery score is built
+
+Each signal is compared with your own last 28 nights, never with other people:
+
+HRV, 24%. Higher than your usual is better.
+Sleeping heart rate, 29%. Lower than your usual is better.
+Sleep against your need, 29%. Meeting the need is better.
+Breathing rate, 12% and wrist temperature, 6%. Staying near your usual is better; a rise in both often comes before feeling ill.
+
+67 and above is green, 34 to 66 yellow, under 34 red. If two or more signals are far off on the same night, the score is capped at 33 so one good number cannot hide a rough night.
+
+What makes it good
+A full, unbroken night at your regular hours.
+Easy days or rest after hard sessions.
+Staying hydrated and eating enough on training days.
+Aerobic fitness built over months: it lifts HRV and lowers sleeping heart rate.
+What makes it bad
+Alcohol. Even two drinks commonly raises sleeping heart rate and cuts HRV that night.
+Very hard or very late training, and several hard days in a row.
+Short or broken sleep, travel across time zones, mental stress.
+Illness: watch for higher breathing rate and wrist temperature together.
+What this period tells you
+
+Over these 30 nights you averaged 57%: 37% of nights were green and 10% were red. Most nights were in the middle. Keep hard sessions for green mornings, and keep the day after each one easy.
+
+Day by day
+
+Open a day to see the night, the strain and the workouts behind its score.
+
+Sun, Nov 22
+HRV 43 ms · sleeping HR 58 bpm
+32%
+Sat, Nov 21
+HRV 46 ms · sleeping HR 56 bpm
+52%
+Fri, Nov 20
+HRV 47 ms · sleeping HR 56 bpm
+53%
+Thu, Nov 19
+HRV 47 ms · sleeping HR 57 bpm
+52%
+Wed, Nov 18
+HRV 50 ms · sleeping HR 55 bpm
+64%
+Tue, Nov 17
+HRV 51 ms · sleeping HR 54 bpm
+68%
+Mon, Nov 16
+HRV 52 ms · sleeping HR 54 bpm
+73%
+Sun, Nov 15
+HRV 51 ms · sleeping HR 55 bpm
+69%
+Sat, Nov 14
+HRV 54 ms · sleeping HR 53 bpm
+81%
+Fri, Nov 13
+HRV 55 ms · sleeping HR 53 bpm
+79%
+Thu, Nov 12
+HRV 53 ms · sleeping HR 54 bpm
+75%
+Wed, Nov 11
+HRV 55 ms · sleeping HR 53 bpm
+80%
+Tue, Nov 10
+HRV 55 ms · sleeping HR 53 bpm
+79%
+Mon, Nov 9
+HRV 55 ms · sleeping HR 53 bpm
+78%

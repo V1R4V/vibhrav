@@ -1,0 +1,44 @@
+[
+  {
+    "start": 0.45,
+    "end": 2.4553333333333334,
+    "text": "Vyaya keeps your spending in view.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  },
+  {
+    "start": 4.35,
+    "end": 8.766,
+    "text": "See what came in, where it went, and what remains from the money you've tracked.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  },
+  {
+    "start": 10.35,
+    "end": 13.507333333333333,
+    "text": "Open a category to see the purchases behind it.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  },
+  {
+    "start": 15.3,
+    "end": 19.374666666666666,
+    "text": "Add the next purchase, give it a category, and keep the picture current.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  },
+  {
+    "start": 21.4,
+    "end": 25.837333333333333,
+    "text": "Keep everyday spending separate from funding and repayments, in three lanes.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  },
+  {
+    "start": 29.6,
+    "end": 31.520000000000003,
+    "text": "Vyaya. Your money, in view.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  }
+]

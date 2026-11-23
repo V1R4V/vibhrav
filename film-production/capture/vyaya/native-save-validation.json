@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "existingRecordsPreserved": 188,
+  "newRecord": {
+    "date": "2026-11-20",
+    "amount": 525,
+    "direction": "out",
+    "lane": "everyday",
+    "merchant": "Campus café",
+    "categoryId": "food-rest",
+    "paymentMethod": "Debit Card",
+    "note": "Coffee after the studio session",
+    "source": "manual",
+    "id": "tx-mwpn5ug1-r3cb7"
+  },
+  "everyday": {
+    "income": 1143000,
+    "spent": 501070,
+    "net": 641930
+  }
+}

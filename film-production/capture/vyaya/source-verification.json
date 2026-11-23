@@ -1,0 +1,18 @@
+{
+  "commit": "c4f1fc28a338e81575f050ec97fd60dc0289b734",
+  "filesChecked": 122,
+  "changed": [
+    "src/components/LightField.tsx",
+    "src/main.tsx",
+    "src/screens/Dashboard.tsx",
+    "src/screens/Income.tsx",
+    "src/screens/assistant/Preview.tsx"
+  ],
+  "classification": {
+    "src/components/LightField.tsx": "Explicit .ts import extension for local Vite resolution; no visual changes.",
+    "src/screens/Dashboard.tsx": "Explicit .tsx import extension; native UI unchanged.",
+    "src/screens/Income.tsx": "Explicit .tsx import extension; native UI unchanged.",
+    "src/main.tsx": "Optional capture landing/signin routes; normal App route used in every film capture.",
+    "src/screens/assistant/Preview.tsx": "Placeholder personal name changed to Split repayment; assistant is not featured in this film."
+  }
+}

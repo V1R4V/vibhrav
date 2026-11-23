@@ -1,0 +1,725 @@
+{
+  "format": 1,
+  "capture": "Native app UI, fictional coherent records; per-screen routes/state are in capture/{product} manifests.",
+  "compositions": "film-production/remotion/src/Root.tsx",
+  "licensing": "docs/product-films/licenses.md",
+  "sources": {
+    "nura": "878caedee17e0544cc855558b3669374ab7b900e",
+    "studyflow": "47c1e61d1045338e31f043b2d52e2751b2f91d6d",
+    "vyaya": "c4f1fc28a338e81575f050ec97fd60dc0289b734"
+  },
+  "assets": [
+    {
+      "file": "film-production/public/brand/instrumentserif-OFL.txt",
+      "bytes": 4405,
+      "sha256": "129ed7618959716959f2941fdd5b49e0ad6e6c1d78726761786a00253d865521"
+    },
+    {
+      "file": "film-production/public/brand/inter-OFL.txt",
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    {
+      "file": "film-production/public/brand/inter.ttf",
+      "bytes": 876576,
+      "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031"
+    },
+    {
+      "file": "film-production/public/brand/jakarta.ttf",
+      "bytes": 176288,
+      "sha256": "89b3fb38aa0d275d7a731d0d817a4f1622b316b4d7fbdedcf02ee9099ff68bc8"
+    },
+    {
+      "file": "film-production/public/brand/nura-mark.svg",
+      "bytes": 991,
+      "sha256": "7665b67856d94701c7b60efcad7091f0c4a5fcaa0e4b007c6d1b63f5bb9f7a3a"
+    },
+    {
+      "file": "film-production/public/brand/plusjakartasans-OFL.txt",
+      "bytes": 4402,
+      "sha256": "995c7199cab65954f545996326755daee7b63cc6b42b06c13da1f9502ab08a99"
+    },
+    {
+      "file": "film-production/public/brand/serif.ttf",
+      "bytes": 70012,
+      "sha256": "498efd461f6ddfcb7a111bf9a565709d2085d48201d501ead960d93e84ffbb88"
+    },
+    {
+      "file": "film-production/public/brand/studyflow-mark.svg",
+      "bytes": 215,
+      "sha256": "0ba26a4c8b1dd85916227cf0bd065837bb45941990bf5272f35ba8662efc38b9"
+    },
+    {
+      "file": "film-production/public/brand/vyaya-mark.svg",
+      "bytes": 1501,
+      "sha256": "acdec79080a8224e46c0e188954ab67fa40d5421dbc5ee1b26ae3ac70c17a3fd"
+    },
+    {
+      "file": "film-production/public/nura/calendar.png",
+      "bytes": 2466398,
+      "sha256": "4456918ca9e59ad5e02bdf571bf7eccd8f49f9c86d7a11c92ebe7b436e61b6f7"
+    },
+    {
+      "file": "film-production/public/nura/cardio.png",
+      "bytes": 2123257,
+      "sha256": "824c6813036910abebe918ec56e488262d56ff8e70d8c6c2e22231db3d536675"
+    },
+    {
+      "file": "film-production/public/nura/health-day.png",
+      "bytes": 2286430,
+      "sha256": "d1aa582a057d93a94532cd9a51fef4004c6905eed3266829542069745416cc86"
+    },
+    {
+      "file": "film-production/public/nura/health-month.png",
+      "bytes": 2310379,
+      "sha256": "8e812970ff63cee3e6ebc9bf7a7155c7b2af4f69d13ef8562cf1fa51da46e119"
+    },
+    {
+      "file": "film-production/public/nura/health-trend.png",
+      "bytes": 1680272,
+      "sha256": "5ecaf7926e1212839b69e99a7828bc7457c75336f5a925a1bbd49198a6baa65b"
+    },
+    {
+      "file": "film-production/public/nura/historical-summary.png",
+      "bytes": 2071082,
+      "sha256": "2a2161e6b7f9a99f18152acd696c1e7d0c034e7707e8b3c45b753faeeb545c47"
+    },
+    {
+      "file": "film-production/public/nura/historical-top.png",
+      "bytes": 2487454,
+      "sha256": "80523c72cfac17dbbc5e95e4754c84a6b6be9f9e5d32acf6fc51b99640c1ca9a"
+    },
+    {
+      "file": "film-production/public/nura/overview-28.png",
+      "bytes": 2081035,
+      "sha256": "083dcfd27469be6da46d6be42a664ab807e80b84857e0a510caf07246ffff5f5"
+    },
+    {
+      "file": "film-production/public/nura/overview.png",
+      "bytes": 2069759,
+      "sha256": "ed3148e3ed27911a797e1622d0d93c6db3a80c0a300b7cd9e02402bdeb3b5539"
+    },
+    {
+      "file": "film-production/public/nura/recovery.png",
+      "bytes": 2197397,
+      "sha256": "30c622e8fa487aa04e0afaf0e34ac76d65cc72ede0f9b732082fd6a115d4f06e"
+    },
+    {
+      "file": "film-production/public/nura/sleep.png",
+      "bytes": 2218212,
+      "sha256": "99ec1e4e3f4d615457c5d70ed6684acf961a9c9eb1ac7a306f75a84cbf90a100"
+    },
+    {
+      "file": "film-production/public/nura/strain.png",
+      "bytes": 2305298,
+      "sha256": "bd011698eda1c346fd9cfa6a582c16905e7f60becf475c62f45b71409aae6545"
+    },
+    {
+      "file": "film-production/public/nura/summary-top.png",
+      "bytes": 2439038,
+      "sha256": "efc8d47da7a061addaa127a6c1951cb2173ddbd9a7dc622f24ef3b35ed9bfce0"
+    },
+    {
+      "file": "film-production/public/nura/workout-detail.png",
+      "bytes": 2022578,
+      "sha256": "2b6d02a9578f4a765bfa0e3eaafcfaca6c16483580bf59557cd284c23f572858"
+    },
+    {
+      "file": "film-production/public/nura/workout-zones.png",
+      "bytes": 1524776,
+      "sha256": "9eaf3ce22d2c0e32ab4f16d6cb3a45d31223ef26e9f60653e812b1727043eb76"
+    },
+    {
+      "file": "film-production/public/nura/workouts.png",
+      "bytes": 2027366,
+      "sha256": "aeefbd108c56412910d07c7a8ae335f1506c64b3f1711a936327992c4b7e9b48"
+    },
+    {
+      "file": "film-production/public/sounds/LICENSE.txt",
+      "bytes": 574,
+      "sha256": "f7966c773bbed0eca6a9c75081c44a178b38eae112724dbb5fdfbd4192d118a9"
+    },
+    {
+      "file": "film-production/public/sounds/click.ogg",
+      "bytes": 4876,
+      "sha256": "ccfb7fa0cccdd9faec0eb16033c732b1e308d139d80f799161495d58f7adcdb9"
+    },
+    {
+      "file": "film-production/public/studyflow/activity-heatmap.png",
+      "bytes": 2015774,
+      "sha256": "7970e307a621eaf95bbb3aa29d8d76be0310fadc28dcc3fc89f38f40a4773e43"
+    },
+    {
+      "file": "film-production/public/studyflow/dashboard-saved.png",
+      "bytes": 2942970,
+      "sha256": "ed7c3633b53c2e0cfeb251a5bf026d4c7daac6d7420b8e590a48d40341a4a49b"
+    },
+    {
+      "file": "film-production/public/studyflow/dashboard.png",
+      "bytes": 3184528,
+      "sha256": "988894d44761936ed4530daa3a845a4f6faa181bafe34b7fdd650bd3c5ed12e4"
+    },
+    {
+      "file": "film-production/public/studyflow/history-algorithms.png",
+      "bytes": 3293153,
+      "sha256": "d6fd96308d0f733ddde4b81a881b599ff7af791f26081af6a5454602cebf7ca5"
+    },
+    {
+      "file": "film-production/public/studyflow/planner-edited.png",
+      "bytes": 2068158,
+      "sha256": "23c50ae87cea1a0a9e92050c1131244b7349742f5cb595da17d3d88aeb1a4334"
+    },
+    {
+      "file": "film-production/public/studyflow/planner-saved.png",
+      "bytes": 2059246,
+      "sha256": "6f683364930245d777da43a26376eaacd577cedff297aec6fbfc06c89c528cab"
+    },
+    {
+      "file": "film-production/public/studyflow/planner.png",
+      "bytes": 2062178,
+      "sha256": "81eb0bc070d08c4409f8c9e35ae638f0c2f90c3dcbcaa38019e84a75687c6da9"
+    },
+    {
+      "file": "film-production/public/studyflow/session-review.png",
+      "bytes": 1422689,
+      "sha256": "9c0d54e92998e327dee3d8476f6bc23e8c85c115dc6227add614ad12a25fb9cb"
+    },
+    {
+      "file": "film-production/public/studyflow/statistics-weekdays.png",
+      "bytes": 2820536,
+      "sha256": "98c0ecc3a9642ce7673b57ca08a20763e1e91d75fe098bb06405f8a5d7a2096d"
+    },
+    {
+      "file": "film-production/public/studyflow/statistics.png",
+      "bytes": 3319850,
+      "sha256": "cef46a24f050e74748b6c6fdcd58f2df503739a7fec4e62868c273f1a79bb74f"
+    },
+    {
+      "file": "film-production/public/studyflow/timer-paused.png",
+      "bytes": 2678283,
+      "sha256": "5bf9080ec7a5fa5b091a9cd43fe2ef0037677098be8bd863dd4497d161ebce01"
+    },
+    {
+      "file": "film-production/public/studyflow/timer-ready.png",
+      "bytes": 2697057,
+      "sha256": "fc1585f0aa62e567cafe21924f7127cdb36eaacfc7b76e144e007ada0d6fc90e"
+    },
+    {
+      "file": "film-production/public/studyflow/timer-resumed.png",
+      "bytes": 2656013,
+      "sha256": "40993b3e91fb1f48f4ce1f9d241b8a627afcc7f9c9669a54f975c7cc4560b68a"
+    },
+    {
+      "file": "film-production/public/studyflow/timer-started.png",
+      "bytes": 2654591,
+      "sha256": "97d3119e4f423f08c3682725f057769a6eb9b40420d36bea6a625c8f7fc94acc"
+    },
+    {
+      "file": "film-production/public/vyaya/category-groceries.png",
+      "bytes": 544848,
+      "sha256": "7224354156b28f991d56b05cf7d1845c10a2070aed548485b7c741ea2038f9a0"
+    },
+    {
+      "file": "film-production/public/vyaya/category-mix.png",
+      "bytes": 546862,
+      "sha256": "560bd2d10be52f98a1824e402718b6f910322abc7cbe2cd9a09fe82611d0f0f7"
+    },
+    {
+      "file": "film-production/public/vyaya/category-purchases.png",
+      "bytes": 402678,
+      "sha256": "ab7a1d9c15c43bc344358a940581ffc2c2abfbde72f9be9e88e83701da81295b"
+    },
+    {
+      "file": "film-production/public/vyaya/entry-empty.png",
+      "bytes": 481170,
+      "sha256": "23202688b5b253cdcdc4613a4f6dbbb0a12799051b6f3f9d0c3db89c41c95bae"
+    },
+    {
+      "file": "film-production/public/vyaya/entry-filled.png",
+      "bytes": 535665,
+      "sha256": "9ed7e4ce9d187b64f4a77d02ff08372d3e4457b80253fa605dcf7bbe8ef9a011"
+    },
+    {
+      "file": "film-production/public/vyaya/fees-funding.png",
+      "bytes": 611184,
+      "sha256": "ca61d573a8fc981036edb836dcbae669dac1fd7884178a64857f0b8c3e0b5e41"
+    },
+    {
+      "file": "film-production/public/vyaya/inspect-overview.png",
+      "bytes": 729723,
+      "sha256": "9509df3a92d89ee1880240eb872d5ef49d8116fee7ac85ddf56c8a6c7e6f0da7"
+    },
+    {
+      "file": "film-production/public/vyaya/ledger.png",
+      "bytes": 586870,
+      "sha256": "ccb6179c5501e7766d0e9c2d368c6757b4a2885570d09635539ce2400a07bf84"
+    },
+    {
+      "file": "film-production/public/vyaya/overview-saved.png",
+      "bytes": 824468,
+      "sha256": "e1f84584ab0b6caffbba641b2c553afe3e712a79c52ad9e33167c5dcbe4933a3"
+    },
+    {
+      "file": "film-production/public/vyaya/overview.png",
+      "bytes": 729074,
+      "sha256": "cc334ba1db72a23624144366e6601d895585b0b3eb7d79d705f84d49e1e11145"
+    },
+    {
+      "file": "film-production/public/vyaya/settlements.png",
+      "bytes": 666062,
+      "sha256": "a6b9ee1f60928dd12b7218373dca577ed6da8464a8924cc3d53b59cacb1651d7"
+    },
+    {
+      "file": "film-production/public/vyaya/spending-flow.png",
+      "bytes": 867416,
+      "sha256": "a465274307e713422ef529a329a343fd4a79cd3fc19a91d666185f2494589682"
+    },
+    {
+      "file": "film-production/capture/nura/calendar-text.txt",
+      "bytes": 2531,
+      "sha256": "da5216c7636346a5aa173b860500ea8f57b1c0fa1ede162b9868ffd88e58d215"
+    },
+    {
+      "file": "film-production/capture/nura/capture.mjs",
+      "bytes": 4819,
+      "sha256": "9ed34a6833f4a68934a9a42337204130ae826a5972625365738446c5b64a3aed"
+    },
+    {
+      "file": "film-production/capture/nura/captures.json",
+      "bytes": 48570,
+      "sha256": "a36b5fdafec57d7cac48062db8310a35be1cc7ae810ab23051ab73bac590a29b"
+    },
+    {
+      "file": "film-production/capture/nura/cardio-text.txt",
+      "bytes": 4667,
+      "sha256": "b946b0fb81c9952b4c172b5252f5e7408fc647e71c7f0700ae073c36e1525704"
+    },
+    {
+      "file": "film-production/capture/nura/data-validation.json",
+      "bytes": 850,
+      "sha256": "f46b7f827c8a6fc79302bf7e70b7a87415cb80864380fd203a881287f16fe20c"
+    },
+    {
+      "file": "film-production/capture/nura/health-day-text.txt",
+      "bytes": 6638,
+      "sha256": "57e929ea9f287da83dee0fcae40a6e33bac423dab63d56ef8508d615c25b2f39"
+    },
+    {
+      "file": "film-production/capture/nura/health-month-text.txt",
+      "bytes": 6726,
+      "sha256": "f1296a20eacc8b363d6507b6af917dd2bdf296c7489ad7e47877bbf19f9b835c"
+    },
+    {
+      "file": "film-production/capture/nura/health-trend-text.txt",
+      "bytes": 6638,
+      "sha256": "57e929ea9f287da83dee0fcae40a6e33bac423dab63d56ef8508d615c25b2f39"
+    },
+    {
+      "file": "film-production/capture/nura/health-values.json",
+      "bytes": 3036,
+      "sha256": "6432427056a725b676591ebe5db978a9178496e4896f40e5f21a4316c5622fdb"
+    },
+    {
+      "file": "film-production/capture/nura/health-values.mts",
+      "bytes": 839,
+      "sha256": "b25aea6f33593f9502d3e71a831461faad5edce5c1e4efce81606e4f2b5e1c79"
+    },
+    {
+      "file": "film-production/capture/nura/historical-summary-text.txt",
+      "bytes": 2177,
+      "sha256": "d532b0de3cca7c0a33deae643f793c67040e41f5790d677b728b4d7807b0f02f"
+    },
+    {
+      "file": "film-production/capture/nura/historical-top-text.txt",
+      "bytes": 2177,
+      "sha256": "d532b0de3cca7c0a33deae643f793c67040e41f5790d677b728b4d7807b0f02f"
+    },
+    {
+      "file": "film-production/capture/nura/inspect.mjs",
+      "bytes": 650,
+      "sha256": "ad87fa913f39cd4f27672c03318c916059b860d5f56bdb4a25dbd6540019b983"
+    },
+    {
+      "file": "film-production/capture/nura/interaction-targets.json",
+      "bytes": 294,
+      "sha256": "a1c3c2b0ccfbff1b1d44d0778d48659bfecc8c304d58f7903e32c827e7fd88d9"
+    },
+    {
+      "file": "film-production/capture/nura/overview-28-text.txt",
+      "bytes": 2256,
+      "sha256": "dd68df973862b21f5b9870485566d69a5d1ca6d3b1bbff7d6e8b0965f1ddf7df"
+    },
+    {
+      "file": "film-production/capture/nura/overview-text.txt",
+      "bytes": 2202,
+      "sha256": "147374de1fd797cd7bdaff1c830b9628e224632b5ebadd7853e51851a41a81e8"
+    },
+    {
+      "file": "film-production/capture/nura/recovery-text.txt",
+      "bytes": 4994,
+      "sha256": "772836a1c8c18216edf1bad6b6d5c2842e15780b1595d9edeafcf4efbb11236c"
+    },
+    {
+      "file": "film-production/capture/nura/seed.mts",
+      "bytes": 6746,
+      "sha256": "a8163f81b214771acd37a37af31d929c89fa954b6bc0dd0df9a6ceb3a9fc7863"
+    },
+    {
+      "file": "film-production/capture/nura/sleep-text.txt",
+      "bytes": 6035,
+      "sha256": "2e2cdc4b034079566df3825a30c44eeac7462ba11d39c66a6e6ee63960b5fe9d"
+    },
+    {
+      "file": "film-production/capture/nura/strain-text.txt",
+      "bytes": 5123,
+      "sha256": "24357f7eefe74ad85692a35be732feafad10df747aee4b05380483ee94d995fa"
+    },
+    {
+      "file": "film-production/capture/nura/summary-top-text.txt",
+      "bytes": 2202,
+      "sha256": "147374de1fd797cd7bdaff1c830b9628e224632b5ebadd7853e51851a41a81e8"
+    },
+    {
+      "file": "film-production/capture/nura/validate.mjs",
+      "bytes": 3601,
+      "sha256": "9dfcca0623da82d995b3c158e9b5b50371cfe844b4361ea467a4f0af1cac100c"
+    },
+    {
+      "file": "film-production/capture/nura/workout-detail-text.txt",
+      "bytes": 2327,
+      "sha256": "c4d4ee69d4c707c2fcbac8408bfba40e82894b87da708ef69d50170b947ac818"
+    },
+    {
+      "file": "film-production/capture/nura/workout-zones-text.txt",
+      "bytes": 2327,
+      "sha256": "c4d4ee69d4c707c2fcbac8408bfba40e82894b87da708ef69d50170b947ac818"
+    },
+    {
+      "file": "film-production/capture/nura/workouts-text.txt",
+      "bytes": 1935,
+      "sha256": "57e7a659680ac76c7ab55aafadf7f0c4456b79092d36558b360691b8b0e6d105"
+    },
+    {
+      "file": "film-production/capture/studyflow/capture.mjs",
+      "bytes": 7729,
+      "sha256": "d9e52bc0e2809d1dd9f67e379b83e7ff665f478008bda16f83634f008abf26e1"
+    },
+    {
+      "file": "film-production/capture/studyflow/captures.json",
+      "bytes": 46548,
+      "sha256": "1e90c76c3473ad2a445b406f904437158516363c7de258aa2221bbd3952805a2"
+    },
+    {
+      "file": "film-production/capture/studyflow/final-storage.json",
+      "bytes": 16865,
+      "sha256": "dd62054e9bb6b9d8e49388617fff1e62d80ec4513001d50caa0e9c6cbb42c9a7"
+    },
+    {
+      "file": "film-production/capture/studyflow/fixture.json",
+      "bytes": 19985,
+      "sha256": "5495cb3ff60f07a0a57cfd70f4a59b67e2244df46618d79235a815518f3a4999"
+    },
+    {
+      "file": "film-production/capture/studyflow/fonts/google-fonts.css",
+      "bytes": 1752,
+      "sha256": "a332e37286885163999ed629f67a6cfe66c87d25b3008f33f828ecad14ed3fa5"
+    },
+    {
+      "file": "film-production/capture/studyflow/fonts/manifest.json",
+      "bytes": 928,
+      "sha256": "f305eba9129de1b3dcdc9050f5b9a690066325d3e85e26157af1805071160cc0"
+    },
+    {
+      "file": "film-production/capture/studyflow/fonts/plus-jakarta-0.woff2",
+      "bytes": 64848,
+      "sha256": "3a658a0234119d94a50063e72fc8c925e2d4cf64a525854171a32643828b21ec"
+    },
+    {
+      "file": "film-production/capture/studyflow/fonts/plus-jakarta-1.woff2",
+      "bytes": 63372,
+      "sha256": "c96871f21917248bceb319a3d52a452bbec760c6ea8f7b9a0448572274f1d5b8"
+    },
+    {
+      "file": "film-production/capture/studyflow/fonts/plus-jakarta-2.woff2",
+      "bytes": 63336,
+      "sha256": "076831b98043f50f829b6c91db3be4a844641f1c95bccff5c886ed87c661a852"
+    },
+    {
+      "file": "film-production/capture/studyflow/fonts/plus-jakarta-3.woff2",
+      "bytes": 63404,
+      "sha256": "b4fc14ec283d54236fd302cdb92546f98ae0ff061ca5ee23453a02bdf4628791"
+    },
+    {
+      "file": "film-production/capture/studyflow/fonts/plus-jakarta-4.woff2",
+      "bytes": 63412,
+      "sha256": "50357df108c5d297ec4ece76aeddf49561f3794f67af077cfc2c711b7a75b439"
+    },
+    {
+      "file": "film-production/capture/studyflow/fonts/plus-jakarta-5.woff2",
+      "bytes": 63336,
+      "sha256": "32971ad7976930539a11c79ce91ce84092df7f25c5be716b594601842f10a7ae"
+    },
+    {
+      "file": "film-production/capture/studyflow/fonts/plus-jakarta-6.woff2",
+      "bytes": 63372,
+      "sha256": "d9e0ddb4a15a0054ad84b4ded3b4b9f354a0b7df426e21a1363d6933728da9d5"
+    },
+    {
+      "file": "film-production/capture/studyflow/seed.mjs",
+      "bytes": 4911,
+      "sha256": "5702017d58de5bfd77a6615f6952d418fc3612e4e7b5a0498b5688c2d8da0d61"
+    },
+    {
+      "file": "film-production/capture/studyflow/validate.mjs",
+      "bytes": 3472,
+      "sha256": "99384a516b21caa33e5bf8a6f55ef3be6ab3ff28a2084b28c1b8e1a36e8fae5e"
+    },
+    {
+      "file": "film-production/capture/studyflow/validation.json",
+      "bytes": 2149,
+      "sha256": "2905af9fd2ea0a5708e30d541d4b3393e63340eb20c1c29348eec949006188ef"
+    },
+    {
+      "file": "film-production/capture/vyaya/capture-manifest.json",
+      "bytes": 28375,
+      "sha256": "fd3e66903ce02de3685284a1b32681f6046075ee762410142081d5de57d8f2a9"
+    },
+    {
+      "file": "film-production/capture/vyaya/capture-purchases.mjs",
+      "bytes": 3374,
+      "sha256": "b66a25707cef0897ee686dc5f8f528642a39226c7d96048275578ebb22e5af60"
+    },
+    {
+      "file": "film-production/capture/vyaya/capture.log",
+      "bytes": 1347,
+      "sha256": "56fcc77a09b96970111183b334182133ef4e0da6d90a64ce5e7401ce16d352b1"
+    },
+    {
+      "file": "film-production/capture/vyaya/capture.mjs",
+      "bytes": 5345,
+      "sha256": "b84fcf3e92814b0e2571a2d7a5ad57fe5233e26514a98979e25a7bfd1cf4b442"
+    },
+    {
+      "file": "film-production/capture/vyaya/category-groceries-text.txt",
+      "bytes": 1996,
+      "sha256": "0b015a310eb43f6f9c2f05fae3ae4fc0535d16df36d9ec40242f050f9b0f76e1"
+    },
+    {
+      "file": "film-production/capture/vyaya/category-mix-text.txt",
+      "bytes": 1117,
+      "sha256": "83c0c475fb62d423b4f8c53199be3d687672f3066774e9441777ef72227fe171"
+    },
+    {
+      "file": "film-production/capture/vyaya/category-purchases-text.txt",
+      "bytes": 1996,
+      "sha256": "0b015a310eb43f6f9c2f05fae3ae4fc0535d16df36d9ec40242f050f9b0f76e1"
+    },
+    {
+      "file": "film-production/capture/vyaya/data-validation.json",
+      "bytes": 1771,
+      "sha256": "29c1167cde8c9dbac8760a74ae1a1be97e1894d3ee4c95741311e4650a51ba76"
+    },
+    {
+      "file": "film-production/capture/vyaya/demo-ledger.json",
+      "bytes": 53734,
+      "sha256": "f47e8b138fda9a5086db69bfcc550cbc51f48fabf82984f48cdae1258a8d73b1"
+    },
+    {
+      "file": "film-production/capture/vyaya/entry-dom.html",
+      "bytes": 17080,
+      "sha256": "82441844c5bf5732dfc3526237be4e747e4a8c9b4165d1fb05aba8c044fdae12"
+    },
+    {
+      "file": "film-production/capture/vyaya/entry-empty-text.txt",
+      "bytes": 2834,
+      "sha256": "8ea686274693f1c59e481d0fbb416a0466146147e96b97ae500aa93881cfadca"
+    },
+    {
+      "file": "film-production/capture/vyaya/entry-filled-text.txt",
+      "bytes": 2920,
+      "sha256": "7885b7453d39db0d6964cca5f0c383b9af19a4b603b4dff47150aeb504da396d"
+    },
+    {
+      "file": "film-production/capture/vyaya/fees-funding-text.txt",
+      "bytes": 1528,
+      "sha256": "f9fd0eef9d58991a50d0b63fa867d5684ce6ae3fa942d251c04e6df14c1f937b"
+    },
+    {
+      "file": "film-production/capture/vyaya/final-native-ledger.json",
+      "bytes": 54450,
+      "sha256": "c1d9fdefa15bdfdbaa0332ec382532ec22828ecd9a6e1f1002412252d2f6e8a2"
+    },
+    {
+      "file": "film-production/capture/vyaya/finish-entry.mjs",
+      "bytes": 2776,
+      "sha256": "e236d565962589e8008d8b93f6af3bff07e2e1f1457e0dd31a3dc9b480b03cf2"
+    },
+    {
+      "file": "film-production/capture/vyaya/fonts/536fbb244a2b2f88648bfba5656ffa9a7c32e6c1bd0d9f87efc4465191ca2967.css",
+      "bytes": 9336,
+      "sha256": "d209c8f2fbbd2cdbfcdd265510a5a4c215912d131ef6fc8c7224eb0f80712a2b"
+    },
+    {
+      "file": "film-production/capture/vyaya/fonts/a28b7e319024809fa76ecda6cd4836f722b58d4db1b8941e57a72e1a941424fc.woff2",
+      "bytes": 48432,
+      "sha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4"
+    },
+    {
+      "file": "film-production/capture/vyaya/fonts/c6f79bf3a25c9d18bd2c834937eaf326b146cd4e3091e6fe45c730419ebeed6c.woff2",
+      "bytes": 15684,
+      "sha256": "6ee678c33f388dd7ba59700ebea635deb98821baafd817b09891f7927177f702"
+    },
+    {
+      "file": "film-production/capture/vyaya/inspect.mjs",
+      "bytes": 1135,
+      "sha256": "69b31cf47197afe16dc83f10baffdb65642a5ea64f87630e331d5e6c2543b30e"
+    },
+    {
+      "file": "film-production/capture/vyaya/ledger-text.txt",
+      "bytes": 11750,
+      "sha256": "87ca8b942c820e75ae886ecbcf4dcbcfebfc3cee7343305483c1c21a765959b2"
+    },
+    {
+      "file": "film-production/capture/vyaya/make-demo.mjs",
+      "bytes": 7163,
+      "sha256": "d6e7164b0d0a200c7edda0322f1260a20ea1ae9cb6de66a974c3f77fc7594980"
+    },
+    {
+      "file": "film-production/capture/vyaya/native-save-validation.json",
+      "bytes": 452,
+      "sha256": "e3b5b216676492b29961dba8fd0a61ed99f9311a0eeee9f68416fe3b0956ebf8"
+    },
+    {
+      "file": "film-production/capture/vyaya/overview-saved-text.txt",
+      "bytes": 2389,
+      "sha256": "e185ef15c0769d4b132d89047cf6ad18afa5460ba8988e074a413f5745e63211"
+    },
+    {
+      "file": "film-production/capture/vyaya/overview-text.txt",
+      "bytes": 2269,
+      "sha256": "d6d8681688659a7166b4c37d312fc75d306783ff3b94c6a31175dc220b6b5a59"
+    },
+    {
+      "file": "film-production/capture/vyaya/settlements-text.txt",
+      "bytes": 1441,
+      "sha256": "4690a39369437dbb389354e60e56f265a2a26275c0ce76285c067d4e444cee17"
+    },
+    {
+      "file": "film-production/capture/vyaya/source-verification.json",
+      "bytes": 825,
+      "sha256": "4a85ae96fd8eb7788f13710d54f4dcaf9ff2a2e44604a31b22c91de7e01cc451"
+    },
+    {
+      "file": "film-production/capture/vyaya/spending-flow-text.txt",
+      "bytes": 1048,
+      "sha256": "eb5a6d05a28e164fa28f981b6f433ec74e9a6092f520651dd63b741492758107"
+    }
+  ],
+  "exports": [
+    {
+      "file": "film-production/deliverables/nura/master.mp4",
+      "bytes": 5124296,
+      "sha256": "e166490e33642bff4a40c9fdc7da934cdb7850a182d6a3a498eadda22c4a5570"
+    },
+    {
+      "file": "film-production/deliverables/nura/captions.vtt",
+      "bytes": 811,
+      "sha256": "af6d5f518449461dbe34fdaa5e79f67e5473c3201ab4ca8af21e58b08d807042"
+    },
+    {
+      "file": "film-production/deliverables/nura/script.txt",
+      "bytes": 547,
+      "sha256": "9959d124a9ff70b9475a2a33f7db855a4b27c2a6a0ac8e129d9396b7e8b6f685"
+    },
+    {
+      "file": "film-production/deliverables/nura/poster.png",
+      "bytes": 335204,
+      "sha256": "9bf73683fa77c5408bfa58f15403b0048f77c6c34e1cb1878ac3f01dea4d36e7"
+    },
+    {
+      "file": "film-production/deliverables/studyflow/master.mp4",
+      "bytes": 4019179,
+      "sha256": "0852fb93048966810ed667fa2a4fac404e8af5a7d3ca7aee08bab0a9d3dfdbc6"
+    },
+    {
+      "file": "film-production/deliverables/studyflow/captions.vtt",
+      "bytes": 680,
+      "sha256": "4645ca9cd079d771cac729a0df2518b5ad361dac75cb15a9a602e218ec9b8255"
+    },
+    {
+      "file": "film-production/deliverables/studyflow/script.txt",
+      "bytes": 448,
+      "sha256": "9dd65cf0392a128b33eb28812bb0707de84339f9de66090887374a2cb16dbf7d"
+    },
+    {
+      "file": "film-production/deliverables/studyflow/poster.png",
+      "bytes": 383784,
+      "sha256": "d6943443ce24c855555d14c25eee34267b0f2eb8646c006cc3fe2fdd6b4da4da"
+    },
+    {
+      "file": "film-production/deliverables/vyaya/master.mp4",
+      "bytes": 2857018,
+      "sha256": "0faf36733144232949ba6e9462a02f24ef04bd5df6b8aca7f77bd9f8b65e7686"
+    },
+    {
+      "file": "film-production/deliverables/vyaya/captions.vtt",
+      "bytes": 547,
+      "sha256": "fdd407c3ddf82b10844dce12a00a2eae7f8ff734bc9e914c955604c9e37f664e"
+    },
+    {
+      "file": "film-production/deliverables/vyaya/script.txt",
+      "bytes": 347,
+      "sha256": "dd8a7b8bcdf3e4372d854e662686867b4d8b3bcae144fb345c9557fc5f33e1ea"
+    },
+    {
+      "file": "film-production/deliverables/vyaya/poster.png",
+      "bytes": 261966,
+      "sha256": "54016902d8f61152e07421ec06cc9e5497527111a1e498ade46713846dac17cd"
+    },
+    {
+      "file": "public/cinematic/films/nura-46-v3.mp4",
+      "bytes": 3109604,
+      "sha256": "8e09ee4d997fc9324c84454f288df28a0c6babe81e07ea4106c5ed258b45d518"
+    },
+    {
+      "file": "public/cinematic/films/nura-v3-poster.webp",
+      "bytes": 78434,
+      "sha256": "3fd989a52e74d64566fb519c624fb377014204ae9c323c993588bec277582168"
+    },
+    {
+      "file": "public/cinematic/films/nura-v3.vtt",
+      "bytes": 811,
+      "sha256": "cc37748ceadad57868ae3879adaeab96df46a3255d70ddd76b7fa8650d2ecc86"
+    },
+    {
+      "file": "public/cinematic/films/studyflow-44-v3.mp4",
+      "bytes": 2416824,
+      "sha256": "20284a730fe3c4856fd9de31ce58ffb7b2879ee9b6c6b769c03ae0711d488f07"
+    },
+    {
+      "file": "public/cinematic/films/studyflow-v3-poster.webp",
+      "bytes": 62740,
+      "sha256": "f47f3f1adc6a2d3b25e9718d629600957741f22e84ba1e1ba1935c4742227e87"
+    },
+    {
+      "file": "public/cinematic/films/studyflow-v3.vtt",
+      "bytes": 680,
+      "sha256": "7f9252862f6a2da6b181a51b7360723792ae0d2a644b06d74d983b3742c2d6f0"
+    },
+    {
+      "file": "public/cinematic/films/vyaya-34-v3.mp4",
+      "bytes": 1733634,
+      "sha256": "91e67e464020f2bef81d4647ac7d964229fdbd4044813fa474454c97c2d59002"
+    },
+    {
+      "file": "public/cinematic/films/vyaya-v3-poster.webp",
+      "bytes": 53172,
+      "sha256": "bd7b7c81f7d70e7411de5d2376148cf033405d8f1f8f4371b60232d73b7c74e1"
+    },
+    {
+      "file": "public/cinematic/films/vyaya-v3.vtt",
+      "bytes": 547,
+      "sha256": "4ed0d132000357cda9cc16971636024bd1753018691a183cc2fabfd022c707a1"
+    }
+  ]
+}

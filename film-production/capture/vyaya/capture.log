@@ -1,0 +1,80 @@
+overview /dashboard { x: 240, y: 170.875, width: 1200, height: 3281.84375 }
+spending-flow /chart/flow { x: 240, y: 170.875, width: 1200, height: 1506 }
+category-mix /chart/categories { x: 240, y: 170.875, width: 1200, height: 1580 }
+category-groceries /item/category/groceries { x: 240, y: 170.875, width: 1200, height: 2481 }
+ledger /logs { x: 240, y: 170.875, width: 1200, height: 15117 }
+fees-funding /dashboard { x: 240, y: 170.875, width: 1200, height: 2413 }
+settlements /dashboard { x: 240, y: 170.875, width: 1200, height: 2315 }
+entry-empty /add { x: 440, y: 70, width: 560, height: 860 }
+inputcontrols [
+  { placeholder: '', label: null, type: 'text' },
+  { placeholder: 'Merchant or person', label: null, type: 'text' },
+  { placeholder: '', label: null, type: 'date' }
+]
+New transaction
+Spent
+Earned
+Amount, spent
+−
+$
+0
+
+Lane
+Everyday
+Fees & Funding
+Settlements
+Frequent in Everyday
+☕️
+Campus café
+💼
+Salary
+🍜
+Noodles & Co
+🛒
+Trader Joe’s
+🛵
+DoorDash
+🚗
+Uber
+🎬
+Cinema
+🚌
+Metro
+🧾
+Merchant or person
+Category
+💼
+Salary
+🚗
+Transport
+🎟️
+Entertainment
+🍽️
+Dining
+🛒
+Groceries
+🔁
+Subscriptions
+More
+category options
+Paid with
+🏦
+Bank Transfer
+💳
+Credit Card
+💳
+Debit Card
+🔁
+Zelle
+💳
+Chase Freedom
+💵
+Cash
+More
+paid with options
+Date
+Today
+Yesterday
+Pick a date
+Note
+Save transaction

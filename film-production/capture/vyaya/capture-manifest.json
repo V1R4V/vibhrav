@@ -1,0 +1,1296 @@
+{
+  "product": "Vyaya",
+  "captureDate": "2026-11-20",
+  "fictional": true,
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "dpr": 2,
+  "pixels": {
+    "width": 2880,
+    "height": 2000
+  },
+  "sourceApp": "/tmp/vyaya-brag-v2-capture-20261122",
+  "dataset": "capture/vyaya/demo-ledger.json",
+  "dateFrozen": "2026-11-20T18:00:00-06:00",
+  "shots": [
+    {
+      "file": "vyaya/overview.png",
+      "route": "/dashboard",
+      "purpose": "Earned vs spent and monthly net, only Everyday; all-time June–November, current month explicitly partial.",
+      "state": "before-entry",
+      "focalCSS": {
+        "x": 240,
+        "y": 170.875,
+        "width": 1200,
+        "height": 3281.84375
+      },
+      "visibleElements": [
+        {
+          "tag": "svg",
+          "label": "Vyaya",
+          "x": 24,
+          "y": 24,
+          "width": 26,
+          "height": 26
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 53.4375,
+          "y": 85,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 149,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 193,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 237,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 281,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 955,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "H1",
+          "label": "Dashboard",
+          "x": 272,
+          "y": 30,
+          "width": 131.984375,
+          "height": 32
+        },
+        {
+          "tag": "H2",
+          "label": "This period",
+          "x": 1063.65625,
+          "y": 583.875,
+          "width": 90.671875,
+          "height": 24
+        },
+        {
+          "tag": "H2",
+          "label": "Where the money goes",
+          "x": 293,
+          "y": 583.875,
+          "width": 186.53125,
+          "height": 24
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 983.65625,
+          "y": 587.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "Salary$11,430.00Groceries$1,505.20Shopping$711.70Dining$641.20Bills$480.00Delive",
+          "x": 293,
+          "y": 653.875,
+          "width": 708.65625,
+          "height": 348
+        }
+      ],
+      "sha256": "cc334ba1db72a23624144366e6601d895585b0b3eb7d79d705f84d49e1e11145"
+    },
+    {
+      "file": "vyaya/spending-flow.png",
+      "route": "/chart/flow",
+      "purpose": "Salary flows into exact spending categories and not-spent balance; native chart view.",
+      "state": "before-entry",
+      "focalCSS": {
+        "x": 240,
+        "y": 170.875,
+        "width": 1200,
+        "height": 1506
+      },
+      "visibleElements": [
+        {
+          "tag": "svg",
+          "label": "Vyaya",
+          "x": 24,
+          "y": 24,
+          "width": 26,
+          "height": 26
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 53.4375,
+          "y": 85,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 149,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 193,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 237,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 281,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 955,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "H1",
+          "label": "Where the money goes",
+          "x": 272,
+          "y": 30,
+          "width": 280.09375,
+          "height": 32
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 272,
+          "y": 207.875,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "H2",
+          "label": "Where the money goes",
+          "x": 297,
+          "y": 473.875,
+          "width": 186.53125,
+          "height": 24
+        },
+        {
+          "tag": "svg",
+          "label": "Salary$11,430.00Groceries$1,505.20Shopping$711.70Dining$641.20Bills$480.00Delive",
+          "x": 297,
+          "y": 543.875,
+          "width": 1086,
+          "height": 384
+        },
+        {
+          "tag": "H2",
+          "label": "Breakdown",
+          "x": 297,
+          "y": 993.875,
+          "width": 90.421875,
+          "height": 24
+        }
+      ],
+      "sha256": "a465274307e713422ef529a329a343fd4a79cd3fc19a91d666185f2494589682"
+    },
+    {
+      "file": "vyaya/category-mix.png",
+      "route": "/chart/categories",
+      "purpose": "Native category pie paired with ranked list.",
+      "state": "before-entry",
+      "focalCSS": {
+        "x": 240,
+        "y": 170.875,
+        "width": 1200,
+        "height": 1580
+      },
+      "visibleElements": [
+        {
+          "tag": "svg",
+          "label": "Vyaya",
+          "x": 24,
+          "y": 24,
+          "width": 26,
+          "height": 26
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 53.4375,
+          "y": 85,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 149,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 193,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 237,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 281,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 955,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "H1",
+          "label": "Category mix",
+          "x": 272,
+          "y": 30,
+          "width": 161.625,
+          "height": 32
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 272,
+          "y": 207.875,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "H2",
+          "label": "Category mix",
+          "x": 297,
+          "y": 475.875,
+          "width": 107.71875,
+          "height": 24
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1256.25,
+          "y": 479.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "Spent",
+          "x": 297,
+          "y": 517.875,
+          "width": 200,
+          "height": 200
+        }
+      ],
+      "sha256": "560bd2d10be52f98a1824e402718b6f910322abc7cbe2cd9a09fe82611d0f0f7"
+    },
+    {
+      "file": "vyaya/category-groceries.png",
+      "route": "/item/category/groceries",
+      "purpose": "Native category drilldown to underlying merchants and logged transactions.",
+      "state": "before-entry",
+      "focalCSS": {
+        "x": 240,
+        "y": 170.875,
+        "width": 1200,
+        "height": 2481
+      },
+      "visibleElements": [
+        {
+          "tag": "svg",
+          "label": "Vyaya",
+          "x": 24,
+          "y": 24,
+          "width": 26,
+          "height": 26
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 53.4375,
+          "y": 85,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 149,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 193,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 237,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 281,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 955,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "H1",
+          "label": "Category",
+          "x": 272,
+          "y": 30,
+          "width": 111.9375,
+          "height": 32
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 272,
+          "y": 207.875,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "H2",
+          "label": "Groceries",
+          "x": 361,
+          "y": 317.875,
+          "width": 91.03125,
+          "height": 26
+        },
+        {
+          "tag": "H2",
+          "label": "By month",
+          "x": 293,
+          "y": 539.875,
+          "width": 76.65625,
+          "height": 24
+        },
+        {
+          "tag": "H2",
+          "label": "By merchant",
+          "x": 967.328125,
+          "y": 539.875,
+          "width": 101.765625,
+          "height": 24
+        },
+        {
+          "tag": "H2",
+          "label": "23 entries",
+          "x": 293,
+          "y": 823.875,
+          "width": 81.703125,
+          "height": 24
+        },
+        {
+          "tag": "H3",
+          "label": "November 2026−$194.40",
+          "x": 273,
+          "y": 871.875,
+          "width": 1134,
+          "height": 30
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1367,
+          "y": 926.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1367,
+          "y": 991.875,
+          "width": 16,
+          "height": 16
+        }
+      ],
+      "sha256": "7224354156b28f991d56b05cf7d1845c10a2070aed548485b7c741ea2038f9a0"
+    },
+    {
+      "file": "vyaya/ledger.png",
+      "route": "/logs",
+      "purpose": "Actual transaction ledger, dates/categories/payments.",
+      "state": "before-entry",
+      "focalCSS": {
+        "x": 240,
+        "y": 170.875,
+        "width": 1200,
+        "height": 15117
+      },
+      "visibleElements": [
+        {
+          "tag": "svg",
+          "label": "Vyaya",
+          "x": 24,
+          "y": 24,
+          "width": 26,
+          "height": 26
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 53.4375,
+          "y": 85,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 149,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 193,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 237,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 281,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 955,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "H1",
+          "label": "Logs",
+          "x": 272,
+          "y": 30,
+          "width": 58.796875,
+          "height": 32
+        },
+        {
+          "tag": "H2",
+          "label": "Everyday· All time",
+          "x": 293,
+          "y": 211.875,
+          "width": 774,
+          "height": 20
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 286,
+          "y": 342.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 834.609375,
+          "y": 342.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "H3",
+          "label": "Thu, Nov 191 row",
+          "x": 273,
+          "y": 426.875,
+          "width": 814,
+          "height": 32
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1055,
+          "y": 482.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "H3",
+          "label": "Wed, Nov 182 rows",
+          "x": 273,
+          "y": 523.875,
+          "width": 814,
+          "height": 32
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1055,
+          "y": 579.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1055,
+          "y": 644.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "H3",
+          "label": "Tue, Nov 171 row",
+          "x": 273,
+          "y": 685.875,
+          "width": 814,
+          "height": 32
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1055,
+          "y": 741.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "H3",
+          "label": "Mon, Nov 162 rows",
+          "x": 273,
+          "y": 782.875,
+          "width": 814,
+          "height": 32
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1055,
+          "y": 838.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1055,
+          "y": 903.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "H3",
+          "label": "Sun, Nov 151 row",
+          "x": 273,
+          "y": 944.875,
+          "width": 814,
+          "height": 32
+        },
+        {
+          "tag": "H2",
+          "label": "Summary",
+          "x": 1129,
+          "y": 215.875,
+          "width": 77.4375,
+          "height": 24
+        }
+      ],
+      "sha256": "ccb6179c5501e7766d0e9c2d368c6757b4a2885570d09635539ce2400a07bf84"
+    },
+    {
+      "file": "vyaya/fees-funding.png",
+      "route": "/dashboard",
+      "purpose": "Second lane isolates education funding and tuition/rent; $18,500 in/out, $0 gap.",
+      "state": "before-entry",
+      "focalCSS": {
+        "x": 240,
+        "y": 170.875,
+        "width": 1200,
+        "height": 2413
+      },
+      "visibleElements": [
+        {
+          "tag": "svg",
+          "label": "Vyaya",
+          "x": 24,
+          "y": 24,
+          "width": 26,
+          "height": 26
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 53.4375,
+          "y": 85,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 149,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 193,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 237,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 281,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 955,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "H1",
+          "label": "Dashboard",
+          "x": 272,
+          "y": 30,
+          "width": 131.984375,
+          "height": 32
+        },
+        {
+          "tag": "H2",
+          "label": "Closed loop",
+          "x": 293,
+          "y": 523.875,
+          "width": 95.40625,
+          "height": 24
+        },
+        {
+          "tag": "H2",
+          "label": "This period",
+          "x": 1063.65625,
+          "y": 695.875,
+          "width": 90.671875,
+          "height": 24
+        },
+        {
+          "tag": "H2",
+          "label": "Where the money goes",
+          "x": 293,
+          "y": 695.875,
+          "width": 186.53125,
+          "height": 24
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 983.65625,
+          "y": 699.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "Education fund$18,500.00Tuition & fees$12,800.00Housing & rent$5,700.00",
+          "x": 293,
+          "y": 765.875,
+          "width": 708.65625,
+          "height": 240
+        }
+      ],
+      "sha256": "ca61d573a8fc981036edb836dcbae669dac1fd7884178a64857f0b8c3e0b5e41"
+    },
+    {
+      "file": "vyaya/settlements.png",
+      "route": "/dashboard",
+      "purpose": "Third lane records repayments/transfers, explicitly excluded from earned/spent.",
+      "state": "before-entry",
+      "focalCSS": {
+        "x": 240,
+        "y": 170.875,
+        "width": 1200,
+        "height": 2315
+      },
+      "visibleElements": [
+        {
+          "tag": "svg",
+          "label": "Vyaya",
+          "x": 24,
+          "y": 24,
+          "width": 26,
+          "height": 26
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 53.4375,
+          "y": 85,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 149,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 193,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 237,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 281,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 955,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "H1",
+          "label": "Dashboard",
+          "x": 272,
+          "y": 30,
+          "width": 131.984375,
+          "height": 32
+        },
+        {
+          "tag": "H2",
+          "label": "This period",
+          "x": 1063.65625,
+          "y": 639.875,
+          "width": 90.671875,
+          "height": 24
+        },
+        {
+          "tag": "H2",
+          "label": "Where the money goes",
+          "x": 293,
+          "y": 639.875,
+          "width": 186.53125,
+          "height": 24
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 983.65625,
+          "y": 643.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "Shared meal repayment$114.45More out than in$485.55Account transfer$600.00",
+          "x": 293,
+          "y": 709.875,
+          "width": 708.65625,
+          "height": 240
+        }
+      ],
+      "sha256": "a6b9ee1f60928dd12b7218373dca577ed6da8464a8924cc3d53b59cacb1651d7"
+    },
+    {
+      "file": "vyaya/entry-empty.png",
+      "route": "/add",
+      "purpose": "Real native transaction sheet opened via Add transaction.",
+      "state": "before-entry",
+      "focalCSS": {
+        "x": 440,
+        "y": 70,
+        "width": 560,
+        "height": 860
+      },
+      "visibleElements": [
+        {
+          "tag": "svg",
+          "label": "Vyaya",
+          "x": 24,
+          "y": 24,
+          "width": 26,
+          "height": 26
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 53.4375,
+          "y": 85,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 149,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 193,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 237,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 281,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 955,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "H1",
+          "label": "Dashboard",
+          "x": 272,
+          "y": 30,
+          "width": 131.984375,
+          "height": 32
+        },
+        {
+          "tag": "H2",
+          "label": "This period",
+          "x": 1063.65625,
+          "y": 583.875,
+          "width": 90.671875,
+          "height": 24
+        },
+        {
+          "tag": "H2",
+          "label": "Where the money goes",
+          "x": 293,
+          "y": 583.875,
+          "width": 186.53125,
+          "height": 24
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 983.65625,
+          "y": 587.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "Salary$11,430.00Groceries$1,505.20Shopping$711.70Dining$641.20Bills$480.00Delive",
+          "x": 293,
+          "y": 653.875,
+          "width": 708.65625,
+          "height": 348
+        },
+        {
+          "tag": "DIV",
+          "label": "New transactionSpentEarnedAmount, spent−$0LaneEverydayFees & FundingSettlementsF",
+          "x": 440,
+          "y": 70,
+          "width": 560,
+          "height": 860
+        },
+        {
+          "tag": "H2",
+          "label": "New transaction",
+          "x": 465,
+          "y": 99,
+          "width": 462,
+          "height": 24
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 951,
+          "y": 101,
+          "width": 20,
+          "height": 20
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 802.625,
+          "y": 654,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 883.421875,
+          "y": 792,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 662.6875,
+          "y": 885.75,
+          "width": 16,
+          "height": 16
+        }
+      ],
+      "sha256": "23202688b5b253cdcdc4613a4f6dbbb0a12799051b6f3f9d0c3db89c41c95bae"
+    },
+    {
+      "file": "vyaya/entry-filled.png",
+      "route": "/add",
+      "purpose": "Native $5.25 Dining purchase with fictional merchant, payment and note.",
+      "state": "filled-before-native-save",
+      "sha256": "8d0999daf03add9f8ff29c6450941fa1e03bda3311704487224afab87663e78e"
+    },
+    {
+      "file": "vyaya/entry-filled.png",
+      "route": "/add",
+      "purpose": "Native $5.25 Dining purchase with fictional merchant, payment and note.",
+      "state": "filled-before-native-save",
+      "sha256": "9ed7e4ce9d187b64f4a77d02ff08372d3e4457b80253fa605dcf7bbe8ef9a011"
+    },
+    {
+      "file": "vyaya/overview-saved.png",
+      "route": "/dashboard",
+      "purpose": "Actual saved purchase adds $5.25 to spend and subtracts $5.25 from tracked net.",
+      "state": "after-native-save",
+      "sha256": "e1f84584ab0b6caffbba641b2c553afe3e712a79c52ad9e33167c5dcbe4933a3"
+    },
+    {
+      "file": "vyaya/category-purchases.png",
+      "route": "/item/category/groceries",
+      "purpose": "Underlying native grocery purchase rows after scrolling the category detail.",
+      "state": "before-entry",
+      "focalCSS": {
+        "x": 240,
+        "y": -479.125,
+        "width": 1200,
+        "height": 2481
+      },
+      "visibleElements": [
+        {
+          "tag": "svg",
+          "label": "Vyaya",
+          "x": 24,
+          "y": 24,
+          "width": 26,
+          "height": 26
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 53.4375,
+          "y": 85,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 149,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 193,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 237,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 281,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 24,
+          "y": 955,
+          "width": 18,
+          "height": 18
+        },
+        {
+          "tag": "H1",
+          "label": "Category",
+          "x": 272,
+          "y": 30,
+          "width": 111.9375,
+          "height": 32
+        },
+        {
+          "tag": "H2",
+          "label": "23 entries",
+          "x": 293,
+          "y": 173.875,
+          "width": 81.703125,
+          "height": 24
+        },
+        {
+          "tag": "H3",
+          "label": "November 2026−$194.40",
+          "x": 273,
+          "y": 221.875,
+          "width": 1134,
+          "height": 30
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1367,
+          "y": 276.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1367,
+          "y": 341.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1367,
+          "y": 406.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "H3",
+          "label": "October 2026−$278.57",
+          "x": 273,
+          "y": 454.875,
+          "width": 1134,
+          "height": 30
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1367,
+          "y": 509.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1367,
+          "y": 574.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1367,
+          "y": 639.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1367,
+          "y": 704.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "H3",
+          "label": "September 2026−$255.63",
+          "x": 273,
+          "y": 752.875,
+          "width": 1134,
+          "height": 30
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1367,
+          "y": 807.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1367,
+          "y": 872.875,
+          "width": 16,
+          "height": 16
+        },
+        {
+          "tag": "svg",
+          "label": "",
+          "x": 1367,
+          "y": 937.875,
+          "width": 16,
+          "height": 16
+        }
+      ],
+      "sha256": "ab7a1d9c15c43bc344358a940581ffc2c2abfbde72f9be9e88e83701da81295b"
+    }
+  ],
+  "errors": []
+}

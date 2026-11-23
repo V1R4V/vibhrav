@@ -1,0 +1,160 @@
+Skip to content
+Vyaya
+Add transaction
+Dashboard
+Income
+Logs
+Import
+Settings
+Dashboard
+Everyday
+Fees & Funding
+Settlements
+7 days
+1 month
+3 months
+6 months
+1 year
+All time
+Custom
+
+Money in for fees, money out for fees. Not income, not spending.
+
+every transaction ever logged
+
+Fees & Funding balance
+All time
+On this device
+$0
+.00
+In
++$18,500.00
+Out
+−$18,500.00
+Allocated
+100%
+Closed loop
+100%
+In for fees
+$18,500.00
+Gap
+$0.00
+Out for fees
+−$18,500.00
+This period
+All time
+Rows
+14
+Average row
+$2,642.86
+Largest row
+$12,800.00
+Education fund
+Busiest month
+Aug 26
+$27,500.00
+Recent
+See all
+🏠
+Housing office
+Housing & rent
+−$950.00
+🧑
+Education fund
+Education funding
++$950.00
+🏠
+Housing office
+Housing & rent
+−$950.00
+🧑
+Education fund
+Education funding
++$950.00
+Where the money goes
+in for fees, out for fees
+In
+Out
+Education fund
+$18,500.00
+Tuition & fees
+$12,800.00
+Housing & rent
+$5,700.00
+Out vs In
+by month
+In
+Out
+$0
+$10.0k
+$20.0k
+Jun
+Jul
+Aug
+Sep
+Oct
+Nov
+Breakdown
+Category mix
+share of out
+Out
+$18,500.00
+🎓
+Tuition & fees
+69.2%
+$12,800.00
+🏠
+Housing & rent
+30.8%
+$5,700.00
+Top recipients
+by total
+🎓
+University tuition
+$12,800.00
+🏠
+Housing office
+$5,700.00
+Who sent it
+1 source
+🧑
+Education fund
+100.0%
+$18,500.00
+When you spend
+by day of week
+$950
+Sun
+$950
+Mon
+$950
+Tue
+$950
+Wed
+$13.8k
+Thu
+$950
+Fri
+$0
+Sat
+Gap by month
+in minus out
+$0
+Jun
+Jul
+Aug
+Sep
+Oct
+Nov
+What it paid for
+2 obligations
+🎓
+Tuition & fees
+69.2%
+$12,800.00
+🏠
+Housing & rent
+30.8%
+$5,700.00
+More analysis
+Monthly breakdown

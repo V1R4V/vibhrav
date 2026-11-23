@@ -1,0 +1,38 @@
+import {chromium} from 'playwright';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import path from 'node:path';
+import {fixture} from './seed.mjs';
+const root=path.dirname(new URL(import.meta.url).pathname);
+const out=path.resolve(root,'../../public/studyflow');await mkdir(out,{recursive:true});
+const origin=process.env.STUDYFLOW_CAPTURE_ORIGIN||'http://127.0.0.1:3259';
+const old=path.join(root,'fonts');
+const fontManifest=JSON.parse(await readFile(path.join(old,'manifest.json'),'utf8'));
+const fontCSS=await readFile(path.join(old,'google-fonts.css'),'utf8');
+const browser=await chromium.launch({headless:true});
+const context=await browser.newContext({viewport:{width:1440,height:1000},deviceScaleFactor:2,colorScheme:'dark',reducedMotion:'reduce',timezoneId:fixture.timezone,locale:'en-US'});
+await context.route('**/*',async route=>{const url=route.request().url();if(url.startsWith(origin+'/'))return route.continue();if(url.startsWith('https://fonts.googleapis.com/css2?'))return route.fulfill({contentType:'text/css',body:fontCSS});if(fontManifest[url])return route.fulfill({contentType:'font/woff2',body:await readFile(path.join(old,fontManifest[url]))});return route.abort();});
+await context.addInitScript(f=>{if(localStorage.getItem('film-rebuild-fixture'))return;localStorage.clear();for(const [key,value] of Object.entries({'studyflow-subjects':f.subjects,'studyflow-sessions':f.sessions,'studyflow-plan-entries':f.planEntries}))localStorage.setItem(key,JSON.stringify(value));localStorage.setItem('studyflow-theme','dark');localStorage.setItem('studyflow-time-zone',f.timezone);localStorage.setItem('film-rebuild-fixture','1');},fixture);
+const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));page.setDefaultTimeout(12000);await page.clock.setFixedTime(new Date(fixture.fixedTime));
+const shots=[];
+async function ready(){await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(1100);}
+async function go(route){await page.goto(origin+route,{waitUntil:'networkidle'});await ready();}
+async function shot(name,purpose,selectors=[]){if(name.startsWith('timer-'))await page.evaluate(()=>window.scrollTo(0,240));if(name==='dashboard-saved')await page.evaluate(()=>window.scrollTo(0,0));await ready();await page.screenshot({path:path.join(out,name+'.png')});const focal={};for(const [key,selector]of selectors){const e=page.locator(selector).first();if(await e.count())focal[key]=await e.boundingBox();}if(name.startsWith('timer-')){for(const label of ['Start Session','Pause','Resume Session']){const button=page.getByRole('button',{name:label,exact:true});if(await button.count())focal[label]=await button.boundingBox();}}if(name==='statistics')focal.distribution=await page.getByText('Time Distribution',{exact:true}).locator('xpath=ancestor::div[contains(@class,"row")][1]').boundingBox();shots.push({name,file:`studyflow/${name}.png`,sourceRoute:page.url().replace(origin,''),purpose,viewport:{width:1440,height:1000},dpr:2,scrollY:await page.evaluate(()=>window.scrollY),focal,fonts:await page.evaluate(()=>({jakarta:document.fonts.check('16px "Plus Jakarta Sans"'),status:document.fonts.status})),visibleText:await page.locator('main').count()?await page.locator('main').innerText():await page.locator('body').innerText()});console.log('captured',name);}
+try{
+await go('/app');await shot('dashboard','Unified dashboard before the afternoon Algorithms session.',[['timer','.sf-card-timer'],['weekly','.sf-weekly-trend']]);
+await go('/app/command');await shot('planner','Per-date plans and actual logged minutes for Nov 15–21.',[['planner','.sf-plan-grid']]);
+await page.getByLabel('Algorithms planned hours on Sat, 2026-11-21',{exact:true}).fill('1.5');await page.keyboard.press('Enter');await shot('planner-edited','Actual edit: Saturday Algorithms plan changes from 1h to 1.5h. Weekly goal remains 6h. This is planning, not completed study.',[['planner','.sf-plan-grid']]);
+// Restore base plan so every later shot uses the same dataset.
+await page.getByLabel('Algorithms planned hours on Sat, 2026-11-21',{exact:true}).fill('1');await page.keyboard.press('Enter');
+await go('/app');await page.locator('#timer-subject').selectOption('1');await page.locator('label[for="timer-mode-custom"]').click();await page.getByRole('spinbutton',{name:'Minutes',exact:true}).fill('45');await shot('timer-ready','Choose Algorithms and a 45-minute custom focus block.',[['timer','.sf-card-timer']]);
+await page.getByRole('button',{name:'Start Session',exact:true}).click();await shot('timer-started','Native timer running from 45:00, no staged DOM changes.',[['timer','.sf-card-timer']]);
+await page.clock.setFixedTime(new Date(new Date(fixture.fixedTime).getTime()+720000));await page.waitForTimeout(1150);await page.getByRole('button',{name:'Pause',exact:true}).click();await shot('timer-paused','Twelve minutes of focused time elapsed. Timer paused at 33:00 remaining.',[['timer','.sf-card-timer']]);
+await page.getByRole('button',{name:'Resume Session',exact:true}).click();await shot('timer-resumed','Native Resume restores the same Algorithms session, 33:00 remaining.',[['timer','.sf-card-timer']]);await page.clock.setFixedTime(new Date(new Date(fixture.fixedTime).getTime()+2700000));await page.waitForTimeout(1500);await page.getByRole('radio',{name:'5 of 5',exact:true}).click();await page.locator('#session-notes').fill('Solved two shortest-path problems; compared Dijkstra with BFS.');await shot('session-review','Native completion dialog: 45-minute Algorithms session, focus 5/5, specific fictional study notes.',[['dialog','.modal-content']]);
+await page.getByRole('button',{name:'Save Session',exact:true}).click();await page.locator('.modal-content').waitFor({state:'hidden'});await shot('dashboard-saved','Saved session updates Friday focus from 1h20 to 2h05 and week from 9h45 to 10h30.',[['timer','.sf-card-timer']]);
+await go('/app/command');await shot('planner-saved','Algorithms weekly progress updates from 4h10 to 4h55 of 6h; goal credit from 69 to 75 percent.',[['planner','.sf-plan-grid']]);
+await go('/app/sessions');await page.locator('#filter-range').selectOption('all');await page.waitForTimeout(900);await page.locator('#filter-subject').selectOption('1');await shot('history-algorithms','Saved Algorithms sessions with true start/end times and study notes.',[['history','.sf-session-table']]);
+await go('/app/statistics');await page.getByRole('combobox',{name:'Statistics time range',exact:true}).selectOption('all');await shot('statistics','Five weeks of saved sessions; all statistics computed by app.',[['breakdown','.sf-subject-breakdown']]);
+await page.getByRole('button',{name:'By Day of Week',exact:true}).scrollIntoViewIfNeeded();await page.getByRole('button',{name:'By Day of Week',exact:true}).click();await page.mouse.wheel(0,310);await shot('statistics-weekdays','Native weekday activity distribution from the same sessions.');
+await page.getByRole('grid',{name:/^Activity heatmap/}).scrollIntoViewIfNeeded();await shot('activity-heatmap','Sparse, realistic five-week activity pattern; rest Sundays remain empty.');
+await writeFile(path.join(root,'final-storage.json'),JSON.stringify(await page.evaluate(()=>Object.fromEntries(Object.entries(localStorage))),null,2));
+}catch(e){console.error(e);await page.screenshot({path:path.join(out,'capture-debug.png')});process.exitCode=1;}
+finally{await writeFile(path.join(root,'captures.json'),JSON.stringify({application:'StudyFlow',sourceHead:'47c1e61d1045338e31f043b2d52e2751b2f91d6d',origin,source:'/Users/vibhravjha/Code/StudyFlow',isolated:'/tmp/studyflow-brag-v2-capture-20261122',fixture:'fixture.json',errors,shots},null,2));await browser.close();}

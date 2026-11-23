@@ -1,0 +1,377 @@
+{
+  "application": "StudyFlow",
+  "sourceHead": "47c1e61d1045338e31f043b2d52e2751b2f91d6d",
+  "origin": "http://127.0.0.1:3259",
+  "source": "/Users/vibhravjha/Code/StudyFlow",
+  "isolated": "/tmp/studyflow-brag-v2-capture-20261122",
+  "fixture": "fixture.json",
+  "errors": [],
+  "shots": [
+    {
+      "name": "dashboard",
+      "file": "studyflow/dashboard.png",
+      "sourceRoute": "/app",
+      "purpose": "Unified dashboard before the afternoon Algorithms session.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 0,
+      "focal": {
+        "timer": {
+          "x": 569,
+          "y": 376.296875,
+          "width": 554,
+          "height": 578.421875
+        },
+        "weekly": {
+          "x": 284,
+          "y": 376.296875,
+          "width": 269,
+          "height": 578.421875
+        }
+      },
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "FRIDAY, NOVEMBER 20, 2026\nGood afternoon.\n\n🔥\n5-day streak strong. Keep it rolling.\n\n‹\nToday\n›\nToday's Focus\n⏱️\n1h 20m\n−1h vs yesterday\nDaily Streak\n🔥\n5\ndays\nActive days in a row\nToday's Schedule\n📅\n66%\n40m left of 2h\nWeekly Goal Progress\n🎯\n69%\n0 of 3 subject goals reached\nWeekly Trend\nNov 15 – Nov 21 · Sun–Sat\nMinutes\nHours\n9h 45m\nstudied this week\n180\n90\n0\n0\nSun\n15\n130\nMon\n16\n95\nTue\n17\n140\nWed\n18\n140\nThu\n19\n80\nFri\n20\n–\nSat\n21\nFriday, Nov 20\n80 min\nDaily avg\n1h 37m\nBest day\nWed · 2h 20m\nSame days last week\n+1h 30m\nSmart Timer\n\nReady to dive into deep work?\n\nPomodoro\nCustom\nStopwatch\nBreak\n25 min countdown\n25:00\nPOMODORO MODE\nSubject\nAlgorithms\nComputer Systems\nProduct Studio\n▶️Start Session\nReset\nEnd Session\nToday's Subject Schedule\nEdit\n40m left of 2h scheduled\nAlgorithms\n45m / 1h studied\nComputer Systems\n35m / 1h studied\nWeekly Subjects\nNov 15 – Nov 21 · Logged study counts automatically\nManage goals\nStudied\n9h 45m\nWeekly goals\n14h\nScheduled\n14h\n69% of subject goals completed\n0/3 reached · 4h 15m remaining\nAlgorithms\n➡️\n4h 10m studied / 6h goal\n6h scheduled\n69% complete · 1h 50m to go\nComputer Systems\n➡️\n2h 30m studied / 4h goal\n4h scheduled\n62% complete · 1h 30m to go\nProduct Studio\n➡️\n3h 5m studied / 4h goal\n4h scheduled\n77% complete · 55m to go\nToday's Reminders\nView all\nNothing due today\nAdd reminder\n\nClear runway. Add one above when something comes up.\n\nRecent Sessions\nToday\nLast 7 days\nAll time\nC\nComputer Systems\n2026-11-20 • Consolidated notes on memory hierarchy a…\n35m\nA\nAlgorithms\n2026-11-20 • Reviewed minimum spanning trees and cut …\n45m\nA\nAlgorithms\n2026-11-19 • Implemented union-find with path compres…\n50m\nP\nProduct Studio\n2026-11-19 • Tested keyboard navigation and fixed foc…\n1h 30m\nC\nComputer Systems\n2026-11-18 • Compared write-through and write-back ca…\n1h 5m\nA\nAlgorithms\n2026-11-18 • Solved three graph traversal exercises; …\n1h 15m\nP\nProduct Studio\n2026-11-17 • Implemented the studio prototype setting…\n1h 35m\nC\nComputer Systems\n2026-11-16 • Traced a page fault from process to disk…\n50m"
+    },
+    {
+      "name": "planner",
+      "file": "studyflow/planner.png",
+      "sourceRoute": "/app/command",
+      "purpose": "Per-date plans and actual logged minutes for Nov 15–21.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 0,
+      "focal": {
+        "planner": {
+          "x": 304.1875,
+          "y": 339.625,
+          "width": 1083.625,
+          "height": 509.453125
+        }
+      },
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "COMMAND CENTER\nGoals & Planning\n\nSet your targets, plan your time, and follow your progress.\n\nManage subjects\nNov 15 – Nov 21\nSunday–Saturday · This week\n‹ Prev\nThis week\nNext ›\nWeekly Planner\nImport last week\nScheduled hours and logged study for Nov 15 – Nov 21. Edit hours in each day. Logged time counts toward weekly goals independently.\nSubject\t\nSUN\n15\n\t\nMON\n16\n\t\nTUE\n17\n\t\nWED\n18\n\t\nTHU\n19\n\t\nFRI\n20\n\t\nSAT\n21\n\tWeekly progress\n\nAlgorithms\n\t\n0m studied\n\t\n1h 20m studied\n\t\n0m studied\n\t\n1h 15m studied\n\t\n50m studied\n\t\n45m studied\n\t\nUpcoming\n\t\n4h 10m studied / 6h goal\n69% · 1h 50m to go\n6h planned\nEdit goal\n\n\nComputer Systems\n\t\n0m studied\n\t\n50m studied\n\t\n0m studied\n\t\n✅\n1h 5m studied\n\t\n0m studied\n\t\n35m studied\n\t\nUpcoming\n\t\n2h 30m studied / 4h goal\n62% · 1h 30m to go\n4h planned\nEdit goal\n\n\nProduct Studio\n\t\n0m studied\n\t\n0m studied\n\t\n✅\n1h 35m studied\n\t\n0m studied\n\t\n✅\n1h 30m studied\n\t\n0m studied\n\t\nUpcoming\n\t\n3h 5m studied / 4h goal\n77% · 55m to go\n4h planned\nEdit goal\n\nScheduled total\t0m\t2h 30m\t1h 30m\t2h 30m\t2h 30m\t2h\t3h\t14h\nStudied total\t0m\t2h 10m\t1h 35m\t2h 20m\t2h 20m\t1h 20m\t0m\t9h 45m"
+    },
+    {
+      "name": "planner-edited",
+      "file": "studyflow/planner-edited.png",
+      "sourceRoute": "/app/command",
+      "purpose": "Actual edit: Saturday Algorithms plan changes from 1h to 1.5h. Weekly goal remains 6h. This is planning, not completed study.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 0,
+      "focal": {
+        "planner": {
+          "x": 304.1875,
+          "y": 339.625,
+          "width": 1083.625,
+          "height": 509.453125
+        }
+      },
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "COMMAND CENTER\nGoals & Planning\n\nSet your targets, plan your time, and follow your progress.\n\nManage subjects\nNov 15 – Nov 21\nSunday–Saturday · This week\n‹ Prev\nThis week\nNext ›\nWeekly Planner\nImport last week\nScheduled hours and logged study for Nov 15 – Nov 21. Edit hours in each day. Logged time counts toward weekly goals independently.\nSubject\t\nSUN\n15\n\t\nMON\n16\n\t\nTUE\n17\n\t\nWED\n18\n\t\nTHU\n19\n\t\nFRI\n20\n\t\nSAT\n21\n\tWeekly progress\n\nAlgorithms\n\t\n0m studied\n\t\n1h 20m studied\n\t\n0m studied\n\t\n1h 15m studied\n\t\n50m studied\n\t\n45m studied\n\t\nUpcoming\n\t\n4h 10m studied / 6h goal\n69% · 1h 50m to go\n6h 30m planned\nEdit goal\n\n\nComputer Systems\n\t\n0m studied\n\t\n50m studied\n\t\n0m studied\n\t\n✅\n1h 5m studied\n\t\n0m studied\n\t\n35m studied\n\t\nUpcoming\n\t\n2h 30m studied / 4h goal\n62% · 1h 30m to go\n4h planned\nEdit goal\n\n\nProduct Studio\n\t\n0m studied\n\t\n0m studied\n\t\n✅\n1h 35m studied\n\t\n0m studied\n\t\n✅\n1h 30m studied\n\t\n0m studied\n\t\nUpcoming\n\t\n3h 5m studied / 4h goal\n77% · 55m to go\n4h planned\nEdit goal\n\nScheduled total\t0m\t2h 30m\t1h 30m\t2h 30m\t2h 30m\t2h\t3h 30m\t14h 30m\nStudied total\t0m\t2h 10m\t1h 35m\t2h 20m\t2h 20m\t1h 20m\t0m\t9h 45m"
+    },
+    {
+      "name": "timer-ready",
+      "file": "studyflow/timer-ready.png",
+      "sourceRoute": "/app",
+      "purpose": "Choose Algorithms and a 45-minute custom focus block.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 240,
+      "focal": {
+        "timer": {
+          "x": 569,
+          "y": 136.296875,
+          "width": 554,
+          "height": 617.96875
+        },
+        "Start Session": {
+          "x": 594,
+          "y": 642.265625,
+          "width": 504,
+          "height": 48
+        }
+      },
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "FRIDAY, NOVEMBER 20, 2026\nGood afternoon.\n\n🔥\n5-day streak strong. Keep it rolling.\n\n‹\nToday\n›\nToday's Focus\n⏱️\n1h 20m\n−1h vs yesterday\nDaily Streak\n🔥\n5\ndays\nActive days in a row\nToday's Schedule\n📅\n66%\n40m left of 2h\nWeekly Goal Progress\n🎯\n69%\n0 of 3 subject goals reached\nWeekly Trend\nNov 15 – Nov 21 · Sun–Sat\nMinutes\nHours\n9h 45m\nstudied this week\n180\n90\n0\n0\nSun\n15\n130\nMon\n16\n95\nTue\n17\n140\nWed\n18\n140\nThu\n19\n80\nFri\n20\n–\nSat\n21\nFriday, Nov 20\n80 min\nDaily avg\n1h 37m\nBest day\nWed · 2h 20m\nSame days last week\n+1h 30m\nSmart Timer\n\nReady to dive into deep work?\n\nPomodoro\nCustom\nStopwatch\nBreak\nPick your own H:M:S\n0:45:00\nCUSTOM TIMER\nCustom duration\nHours\nHR\nMinutes\nMIN\nSeconds\nSEC\nSubject\nAlgorithms\nComputer Systems\nProduct Studio\n▶️Start Session\nReset\nEnd Session\nToday's Subject Schedule\nEdit\n40m left of 2h scheduled\nAlgorithms\n45m / 1h studied\nComputer Systems\n35m / 1h studied\nWeekly Subjects\nNov 15 – Nov 21 · Logged study counts automatically\nManage goals\nStudied\n9h 45m\nWeekly goals\n14h\nScheduled\n14h\n69% of subject goals completed\n0/3 reached · 4h 15m remaining\nAlgorithms\n➡️\n4h 10m studied / 6h goal\n6h scheduled\n69% complete · 1h 50m to go\nComputer Systems\n➡️\n2h 30m studied / 4h goal\n4h scheduled\n62% complete · 1h 30m to go\nProduct Studio\n➡️\n3h 5m studied / 4h goal\n4h scheduled\n77% complete · 55m to go\nToday's Reminders\nView all\nNothing due today\nAdd reminder\n\nClear runway. Add one above when something comes up.\n\nRecent Sessions\nToday\nLast 7 days\nAll time\nC\nComputer Systems\n2026-11-20 • Consolidated notes on memory hierarchy a…\n35m\nA\nAlgorithms\n2026-11-20 • Reviewed minimum spanning trees and cut …\n45m\nA\nAlgorithms\n2026-11-19 • Implemented union-find with path compres…\n50m\nP\nProduct Studio\n2026-11-19 • Tested keyboard navigation and fixed foc…\n1h 30m\nC\nComputer Systems\n2026-11-18 • Compared write-through and write-back ca…\n1h 5m\nA\nAlgorithms\n2026-11-18 • Solved three graph traversal exercises; …\n1h 15m\nP\nProduct Studio\n2026-11-17 • Implemented the studio prototype setting…\n1h 35m\nC\nComputer Systems\n2026-11-16 • Traced a page fault from process to disk…\n50m"
+    },
+    {
+      "name": "timer-started",
+      "file": "studyflow/timer-started.png",
+      "sourceRoute": "/app",
+      "purpose": "Native timer running from 45:00, no staged DOM changes.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 240,
+      "focal": {
+        "timer": {
+          "x": 569,
+          "y": 136.296875,
+          "width": 554,
+          "height": 656.96875
+        },
+        "Pause": {
+          "x": 594,
+          "y": 642.265625,
+          "width": 504,
+          "height": 48
+        }
+      },
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "FRIDAY, NOVEMBER 20, 2026\nGood afternoon.\n\n🔥\n5-day streak strong. Keep it rolling.\n\n‹\nToday\n›\nToday's Focus\n⏱️\n1h 20m\n−1h vs yesterday\nDaily Streak\n🔥\n5\ndays\nActive days in a row\nToday's Schedule\n📅\n66%\n40m left of 2h\nWeekly Goal Progress\n🎯\n69%\n0 of 3 subject goals reached\nWeekly Trend\nNov 15 – Nov 21 · Sun–Sat\nMinutes\nHours\n9h 45m\nstudied this week\n180\n90\n0\n0\nSun\n15\n130\nMon\n16\n95\nTue\n17\n140\nWed\n18\n140\nThu\n19\n80\nFri\n20\n–\nSat\n21\nFriday, Nov 20\n80 min\nDaily avg\n1h 37m\nBest day\nWed · 2h 20m\nSame days last week\n+1h 30m\nSmart Timer\n\nDeep focus in progress…\n\nPomodoro\nCustom\nStopwatch\nBreak\nPick your own H:M:S\n0:45:00\nCUSTOM TIMER\nCustom duration\nHours\nHR\nMinutes\nMIN\nSeconds\nSEC\nSubject\nAlgorithms\nComputer Systems\nProduct Studio\n⏸️Pause\nGot distracted\nReset\nEnd Session\nToday's Subject Schedule\nEdit\n40m left of 2h scheduled\nAlgorithms\n45m / 1h studied\nComputer Systems\n35m / 1h studied\nWeekly Subjects\nNov 15 – Nov 21 · Logged study counts automatically\nManage goals\nStudied\n9h 45m\nWeekly goals\n14h\nScheduled\n14h\n69% of subject goals completed\n0/3 reached · 4h 15m remaining\nAlgorithms\n➡️\n4h 10m studied / 6h goal\n6h scheduled\n69% complete · 1h 50m to go\nComputer Systems\n➡️\n2h 30m studied / 4h goal\n4h scheduled\n62% complete · 1h 30m to go\nProduct Studio\n➡️\n3h 5m studied / 4h goal\n4h scheduled\n77% complete · 55m to go\nToday's Reminders\nView all\nNothing due today\nAdd reminder\n\nClear runway. Add one above when something comes up.\n\nRecent Sessions\nToday\nLast 7 days\nAll time\nC\nComputer Systems\n2026-11-20 • Consolidated notes on memory hierarchy a…\n35m\nA\nAlgorithms\n2026-11-20 • Reviewed minimum spanning trees and cut …\n45m\nA\nAlgorithms\n2026-11-19 • Implemented union-find with path compres…\n50m\nP\nProduct Studio\n2026-11-19 • Tested keyboard navigation and fixed foc…\n1h 30m\nC\nComputer Systems\n2026-11-18 • Compared write-through and write-back ca…\n1h 5m\nA\nAlgorithms\n2026-11-18 • Solved three graph traversal exercises; …\n1h 15m\nP\nProduct Studio\n2026-11-17 • Implemented the studio prototype setting…\n1h 35m\nC\nComputer Systems\n2026-11-16 • Traced a page fault from process to disk…\n50m"
+    },
+    {
+      "name": "timer-paused",
+      "file": "studyflow/timer-paused.png",
+      "sourceRoute": "/app",
+      "purpose": "Twelve minutes of focused time elapsed. Timer paused at 33:00 remaining.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 240,
+      "focal": {
+        "timer": {
+          "x": 569,
+          "y": 136.296875,
+          "width": 554,
+          "height": 656.96875
+        },
+        "Resume Session": {
+          "x": 594,
+          "y": 642.265625,
+          "width": 504,
+          "height": 48
+        }
+      },
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "FRIDAY, NOVEMBER 20, 2026\nGood afternoon.\n\n🔥\n5-day streak strong. Keep it rolling.\n\n‹\nToday\n›\nToday's Focus\n⏱️\n1h 20m\n−1h vs yesterday\nDaily Streak\n🔥\n5\ndays\nActive days in a row\nToday's Schedule\n📅\n66%\n40m left of 2h\nWeekly Goal Progress\n🎯\n69%\n0 of 3 subject goals reached\nWeekly Trend\nNov 15 – Nov 21 · Sun–Sat\nMinutes\nHours\n9h 45m\nstudied this week\n180\n90\n0\n0\nSun\n15\n130\nMon\n16\n95\nTue\n17\n140\nWed\n18\n140\nThu\n19\n80\nFri\n20\n–\nSat\n21\nFriday, Nov 20\n80 min\nDaily avg\n1h 37m\nBest day\nWed · 2h 20m\nSame days last week\n+1h 30m\nSmart Timer\n\nPaused. Press resume to continue\n\nPomodoro\nCustom\nStopwatch\nBreak\nPick your own H:M:S\n0:33:00\nCUSTOM TIMER\nCustom duration\nHours\nHR\nMinutes\nMIN\nSeconds\nSEC\nSubject\nAlgorithms\nComputer Systems\nProduct Studio\n▶️Resume Session\nGot distracted\nReset\nEnd Session\nToday's Subject Schedule\nEdit\n40m left of 2h scheduled\nAlgorithms\n45m / 1h studied\nComputer Systems\n35m / 1h studied\nWeekly Subjects\nNov 15 – Nov 21 · Logged study counts automatically\nManage goals\nStudied\n9h 45m\nWeekly goals\n14h\nScheduled\n14h\n69% of subject goals completed\n0/3 reached · 4h 15m remaining\nAlgorithms\n➡️\n4h 10m studied / 6h goal\n6h scheduled\n69% complete · 1h 50m to go\nComputer Systems\n➡️\n2h 30m studied / 4h goal\n4h scheduled\n62% complete · 1h 30m to go\nProduct Studio\n➡️\n3h 5m studied / 4h goal\n4h scheduled\n77% complete · 55m to go\nToday's Reminders\nView all\nNothing due today\nAdd reminder\n\nClear runway. Add one above when something comes up.\n\nRecent Sessions\nToday\nLast 7 days\nAll time\nC\nComputer Systems\n2026-11-20 • Consolidated notes on memory hierarchy a…\n35m\nA\nAlgorithms\n2026-11-20 • Reviewed minimum spanning trees and cut …\n45m\nA\nAlgorithms\n2026-11-19 • Implemented union-find with path compres…\n50m\nP\nProduct Studio\n2026-11-19 • Tested keyboard navigation and fixed foc…\n1h 30m\nC\nComputer Systems\n2026-11-18 • Compared write-through and write-back ca…\n1h 5m\nA\nAlgorithms\n2026-11-18 • Solved three graph traversal exercises; …\n1h 15m\nP\nProduct Studio\n2026-11-17 • Implemented the studio prototype setting…\n1h 35m\nC\nComputer Systems\n2026-11-16 • Traced a page fault from process to disk…\n50m"
+    },
+    {
+      "name": "timer-resumed",
+      "file": "studyflow/timer-resumed.png",
+      "sourceRoute": "/app",
+      "purpose": "Native Resume restores the same Algorithms session, 33:00 remaining.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 240,
+      "focal": {
+        "timer": {
+          "x": 569,
+          "y": 136.296875,
+          "width": 554,
+          "height": 656.96875
+        },
+        "Pause": {
+          "x": 594,
+          "y": 642.265625,
+          "width": 504,
+          "height": 48
+        }
+      },
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "FRIDAY, NOVEMBER 20, 2026\nGood afternoon.\n\n🔥\n5-day streak strong. Keep it rolling.\n\n‹\nToday\n›\nToday's Focus\n⏱️\n1h 20m\n−1h vs yesterday\nDaily Streak\n🔥\n5\ndays\nActive days in a row\nToday's Schedule\n📅\n66%\n40m left of 2h\nWeekly Goal Progress\n🎯\n69%\n0 of 3 subject goals reached\nWeekly Trend\nNov 15 – Nov 21 · Sun–Sat\nMinutes\nHours\n9h 45m\nstudied this week\n180\n90\n0\n0\nSun\n15\n130\nMon\n16\n95\nTue\n17\n140\nWed\n18\n140\nThu\n19\n80\nFri\n20\n–\nSat\n21\nFriday, Nov 20\n80 min\nDaily avg\n1h 37m\nBest day\nWed · 2h 20m\nSame days last week\n+1h 30m\nSmart Timer\n\nDeep focus in progress…\n\nPomodoro\nCustom\nStopwatch\nBreak\nPick your own H:M:S\n0:33:00\nCUSTOM TIMER\nCustom duration\nHours\nHR\nMinutes\nMIN\nSeconds\nSEC\nSubject\nAlgorithms\nComputer Systems\nProduct Studio\n⏸️Pause\nGot distracted\nReset\nEnd Session\nToday's Subject Schedule\nEdit\n40m left of 2h scheduled\nAlgorithms\n45m / 1h studied\nComputer Systems\n35m / 1h studied\nWeekly Subjects\nNov 15 – Nov 21 · Logged study counts automatically\nManage goals\nStudied\n9h 45m\nWeekly goals\n14h\nScheduled\n14h\n69% of subject goals completed\n0/3 reached · 4h 15m remaining\nAlgorithms\n➡️\n4h 10m studied / 6h goal\n6h scheduled\n69% complete · 1h 50m to go\nComputer Systems\n➡️\n2h 30m studied / 4h goal\n4h scheduled\n62% complete · 1h 30m to go\nProduct Studio\n➡️\n3h 5m studied / 4h goal\n4h scheduled\n77% complete · 55m to go\nToday's Reminders\nView all\nNothing due today\nAdd reminder\n\nClear runway. Add one above when something comes up.\n\nRecent Sessions\nToday\nLast 7 days\nAll time\nC\nComputer Systems\n2026-11-20 • Consolidated notes on memory hierarchy a…\n35m\nA\nAlgorithms\n2026-11-20 • Reviewed minimum spanning trees and cut …\n45m\nA\nAlgorithms\n2026-11-19 • Implemented union-find with path compres…\n50m\nP\nProduct Studio\n2026-11-19 • Tested keyboard navigation and fixed foc…\n1h 30m\nC\nComputer Systems\n2026-11-18 • Compared write-through and write-back ca…\n1h 5m\nA\nAlgorithms\n2026-11-18 • Solved three graph traversal exercises; …\n1h 15m\nP\nProduct Studio\n2026-11-17 • Implemented the studio prototype setting…\n1h 35m\nC\nComputer Systems\n2026-11-16 • Traced a page fault from process to disk…\n50m"
+    },
+    {
+      "name": "session-review",
+      "file": "studyflow/session-review.png",
+      "sourceRoute": "/app",
+      "purpose": "Native completion dialog: 45-minute Algorithms session, focus 5/5, specific fictional study notes.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 240,
+      "focal": {
+        "dialog": {
+          "x": 470,
+          "y": 35.53125,
+          "width": 500,
+          "height": 928.9375
+        }
+      },
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "FRIDAY, NOVEMBER 20, 2026\nGood afternoon.\n\n🔥\n5-day streak strong. Keep it rolling.\n\n‹\nToday\n›\nToday's Focus\n⏱️\n1h 20m\n−1h vs yesterday\nDaily Streak\n🔥\n5\ndays\nActive days in a row\nToday's Schedule\n📅\n66%\n40m left of 2h\nWeekly Goal Progress\n🎯\n69%\n0 of 3 subject goals reached\nWeekly Trend\nNov 15 – Nov 21 · Sun–Sat\nMinutes\nHours\n9h 45m\nstudied this week\n180\n90\n0\n0\nSun\n15\n130\nMon\n16\n95\nTue\n17\n140\nWed\n18\n140\nThu\n19\n80\nFri\n20\n–\nSat\n21\nFriday, Nov 20\n80 min\nDaily avg\n1h 37m\nBest day\nWed · 2h 20m\nSame days last week\n+1h 30m\nSmart Timer\n\nPaused. Press resume to continue\n\nPomodoro\nCustom\nStopwatch\nBreak\nPick your own H:M:S\n0:00:00\nCUSTOM TIMER\nCustom duration\nHours\nHR\nMinutes\nMIN\nSeconds\nSEC\nSubject\nAlgorithms\nComputer Systems\nProduct Studio\n▶️Resume Session\nGot distracted\nReset\nEnd Session\nSession complete.\nToday's Subject Schedule\nEdit\n40m left of 2h scheduled\nAlgorithms\n45m / 1h studied\nComputer Systems\n35m / 1h studied\nWeekly Subjects\nNov 15 – Nov 21 · Logged study counts automatically\nManage goals\nStudied\n9h 45m\nWeekly goals\n14h\nScheduled\n14h\n69% of subject goals completed\n0/3 reached · 4h 15m remaining\nAlgorithms\n➡️\n4h 10m studied / 6h goal\n6h scheduled\n69% complete · 1h 50m to go\nComputer Systems\n➡️\n2h 30m studied / 4h goal\n4h scheduled\n62% complete · 1h 30m to go\nProduct Studio\n➡️\n3h 5m studied / 4h goal\n4h scheduled\n77% complete · 55m to go\nToday's Reminders\nView all\nNothing due today\nAdd reminder\n\nClear runway. Add one above when something comes up.\n\nRecent Sessions\nToday\nLast 7 days\nAll time\nC\nComputer Systems\n2026-11-20 • Consolidated notes on memory hierarchy a…\n35m\nA\nAlgorithms\n2026-11-20 • Reviewed minimum spanning trees and cut …\n45m\nA\nAlgorithms\n2026-11-19 • Implemented union-find with path compres…\n50m\nP\nProduct Studio\n2026-11-19 • Tested keyboard navigation and fixed foc…\n1h 30m\nC\nComputer Systems\n2026-11-18 • Compared write-through and write-back ca…\n1h 5m\nA\nAlgorithms\n2026-11-18 • Solved three graph traversal exercises; …\n1h 15m\nP\nProduct Studio\n2026-11-17 • Implemented the studio prototype setting…\n1h 35m\nC\nComputer Systems\n2026-11-16 • Traced a page fault from process to disk…\n50m"
+    },
+    {
+      "name": "dashboard-saved",
+      "file": "studyflow/dashboard-saved.png",
+      "sourceRoute": "/app",
+      "purpose": "Saved session updates Friday focus from 1h20 to 2h05 and week from 9h45 to 10h30.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 0,
+      "focal": {
+        "timer": {
+          "x": 569,
+          "y": 376.296875,
+          "width": 554,
+          "height": 617.96875
+        }
+      },
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "FRIDAY, NOVEMBER 20, 2026\nGood afternoon.\n\n🔥\n5-day streak strong. Keep it rolling.\n\n‹\nToday\n›\nToday's Focus\n⏱️\n2h 5m\n−15m vs yesterday\nDaily Streak\n🔥\n5\ndays\nActive days in a row\nToday's Schedule\n📅\n79%\n25m left of 2h\nWeekly Goal Progress\n🎯\n75%\n0 of 3 subject goals reached\nWeekly Trend\nNov 15 – Nov 21 · Sun–Sat\nMinutes\nHours\n10h 30m\nstudied this week\n180\n90\n0\n0\nSun\n15\n130\nMon\n16\n95\nTue\n17\n140\nWed\n18\n140\nThu\n19\n125\nFri\n20\n–\nSat\n21\nFriday, Nov 20\n125 min\nDaily avg\n1h 45m\nBest day\nWed · 2h 20m\nSame days last week\n+2h 15m\nSmart Timer\n\nReady to dive into deep work?\n\nPomodoro\nCustom\nStopwatch\nBreak\nPick your own H:M:S\n0:45:00\nCUSTOM TIMER\nCustom duration\nHours\nHR\nMinutes\nMIN\nSeconds\nSEC\nSubject\nAlgorithms\nComputer Systems\nProduct Studio\n▶️Start Session\nReset\nEnd Session\nSession complete.\nToday's Subject Schedule\nEdit\n25m left of 2h scheduled\nAlgorithms\n✅\n1h 30m / 1h studied\nComputer Systems\n35m / 1h studied\nWeekly Subjects\nNov 15 – Nov 21 · Logged study counts automatically\nManage goals\nStudied\n10h 30m\nWeekly goals\n14h\nScheduled\n14h\n75% of subject goals completed\n0/3 reached · 3h 30m remaining\nAlgorithms\n➡️\n4h 55m studied / 6h goal\n6h scheduled\n81% complete · 1h 5m to go\nComputer Systems\n➡️\n2h 30m studied / 4h goal\n4h scheduled\n62% complete · 1h 30m to go\nProduct Studio\n➡️\n3h 5m studied / 4h goal\n4h scheduled\n77% complete · 55m to go\nToday's Reminders\nView all\nNothing due today\nAdd reminder\n\nClear runway. Add one above when something comes up.\n\nRecent Sessions\nToday\nLast 7 days\nAll time\nA\nAlgorithms\n2026-11-20 • Solved two shortest-path problems; compa…\n45m\nC\nComputer Systems\n2026-11-20 • Consolidated notes on memory hierarchy a…\n35m\nA\nAlgorithms\n2026-11-20 • Reviewed minimum spanning trees and cut …\n45m\nA\nAlgorithms\n2026-11-19 • Implemented union-find with path compres…\n50m\nP\nProduct Studio\n2026-11-19 • Tested keyboard navigation and fixed foc…\n1h 30m\nC\nComputer Systems\n2026-11-18 • Compared write-through and write-back ca…\n1h 5m\nA\nAlgorithms\n2026-11-18 • Solved three graph traversal exercises; …\n1h 15m\nP\nProduct Studio\n2026-11-17 • Implemented the studio prototype setting…\n1h 35m"
+    },
+    {
+      "name": "planner-saved",
+      "file": "studyflow/planner-saved.png",
+      "sourceRoute": "/app/command",
+      "purpose": "Algorithms weekly progress updates from 4h10 to 4h55 of 6h; goal credit from 69 to 75 percent.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 0,
+      "focal": {
+        "planner": {
+          "x": 304.1875,
+          "y": 339.625,
+          "width": 1083.625,
+          "height": 509.453125
+        }
+      },
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "COMMAND CENTER\nGoals & Planning\n\nSet your targets, plan your time, and follow your progress.\n\nManage subjects\nNov 15 – Nov 21\nSunday–Saturday · This week\n‹ Prev\nThis week\nNext ›\nWeekly Planner\nImport last week\nScheduled hours and logged study for Nov 15 – Nov 21. Edit hours in each day. Logged time counts toward weekly goals independently.\nSubject\t\nSUN\n15\n\t\nMON\n16\n\t\nTUE\n17\n\t\nWED\n18\n\t\nTHU\n19\n\t\nFRI\n20\n\t\nSAT\n21\n\tWeekly progress\n\nAlgorithms\n\t\n0m studied\n\t\n1h 20m studied\n\t\n0m studied\n\t\n1h 15m studied\n\t\n50m studied\n\t\n✅\n1h 30m studied\n\t\nUpcoming\n\t\n4h 55m studied / 6h goal\n81% · 1h 5m to go\n6h planned\nEdit goal\n\n\nComputer Systems\n\t\n0m studied\n\t\n50m studied\n\t\n0m studied\n\t\n✅\n1h 5m studied\n\t\n0m studied\n\t\n35m studied\n\t\nUpcoming\n\t\n2h 30m studied / 4h goal\n62% · 1h 30m to go\n4h planned\nEdit goal\n\n\nProduct Studio\n\t\n0m studied\n\t\n0m studied\n\t\n✅\n1h 35m studied\n\t\n0m studied\n\t\n✅\n1h 30m studied\n\t\n0m studied\n\t\nUpcoming\n\t\n3h 5m studied / 4h goal\n77% · 55m to go\n4h planned\nEdit goal\n\nScheduled total\t0m\t2h 30m\t1h 30m\t2h 30m\t2h 30m\t2h\t3h\t14h\nStudied total\t0m\t2h 10m\t1h 35m\t2h 20m\t2h 20m\t2h 5m\t0m\t10h 30m"
+    },
+    {
+      "name": "history-algorithms",
+      "file": "studyflow/history-algorithms.png",
+      "sourceRoute": "/app/sessions?subject=1",
+      "purpose": "Saved Algorithms sessions with true start/end times and study notes.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 0,
+      "focal": {
+        "history": {
+          "x": 285,
+          "y": 489.421875,
+          "width": 1122,
+          "height": 1296.546875
+        }
+      },
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "Sessions\n\nFull session history. Review and correct times, ratings, or notes anytime.\n\n📥\nExport CSV\n📤\nImport CSV\nSubject\nAll subjects\nAlgorithms\nComputer Systems\nProduct Studio\nDate range\nAll time\nLast 7 days\nLast 30 days\nLast 90 days\nThis week (Sun–Sat)\nThis month\nCustom range…\nAggregate by\nNo grouping\nGroup by day\nGroup by week\nGroup by month\nReset filters\nShowing all time\nOverall session activity · counts across your full history\nSESSIONS TODAY\n3\nsessions\n2h 5m focused today\nSESSIONS THIS WEEK\n10\nsessions\nvs 7 by Fri last week\n↑ 3\nSESSIONS / ACTIVE DAY\n1.4\nsessions\nover 29 active days\nBEST DAY\n3\nsessions\nFri, Nov 20\nSession History\n17 sessions · 17.8h · 4.5★ avg\nSession history: dates, subjects, durations, focus, distractions, notes, and session actions.\nDATE\tSUBJECT\tDURATION\tFOCUS\tDISTRACTIONS\tNOTES\tACTIONS\n\nFri, Nov 20, 2026\n1:30 – 2:15 PM\n\t\nAlgorithms\n\t\n45m\n\t★★★★★\t–\t\nSolved two shortest-path problems; compared Dijkst…\n\t\n✏️\nEdit\n🗑️\n\n\nFri, Nov 20, 2026\n9:00 – 9:45 AM\n\t\nAlgorithms\n\t\n45m\n\t★★★★★\t–\t\nReviewed minimum spanning trees and cut properties…\n\t\n✏️\nEdit\n🗑️\n\n\nThu, Nov 19, 2026\n2:00 – 2:50 PM\n\t\nAlgorithms\n\t\n50m\n\t★★★★★\t–\t\nImplemented union-find with path compression.\n\t\n✏️\nEdit\n🗑️\n\n\nWed, Nov 18, 2026\n9:00 – 10:15 AM\n\t\nAlgorithms\n\t\n1h 15m\n\t★★★★★\t1\t\nSolved three graph traversal exercises; checked co…\n\t\n✏️\nEdit\n🗑️\n\n\nMon, Nov 16, 2026\n9:00 – 10:20 AM\n\t\nAlgorithms\n\t\n1h 20m\n\t★★★★★\t–\t\nCompared BFS and DFS on weighted and unweighted gr…\n\t\n✏️\nEdit\n🗑️\n\n\nFri, Nov 13, 2026\n9:15 – 10:10 AM\n\t\nAlgorithms\n\t\n55m\n\t★★★★★\t–\t\nSolved knapsack variations and checked edge cases.\n\t\n✏️\nEdit\n🗑️\n\n\nWed, Nov 11, 2026\n9:00 – 10:10 AM\n\t\nAlgorithms\n\t\n1h 10m\n\t★★★★★\t1\t\nCompared memoization with tabulation.\n\t\n✏️\nEdit\n🗑️\n\n\nMon, Nov 9, 2026\n9:10 – 10:35 AM\n\t\nAlgorithms\n\t\n1h 25m\n\t★★★★★\t–\t\nDeveloped dynamic-programming recurrence relations…\n\t\n✏️\nEdit\n🗑️\n\n\nFri, Nov 6, 2026\n9:00 – 10:00 AM\n\t\nAlgorithms\n\t\n1h\n\t★★★★★\t–\t\nPracticed topological sorting and dependency graph…\n\t\n✏️\nEdit\n🗑️\n\n\nWed, Nov 4, 2026\n9:15 – 10:35 AM\n\t\nAlgorithms\n\t\n1h 20m\n\t★★★★★\t1\t\nSolved shortest-path exercises using Dijkstra.\n\t\n✏️\nEdit\n🗑️\n\n\nMon, Nov 2, 2026\n9:00 – 10:10 AM\n\t\nAlgorithms\n\t\n1h 10m\n\t★★★★★\t1\t\nCompared DFS and BFS on adjacency lists.\n\t\n✏️\nEdit\n🗑️\n\n\nFri, Oct 30, 2026\n9:10 – 10:05 AM\n\t\nAlgorithms\n\t\n55m\n\t★★★★★\t–\t\nWrote tests for tree traversal helpers.\n\t\n✏️\nEdit\n🗑️\n\n\nWed, Oct 28, 2026\n9:00 – 10:00 AM\n\t\nAlgorithms\n\t\n1h\n\t★★★★★\t1\t\nUsed hash maps for frequency counting.\n\t\n✏️\nEdit\n🗑️\n\n\nMon, Oct 26, 2026\n9:15 – 10:30 AM\n\t\nAlgorithms\n\t\n1h 15m\n\t★★★★★\t–\t\nImplemented linked-list reversal and cycle detecti…\n\t\n✏️\nEdit\n🗑️\n\n\nSat, Oct 24, 2026\n11:00 – 11:45 AM\n\t\nAlgorithms\n\t\n45m\n\t★★★★★\t–\t\nPracticed stack and queue problems.\n\t\n✏️\nEdit\n🗑️\n\n\nWed, Oct 21, 2026\n9:00 – 10:05 AM\n\t\nAlgorithms\n\t\n1h 5m\n\t★★★★★\t–\t\nSolved binary-search boundary cases.\n\t\n✏️\nEdit\n🗑️\n\n\nMon, Oct 19, 2026\n9:10 – 10:00 AM\n\t\nAlgorithms\n\t\n50m\n\t★★★★★\t1\t\nTraced merge sort and compared stable sorting algo…\n\t\n✏️\nEdit\n🗑️"
+    },
+    {
+      "name": "statistics",
+      "file": "studyflow/statistics.png",
+      "sourceRoute": "/app/statistics",
+      "purpose": "Five weeks of saved sessions; all statistics computed by app.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 0,
+      "focal": {
+        "distribution": {
+          "x": 276,
+          "y": 394.65625,
+          "width": 1140,
+          "height": 399.9375
+        }
+      },
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "Statistics\n\nAll time · 2026-10-19 → 2026-11-20\n\nSingle day\nLast 7 days\nLast 30 days\nLast 90 days\nYear to date\nAll time\nCustom range\nTOTAL TIME\n?\n43.4h\n1h 30m per active day\nSESSIONS\n?\n41\nmedian 1h\nAVG FOCUS\n?\n4.2/ 5\n38 of 41 rated ≥ 4\nAVG SESSION\n?\n1h 4m\nlongest 1h 35m\nCONSISTENCY\n?\n88%\n29 of 33 days active\nDEEP WORK RATE\n?\n59%\n24 of 41 sessions ≥ 60m\nCURRENT STREAK\n?\n5 days\npersonal best: 6 days\nPEAK WEEKDAY\n?\nMon\n10h on Mondays\nTime Distribution\n43.4h\nTOTAL HOURS\nAlgorithms\n41%\nProduct Studio\n31%\nComputer Systems\n28%\nSubject Breakdown\nAlgorithms\n· 17 sessions · focus 4.5\n17.8h (41%)\nProduct Studio\n· 10 sessions · focus 4.1\n13.7h (31%)\nComputer Systems\n· 14 sessions · focus 4.1\n12.0h (28%)\nActivity\nTimeline\nBy Day of Week\nBy Hour of Day\nPeak: Nov 18 (2h 20m)\nMost study time\n10h 30m\nNov 16 – Nov 20 · 10 sessions\nStudy time\n43h 25m\nin the selected range\n10h 30m\n5h 15m\n0m\nOct 19\nNov 20\n\nEach bar groups consecutive days. Select a bar for details.\n\nWhen & what you study\nAmerica/Chicago\nSession starts by subject & hour\n\nSelect a cell to review those sessions. Uses the date range above.\n\nSubject\nAll subjects\nAlgorithms\nComputer Systems\nProduct Studio\n41 sessions with recorded times\nMost frequent start: 9 AM–10 AM\nNumber of sessions started in each local hour, by subject. Select a cell to filter the session details.\nSubject\t12 AM\t1 AM\t2 AM\t3 AM\t4 AM\t5 AM\t6 AM\t7 AM\t8 AM\t9 AM\t10 AM\t11 AM\t12 PM\t1 PM\t2 PM\t3 PM\t4 PM\t5 PM\t6 PM\t7 PM\t8 PM\t9 PM\t10 PM\t11 PM\tUsual start\n\nAlgorithms\t·\t·\t·\t·\t·\t·\t·\t·\t·\t14\t·\t1\t·\t1\t1\t·\t·\t·\t·\t·\t·\t·\t·\t·\t9 AM\n\nComputer Systems\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t4\t·\t1\t9\t·\t·\t·\t·\t·\t·\t·\t·\t·\t2 PM\n\nProduct Studio\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t10\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t10 AM\n\nDarker cells mean more starts. Tied usual start hours show the earliest hour.\n\nSession details · 41\nSUBJECT / WORK\tSTARTED\tENDED\tFOCUSED TIME\n\nAlgorithms\nSolved two shortest-path problems; compared Dijkstra with BFS.\n\tNov 20, 2026, 1:30 PM\tNov 20, 2026, 2:15 PM\t45m\n\nComputer Systems\nConsolidated notes on memory hierarchy and locality.\n\tNov 20, 2026, 11:00 AM\tNov 20, 2026, 11:35 AM\t35m\n\nAlgorithms\nReviewed minimum spanning trees and cut properties.\n\tNov 20, 2026, 9:00 AM\tNov 20, 2026, 9:45 AM\t45m\n\nAlgorithms\nImplemented union-find with path compression.\n\tNov 19, 2026, 2:00 PM\tNov 19, 2026, 2:50 PM\t50m\n\nProduct Studio\nTested keyboard navigation and fixed focus order.\n\tNov 19, 2026, 10:00 AM\tNov 19, 2026, 11:30 AM\t1h 30m\n\nComputer Systems\nCompared write-through and write-back cache policies.\n\tNov 18, 2026, 2:10 PM\tNov 18, 2026, 3:15 PM\t1h 5m\n\nAlgorithms\nSolved three graph traversal exercises; checked complexity.\n\tNov 18, 2026, 9:00 AM\tNov 18, 2026, 10:15 AM\t1h 15m\n\nProduct Studio\nImplemented the studio prototype settings flow.\n\tNov 17, 2026, 10:00 AM\tNov 17, 2026, 11:35 AM\t1h 35m\n\nComputer Systems\nTraced a page fault from process to disk.\n\tNov 16, 2026, 2:00 PM\tNov 16, 2026, 2:50 PM\t50m\n\nAlgorithms\nCompared BFS and DFS on weighted and unweighted graphs.\n\tNov 16, 2026, 9:00 AM\tNov 16, 2026, 10:20 AM\t1h 20m\nShow all 41 sessions\nFocus Quality\n23 distractions across 20 of 41 sessions · 0.6 per session\nAlgorithms\n· 17 sessions\n4.5 / 5\nProduct Studio\n· 10 sessions\n4.1 / 5\nComputer Systems\n· 14 sessions\n4.1 / 5\nGoal Progress by Subject\n?\nHow each subject is tracking against its weekly goal over this week. “To go” is the hours still needed; “ahead” is time banked beyond goal. The current week is pro-rated to days elapsed.\nThis week\n2 weeks\n4 weeks\nComputer Systems\n· 2.5h of 3.4h\n0.9h to go\nProduct Studio\n· 3.1h of 3.4h\n0.3h to go\nAlgorithms\n· 4.9h of 5.1h\non track\nWhat-If Goal Planner\n?\nDaily focus target\n1h 45m/ day\n15m\n2h\n4h\n6h\n8h\nRemaining this week\n3h 30m\nDays left this week\n2 days (through Sat)\nPace needed to finish\n1h 45m/day\nAt 1h 45m/day you'll hit your 14h weekly goal by Saturday, November 21, 2026, 2 of 2 days left.\nFor context, your recent 14-day average is 1h 28m/day.\nActivity Heatmap\nLast 52 weeks · click a day for detail, click the top of a column to inspect that week\nDec\nJan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\nMon\nWed\nFri\n29 active days · 43h 25m over the last 52 weeks\nLess\nMore"
+    },
+    {
+      "name": "statistics-weekdays",
+      "file": "studyflow/statistics-weekdays.png",
+      "sourceRoute": "/app/statistics",
+      "purpose": "Native weekday activity distribution from the same sessions.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 310,
+      "focal": {},
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "Statistics\n\nAll time · 2026-10-19 → 2026-11-20\n\nSingle day\nLast 7 days\nLast 30 days\nLast 90 days\nYear to date\nAll time\nCustom range\nTOTAL TIME\n?\n43.4h\n1h 30m per active day\nSESSIONS\n?\n41\nmedian 1h\nAVG FOCUS\n?\n4.2/ 5\n38 of 41 rated ≥ 4\nAVG SESSION\n?\n1h 4m\nlongest 1h 35m\nCONSISTENCY\n?\n88%\n29 of 33 days active\nDEEP WORK RATE\n?\n59%\n24 of 41 sessions ≥ 60m\nCURRENT STREAK\n?\n5 days\npersonal best: 6 days\nPEAK WEEKDAY\n?\nMon\n10h on Mondays\nTime Distribution\n43.4h\nTOTAL HOURS\nAlgorithms\n41%\nProduct Studio\n31%\nComputer Systems\n28%\nSubject Breakdown\nAlgorithms\n· 17 sessions · focus 4.5\n17.8h (41%)\nProduct Studio\n· 10 sessions · focus 4.1\n13.7h (31%)\nComputer Systems\n· 14 sessions · focus 4.1\n12.0h (28%)\nActivity\nTimeline\nBy Day of Week\nBy Hour of Day\nStrongest: Monday\nMost study time\nMon\n10h\n\nTotal focused time by weekday in the selected date range.\n\nMon\n10h\nTue\n7h 20m\nWed\n9h 30m\nThu\n6h 55m\nFri\n6h 5m\nSat\n3h 35m\nSun\n0m\nWhen & what you study\nAmerica/Chicago\nSession starts by subject & hour\n\nSelect a cell to review those sessions. Uses the date range above.\n\nSubject\nAll subjects\nAlgorithms\nComputer Systems\nProduct Studio\n41 sessions with recorded times\nMost frequent start: 9 AM–10 AM\nNumber of sessions started in each local hour, by subject. Select a cell to filter the session details.\nSubject\t12 AM\t1 AM\t2 AM\t3 AM\t4 AM\t5 AM\t6 AM\t7 AM\t8 AM\t9 AM\t10 AM\t11 AM\t12 PM\t1 PM\t2 PM\t3 PM\t4 PM\t5 PM\t6 PM\t7 PM\t8 PM\t9 PM\t10 PM\t11 PM\tUsual start\n\nAlgorithms\t·\t·\t·\t·\t·\t·\t·\t·\t·\t14\t·\t1\t·\t1\t1\t·\t·\t·\t·\t·\t·\t·\t·\t·\t9 AM\n\nComputer Systems\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t4\t·\t1\t9\t·\t·\t·\t·\t·\t·\t·\t·\t·\t2 PM\n\nProduct Studio\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t10\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t10 AM\n\nDarker cells mean more starts. Tied usual start hours show the earliest hour.\n\nSession details · 41\nSUBJECT / WORK\tSTARTED\tENDED\tFOCUSED TIME\n\nAlgorithms\nSolved two shortest-path problems; compared Dijkstra with BFS.\n\tNov 20, 2026, 1:30 PM\tNov 20, 2026, 2:15 PM\t45m\n\nComputer Systems\nConsolidated notes on memory hierarchy and locality.\n\tNov 20, 2026, 11:00 AM\tNov 20, 2026, 11:35 AM\t35m\n\nAlgorithms\nReviewed minimum spanning trees and cut properties.\n\tNov 20, 2026, 9:00 AM\tNov 20, 2026, 9:45 AM\t45m\n\nAlgorithms\nImplemented union-find with path compression.\n\tNov 19, 2026, 2:00 PM\tNov 19, 2026, 2:50 PM\t50m\n\nProduct Studio\nTested keyboard navigation and fixed focus order.\n\tNov 19, 2026, 10:00 AM\tNov 19, 2026, 11:30 AM\t1h 30m\n\nComputer Systems\nCompared write-through and write-back cache policies.\n\tNov 18, 2026, 2:10 PM\tNov 18, 2026, 3:15 PM\t1h 5m\n\nAlgorithms\nSolved three graph traversal exercises; checked complexity.\n\tNov 18, 2026, 9:00 AM\tNov 18, 2026, 10:15 AM\t1h 15m\n\nProduct Studio\nImplemented the studio prototype settings flow.\n\tNov 17, 2026, 10:00 AM\tNov 17, 2026, 11:35 AM\t1h 35m\n\nComputer Systems\nTraced a page fault from process to disk.\n\tNov 16, 2026, 2:00 PM\tNov 16, 2026, 2:50 PM\t50m\n\nAlgorithms\nCompared BFS and DFS on weighted and unweighted graphs.\n\tNov 16, 2026, 9:00 AM\tNov 16, 2026, 10:20 AM\t1h 20m\nShow all 41 sessions\nFocus Quality\n23 distractions across 20 of 41 sessions · 0.6 per session\nAlgorithms\n· 17 sessions\n4.5 / 5\nProduct Studio\n· 10 sessions\n4.1 / 5\nComputer Systems\n· 14 sessions\n4.1 / 5\nGoal Progress by Subject\n?\nHow each subject is tracking against its weekly goal over this week. “To go” is the hours still needed; “ahead” is time banked beyond goal. The current week is pro-rated to days elapsed.\nThis week\n2 weeks\n4 weeks\nComputer Systems\n· 2.5h of 3.4h\n0.9h to go\nProduct Studio\n· 3.1h of 3.4h\n0.3h to go\nAlgorithms\n· 4.9h of 5.1h\non track\nWhat-If Goal Planner\n?\nDaily focus target\n1h 45m/ day\n15m\n2h\n4h\n6h\n8h\nRemaining this week\n3h 30m\nDays left this week\n2 days (through Sat)\nPace needed to finish\n1h 45m/day\nAt 1h 45m/day you'll hit your 14h weekly goal by Saturday, November 21, 2026, 2 of 2 days left.\nFor context, your recent 14-day average is 1h 28m/day.\nActivity Heatmap\nLast 52 weeks · click a day for detail, click the top of a column to inspect that week\nDec\nJan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\nMon\nWed\nFri\n29 active days · 43h 25m over the last 52 weeks\nLess\nMore"
+    },
+    {
+      "name": "activity-heatmap",
+      "file": "studyflow/activity-heatmap.png",
+      "sourceRoute": "/app/statistics",
+      "purpose": "Sparse, realistic five-week activity pattern; rest Sundays remain empty.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "dpr": 2,
+      "scrollY": 2671,
+      "focal": {},
+      "fonts": {
+        "jakarta": true,
+        "status": "loaded"
+      },
+      "visibleText": "Statistics\n\nAll time · 2026-10-19 → 2026-11-20\n\nSingle day\nLast 7 days\nLast 30 days\nLast 90 days\nYear to date\nAll time\nCustom range\nTOTAL TIME\n?\n43.4h\n1h 30m per active day\nSESSIONS\n?\n41\nmedian 1h\nAVG FOCUS\n?\n4.2/ 5\n38 of 41 rated ≥ 4\nAVG SESSION\n?\n1h 4m\nlongest 1h 35m\nCONSISTENCY\n?\n88%\n29 of 33 days active\nDEEP WORK RATE\n?\n59%\n24 of 41 sessions ≥ 60m\nCURRENT STREAK\n?\n5 days\npersonal best: 6 days\nPEAK WEEKDAY\n?\nMon\n10h on Mondays\nTime Distribution\n43.4h\nTOTAL HOURS\nAlgorithms\n41%\nProduct Studio\n31%\nComputer Systems\n28%\nSubject Breakdown\nAlgorithms\n· 17 sessions · focus 4.5\n17.8h (41%)\nProduct Studio\n· 10 sessions · focus 4.1\n13.7h (31%)\nComputer Systems\n· 14 sessions · focus 4.1\n12.0h (28%)\nActivity\nTimeline\nBy Day of Week\nBy Hour of Day\nStrongest: Monday\nMost study time\nMon\n10h\n\nTotal focused time by weekday in the selected date range.\n\nMon\n10h\nTue\n7h 20m\nWed\n9h 30m\nThu\n6h 55m\nFri\n6h 5m\nSat\n3h 35m\nSun\n0m\nWhen & what you study\nAmerica/Chicago\nSession starts by subject & hour\n\nSelect a cell to review those sessions. Uses the date range above.\n\nSubject\nAll subjects\nAlgorithms\nComputer Systems\nProduct Studio\n41 sessions with recorded times\nMost frequent start: 9 AM–10 AM\nNumber of sessions started in each local hour, by subject. Select a cell to filter the session details.\nSubject\t12 AM\t1 AM\t2 AM\t3 AM\t4 AM\t5 AM\t6 AM\t7 AM\t8 AM\t9 AM\t10 AM\t11 AM\t12 PM\t1 PM\t2 PM\t3 PM\t4 PM\t5 PM\t6 PM\t7 PM\t8 PM\t9 PM\t10 PM\t11 PM\tUsual start\n\nAlgorithms\t·\t·\t·\t·\t·\t·\t·\t·\t·\t14\t·\t1\t·\t1\t1\t·\t·\t·\t·\t·\t·\t·\t·\t·\t9 AM\n\nComputer Systems\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t4\t·\t1\t9\t·\t·\t·\t·\t·\t·\t·\t·\t·\t2 PM\n\nProduct Studio\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t10\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t·\t10 AM\n\nDarker cells mean more starts. Tied usual start hours show the earliest hour.\n\nSession details · 41\nSUBJECT / WORK\tSTARTED\tENDED\tFOCUSED TIME\n\nAlgorithms\nSolved two shortest-path problems; compared Dijkstra with BFS.\n\tNov 20, 2026, 1:30 PM\tNov 20, 2026, 2:15 PM\t45m\n\nComputer Systems\nConsolidated notes on memory hierarchy and locality.\n\tNov 20, 2026, 11:00 AM\tNov 20, 2026, 11:35 AM\t35m\n\nAlgorithms\nReviewed minimum spanning trees and cut properties.\n\tNov 20, 2026, 9:00 AM\tNov 20, 2026, 9:45 AM\t45m\n\nAlgorithms\nImplemented union-find with path compression.\n\tNov 19, 2026, 2:00 PM\tNov 19, 2026, 2:50 PM\t50m\n\nProduct Studio\nTested keyboard navigation and fixed focus order.\n\tNov 19, 2026, 10:00 AM\tNov 19, 2026, 11:30 AM\t1h 30m\n\nComputer Systems\nCompared write-through and write-back cache policies.\n\tNov 18, 2026, 2:10 PM\tNov 18, 2026, 3:15 PM\t1h 5m\n\nAlgorithms\nSolved three graph traversal exercises; checked complexity.\n\tNov 18, 2026, 9:00 AM\tNov 18, 2026, 10:15 AM\t1h 15m\n\nProduct Studio\nImplemented the studio prototype settings flow.\n\tNov 17, 2026, 10:00 AM\tNov 17, 2026, 11:35 AM\t1h 35m\n\nComputer Systems\nTraced a page fault from process to disk.\n\tNov 16, 2026, 2:00 PM\tNov 16, 2026, 2:50 PM\t50m\n\nAlgorithms\nCompared BFS and DFS on weighted and unweighted graphs.\n\tNov 16, 2026, 9:00 AM\tNov 16, 2026, 10:20 AM\t1h 20m\nShow all 41 sessions\nFocus Quality\n23 distractions across 20 of 41 sessions · 0.6 per session\nAlgorithms\n· 17 sessions\n4.5 / 5\nProduct Studio\n· 10 sessions\n4.1 / 5\nComputer Systems\n· 14 sessions\n4.1 / 5\nGoal Progress by Subject\n?\nHow each subject is tracking against its weekly goal over this week. “To go” is the hours still needed; “ahead” is time banked beyond goal. The current week is pro-rated to days elapsed.\nThis week\n2 weeks\n4 weeks\nComputer Systems\n· 2.5h of 3.4h\n0.9h to go\nProduct Studio\n· 3.1h of 3.4h\n0.3h to go\nAlgorithms\n· 4.9h of 5.1h\non track\nWhat-If Goal Planner\n?\nDaily focus target\n1h 45m/ day\n15m\n2h\n4h\n6h\n8h\nRemaining this week\n3h 30m\nDays left this week\n2 days (through Sat)\nPace needed to finish\n1h 45m/day\nAt 1h 45m/day you'll hit your 14h weekly goal by Saturday, November 21, 2026, 2 of 2 days left.\nFor context, your recent 14-day average is 1h 28m/day.\nActivity Heatmap\nLast 52 weeks · click a day for detail, click the top of a column to inspect that week\nDec\nJan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\nMon\nWed\nFri\nFriday, January 23, 2026\nNo focus time\n29 active days · 43h 25m over the last 52 weeks\nLess\nMore"
+    }
+  ]
+}

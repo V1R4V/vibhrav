@@ -1,0 +1,62 @@
+[
+  {
+    "scene": "intro",
+    "at": 0.35,
+    "end": 4.35,
+    "text": "Your watch measures. Nura shows the working."
+  },
+  {
+    "scene": "recovery",
+    "at": 5.15,
+    "end": 14.95,
+    "text": "Recovery compares last night with your own previous twenty-eight nights. Open it to see heart-rate variability, sleeping heart rate, and sleep, with the weights shown."
+  },
+  {
+    "scene": "sleep",
+    "at": 15.75,
+    "end": 25.75,
+    "text": "Sleep looks beyond the hours. Duration, regularity, and interruptions make up most of the score. Sleep need includes strain, sleep debt, and naps."
+  },
+  {
+    "scene": "strain",
+    "at": 26.55,
+    "end": 36.05,
+    "text": "Strain tracks how much work your heart did, on a zero-to-twenty-one scale. Harder minutes count more. Open a workout to inspect heart-rate zones and training load."
+  },
+  {
+    "scene": "health",
+    "at": 36.85,
+    "end": 45.25,
+    "text": "Health score combines fitness, activity, sleep, and resting heart rate. See how each part contributes."
+  },
+  {
+    "scene": "cardio",
+    "at": 46.05,
+    "end": 52.35,
+    "text": "Cardio compares your estimated fitness with your age group, alongside heart-rate trends."
+  },
+  {
+    "scene": "target",
+    "at": 53.15,
+    "end": 60.05,
+    "text": "The target planner shows how changes could move your score, with the assumptions visible."
+  },
+  {
+    "scene": "age",
+    "at": 60.85,
+    "end": 69.55,
+    "text": "Body Age estimates your habits in years above or below your calendar age. It uses six-month averages, with each factor shown."
+  },
+  {
+    "scene": "method",
+    "at": 70.35,
+    "end": 75.75,
+    "text": "Inspect the formulas, weights, research, and limitations behind each estimate."
+  },
+  {
+    "scene": "outro",
+    "at": 76.55,
+    "end": 79.75,
+    "text": "Your data, explained. Try Nura."
+  }
+]

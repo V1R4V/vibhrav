@@ -1,0 +1,76 @@
+{
+  "duration": 80,
+  "voice": "af_heart",
+  "scenes": [
+    [
+      "intro",
+      0,
+      4.6,
+      "Your watch measures.<br>Nura explains.",
+      "Your watch measures. Nura shows the working."
+    ],
+    [
+      "recovery",
+      4.8,
+      15.2,
+      "Recovery",
+      "Recovery compares last night with your own previous twenty-eight nights. Open it to see heart-rate variability, sleeping heart rate, and sleep, with the weights shown."
+    ],
+    [
+      "sleep",
+      15.4,
+      26,
+      "Sleep",
+      "Sleep looks beyond the hours. Duration, regularity, and interruptions make up most of the score. Estimated sleep need also reflects strain, sleep debt, and naps."
+    ],
+    [
+      "strain",
+      26.2,
+      36.3,
+      "Strain",
+      "Strain tracks how much work your heart did, on a zero-to-twenty-one scale. Harder minutes count more. Open a workout to inspect heart-rate zones and training load."
+    ],
+    [
+      "health",
+      36.5,
+      45.5,
+      "Health score",
+      "Your health score brings together cardio fitness, activity, sleep, and resting heart rate. The contribution of each part is visible, for a day or a longer period."
+    ],
+    [
+      "cardio",
+      45.7,
+      52.6,
+      "Cardio fitness",
+      "Cardio puts your estimated oxygen capacity in context for your age and sex, alongside heart-rate trends."
+    ],
+    [
+      "target",
+      52.8,
+      60.3,
+      "A target you can inspect",
+      "The target planner estimates which changes would move your score, using your own numbers. The assumptions stay visible."
+    ],
+    [
+      "age",
+      60.5,
+      69.8,
+      "Body Age",
+      "Body Age takes a longer view, using six-month averages. Unpack the factors, follow the monthly trend, and treat it as a habits estimate."
+    ],
+    [
+      "method",
+      70,
+      76,
+      "See the working",
+      "The method stays open: formulas, weights, research, and limitations. You can inspect the reasoning behind the number."
+    ],
+    [
+      "outro",
+      76.2,
+      80,
+      "Your data.<br>Explained.",
+      "Your data, explained. Try Nura."
+    ]
+  ]
+}

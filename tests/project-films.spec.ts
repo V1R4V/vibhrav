@@ -37,10 +37,10 @@ test("Nura has a direct film page with captions and the verified public app link
   await expect(page.getByRole("link", { name: "Try Nura" }).first()).toHaveAttribute("href", "https://nura-v1r4v.vercel.app")
 })
 
-test("films remain playable without JavaScript", async ({ browser }) => {
+test("films remain playable without JavaScript", async ({ browser, baseURL }) => {
   const context = await browser.newContext({ javaScriptEnabled: false })
   const page = await context.newPage()
-  await page.goto("http://127.0.0.1:4310/films/nura")
+  await page.goto(`${baseURL}/films/nura`)
   await expect(page.locator('[data-film-player="nura"] video')).toBeVisible()
   await expect(page.locator('[data-film-player="nura"] video')).toHaveAttribute("controls", "")
   await expect(page.locator('[data-film-player="nura"] .film-start')).not.toBeVisible()

@@ -1,0 +1,58 @@
+{
+  "app": "nura",
+  "bg": "#0d1915",
+  "accent": "#c0de80",
+  "duration": 80,
+  "scenes": [
+    {
+      "id": "intro",
+      "start": 0,
+      "end": 4.6
+    },
+    {
+      "id": "recovery",
+      "start": 4.8,
+      "end": 15.2
+    },
+    {
+      "id": "sleep",
+      "start": 15.4,
+      "end": 26
+    },
+    {
+      "id": "strain",
+      "start": 26.2,
+      "end": 36.3
+    },
+    {
+      "id": "health",
+      "start": 36.5,
+      "end": 45.5
+    },
+    {
+      "id": "cardio",
+      "start": 45.7,
+      "end": 52.6
+    },
+    {
+      "id": "target",
+      "start": 52.8,
+      "end": 60.3
+    },
+    {
+      "id": "age",
+      "start": 60.5,
+      "end": 69.8
+    },
+    {
+      "id": "method",
+      "start": 70,
+      "end": 76
+    },
+    {
+      "id": "outro",
+      "start": 76.2,
+      "end": 80
+    }
+  ]
+}

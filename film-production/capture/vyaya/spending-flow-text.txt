@@ -1,0 +1,116 @@
+Skip to content
+Vyaya
+Add transaction
+Dashboard
+Income
+Logs
+Import
+Settings
+Where the money goes
+Everyday
+Fees & Funding
+Settlements
+7 days
+1 month
+3 months
+6 months
+1 year
+All time
+Custom
+
+What you earned and what you spent. Fixed costs excluded.
+
+every transaction ever logged
+
+Back
+
+Everyday · All time
+
+Everyday earned
+
+All time
+
+$11,430
+.00
+Spent
+−$5,005.45
+Net
+$6,424.55
+Where the money goes
+in, then out
+Earned
+Spent
+Salary
+$11,430.00
+Groceries
+$1,505.20
+Shopping
+$711.70
+Dining
+$641.20
+Bills
+$480.00
+Delivery
+$467.19
+Transport
+$405.20
+Books & study
+$318.20
+Entertainment
+$302.94
+Subscriptions
+$173.82
+Not spent
+$6,424.55
+Breakdown
+9 rows
+Where the money goes, Everyday, All time
+Name	
+Share bar
+	Amount	Share
+
+🛒
+Groceries
+	
+	$1,505.20	30.1%
+
+🛍️
+Shopping
+	
+	$711.70	14.2%
+
+🍽️
+Dining
+	
+	$641.20	12.8%
+
+🧾
+Bills
+	
+	$480.00	9.6%
+
+🛵
+Delivery
+	
+	$467.19	9.3%
+
+🚗
+Transport
+	
+	$405.20	8.1%
+
+📚
+Books & study
+	
+	$318.20	6.4%
+
+🎟️
+Entertainment
+	
+	$302.94	6.1%
+
+🔁
+Subscriptions
+	
+	$173.82	3.5%
+Total		$5,005.45	100.0%

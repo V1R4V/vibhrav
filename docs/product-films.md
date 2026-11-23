@@ -1,40 +1,29 @@
-# Product films
+# Product films — reviewed replacements
 
-The homepage film shelf and `/films/{vyaya,studyflow,nura}` use one metadata source,
-`lib/project-films.ts`. Vyaya and StudyFlow also use the player on their project
-pages. Nura has a film page without changing the reviewed project catalogue.
+The homepage shelf, three `/films/{slug}` routes and the two existing project-page
+players read `lib/project-films.ts`. Original exports remain available for rollback.
 
-Playback starts on a viewer action. Videos use `preload="none"`, native controls,
-inline mobile playback and optional English captions. Dialogs restore focus and
-scroll position. Device reduced motion removes player transitions. Without
-JavaScript, native playback and direct film-page links remain available.
+| Film | Runtime | Voice | Web size | SHA-256 |
+|---|---:|---|---:|---|
+| nura | 46s | Female | 3.11 MB | `8e09ee4d997fc9324c84454f288df28a0c6babe81e07ea4106c5ed258b45d518` |
+| studyflow | 44s | Male | 2.42 MB | `20284a730fe3c4856fd9de31ce58ffb7b2879ee9b6c6b769c03ae0711d488f07` |
+| vyaya | 34s | Female | 1.73 MB | `91e67e464020f2bef81d4647ac7d964229fdbd4044813fa474454c97c2d59002` |
 
-## Exports
+Nura opens with the health overview, distinguishes daily and period estimates,
+then shows workouts/history before sleep and recovery. StudyFlow follows one
+actual saved session through planning, focus, reflection and updated progress.
+Vyaya leads with income/spending, concrete purchases and native entry before
+introducing the three implemented money lanes.
 
-| Film | Duration | Narration | SHA-256 |
-| --- | --- | --- | --- |
-| Vyaya | 26.1 seconds | Female | `7594e9370d1ed11ecb9e804bcb448235f5ec4654dd71e3f89d73088d8f3d8ce0` |
-| StudyFlow | 81 seconds | Male | `858dfec3d323e9ef259ec2de09fcccf90d17fbcfd7ffb476d8826543c626c616` |
-| Nura | 80 seconds | Female | `19c529084c61bd6e6acd17a749211673dda11e93212305242fe0c263df25d474` |
+All footage uses fresh native UI captures and coherent fictional source records.
+Unnecessary decorative3D has been removed. Each product retains its own palette
+and typography. Exact scripts, storyboards, sources, licenses and review evidence
+are in [the production documentation](product-films/README.md).
 
-Vyaya is the exact user-approved export. All films show independently prepared
-synthetic app data. Raw captures and production material are outside public assets.
-Vyaya's public app URL is pending; its film page omits a trial link until verified.
+Playback remains viewer-initiated, with preload none, native controls, inline
+mobile playback, captions, transcript, focus return and reduced-motion UI support.
+Vyaya has no verified public URL, so its trial link remains omitted.
 
-## Asset licenses
-
-- Music from [Mixkit](https://mixkit.co/license/modal/musicFree/): Cat Walk by Arulo
-  (Vyaya), Deep Urban by Eugenio Mininni (StudyFlow), Digital Clouds by Alejandro
-  Magaña (Nura). Music is distributed only as part of the films.
-- Studio lighting: [Studio Small 08](https://polyhaven.com/a/studio_small_08) by
-  Sergej Majboroda, Poly Haven, CC0.
-- Interface sounds: [Kenney Interface Sounds](https://kenney.nl/assets/interface-sounds), CC0.
-
-## Verification
-
-The full browser suite passed 133 cases; contact tests passed 19 cases. Typecheck,
-production build, and lint passed, with six pre-existing image warnings. Focused
-film tests cover intent loading, actual playback, keyboard dismissal and focus,
-no-JavaScript playback, captions, public app links and mobile dialog bounds.
-Additional browser inspection verified 1440/1024/390px layouts, all three runtimes,
-seeking responses, and no accessibility violations in the Nura page or film dialog.
+Source: `film-production/remotion`; masters: `film-production/deliverables/`;
+web files: `public/cinematic/films/*-v3*`. See [QA notes](product-films/qa.md)
+for measured results and explicit visual/listening limitations.

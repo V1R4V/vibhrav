@@ -1,0 +1,113 @@
+Nura
+Summary
+Health score
+Cardio
+Recovery
+Sleep
+Strain
+Workouts
+Body Age
+Browse
+Method
+Account
+
+Scores are estimates from Apple Watch data, not medical advice.
+
+Running
+
+Thursday, November 19, 2026 · 5:35 PM · 0h 48m
+
+Workouts
+
+Tap any tile to see how the number was worked out.
+
+Strain
+13.4
+/ 21
+Moderate · day total 13.4
+Heart rate
+145
+bpm avg
+Low 57 · peak 174 bpm
+Active energy
+538
+kcal
+11.2 kcal a minute
+High-intensity time
+21
+min
+Above 160 bpm
+Distance
+8.35
+km
+5:35 PM – 6:23 PM
+Effort
+–
+No rating
+Going in
+52%
+Recovery that morning
+Coming out
+53%
+Recovery next morning
+Heart rate
+
+192 readings · bands are zones of your heart-rate reserve (rest 55, max 178 bpm)
+
+Z1
+Z2
+Z3
+Z4
+Z5
+0:00
+0:12
+0:24
+0:36
+0:48
+Time in zones
+Zone 1 · 50–60%
+1 min
+Zone 2 · 60–70%
+11 min
+Zone 3 · 70–80%
+8 min
+Zone 4 · 80–90%
+1 min
+Zone 5 · 90%+
+20 min
+Session detail
+Efforts above 90%
+7
+High-intensity minutes
+21
+Second half vs first
++6 pts
+Heart-rate load
+110
+Recovery next morning
+53%
+Understand this workout
+What this session did for you
+
+You spent 21 minutes above 80% of your heart-rate range. Time up there is what raises VO2 max and top-end fitness, and it is also what costs the most recovery. It scored 13.4 of 21 on its own; your day’s strain adds everything else you did.
+
+How this workout is scored
+
+Each heart-rate reading is placed between your resting rate and your maximum, and weighted so that hard minutes count far more than easy ones. The sum is the heart-rate load (110), which maps onto the 0 to 21 strain scale.
+
+Calories are Apple’s estimate, shown with a ±20% band for this kind of activity.
+
+What makes a session count for more
+More minutes in zones 4 and 5.
+A longer session at the same intensity.
+Shorter rests between hard efforts.
+How to read it
+
+Compare this session with others of the same activity rather than across sports: wrist heart rate behaves differently in each. If the second half ran much higher than the first at the same pace, you were tiring or dehydrating; that drift shrinks as fitness improves.
+
+Everything else from this day
+Recovery, sleep and strain around the session
+All running sessions
+Compare this one with the rest
+
+Calories are Apple’s estimate with a ±20% band for this activity. Studies do not support correcting it by sport, so it is shown as measured.

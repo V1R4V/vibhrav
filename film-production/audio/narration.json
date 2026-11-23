@@ -1,0 +1,26 @@
+{
+ "nura":{"duration":46,"voice":"af_heart","music":"digital-clouds-alejandro-magana.mp3","musicOffset":18,"cues":[
+  [0.25,4.05,"Nura brings your Apple Watch data into one view."],
+  [4.4,9.7,"Start with today's summary, and see what contributes to your health score."],
+  [10.4,15.8,"Then take a longer view. A selected-period score summarizes the dates you choose."],
+  [16.3,20.7,"Daily bars and a twenty-eight-day line keep the two views distinct."],
+  [21.3,27.7,"Open a workout. Follow its heart-rate trace, and see time in each zone."],
+  [28.3,33.8,"Use the calendar to return to a day, with the weeks that led up to it."],
+  [34.35,40.7,"Sleep and recovery add context. The scores are estimates, with their inputs shown."],
+  [41.5,45.25,"Nura. Health data, made understandable."]]},
+ "studyflow":{"duration":44,"voice":"am_michael","music":"deep-urban-eugenio-mininni.mp3","musicOffset":24,"cues":[
+  [0.4,4.0,"Plan your week. See your study time count."],
+  [4.5,9.7,"Give each subject a goal. Put the hours on your calendar."],
+  [10.4,17.8,"Choose a subject and start. Pause when you need to, then return to the same session."],
+  [18.4,23.8,"Keep the time, rate your focus, and note what you worked on."],
+  [24.4,30.75,"Save once. Your session appears in the log, and your goal progress updates."],
+  [31.4,37.6,"Find the session later, or step back and see where your study time went."],
+  [38.7,43.3,"Plan. Focus. Follow through. With Study Flow."]]},
+ "vyaya":{"duration":34,"voice":"af_heart","music":"cat-walk-arulo.mp3","musicOffset":8,"cues":[
+  [0.45,3.75,"Vyaya keeps your spending in view."],
+  [4.35,9.8,"See what came in, where it went, and what remains from the money you've tracked."],
+  [10.35,14.7,"Open a category to see the purchases behind it."],
+  [15.3,20.7,"Add the next purchase, give it a category, and keep the picture current."],
+  [21.4,28.5,"Keep everyday spending separate from funding and repayments, in three lanes."],
+  [29.6,33.4,"Vyaya. Your money, in view."]]}
+}

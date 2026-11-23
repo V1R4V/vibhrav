@@ -1,0 +1,58 @@
+[
+  {
+    "start": 0.25,
+    "end": 3.3433333333333333,
+    "text": "Nura brings your Apple Watch data into one view.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  },
+  {
+    "start": 4.4,
+    "end": 8.282666666666668,
+    "text": "Start with today's summary, and see what contributes to your health score.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  },
+  {
+    "start": 10.4,
+    "end": 15.605333333333334,
+    "text": "Then take a longer view. A selected-period score summarizes the dates you choose.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  },
+  {
+    "start": 16.3,
+    "end": 20.630666666666666,
+    "text": "Daily bars and a twenty-eight-day line keep the two views distinct.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  },
+  {
+    "start": 21.3,
+    "end": 25.929333333333332,
+    "text": "Open a workout. Follow its heart-rate trace, and see time in each zone.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  },
+  {
+    "start": 28.3,
+    "end": 32.31066666666667,
+    "text": "Use the calendar to return to a day, with the weeks that led up to it.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  },
+  {
+    "start": 34.35,
+    "end": 39.83266666666667,
+    "text": "Sleep and recovery add context. The scores are estimates, with their inputs shown.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  },
+  {
+    "start": 41.5,
+    "end": 44.294666666666664,
+    "text": "Nura. Health data, made understandable.",
+    "speed": 0.88,
+    "voice": "af_heart"
+  }
+]

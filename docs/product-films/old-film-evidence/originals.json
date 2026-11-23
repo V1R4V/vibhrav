@@ -1,0 +1,589 @@
+{
+  "nura": {
+    "path": "/Users/vibhravjha/Code/2Personal_Projects/Portfolios/Portfolio Website/.artifacts/brag-v2-2026-11-22/nura/explainer/brag.mp4",
+    "sha256": "19c529084c61bd6e6acd17a749211673dda11e93212305242fe0c263df25d474",
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuv420p",
+          "level": 40,
+          "color_range": "tv",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709",
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/15360",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 1228800,
+          "duration": "80.000000",
+          "bit_rate": "605021",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "2400",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc62.28.102 libx264"
+          }
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_long_name": "AAC (Advanced Audio Coding)",
+          "profile": "LC",
+          "codec_type": "audio",
+          "codec_tag_string": "mp4a",
+          "codec_tag": "0x6134706d",
+          "mime_codec_string": "mp4a.40.2",
+          "sample_fmt": "fltp",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 0,
+          "id": "0x2",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/48000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 3840000,
+          "duration": "80.000000",
+          "bit_rate": "204841",
+          "nb_frames": "3751",
+          "extradata_size": 5,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "SoundHandler"
+          }
+        }
+      ],
+      "format": {
+        "filename": "/Users/vibhravjha/Code/2Personal_Projects/Portfolios/Portfolio Website/.artifacts/brag-v2-2026-11-22/nura/explainer/brag.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "80.000000",
+        "size": "8188296",
+        "bit_rate": "818829",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf62.12.102"
+        }
+      }
+    },
+    "timeline": {
+      "app": "nura",
+      "bg": "#0d1915",
+      "accent": "#c0de80",
+      "duration": 80,
+      "scenes": [
+        {
+          "id": "intro",
+          "start": 0,
+          "end": 4.6
+        },
+        {
+          "id": "recovery",
+          "start": 4.8,
+          "end": 15.2
+        },
+        {
+          "id": "sleep",
+          "start": 15.4,
+          "end": 26
+        },
+        {
+          "id": "strain",
+          "start": 26.2,
+          "end": 36.3
+        },
+        {
+          "id": "health",
+          "start": 36.5,
+          "end": 45.5
+        },
+        {
+          "id": "cardio",
+          "start": 45.7,
+          "end": 52.6
+        },
+        {
+          "id": "target",
+          "start": 52.8,
+          "end": 60.3
+        },
+        {
+          "id": "age",
+          "start": 60.5,
+          "end": 69.8
+        },
+        {
+          "id": "method",
+          "start": 70,
+          "end": 76
+        },
+        {
+          "id": "outro",
+          "start": 76.2,
+          "end": 80
+        }
+      ]
+    }
+  },
+  "studyflow": {
+    "path": "/Users/vibhravjha/Code/2Personal_Projects/Portfolios/Portfolio Website/.artifacts/brag-v2-2026-11-22/studyflow/explainer/brag.mp4",
+    "sha256": "858dfec3d323e9ef259ec2de09fcccf90d17fbcfd7ffb476d8826543c626c616",
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuv420p",
+          "level": 40,
+          "color_range": "tv",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709",
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/15360",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 1244160,
+          "duration": "81.000000",
+          "bit_rate": "678004",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "2430",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc62.28.102 libx264"
+          }
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_long_name": "AAC (Advanced Audio Coding)",
+          "profile": "LC",
+          "codec_type": "audio",
+          "codec_tag_string": "mp4a",
+          "codec_tag": "0x6134706d",
+          "mime_codec_string": "mp4a.40.2",
+          "sample_fmt": "fltp",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 0,
+          "id": "0x2",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/48000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 3888000,
+          "duration": "81.000000",
+          "bit_rate": "200440",
+          "nb_frames": "3794",
+          "extradata_size": 5,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "SoundHandler"
+          }
+        }
+      ],
+      "format": {
+        "filename": "/Users/vibhravjha/Code/2Personal_Projects/Portfolios/Portfolio Website/.artifacts/brag-v2-2026-11-22/studyflow/explainer/brag.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "81.000000",
+        "size": "8984895",
+        "bit_rate": "887397",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf62.12.102"
+        }
+      }
+    },
+    "timeline": {
+      "app": "studyflow",
+      "bg": "#0c101c",
+      "accent": "#9eb5ff",
+      "duration": 81,
+      "scenes": [
+        {
+          "id": "intro",
+          "start": 0,
+          "end": 4.5
+        },
+        {
+          "id": "subjects",
+          "start": 4.7,
+          "end": 12.1
+        },
+        {
+          "id": "planner",
+          "start": 12.3,
+          "end": 21
+        },
+        {
+          "id": "modes",
+          "start": 21.2,
+          "end": 29
+        },
+        {
+          "id": "focus",
+          "start": 29.2,
+          "end": 38
+        },
+        {
+          "id": "save",
+          "start": 38.2,
+          "end": 47
+        },
+        {
+          "id": "history",
+          "start": 47.2,
+          "end": 55
+        },
+        {
+          "id": "statistics",
+          "start": 55.2,
+          "end": 64
+        },
+        {
+          "id": "whatif",
+          "start": 64.2,
+          "end": 73
+        },
+        {
+          "id": "heatmap",
+          "start": 73.2,
+          "end": 77.3
+        },
+        {
+          "id": "outro",
+          "start": 77.5,
+          "end": 81
+        }
+      ]
+    }
+  },
+  "vyaya": {
+    "path": "/Users/vibhravjha/Code/2Personal_Projects/Portfolios/Portfolio Website/.artifacts/brag-v2-2026-11-22/vyaya/film/brag.mp4",
+    "sha256": "7594e9370d1ed11ecb9e804bcb448235f5ec4654dd71e3f89d73088d8f3d8ce0",
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuv420p",
+          "level": 40,
+          "color_range": "tv",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709",
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/15360",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 399360,
+          "duration": "26.000000",
+          "bit_rate": "916493",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "780",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc62.28.102 libx264"
+          }
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_long_name": "AAC (Advanced Audio Coding)",
+          "profile": "LC",
+          "codec_type": "audio",
+          "codec_tag_string": "mp4a",
+          "codec_tag": "0x6134706d",
+          "mime_codec_string": "mp4a.40.2",
+          "sample_fmt": "fltp",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 0,
+          "id": "0x2",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/48000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 1252800,
+          "duration": "26.100000",
+          "bit_rate": "201727",
+          "nb_frames": "1220",
+          "extradata_size": 5,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "SoundHandler"
+          }
+        }
+      ],
+      "format": {
+        "filename": "/Users/vibhravjha/Code/2Personal_Projects/Portfolios/Portfolio Website/.artifacts/brag-v2-2026-11-22/vyaya/film/brag.mp4",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "26.100000",
+        "size": "3666894",
+        "bit_rate": "1123952",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf62.12.102"
+        }
+      }
+    },
+    "timeline": {
+      "scenes": [
+        {
+          "id": "intro",
+          "start": 0,
+          "end": 4
+        },
+        {
+          "id": "tracking",
+          "start": 4.15,
+          "end": 9.05
+        },
+        {
+          "id": "flow",
+          "start": 9.35,
+          "end": 13.05
+        },
+        {
+          "id": "entry",
+          "start": 13.15,
+          "end": 18.1
+        },
+        {
+          "id": "lanes",
+          "start": 18.3,
+          "end": 23.05
+        },
+        {
+          "id": "outro",
+          "start": 23.25,
+          "end": 26.1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,272 @@
+Nura
+Summary
+Health score
+Cardio
+Recovery
+Sleep
+Strain
+Workouts
+Body Age
+Browse
+Method
+Account
+
+Scores are estimates from Apple Watch data, not medical advice.
+
+Workouts
+
+Every session the watch recorded, Oct 24, 2026 to Nov 22, 2026.
+
+D
+W
+M
+3M
+6M
+Y
+All
+Oct 24 – Nov 22, 2026
+Sessions
+22
+5.1 a week
+Time
+17h 59m
+0h 49m a session
+Average strain
+9.6
+of 21 per session
+Active energy
+8,480
+kcal, estimated
+All
+Running
+8
+Walking
+5
+Cycling
+5
+Strength
+4
+November 2026
+16 sessions · 12h 51m
+Walking
+Sun, Nov 22
+0h 40m
+time
+103
+avg bpm
+164
+kcal
+4.0
+strain
+Cycling
+Sat, Nov 21
+1h 12m
+time
+138
+avg bpm
+598
+kcal
+14.2
+strain
+Running
+Thu, Nov 19
+0h 48m
+time
+145
+avg bpm
+538
+kcal
+13.4
+strain
+Strength
+Tue, Nov 17
+0h 48m
+time
+114
+avg bpm
+288
+kcal
+9.0
+strain
+Running
+Mon, Nov 16
+0h 38m
+time
+129
+avg bpm
+369
+kcal
+8.0
+strain
+Walking
+Sun, Nov 15
+0h 36m
+time
+103
+avg bpm
+148
+kcal
+3.5
+strain
+Cycling
+Sat, Nov 14
+1h 16m
+time
+139
+avg bpm
+631
+kcal
+14.7
+strain
+Running
+Thu, Nov 12
+0h 46m
+time
+145
+avg bpm
+515
+kcal
+13.0
+strain
+Strength
+Tue, Nov 10
+0h 54m
+time
+115
+avg bpm
+324
+kcal
+11.1
+strain
+Running
+Mon, Nov 9
+0h 40m
+time
+130
+avg bpm
+388
+kcal
+8.4
+strain
+Walking
+Sun, Nov 8
+0h 32m
+time
+102
+avg bpm
+131
+kcal
+3.2
+strain
+Cycling
+Sat, Nov 7
+1h 04m
+time
+137
+avg bpm
+531
+kcal
+12.9
+strain
+Running
+Thu, Nov 5
+0h 44m
+time
+144
+avg bpm
+493
+kcal
+12.5
+strain
+Strength
+Tue, Nov 3
+0h 51m
+time
+115
+avg bpm
+306
+kcal
+10.0
+strain
+Running
+Mon, Nov 2
+0h 42m
+time
+130
+avg bpm
+407
+kcal
+8.7
+strain
+Walking
+Sun, Nov 1
+0h 40m
+time
+104
+avg bpm
+164
+kcal
+3.9
+strain
+October 2026
+6 sessions · 5h 08m
+Cycling
+Sat, Oct 31
+1h 08m
+time
+137
+avg bpm
+564
+kcal
+13.6
+strain
+Running
+Thu, Oct 29
+0h 48m
+time
+145
+avg bpm
+538
+kcal
+13.4
+strain
+Strength
+Tue, Oct 27
+0h 48m
+time
+114
+avg bpm
+288
+kcal
+9.0
+strain
+Running
+Mon, Oct 26
+0h 36m
+time
+129
+avg bpm
+349
+kcal
+7.6
+strain
+Walking
+Sun, Oct 25
+0h 36m
+time
+103
+avg bpm
+148
+kcal
+3.6
+strain
+Cycling
+Sat, Oct 24
+1h 12m
+time
+138
+avg bpm
+598
+kcal
+14.2
+strain

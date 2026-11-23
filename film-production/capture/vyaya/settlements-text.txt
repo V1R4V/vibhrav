@@ -1,0 +1,142 @@
+Skip to content
+Vyaya
+Add transaction
+Dashboard
+Income
+Logs
+Import
+Settings
+Dashboard
+Everyday
+Fees & Funding
+Settlements
+7 days
+1 month
+3 months
+6 months
+1 year
+All time
+Custom
+
+Splits, refunds, withdrawals. Shown here, counted nowhere.
+
+every transaction ever logged
+
+Settlements net
+All time
+On this device
+−$485
+.55
+In
++$114.45
+Out
+−$600.00
+Out vs in
+5.2×
+Nothing kept: out more than in
+
+Settlements are shown but never counted. None of these figures enter Everyday net, the charts, or any average.
+
+This period
+All time
+Out rows
+6
+Average out
+$100.00
+Largest out
+$100.00
+Account transfer
+Busiest month
+Jun 26
+$100.00
+Recent
+See all
+🔁
+Account transfer
+Account transfer
+$100.00
+🔁
+Shared meal repayment
+Split repayment
+$21.95
+🔁
+Account transfer
+Account transfer
+$100.00
+🔁
+Shared meal repayment
+Split repayment
+$18.50
+Where the money goes
+earned, then spent
+In
+Out
+Shared meal repayment
+$114.45
+More out than in
+$485.55
+Account transfer
+$600.00
+Out vs In
+by month
+In
+Out
+$0
+$50
+$100
+Jun
+Jul
+Aug
+Sep
+Oct
+Nov
+Breakdown
+Category mix
+share of out
+Out
+$600.00
+🔁
+Account transfer
+100.0%
+$600.00
+Top merchants
+by total
+🔁
+Account transfer
+$600.00
+Payment method
+share of spend
+Out
+$600.00
+🏦
+Bank Transfer
+100.0%
+$600.00
+When you spend
+by day of week
+$100
+Sun
+$100
+Mon
+$0
+Tue
+$100
+Wed
+$100
+Thu
+$100
+Fri
+$100
+Sat
+Net by month
+in minus out
+$0
+-$82
+Jun
+Jul
+Aug
+Sep
+Oct
+Nov
+More analysis
+Monthly breakdown and month × category

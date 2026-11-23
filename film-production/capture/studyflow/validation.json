@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "assertions": 335,
+  "source": "Actual application weekProgress() from src/utils/progress.js",
+  "timezone": "America/Chicago",
+  "sessionCountBefore": 40,
+  "sessionCountAfter": 41,
+  "allTimeBeforeMinutes": 2560,
+  "allTimeBefore": "42h 40m",
+  "allTimeAfterMinutes": 2605,
+  "allTimeAfter": "43h 25m",
+  "subjectAllTimeBeforeMinutes": {
+    "Algorithms": 1020,
+    "Computer Systems": 720,
+    "Product Studio": 820
+  },
+  "currentWeekBefore": {
+    "minutes": 585,
+    "formatted": "9h 45m",
+    "goalsMinutes": 840,
+    "plannedMinutes": 840,
+    "goalPct": 69,
+    "fridayMinutes": 80,
+    "subjects": [
+      {
+        "subject": "Algorithms",
+        "loggedMinutes": 250,
+        "goalMinutes": 360,
+        "plannedMinutes": 360,
+        "pct": 69
+      },
+      {
+        "subject": "Computer Systems",
+        "loggedMinutes": 150,
+        "goalMinutes": 240,
+        "plannedMinutes": 240,
+        "pct": 62
+      },
+      {
+        "subject": "Product Studio",
+        "loggedMinutes": 185,
+        "goalMinutes": 240,
+        "plannedMinutes": 240,
+        "pct": 77
+      }
+    ]
+  },
+  "currentWeekAfter": {
+    "minutes": 630,
+    "formatted": "10h 30m",
+    "goalPct": 75,
+    "fridayMinutes": 125,
+    "subjects": [
+      {
+        "subject": "Algorithms",
+        "loggedMinutes": 295,
+        "goalMinutes": 360,
+        "plannedMinutes": 360,
+        "pct": 81
+      },
+      {
+        "subject": "Computer Systems",
+        "loggedMinutes": 150,
+        "goalMinutes": 240,
+        "plannedMinutes": 240,
+        "pct": 62
+      },
+      {
+        "subject": "Product Studio",
+        "loggedMinutes": 185,
+        "goalMinutes": 240,
+        "plannedMinutes": 240,
+        "pct": 77
+      }
+    ]
+  },
+  "nativeSavedSession": {
+    "id": 1795205700000,
+    "subjectId": 1,
+    "subjectName": "Algorithms",
+    "subjectColor": "#7c8cff",
+    "duration": 45,
+    "durationSeconds": 2700,
+    "focusRating": 5,
+    "notes": "Solved two shortest-path problems; compared Dijkstra with BFS.",
+    "distractions": 0,
+    "startedAt": 1795203000000,
+    "endedAt": 1795205700000,
+    "date": "2026-11-20"
+  }
+}

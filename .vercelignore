@@ -1,0 +1,7 @@
+# Offline production sources are versioned, but are not application runtime assets.
+film-production/
+node_modules
+.next
+.artifacts/
+docs/product-films/old-film-evidence/
+docs/product-films/review-evidence/

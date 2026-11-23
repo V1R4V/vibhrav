@@ -1,0 +1,83 @@
+{
+  "duration": 81,
+  "voice": "am_michael",
+  "scenes": [
+    [
+      "intro",
+      0,
+      4.5,
+      "Give your study time<br>a clear plan.",
+      "Know what you are studying. Make time for it."
+    ],
+    [
+      "subjects",
+      4.7,
+      12.1,
+      "1. Your subjects",
+      "Start with your subjects. Give each one a name and colour, so your plan, sessions, and statistics stay connected."
+    ],
+    [
+      "planner",
+      12.3,
+      21,
+      "2. Your week",
+      "In Command Center, set a weekly goal and spread the hours across your week. Planned time and completed study sit side by side."
+    ],
+    [
+      "modes",
+      21.2,
+      29,
+      "3. Your timer",
+      "Choose how to work: Pomodoro, your own countdown, or a stopwatch. Breaks are tracked separately."
+    ],
+    [
+      "focus",
+      29.2,
+      38,
+      "4. Your focus session",
+      "Pick a subject and start. Pause when you need to, log a distraction, and resume the same session."
+    ],
+    [
+      "save",
+      38.2,
+      47,
+      "5. Save what you did",
+      "When you finish, rate your focus and write down what you worked on. Save the session, and that time counts toward your goals."
+    ],
+    [
+      "history",
+      47.2,
+      55,
+      "6. Session history",
+      "Your history keeps duration, subject, rating, notes, and distractions together. Filter it to find the work you want to revisit."
+    ],
+    [
+      "statistics",
+      55.2,
+      64,
+      "7. Understand your progress",
+      "Statistics shows where your time went: by subject, across the week, and over the day. Change the range to compare a different period."
+    ],
+    [
+      "whatif",
+      64.2,
+      73,
+      "8. Try a daily target",
+      "The goal planner lets you try a daily study target and see the pace needed for the week. Move the slider to compare the result."
+    ],
+    [
+      "heatmap",
+      73.2,
+      77.3,
+      "Your study pattern",
+      "The heatmap makes your study pattern visible, day by day."
+    ],
+    [
+      "outro",
+      77.5,
+      81,
+      "Plan it. Study it.<br>See your progress.",
+      "Plan it. Study it. See your progress. Try Study Flow."
+    ]
+  ]
+}

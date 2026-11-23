@@ -1,5 +1,8 @@
 import { defineConfig } from "@playwright/test"
 
+const port = process.env.PORTFOLIO_TEST_PORT || "4310"
+const baseURL = `http://127.0.0.1:${port}`
+
 export default defineConfig({
   testDir: "./tests",
   testMatch: "**/*.spec.ts",
@@ -9,14 +12,14 @@ export default defineConfig({
   reporter: "list",
   outputDir: ".artifacts/playwright",
   use: {
-    baseURL: "http://127.0.0.1:4310",
+    baseURL,
     channel: "chrome",
     headless: true,
     screenshot: "only-on-failure",
   },
   webServer: {
-    command: process.env.CI ? "npm run start -- --hostname 127.0.0.1 --port 4310" : "npm run dev -- --hostname 127.0.0.1 --port 4310",
-    url: "http://127.0.0.1:4310/cinematic",
+    command: `npm run ${process.env.CI ? "start" : "dev"} -- --hostname 127.0.0.1 --port ${port}`,
+    url: `${baseURL}/cinematic`,
     reuseExistingServer: !process.env.CI,
     timeout: 90_000,
   },
