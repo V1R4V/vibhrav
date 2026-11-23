@@ -41,3 +41,26 @@ References: [API and browser-side requirements](https://docs.web3forms.com/getti
   acceptance as delivery evidence.
 - Visual review includes desktop hero and mobile hero/footer screenshots.
 - Six existing unrelated img lint warnings remain; no new lint errors.
+
+## Published checkpoint — 2026-11-23
+
+- Implementation: `7c195c83`, pushed to `main` and
+  `fix/identity-social-contact`.
+- Production deployment: `dpl_6quvp6cBqo68QGHin5h19woDVdTp`, READY,
+  serving https://vibhrav.vercel.app/.
+- Local production build, type checking, lint, 23 contact tests and 37 browser
+  tests pass. No new dependencies or private credentials added.
+- Actual public-site checks at 1440px and 390px: Web3Forms configuration is
+  available (HTTP 200), Send message enabled, no unavailable banner, zero
+  scoped accessibility violations and zero page errors. Résumé returns 200;
+  all three existing films still return HTTP 206 for range playback.
+- User authorized exactly one labeled delivery test. One live-form click was
+  attempted. The browser did not observe a POST response within 30 seconds;
+  no provider acceptance was recorded and no submission retry was attempted.
+  Follow-up GET/OPTIONS diagnostics returned Cloudflare HTTP 403 challenge
+  HTML without CORS approval, and an isolated browser displayed “Just a
+  moment…”. This is a provider-side verification blocker in this environment.
+- The user was asked to test from their normal browser and confirm inbox/spam
+  receipt. Delivery remains unverified; readiness and intercepted test success
+  are not described as actual inbox delivery.
+- YouTube is deferred at the user's request.
