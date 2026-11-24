@@ -4,6 +4,7 @@ import {
   continueRender,
   delayRender,
 } from "remotion";
+import { NuraContext } from "./NuraContext";
 import { Nura } from "./Nura";
 import { StudyFlow } from "./StudyFlow";
 import { Vyaya } from "./Vyaya";
@@ -15,6 +16,14 @@ fontsReady.then(() => continueRender(handle)).catch(cancelRender);
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="NuraContext"
+        component={NuraContext}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={1620}
+      />
       <Composition
         id="Nura"
         component={Nura}

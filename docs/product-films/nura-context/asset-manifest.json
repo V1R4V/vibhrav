@@ -1,0 +1,41 @@
+{
+  "composition": "NuraContext",
+  "durationSeconds": 54,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "datasetSourceCommit": "878caedee17e0544cc855558b3669374ab7b900e",
+  "fictionalSourceRecords": true,
+  "nativeEngineDerived": true,
+  "assets": [
+    {
+      "path": "remotion/src/context-data.json",
+      "sha256": "6b2237c35b4ca1c0f93941781c6e8e2155339771678ccf9f3b00da9d5cccd847",
+      "bytes": 17850
+    },
+    {
+      "path": "public/context/studio_small_09_1k.hdr",
+      "sha256": "e7cfda5f4e98e623db12b8bfd0184e048488e4855d9c83e2751fb44a32e80c45",
+      "bytes": 1615248
+    },
+    {
+      "path": "public/brand/nura-mark.svg",
+      "sha256": "7665b67856d94701c7b60efcad7091f0c4a5fcaa0e4b007c6d1b63f5bb9f7a3a",
+      "bytes": 991
+    },
+    {
+      "path": "public/brand/inter.ttf",
+      "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+      "bytes": 876576
+    }
+  ],
+  "hdriSource": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_09_1k.hdr",
+  "music": {
+    "title": "Vastness",
+    "artist": "Andrew Ev",
+    "url": "https://assets.mixkit.co/music/184/184.mp3",
+    "license": "https://mixkit.co/license/modal/musicFree/",
+    "sourceStartSeconds": 6,
+    "sha256": "3ffae7ccd5ea6f612f75efdf9a8318ccce79a5e4f355b26e233631330a57660f"
+  }
+}

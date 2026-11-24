@@ -1,0 +1,44 @@
+[
+  {
+    "start": 0.8,
+    "end": 5.216,
+    "text": "Your watch records the signals. Nura helps you see how they fit together.",
+    "speed": 0.88
+  },
+  {
+    "start": 7.9,
+    "end": 15.174666666666667,
+    "text": "Start with today's health score. Then look inside: sleep, activity, cardio fitness, and resting heart rate.",
+    "speed": 0.88
+  },
+  {
+    "start": 16.5,
+    "end": 21.876,
+    "text": "A single day is a snapshot. The twenty-eight-day view gives you a longer perspective.",
+    "speed": 0.88
+  },
+  {
+    "start": 24.6,
+    "end": 30.232,
+    "text": "Open a workout to follow your heart rate, and see how long you spent in each intensity zone.",
+    "speed": 0.88
+  },
+  {
+    "start": 33.6,
+    "end": 39.12533333333334,
+    "text": "Recovery compares readings with your own baseline. Sleep adds another part of the picture.",
+    "speed": 0.88
+  },
+  {
+    "start": 42.4,
+    "end": 46.32533333333333,
+    "text": "Move through your history. Put a day beside the weeks that led up to it.",
+    "speed": 0.88
+  },
+  {
+    "start": 49,
+    "end": 51.154666666666664,
+    "text": "Nura. See what's behind the number.",
+    "speed": 0.88
+  }
+]
