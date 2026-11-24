@@ -73,7 +73,7 @@ export const publicCopy = {
     "success": "Your message has been sent. Thank you for getting in touch.",
     "failure": "Your message could not be sent. Please try again."
   },
-  "leadershipIntroduction": "I want people to leave a team more capable and confident than when they joined. My job is to create the conditions for that growth.",
+  "leadershipIntroduction": "When something interests me, I usually want to try it for myself. That’s how a new tool becomes a project, or a problem I encountered during an internship becomes something I want to study more closely in class. I ask a lot of questions along the way, in office hours, with colleagues and while figuring things out on my own. Teaching has become another part of that process. Explaining something to someone else often shows me what I still need to understand.",
   "leadershipPrinciples": [
     { "title": "Build ownership", "body": "Give people the preparation and trust to say, ‘we did it ourselves.’" },
     { "title": "Make mistakes useful", "body": "Treat an error as information about what to practise next, not a verdict on someone’s ability." },
