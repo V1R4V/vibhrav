@@ -30,8 +30,9 @@ export const publicCopy = {
   },
   "about": {
     "paragraphs": [
-      "I study Computer Sciences, Data Science and Economics at UW-Madison, with graduation expected in May 2027. That combination keeps me interested in both the implementation and the decision around it: whether a proposal team can find an approved answer, a researcher can recover a failed batch, or an investment team can test a business assumption.",
-      "My experience has also taught me that useful systems depend on how people work together. Teaching SQL, developing officials and organizing venture events have made clear explanations, preparation and feedback part of how I approach a team."
+      "I study Computer Sciences, Data Science and Economics at UW–Madison and expect to graduate in May 2027. I’m an avid learner who enjoys following a question across disciplines, understanding how something works, connecting it to what I already know and building something to explore it further.",
+      "My interests range from AI and data systems to finance, markets and how people make decisions. Studying these subjects together gives me different ways to approach a problem: examining the implementation, questioning what the data tells me and considering the incentives shaping its use. I enjoy moving between those perspectives and finding connections that change how I think.",
+      "When something interests me, I usually want to try it for myself. That’s how a new tool becomes a project, or a problem I encountered during an internship becomes something I want to study more closely in class. I ask a lot of questions along the way, in office hours, with colleagues and while figuring things out on my own. Teaching has become another part of that process. Explaining something to someone else often shows me what I still need to understand."
     ],
     "personalHeading": "Football, since seven.",
     "personal": "I started playing football at seven and have supported Real Madrid ever since. I’ve competed at high-school, district and state levels, and played with Conscient Football / Barça Academy in Delhi from December 2017 to February 2020.",
@@ -73,7 +74,7 @@ export const publicCopy = {
     "success": "Your message has been sent. Thank you for getting in touch.",
     "failure": "Your message could not be sent. Please try again."
   },
-  "leadershipIntroduction": "When something interests me, I usually want to try it for myself. That’s how a new tool becomes a project, or a problem I encountered during an internship becomes something I want to study more closely in class. I ask a lot of questions along the way, in office hours, with colleagues and while figuring things out on my own. Teaching has become another part of that process. Explaining something to someone else often shows me what I still need to understand.",
+  "leadershipIntroduction": "I want people to leave a team more capable and confident than when they joined. My job is to create the conditions for that growth.",
   "leadershipPrinciples": [
     { "title": "Build ownership", "body": "Give people the preparation and trust to say, ‘we did it ourselves.’" },
     { "title": "Make mistakes useful", "body": "Treat an error as information about what to practise next, not a verdict on someone’s ability." },
