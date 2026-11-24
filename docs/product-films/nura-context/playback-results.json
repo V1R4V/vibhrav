@@ -1,0 +1,26 @@
+{
+  "file": "Nura-Behind-the-Number-Web.mp4",
+  "errors": [],
+  "results": [
+    {
+      "rate": 1,
+      "duration": 54.016,
+      "currentTime": 54.016,
+      "ended": true,
+      "error": null,
+      "frames": 1620,
+      "dropped": 2,
+      "elapsedMs": 54074
+    },
+    {
+      "rate": 0.5,
+      "duration": 54.016,
+      "currentTime": 54.016,
+      "ended": true,
+      "error": null,
+      "frames": 3240,
+      "dropped": 2,
+      "elapsedMs": 108098
+    }
+  ]
+}

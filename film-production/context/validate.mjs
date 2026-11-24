@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 const d=JSON.parse(fs.readFileSync(new URL('../remotion/src/context-data.json',import.meta.url)));
-assert.equal(d.series.length,28);assert.equal(d.series[0].date,'2026-10-26');assert.equal(d.series.at(-1).date,d.date);
+assert.equal(d.series.length,28);assert.ok(d.series.every(p=>Number.isFinite(p.day)&&Number.isFinite(p.month)),'The selected window has complete score data; no missing value is rendered as zero.');assert.equal(d.series[0].date,'2026-10-26');assert.equal(d.series.at(-1).date,d.date);
 assert.equal(Math.round(d.daily.score),81);assert.equal(Math.round(d.trailing28.score),77);
 assert.equal(d.daily.pillars.reduce((s,p)=>s+p.weight,0),1);
 assert.ok(Math.abs(d.daily.pillars.reduce((s,p)=>s+p.weight*p.score,0)-d.daily.score)<1e-9);

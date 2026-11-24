@@ -1,0 +1,43 @@
+{
+  "outputs": {
+    "Nura-Behind-the-Number-1080p.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "frames": "1620",
+      "videoCodec": "h264",
+      "pixelFormat": "yuv420p",
+      "audioCodec": "aac",
+      "audioSampleRate": "48000",
+      "channels": 2,
+      "durationSeconds": 54.0,
+      "bytes": 16104173,
+      "sha256": "bdb31b28780edb7f1a350302d58adaf363fa73e2069ea99377b79591d69e2623",
+      "fastStart": true
+    },
+    "Nura-Behind-the-Number-Web.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "frames": "1620",
+      "videoCodec": "h264",
+      "pixelFormat": "yuv420p",
+      "audioCodec": "aac",
+      "audioSampleRate": "48000",
+      "channels": 2,
+      "durationSeconds": 54.016,
+      "bytes": 7225900,
+      "sha256": "a3a2e94a3a094689aa0089120709aebcd5254164fa6a7dcc95e4473d03416eec",
+      "fastStart": true
+    }
+  },
+  "fixtureValidation": "pass; native source validator2865 checks",
+  "captionCueCount": 7,
+  "encodedMasterAudio": {
+    "integratedLufs": -16.28,
+    "truePeakDbtp": -1.99,
+    "loudnessRangeLu": 7.9
+  },
+  "fullDecode": "pass",
+  "blackDetection": "no detected black segment at50ms threshold"
+}

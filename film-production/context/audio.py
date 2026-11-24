@@ -1,9 +1,9 @@
-"""Original 100BPM score and bespoke cues, locally generated non-cloned narration."""
+"""Licensed cinematic score, bespoke cues, and local non-cloned narration; 48kHz master."""
 from pathlib import Path
 import numpy as np,soundfile as sf,json,subprocess,hashlib
 from kokoro_onnx import Kokoro
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'public/context';CACHE=ROOT/'.artifacts/tts';CACHE.mkdir(parents=True,exist_ok=True)
-SR=24000;D=54;N=SR*D;rng=np.random.default_rng(947)
+SR=48000;D=54;N=SR*D;rng=np.random.default_rng(947)
 k=Kokoro(str(Path.home()/'.cache/hyperframes/tts/models/kokoro-v1.0.onnx'),str(Path.home()/'.cache/hyperframes/tts/voices/voices-v1.0.bin'))
 cues=[(.8,7,'Your watch records the signals. Nura helps you see how they fit together.'),(7.9,15.5,"Start with today's health score. Then look inside: sleep, activity, cardio fitness, and resting heart rate."),(16.5,23.6,'A single day is a snapshot. The twenty-eight-day view gives you a longer perspective.'),(24.6,32.4,'Open a workout to follow your heart rate, and see how long you spent in each intensity zone.'),(33.6,41.4,'Recovery compares readings with your own baseline. Sleep adds another part of the picture.'),(42.4,47.8,'Move through your history. Put a day beside the weeks that led up to it.'),(49,53.3,"Nura. See what's behind the number.")]
 voice=np.zeros(N);timings=[]
@@ -16,11 +16,15 @@ for a,b,text in cues:
   if len(v)/sr<=b-a:break
   speed*=len(v)/sr/(b-a)*1.02
  if speed>1.15 or len(v)/sr>b-a:raise RuntimeError('Rewrite cue rather than rush '+text)
- v=v*.61/max(.01,np.max(np.abs(v)));v[:100]*=np.linspace(0,1,100);v[-100:]*=np.linspace(1,0,100)
+ if sr!=SR:
+  resampled=CACHE/(h+'-48000.wav')
+  if not resampled.exists():subprocess.run(['ffmpeg','-y','-v','error','-i',str(p),'-af','aresample=48000:filter_size=64','-ar',str(SR),str(resampled)],check=True)
+  v,sr=sf.read(resampled)
+ v=v*.61/max(.01,np.max(np.abs(v)));v[:200]*=np.linspace(0,1,200);v[-200:]*=np.linspace(1,0,200)
  pos=round(a*SR);voice[pos:pos+len(v)]+=v;timings.append({'start':a,'end':a+len(v)/sr,'text':text,'speed':speed});print(a,round(len(v)/sr,2),round(speed,3),flush=True)
 # Licensed score: Vastness by Andrew Ev, Mixkit Stock Music Free License.
 # Source is never published as standalone music. Only the finished film is distributed.
-track=ROOT/'.artifacts/vastness.wav'
+track=ROOT/'.artifacts/vastness-48k.wav'
 if not track.exists():
  subprocess.run(['curl','-fsSL','https://assets.mixkit.co/music/184/184.mp3','-o',str(ROOT/'.artifacts/vastness-andrew-ev.mp3')],check=True)
  subprocess.run(['ffmpeg','-y','-v','error','-i',str(ROOT/'.artifacts/vastness-andrew-ev.mp3'),'-ar',str(SR),'-ac','2',str(track)],check=True)
@@ -32,18 +36,12 @@ def add(signal,at,gain=1,pan=0,target=fx):
  if pos<0:return
  n=min(len(signal),len(target)-pos)
  if n>0:target[pos:pos+n,0]+=signal[:n]*gain*np.sqrt((1-pan)/2);target[pos:pos+n,1]+=signal[:n]*gain*np.sqrt((1+pan)/2)
-def note(midi,dur):
- t=np.arange(int(dur*SR))/SR;hz=440*2**((midi-69)/12);return np.sin(2*np.pi*hz*t)*(1-np.exp(-t/.01))*np.exp(-t/1.4)*np.clip((dur-t)/.3,0,1)
 # Designed ascending brush and a restrained low transient at structural cuts.
 for at in [7.5,16,24,33,42,48]:
- tt=np.arange(int(.65*SR))/SR;noise=rng.normal(0,1,len(tt));kernel=np.ones(32)/32;noise=np.convolve(noise,kernel,'same');env=np.sin(np.pi*tt/.65)**2
+ tt=np.arange(int(.65*SR))/SR;noise=rng.normal(0,1,len(tt));kernel=np.ones(64)/64;noise=np.convolve(noise,kernel,'same');env=np.sin(np.pi*tt/.65)**2
  add(noise*env,at-.55,.045,-.25,fx)
  tt=np.arange(int(.4*SR))/SR;add(np.sin(2*np.pi*62*tt)*np.exp(-tt*16),at,.035,0,fx)
-# Opening and ending harmonics settle with the visual lens.
-add(note(81,4),.45,.045,.2,fx);add(note(74,5),48.4,.055,-.2,fx);add(note(81,4.7),48.5,.025,.3,fx)
-for delay,gain in [(.14,.22),(.27,.12),(.43,.08)]:
- shift=int(delay*SR);music[shift:,0]+=music[:-shift,1].copy()*gain;music[shift:,1]+=music[:-shift,0].copy()*gain
-# Cue-aware ducking, original score is distributed only inside completed film.
+# Cue-aware ducking; the licensed score is distributed only inside the completed film.
 gain=np.interp(time,[0,2.5,7.5,32.5,33.3,41.5,42.5,48,51,54],[.42,.72,1,1,.5,.5,1,1.2,1.2,1])
 for q in timings:
  down=np.clip((time-(q['start']-.18))/.18,0,1);up=np.clip((time-q['end'])/.4,0,1);gain*=1-.56*np.minimum(down,1-up)

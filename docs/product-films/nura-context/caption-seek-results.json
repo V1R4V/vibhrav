@@ -1,0 +1,44 @@
+[
+  {
+    "width": 1440,
+    "time": 12.260253,
+    "error": null,
+    "seekable": [
+      0,
+      54.016
+    ],
+    "caption": "Start with today's health score. Then look inside: sleep, activity, cardio fitness, and resting heart rate.",
+    "mediaStatuses": [
+      206,
+      206,
+      206,
+      206,
+      206,
+      206,
+      206,
+      206,
+      206
+    ],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "time": 12.257282,
+    "error": null,
+    "seekable": [
+      0,
+      54.016
+    ],
+    "caption": "Start with today's health score. Then look inside: sleep, activity, cardio fitness, and resting heart rate.",
+    "mediaStatuses": [
+      206,
+      206,
+      206,
+      206,
+      206,
+      206,
+      206
+    ],
+    "overflow": false
+  }
+]
